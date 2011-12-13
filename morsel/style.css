@@ -1,0 +1,35 @@
+/* morsel 1.0b3 by riscky@gmail */
+html>body{margin:0;padding:0;color:black;background:#E9E9EA;font-size:62.5%}
+a{color:inherit;background:transparent;text-decoration:none;font-weight:normal}
+a:link{color:inherit;background:transparent;text-decoration:inherit}
+a:visited{color:inherit;background:transparent;text-decoration:inherit}
+a:active{color:inherit;background:transparent}
+a:hover{color:inherit;background:transparent}
+#pageWrapper{font-size:1.23em;color:inherit;background:transparent}
+#pageHead{max-width:60em;color:white;background:#1E4C62;border-left:solid 2em #1E4C62}
+#banner{margin:0;padding:0}
+#banner h1{font:2.3em "Lucida Grande","Trebuchet MS",Arial,sans-serif;font-style:italic;margin:0;padding:0}
+#banner h2{font:1.35em;font-family:"Helvetica Neue",monospace;margin:0 0 0 1.25em}
+#contentBody{border:solid .05em #A1A97D;max-width:57.9em;background:white;padding:0 2em 2em}
+.morselDate h3{color:black;background:transparent;border-bottom:solid .01em #aa9;margin-bottom:0;font:bold 1.4em 'trebuchet MS',Verdana,Arial,Helvetica,sans-serif;text-align:right}
+.aMorsel h4{color:#743;font-size:1.3em;margin:.25em .1em .25em 0}
+.aMorsel h4 a:hover{color:#069}
+.morselBody{color:black;background:inherit;font-size:1.13em;line-height:1.03em;font-weight:normal;margin:0 0 .5em .5em}
+.morselBody a:link,.morselBody a:visited{color:#F60}
+.morselBody a:hover{color:#227}
+.morselBody a[href^="http"]:not([href*="axiom.local"]):hover{color:#344;text-decoration:underline;}
+.morselFooter{margin:0 0 .5em .51em;color:#998;font:1em "Helvetica Neue",monospace}
+#contentSide{position:absolute;left:63em;top:.5em}
+#contentSide h3,#contentSide h3 a:link,#contentSide h3 a:visited{color:#233;border-bottom:.005em solid #5F5F5F;margin-bottom:.5em;margin-top:.5em}
+#contentSide h3:hover{color:#344}
+#contentSide .serendipitySideBarContent{font-size:1em}
+#contentSide .serendipitySideBarContent .delciousEmbed{font-size:1.05em;padding:0 0 0 .1em}
+#contentSide .serendipitySideBarContent .delciousEmbed ul{padding:0.1em;list-style-type:none}
+#contentSide .serendipitySideBarContent .delciousEmbed li{list-style-type:square;list-style-position:inside}
+.delciousEmbed li a:link,.delciousEmbed li a:visited{color:#345}
+.delciousEmbed li a:visited:after{padding-left:.25em;color:#036;content:"\2713"}
+.delciousEmbed li a:hover{color:#366}
+#pageFoot{margin-bottom:1.5em;max-width:60em;color:#666;background:transparent;#line-height:140%;margin-top:5px;text-align:center;letter-spacing:.3em;font:.75em verdana,arial,sans-serif}
+html[xmlns] .mozclear{border-color:transparent;margin-bottom:-1px}
+.clear{clear:both}
+.hide{display:none}

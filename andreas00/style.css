@@ -1,0 +1,642 @@
+/* andreas00 - an open source xhtml/css website layout by Andreas Viklund  - http://andreasviklund.com . Free to use for any purpose as long as the proper credits are given to the original author.
+Version: 1.0 (Apr 07, 2006) 
+Ported to Serendipity, http://www.s9y.org
+by Carl Galloway, http://www.carlgalloway.com
+*/
+
+/***** Body and main container *****/
+
+body {
+margin:0 auto;
+padding:0;
+font:76% Verdana,Tahoma,Arial,sans-serif;
+background:#eaeaea url({TEMPLATE_PATH}img/bg.gif) top center repeat-y;
+color:#3a3a3a;
+}
+
+.s9y_wrap {
+text-align:left;
+padding:5px;
+}
+
+#wrap {
+background-color:#ffffff;
+color:#303030;
+margin:0 auto;
+padding:1px 5px;
+width:760px;
+}
+
+/***** Header *****/
+
+#header {
+color:#505050;
+background:#ffffff url({TEMPLATE_PATH}img/front.jpg) bottom left no-repeat;
+height:250px;
+margin:0 0 10px 0;
+padding:0;
+}
+
+#header h1 {
+font-size:2.5em;
+font-weight:normal;
+letter-spacing:-2px;
+margin:0 0 4px 15px;
+padding:15px 0 0;
+}
+
+#header h1 a,#header h1 a:hover {
+padding:0;
+}
+
+#header p {
+font-size:1.1em;
+letter-spacing:-1px;
+margin:0 0 5px 15px;
+padding:0 0 0 3px;
+}
+
+/***** Left sidebar *****/
+
+#LeftSideBar {
+clear:left;
+float:left;
+width:170px;
+margin:0 0 10px 0;
+padding:0;
+}
+
+#LeftSideBar .serendipitySideBarItem, #LeftSideBar .container_category, #LeftSideBar .container_staticmenu {
+list-style:none;
+width:160px;
+margin:0 0 20px 0;
+padding:0;
+}
+
+#LeftSideBar li {
+font-weight:bold;
+height:20px;
+text-decoration:none;
+color:#505050;
+padding:6px 0 0 10px;
+margin-bottom:5px;
+background:#f4f4f4 url({TEMPLATE_PATH}img/menubg.gif) bottom left repeat-x;
+border-top:1px solid #d8d8d8;
+border-right:1px solid #d8d8d8;
+border-bottom:1px solid #d8d8d8;
+border-left:4px solid #cccccc;
+}
+
+#LeftSideBar .container_staticmenu a, #LeftSideBar .category_link_all a {
+font-weight:bold;
+height:20px;
+text-decoration:none;
+color:#505050;
+display:block;
+padding:6px 0 0 10px;
+background:#f4f4f4 url({TEMPLATE_PATH}img/menubg.gif) bottom left repeat-x;
+border-top:1px solid #d8d8d8;
+border-right:1px solid #d8d8d8;
+border-bottom:1px solid #d8d8d8;
+border-left:4px solid #cccccc;
+}
+
+#LeftSideBar .container_staticmenu br, #LeftSideBar .container_category br {
+line-height:5px;
+}
+
+#LeftSideBar li:hover, #LeftSideBar .container_staticmenu a:hover, #LeftSideBar .category_link_all a:hover {
+background:#eaeaea url({TEMPLATE_PATH}img/menubg2.gif) bottom left repeat-x;
+color:#286ea0;
+border-top:1px solid #b0b0b0;
+border-right:1px solid #b0b0b0;
+border-bottom:1px solid #b0b0b0;
+border-left:4px solid #505050;
+}
+
+#LeftSideBar li a:hover,  {
+text-decoration:none;
+color:#286ea0;
+}
+
+#LeftSideBar .serendipity_categories_plugin, #LeftSideBar .serendipity_plugin_staticpage {
+display:none;
+}
+
+#LeftSideBar h2 {
+font-size:1.3em;
+font-weight:normal;
+letter-spacing:-1px;
+}
+
+#LeftSideBar input, #LeftSideBar select, #LeftSideBar textarea {
+width:140px;
+border:1px solid #cccccc;
+}
+
+
+/***** Right sidebar *****/
+
+#RightSideBar {
+float:right;
+width:150px;
+margin:0 0 10px 0;
+padding:0;
+font-size:0.9em;
+}
+
+#RightSideBar p, #RightSideBar ul, #RightSideBar .serendipitySideBarContent {
+margin:0 0 1.5em 0;
+line-height:1.3em;
+padding:0;
+}
+
+#RightSideBar a {
+font-weight:bold;
+}
+
+#RightSideBar li {
+list-style:none;
+margin:0 0 6px 0;
+padding:0;
+}
+
+#RightSideBar h2 {
+font-size:1.4em;
+font-weight:normal;
+margin:0 0 6px 0;
+letter-spacing:-1px;
+}
+
+#RightSideBar select, #RightSideBar input, #RightSideBar textarea {
+width:150px;
+border:1px solid #cccccc;
+}
+
+
+/***** Main content *****/
+
+#content {
+margin:10px 175px 10px 175px;
+padding:0;
+line-height:1.5em;
+text-align:left;
+}
+
+#contentright {
+margin:10px 0 10px 180px;
+padding:0;
+line-height:1.5em;
+text-align:left;
+}
+
+#contentleft {
+margin:10px 170px 10px 10px;
+padding:0;
+line-height:1.5em;
+text-align:left;
+}
+
+#contentwide {
+margin:10px 0 10px 180px;
+padding:0;
+line-height:1.5em;
+text-align:left;
+}
+
+#contentfull {
+margin:10px 10px 10px 10px;
+padding:2px 0 0 0;
+line-height:1.5em;
+text-align:left;
+}
+
+#content h2, #contentleft h2, #contentright h2, #content h3.serendipity_date, #contentleft h3.serendipity_date, #contentright h3.serendipity_date, .serendipity_commentsTitle, h4.serendipity_title  {
+font-size:1.5em;
+letter-spacing:-1px;
+font-weight:normal;
+margin:8px 0 10px 0;
+padding:0;
+}
+
+#content h2 a, #content h2 a:hover, #contentleft h2 a, #contentleft h2 a:hover, #contentright h2 a, #contentright h2 a:hover, #content h3 a, #content h3 a:hover, #content h4 a, #content h4 a:hover {
+font-weight:normal;
+}
+
+.serendipity_entry_extended {
+margin-top:20px;
+}
+
+#content a, #contentleft a, #contentright a {
+font-weight:bold;
+}
+
+#content ul, #content ol,
+#contentwide ul, #contentwide ol,
+#contentfull ul, #contentfull ol {
+margin:0 0 16px 20px;
+padding:0;
+}
+
+#content ul ul, #content ol ol,
+#contentwide ul ul, #contentwide ol ol,
+#contentfull ul ul, #contentfull ol ol {
+margin:2px 0 2px 20px;
+}
+
+#content li, #contentwide li, #contentfull li {
+margin:0 0 2px 10px;
+padding:0 0 0 4px;
+}
+
+.serendipity_entryFooter {
+margin-top:10px;
+margin-bottom:50px;
+padding:0px;
+padding-top:3px;
+border-top: 1px solid #dedede;
+font-size:0.78em;
+color: #31314B;  
+text-align:center;
+}
+
+div.serendipity_pageFooter {
+font-size:0.8em;
+clear:both;
+margin:50px auto 15px auto;
+text-align:center;
+}
+
+/***** Footer *****/
+
+#footer {
+clear:both;
+margin:0 auto;
+padding:8px 0;
+border-top:2px solid #dadada;
+width:760px;
+text-align:center;
+color:#808080;
+background-color:#ffffff;
+font-size:0.9em;
+}
+
+#footer p {
+padding:0;
+margin:0;
+}
+
+#footer a {
+color:#808080;
+background-color:inherit;
+text-decoration:none;
+}
+
+#footer a:hover {
+text-decoration:underline;
+}
+
+/***** Various tags *****/
+
+a {
+text-decoration:none;
+color:#505050;
+background-color:inherit;
+}
+
+a:hover {
+text-decoration:underline;
+color:#286ea0;
+background-color:inherit;
+}
+
+a img {
+border:0;
+}
+
+p {
+margin:0 0 16px 0;
+}
+
+blockquote {
+border-top:1px solid #d8d8d8;
+border-right:1px solid #d8d8d8;
+border-bottom:1px solid #d8d8d8;
+border-left:4px solid #cccccc;
+margin:16px;
+width:75%;
+padding:7px 7px 7px 11px;
+background:#f4f4f4 url({TEMPLATE_PATH}img/menubg.gif) bottom left repeat-x;
+color:#505050;
+}
+
+blockquote p {
+font-size:1.1em;
+line-height:1.3em;
+margin:0;
+}
+
+code, pre {
+font-size:1.3em;
+}
+
+/***** Table styles *****/
+#LeftSideBar .serendipity_weekDayName {
+text-align:center;
+}
+
+#LeftSideBar td {
+font-size:0.9em;
+text-align:center;
+color:#888;
+}
+
+#RightSideBar table {
+margin:0 0 16px 0;
+padding:0;
+border-collapse:collapse;
+border:1px solid #d8d8d8;
+}
+
+#RightSideBar .serendipity_weekDayName {
+color:#505050;
+font-weight:bold;
+margin:0;
+padding:6px 0 8px 0;
+}
+
+#RightSideBar th {
+text-align:left;
+background:#eaeaea url({TEMPLATE_PATH}img/menubg2.gif) bottom left repeat-x;
+color:#505050;
+}
+
+#RightSideBar td {
+font-size:0.9em;
+text-align:center;
+background:#f4f4f4 url({TEMPLATE_PATH}img/menubg.gif) bottom left repeat-x;
+color:#888;
+}
+
+td.Today {
+border:solid 1px;
+}
+
+
+/***** Form styles *****/
+
+#content .button, #contentleft .button, #contentright .button {
+border-top:1px solid #d8d8d8;
+border-right:1px solid #d8d8d8;
+border-bottom:1px solid #d8d8d8;
+border-left:4px solid #cccccc;
+margin:0 0 15px 0;
+padding:7px 7px 7px 11px;
+background:#f4f4f4 url({TEMPLATE_PATH}img/menubg.gif) bottom left repeat-x;
+color:#505050;
+font-weight:bold;
+padding:4px;
+width:120px;
+}
+
+#content input, #content select, #content textarea, #contentleft input, #contentleft select, 
+#contentleft textarea, #contentright input, #contentright select, #contentright textarea, select #serendipity_replyTo {
+border:1px solid #cccccc;
+font-family:Verdana,Tahoma,Arial,Sans-Serif;
+font-size:1em;
+margin:0;
+padding:4px;
+}
+
+#content label, #serendipity_comment_page label, #contentleft label, #contentright label {
+margin:2px;
+}
+
+#content input, #content select, #serendipity_comment_page input, #serendipity_comment_page select, #contentleft input, #contentleft select, #contentright input, #contentright select {
+width:200px;
+} 
+#content .checkbox_remember, #content .checkbox_subscribe, #serendipity_comment_page .checkbox_remember, #serendipity_comment_page .checkbox_subscribe, #contentleft .checkbox_remember, #contentleft .checkbox_subscribe, #contentright .checkbox_remember, #contentright .checkbox_subscribe {
+width:20px;
+}
+
+#content textarea, #serendipity_comment_page textarea, #contentleft textarea, #contentright textarea {
+width:300px;
+}
+
+
+/***** Various classes *****/
+
+.left {
+margin:10px 10px 5px 0;
+float:left;
+}
+
+.right {
+margin:10px 0 5px 10px;
+float:right;
+}
+
+#LeftSideBar .announce {
+padding:10px 5px 20px 5px;
+width:145px;
+color:#505050;
+background:#f4f4f4 url({TEMPLATE_PATH}img/menubg.gif) bottom left repeat-x;
+border-top:1px solid #d8d8d8;
+border-right:1px solid #d8d8d8;
+border-bottom:1px solid #d8d8d8;
+border-left:4px solid #cccccc;
+line-height:1.3em;
+}
+
+.announce a {
+font-weight:bold;
+}
+
+.announce h2 {
+margin:0 0 10px 0;
+padding:0;border-bottom:1px solid #dedede;
+}
+
+.textright {
+text-align:right;
+margin:-10px 0 4px 0;
+}
+
+.center {
+text-align:center;
+}
+
+.small {
+font-size:0.8em;
+}
+
+.large {
+font-size:1.3em;
+}
+
+.bold {
+font-weight:bold;
+}
+
+.highlighted {
+padding:3px;
+background-color:#f0f0f0;
+color:#303030;
+border:1px solid #b0b0b0;
+}
+
+.hide {
+display:none;
+}
+
+.serendipity_center {
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+}
+
+.serendipity_msg_important {
+color: red;
+}
+
+.serendipity_msg_notice {
+color: green; 
+}
+
+/* style for line break in comments plugin */
+.container_serendipity_plugin_comments br {
+line-height:0.5em;
+}
+
+img.serendipity_freeTag_xmlButton {
+border:none;
+padding-left:2px;
+vertical-align:bottom; 
+}
+
+.serendipity_comment {
+margin-bottom:20px;
+}
+
+.commentauthor, .comment_source_author {
+margin: 0 0 0 0;
+border-bottom: 1px solid #dedede;
+font-size: 1.1em;
+font-weight:normal;
+}
+
+.commentmeta, h3.serendipity_date  {
+margin: 0 0 0.8em 0;
+padding: 0.2em 0 0 0;
+font-size: 0.92em; 
+}
+
+#comment {
+width: 98%;
+}
+
+#commentlist {
+padding-left:3px;
+}
+
+.serendipity_commentBody {margin-bottom:20px;}
+.comment_threaded_child0 {padding-left:5px;padding-right:5px;background:#f4f4f4 url({TEMPLATE_PATH}img/menubg.gif) bottom left repeat-x;border:1px solid #d8d8d8;}
+.comment_threaded_child1 {margin-left:14px; padding-left:5px;padding-right:5px;background:#f4f4f4 url({TEMPLATE_PATH}img/menubg.gif) bottom left repeat-x;border:1px solid #d8d8d8;}
+.comment_threaded_child2 {margin-left:30px; padding-left:5px;padding-right:5px;background:#f4f4f4 url({TEMPLATE_PATH}img/menubg.gif) bottom left repeat-x;border:1px solid #d8d8d8;}
+
+#content .serendipity_entryIcon a img, #contentleft .serendipity_entryIcon a img, #contentright .serendipity_entryIcon a img {
+float:right;
+padding:0 2px 2px 2px;
+margin:0 0 10px 10px;
+display:inline;
+background:none;
+border:none;}
+
+.searchterm, .searchresults {
+font-weight:bold; 
+}
+
+.serendipity_freetag_taglist, .staticpage_navigation, .serendipity_search {
+border-top:1px solid #d8d8d8;
+border-right:1px solid #d8d8d8;
+border-bottom:1px solid #d8d8d8;
+border-left:4px solid #cccccc;
+margin:16px 0;
+padding:7px 7px 7px 11px;
+background:#f4f4f4 url({TEMPLATE_PATH}img/menubg.gif) bottom left repeat-x;
+color:#505050;
+}
+
+.grey {
+color:#999; 
+}
+
+/********* Embedded images with the s9y image manager *********/
+
+/* container for images and text */
+.serendipity_imageComment_center, .serendipity_imageComment_left, .serendipity_imageComment_right {
+margin:0 0 20px 0;
+padding:5px;
+border:1px solid #c0c0c0;
+background-color:#f4f4f4;
+color:#505050;
+line-height:1.5em; 
+}
+
+/* style to center image and text within entry */
+.serendipity_imageComment_center {
+display:block; 
+margin:0 auto 5px auto; 
+}
+
+/* style to left align image and text within entry */
+.serendipity_imageComment_left {
+float:left; 
+margin:0 12px 5px 0; 
+}
+
+/* style to right align image and text within entry */
+.serendipity_imageComment_right {
+float:right; 
+margin:0 0 5px 12px; 
+}
+
+/* styles for the images */
+.serendipity_imageComment_img, .serendipity_imageComment_img img {
+text-align: center;
+margin-bottom:2px; 
+}
+
+/* styles for the text below the image if used */
+.serendipity_imageComment_txt {
+clear: both;
+text-align: center;
+font-size:0.8em;
+border-top: 1px solid #dedede; 
+}
+
+/********* End of Image Manager Styles *********/
+
+/* container for comments plugin within sidebar */
+#RightSideBar .container_serendipity_plugin_comments {
+color:#333; 
+}
+
+/* style for line break in comments plugin */
+#RightSideBar .container_serendipity_plugin_comments br {
+line-height:0.5em; 
+}
+
+/* style for comment body within sidebar */
+#RightSideBar .plugin_comment_body {
+font-style:oblique; 
+}
+
+#RightSideBar .plugin_comment_wrap {
+margin:0 0 20px 0;
+border-top:1px solid #c0c0c0;
+border-bottom:1px solid #c0c0c0;
+background-color:#f4f4f4;
+color:#505050;
+line-height:1.5em; 
+}

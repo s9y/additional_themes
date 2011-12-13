@@ -1,0 +1,15 @@
+a:link,
+a:visited,
+a:hover,
+a:active,
+h2 a:link,
+h2 a:visited,
+h2 a:hover,
+h2 a:active {
+color: #485fa1;
+text-decoration: none;
+}
+a:hover,
+h2 a:hover {
+text-decoration: underline;
+}

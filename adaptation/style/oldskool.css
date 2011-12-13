@@ -1,0 +1,28 @@
+#header {
+background-color: #222;
+border-bottom: 1px solid #000;
+}
+h1 {
+padding: 0;
+margin: 0;
+font-size: 130%;
+padding-top: 10px;
+margin: 0 0 0 16px;
+}
+h1 a, h1 a:link, h1 a:hover, h1 a:visited {
+color: #fff;
+text-decoration: none;
+}
+.description {
+color: #fff;
+margin: 0 20px 0 0;
+}
+.obut {
+}
+.obut a {
+display: block;
+padding-top: 20px;
+background-color: #eee;
+border: 2px solid #ccc;
+text-decoration: none;
+}

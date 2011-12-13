@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Dokumentace: styl Truth</title>
+    </head>
+
+<body>
+
+<h1>Dokumentace ke stylu/¹ablonì vzhledu 'Truth'</h1>
+
+<p>Dokumentaci k této ¹ablonì pøelo¾il do èe¹tiny Vladimír Ajgl (vlada [zavinac] ajgl [tecka] cz) dne 16.5.2010. Od té doby mohla být ¹ablona pozmìnìna nebo mohly být roz¹íøené její funkce. Zkontrolujte pro jistotu i <a href="readme.html">aktuální anglické "readme"</a>.
+<p>
+
+<h2>MODS ¹ablony Truth: </h2>
+
+<p>Jednodu¹e nahrajte adresáø ¹ablony Truth do adresáøe s ostatními ¹ablonami. Tady je pár instrukcí, které Vám mohou pomoci správnì ji zprovoznit a nastavit.</p>
+
+<h2>Jak zmìnit ikony kategorií</h2>
+
+<p>Upravte soubor plugin_internal.inc.php </p>
+
+<p>Øádek 958 </p>
+
+<p>$image = $this-&gt;get_config('image', serendipity_getTemplateFile('img/nav_icon_c.gif'));</p>
+
+<p>Øádek 992</p>
+
+<p>$html .= '&lt;a href=&quot;'. serendipity_rewriteURL(PATH_FEEDS .'/'. PATH_CATEGORIES .'/'. serendipity_makePermalink(PERM_FEEDS_CATEGORIES, array('id' =&gt; $cat['categoryid'], 'title' =&gt; $cat['category_name']))) .'&quot;&gt;&lt;img src=&quot;../templates/truth/img/nav_icon_c.gif&quot; alt=&quot;Catagories&quot; style=&quot;border: 0px&quot; /&gt;&lt;/a&gt; ';</p>
+
+<h2>Ikony statických stránek</h2>
+<p>Pro zmìnu ikon statických stránek jsem pøilo¾il plugin statických stránek do základního adresáøe ¹ablony. Vlepte ho do adresáøe pluginù Serendipity.</p>
+
+<p>Zbytek je otázka zmìn souborù index.tpl, sidebar.tpl a style.css tak, aby Vám vyhovovaly.</p>
+
+<h2>Dal¹í</h2>
+<p>Ocením link na mé stránky <a href="http://www.truthrealization.com/">http://www.truthrealization.com/</a> nebo <a href="http://www.dhtmlnirvana.com/">http://www.dhtmlnirvana.com/</a>. </p>
+
+<p>Mù¾ete mi také poslat email s popisem pøípadných chyb na <a href="mailto:etraversa@dhhtmlnirvana.com">etraversa@dhhtmlnirvana.com</a>.</p>
+
+<p>Brzy zveøejním DHTML verzi tohoto pluginu, tak¾e to veïte v patrnosti, pokud Vás to zajímá.</p>
+
+<p>Díky</p>
+
+<p>Eddie Traversa</p>
+
+  </body>
+</html>
+

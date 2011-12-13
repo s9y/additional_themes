@@ -1,0 +1,4 @@
+Name: simpla Theme
+Author: Phu ported by Kunze Media
+Date: 19-01-2010
+Require Serendipity: 1.5

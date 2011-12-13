@@ -1,0 +1,4 @@
+Name: Pixel
+Author: 85ideas.com (Ported to s9y by YellowLed, sponsored by serendipity-templates.org)
+Date: 2010-11-30
+Require Serendipity: 1.1

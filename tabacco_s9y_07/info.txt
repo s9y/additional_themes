@@ -1,0 +1,5 @@
+Name: Blogger-Tabacco v0.1 (2007-04-03)
+Author: Frederic Wenzel, blog.magenson.de
+Date: 10/17/2004
+based on a blogger template:
+<http://blogger-templates.blogspot.com/2004_03_14_blogger-templates_archive.html#107996288536718375>

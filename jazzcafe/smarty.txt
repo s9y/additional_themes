@@ -1,0 +1,40 @@
+	
+(setq auto-mode-alist
+      (append '(("\\.css$" . css-mode))
+              auto-mode-alist))
+
+
+
+
+<IMPORT DELEGATE="css::MAIN"/>
+<MODE NAME="html"		FILE="html.xml"
+				FILE_NAME_GLOB="*.{html,htm,hta}" />
+
+-remote openURL($u) 
+
+You might want to execute these lines of BeanShell code :
+
+jEdit.setProperty("mode.smarty.xml.parser","html");
+jEdit.setProperty("mode.smarty.xml.completion-info",
+"jeditresource:/XML.jar!/xml/completion/html-complete.xml");
+
+fatibey77@yahoo.com
+mfguner@muhasebat.gov.tr
+
+<meta name="Author" content="Alf Magne Kalleland (post@dhtmlgoodies.com)">
+<META NAME="Generator" CONTENT="Alf Magne Kalleland (www.dhtmlgoodies.com)">
+<meta name="KeyWords" content="DHTML, HTML, Dynamic HTML,CSS, Menu, Menus,Drag and drop, Drag, Drop, Cross-browser, Cross browser, Examples, Javascript, Free, Javascripts, Cascading Style Sheet, Crossbrowser,Alf Magne Kalleland, Batalf, minesweeper">
+<meta name="Description" content="A library of nice looking DHTML(dynamic HTML) scripts for your website. (CSS + Javascript + HTML = DHTML = true)">
+<meta name="country" content="Norway">
+<meta name="organization-Email" content="post@dhtmlgoodies.com">
+<meta name="copyright" content="copyright 2005 - Alf Magne Kalleland">
+<meta name="coverage" content="Worldwide">
+<meta name="revisit_after" content="30days">
+<meta name="title" content="A library of nice looking DHTML(dynamic HTML) scripts - DHTMLgoodies.com">
+<meta name="identifier" content="http://www.dhtmlgoodies.com/">
+<meta name="language" content="English">
+<meta name="robots" content="follow">
+<meta name="googlebot" content="index, follow">
+
+
+ya da <%= cancel("Vazgeç") %>	

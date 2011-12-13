@@ -1,0 +1,324 @@
+/*
+Stylesheet by Vladimir Simovic (aka Perun)
+www.perun.net | www.vlad-design.de
+Don't remove these Lines
+*/
+
+a {
+color: #B8292C;
+}
+
+a:hover {
+text-decoration: none;
+}
+
+/* Allgemeine Elemente */
+
+img {
+border: none;
+}
+
+body {
+margin: 0;
+padding: 0;
+text-align: center;
+background: #861E20 url({TEMPLATE_PATH}img/mitte.gif) repeat-y center center;
+font: 62.5% arial, sans-serif;
+color: #333;
+}
+
+/* IDs */
+
+#mainpane {
+text-align: left;
+margin: 0 auto;
+padding: 0;
+width: 760px;
+font-size: 1.1em;
+letter-spacing: 1px;
+}
+
+#banner {
+margin: 0;
+height: 110px;
+background: url({TEMPLATE_PATH}img/oben.gif) no-repeat;
+padding: 15px 20px;
+}
+
+#banner h1 {
+font: italic normal 2.2em 'times new roman' times, serif;
+margin: 0 0 2px 20px;
+letter-spacing: 2px;
+}
+
+#banner h2 {
+font-size: 1.1em;
+margin: 0 0 0 20px;
+letter-spacing: 2px;
+}
+
+#banner h1 a, #banner h2 a {
+color: #fff;
+text-decoration: none;
+}
+
+#banner h1 a:hover, #banner h2 a:hover {
+color: #fff;
+}
+
+#content {
+margin: 0 215px 0 40px !important;
+padding: 0;
+width: 480px;
+}
+
+#content h3 {
+font: bold 1.2em arial, sans-serif;
+color: #333;
+background: #eee;
+padding: 0 5px;
+margin: 0;
+text-align: right;
+}
+
+#content h4 {
+font: 180% 'trebuchet ms' arial, sans-serif;
+color: #333;
+border-bottom: 1px solid #861E20;
+margin: .3em 0 .2em 0;
+}
+
+#content h4 a {
+text-decoration: none;
+}
+
+#sidebar {
+margin-top: 0;
+padding-top: 0;
+width: 190px;
+float: right;
+color: #70191B;
+line-height: 130%;
+}
+
+#sidebar h3 {
+margin: .2em 0;
+font: bold 1.3em 'trebuchet ms' arial, sans-serif;
+}
+
+#sidebar a {
+color: #ddd;
+text-decoration: none;
+}
+
+#sidebar a:hover {
+color: #fff;
+}
+
+#sidebar form {
+margin-top: 0;
+padding-top: 0;
+}
+
+#sidebar input {
+border: 1px solid #861E20;
+width: 165px;
+background: #eee;
+}
+
+/* Klassen */
+
+.serendipity_entryFooter {
+padding-top: 10px;
+padding-bottom: 10px;
+}
+
+.serendipity_comment {
+margin: 10px 10px 0 10px;
+padding: 3px;
+overflow: auto;
+}
+
+.serendipity_entry {
+line-height: 130%;
+margin-bottom: 1em;
+}
+
+.autor {
+margin: 1em 0;
+}
+
+.copyright {
+color: #fff;
+margin: 10px 215px 5px 40px;
+text-align: center;
+}
+
+.copyright a, copyright a:hover {
+color: #fff;
+}
+/**//**//**/
+
+.serendipity_entry_date {
+margin: auto;
+}
+
+.serendipity_commentsTitle {
+font-size: small;
+font-weight: bold;
+margin-top: 10px;
+padding-left: 5px;
+border-bottom: 1px solid #861E20;
+}
+
+img.serendipity_entryIcon {
+float: right;
+border: 0px;
+}
+
+img.serendipity_entryIcon {
+float: right;
+border: 0px;
+}
+
+td.serendipity_commentsLabel {
+font-weight: bold;
+vertical-align: top;
+}
+
+td.serendipity_commentsValue input,
+td.serendipity_commentsValue select,
+td.serendipity_commentsValue textarea {
+padding: 2px;
+width: 400px;
+}
+
+.serendipity_commentForm {
+margin-bottom: 13px;
+margin-right: 10px;
+margin-left: 10px;
+}
+
+.serendipity_comment_source {
+margin-top: 5px;
+padding-left: 5px;
+margin-bottom: 5px;
+padding-bottom: 3px;
+border-bottom: 1px solid #861E20;
+}
+
+table.serendipity_calendar td {
+padding: 2px;
+}
+table.serendipity_calendar a {
+color: #f00;
+font-weight: bold;
+text-decoration:none;
+}
+
+table.serendipity_calendar a:hover {
+text-decoration: none;
+}
+
+td.serendipity_calendarHeader a:link,
+td.serendipity_calendarHeader a:visited,
+td.serendipity_calendarHeader a:hover {
+border: 0;
+text-decoration: none;
+}
+
+div.serendipityPlug {
+padding-left: 10px;
+}
+
+div.serendipityPlug a {
+text-decoration: none;
+border: 0px;
+}
+
+/* Container for each item on the side bar */
+.serendipitySideBarItem {
+margin-bottom: 1em;
+}
+
+/* title of an individual item */
+
+.serendipityImageButton {
+cursor: pointer;
+}
+.serendipity_entry p {
+margin: 0px;
+padding-bottom: 0px;
+}
+
+/** Embedded images with the s9y image manager **/
+.serendipity_imageComment_center,
+.serendipity_imageComment_left,
+.serendipity_imageComment_right {
+border: 1px solid #eee;
+background-color: #EFEFEF;
+margin: 3px;
+padding: 3px;
+text-align: center;
+}
+
+.serendipity_imageComment_center {
+margin: auto;
+}
+
+.serendipity_imageComment_left {
+float: left;
+}
+
+.serendipity_imageComment_right {
+float: right;
+}
+
+.serendipity_imageComment_img,
+.serendipity_imageComment_img img {
+margin: 0px;
+padding: 0px;
+text-align: center;
+}
+
+.serendipity_imageComment_txt {
+border-top: 1px solid #ddd;
+margin: 0px;
+padding: 3px;
+clear: both;
+font-size: 8pt;
+text-align: center;
+}
+
+.serendipity_center {
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+}
+
+.serendipity_msg_important {
+color: red;
+}
+
+.serendipity_msg_notice {
+color: green;
+}
+
+.serendipity_comment_author_self .serendipity_comment_source {
+background-color: #eee;
+}
+
+/* Internet Explorer 5.x ist doof */
+.serendipity_calendar {
+font-size: 11px;
+}
+.serendipityCommentForm table {
+font-size: 11px;
+width: auto;
+}
+
+/* Fuer Popups */
+#serendipity_comment_page, .s9y_wrap {
+padding: 1em;
+background: #fff;
+}

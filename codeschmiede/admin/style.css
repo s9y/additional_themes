@@ -1,0 +1,256 @@
+body {
+    font-family: Verdana;
+    margin: 10 0 0 0;
+    background: #EEEEEE url({TEMPLATE_PATH}img/bg-line-admin.gif);
+    direction: {LANG_DIRECTION};
+}
+
+#serendipity_admin_page {
+    text-align: center;
+}
+
+#serendipityAdminBodyImageSelector {
+    background: #FFF;
+}
+
+#serendipityAdminFrame {
+    text-align: left;
+    width: 80%;
+    min-width: 777px;
+    margin: auto;
+    background: #FFF;
+    border: 1px solid #999999;
+}
+
+#serendipityAdminBanner {
+    height: 80px;
+    background: #DBDAD6;
+}
+
+#serendipityAdminInfopane {
+    background: #F8F9FA url({TEMPLATE_PATH}img/infobar_background.png);
+    font-size: 10px;
+    padding: 5px;
+    vertical-align: middle;
+    text-align: right;
+    color: #5E5E5E;
+    height: 27px;
+}
+
+#serendipityAdminMainpane {
+    background: #FFF;
+    border: 2px solid #0F3353;
+    border-top: inherit;
+    padding: 5px;
+}
+
+.serendipityAdminContent {
+    font-size: 0.8em;
+    padding: 10px 5px 20px 5px;
+    width: 80%;
+}
+
+#serendipityAdminBanner h1 {
+    padding-left: 20px;
+    font-size: 1.8em;
+    margin: 0;
+    color: #6C99A6;
+}
+
+#serendipityAdminBanner h2 {
+    padding-left: 30px;
+    font-size: 1em;
+    color: #333333;
+    margin: 0;
+}
+
+#serendipitySideBar {
+    width: 20%;
+    padding-top: 10px;
+}
+
+#serendipityAdminFooter {
+    font-size: 0.7em;
+    text-align: center;
+    color: #333333;
+}
+
+.serendipitySideBarTitle {
+    padding-left: 2px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.serendipitySideBarContent {
+    padding-left: 10px;
+    font-size: 0.8em;
+}
+
+.serendipitySideBarItem {
+    margin-bottom: 10px;
+}
+
+.serendipity_admin_title {
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+.serendipity_admin_list_item.serendipity_admin_list_item_uneven {
+    border: 1px solid #294366;
+    background: #F8F9FA;
+    margin-bottom: 5px;
+}
+
+.serendipity_admin_list_item.serendipity_admin_list_item_even {
+    border: 1px solid #294366;
+    background: #F2F3F2;
+    margin: 0 0 5px 0;
+}
+
+.serendipityAdminMsgError {
+    color: #F00;
+    text-align: center;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.serendipityAdminMsgSuccess {
+    color: #0B0;
+    text-align: center;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.serendipityAdminMsgNote {
+    background: #FFFF9D;
+    border: 1px solid #F70;
+    padding: 3px;
+    text-align: center;
+    margin: 10px;
+}
+
+
+
+td, th {
+    font-size: 0.8em;
+}
+
+a:visited,
+a:link {
+    color: #536C73;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #6C99A6;
+}
+
+input, select, textarea {
+    background: #F8F9FA;
+    font-family: Verdana;
+    font-size: 0.9em;
+    border: 1px solid #294366;
+}
+
+#serendipity_iframe {
+    border: 1px solid #294366;
+    text-align: center;
+    margin: auto;
+}
+
+ul.serendipitySideBarMenu {
+    padding: 0;
+    margin: 0;
+}
+
+ul.serendipitySideBarMenu li.serendipitySideBarMenuHead {
+    font-size: 0.85em;
+    list-style: none;
+    display: block;
+    font-weight: bold;
+    background: url({TEMPLATE_PATH}img/menuheader_background.png) no-repeat;
+    height: 1.6em;
+    padding-left: 3px;
+}
+
+ul.serendipitySideBarMenu li {
+    font-size: 0.8em;
+    font-weight: normal;
+    background:url({TEMPLATE_PATH}img/menu_background.png) no-repeat;
+    padding-top: 4px;
+    padding-left: 5px;
+    height: 1.6em;
+    list-style:none;
+    display:block;
+    margin:0;
+}
+
+ul.serendipitySideBarMenu a:link,
+ul.serendipitySideBarMenu a:visited {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.serendipityImageButton {
+    cursor: pointer;
+}
+
+a:link.serendipityIconLink,
+a:visited.serendipityIconLink {
+    border: 0;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 4px;
+}
+
+.serendipityIconLink img {
+    margin-right: 2px;
+    vertical-align: bottom;
+    border: 0;
+}
+
+a:link.serendipityIconLinkRight,
+a:visited.serendipityIconLinkRight {
+    border: 0;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 4px;
+}
+.serendipityIconLinkRight img {
+    margin-left: 2px;
+    vertical-align: bottom;
+    border: 0;
+}
+
+
+a:link.serendipityPrettyButton,
+a:visited.serendipityPrettyButton,
+a:hover.serendipityPrettyButton {
+    text-decoration: none;
+    color: #1D2E3F;
+}
+
+.serendipityPrettyButton {
+    padding: 1px;
+    background: url({TEMPLATE_PATH}img/button_background.png) repeat-x top;
+    color: #1D2E3F;
+    font-weight: bold;
+    font-size: 0.9em;
+    border: 1px solid #999999;
+    margin: 2px;
+}
+
+/* Special class if the button is a <a> tag */
+a.serendipityPrettyButton {
+    padding: 2px 4px 2px 4px;
+    cursor: default;
+}
+
+
+.direction_ltr {
+    direction: ltr;
+}
+
+.direction_rtl {
+    direction: rtl;
+}

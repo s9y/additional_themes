@@ -1,0 +1,159 @@
+dd {
+    margin-bottom: 7px;
+    padding-left: 0;
+}
+
+#pages-found { font-size: 9pt; }
+
+.category_link_all { display: none; }
+
+#nav strong {
+    display: block;
+    line-height: 44px;
+    margin: 0;
+    padding: 0 20px 0 15px;
+    font-size: 10pt;
+    color: #fff;
+    letter-spacing: -1px;
+    font-weight: normal;
+}
+
+.serendipity_center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.serendipity_msg_important { color: red; }
+
+.serendipity_msg_notice { color: green; }
+
+.serendipity_image_left,
+.serendipity_image_right,
+.serendipity_image_center,
+.serendipity_imageComment_center,
+.serendipity_imageComment_left,
+.serendipity_imageComment_right {
+    border: 1px solid #111!important;
+    padding: 0!important;
+}
+
+.serendipity_image_left {
+    float: left;
+    margin: 0 10px 10px 0;
+}
+
+.serendipity_image_right {
+    float: right;
+    margin: 0 0 10px 10px;
+}
+
+.serendipity_image_center {
+    display: block;
+    margin: 0 auto 10px auto;
+} 
+
+.serendipity_imageComment_left {
+    display: inline;
+    float: left;
+    margin: 0 10px 10px 0;
+}
+
+.serendipity_imageComment_right {
+    display: inline;
+    float: right;
+    margin: 0 0 10px 10px;
+}
+
+.serendipity_imageComment_center {
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+.serendipity_imageComment_img img {
+    border: none!important;
+    margin: 0!important;
+}
+
+.serendipity_imageComment_txt {
+    background: #000;
+    border-top: 0 none;
+    clear: both;
+    color: #fff;
+    font-size: 9pt;
+    margin: 0;
+    padding: 2px 0;
+    text-align: center;
+}
+
+.invisible,
+.container_serendipity_syndication_plugin .serendipity_xml_icon {
+    position: absolute;
+    left: -9999em;
+}
+
+.serendipity_commentDirection {
+    font-size: 9pt;
+    margin: 7px 0;
+    padding: 0;
+}
+
+.serendipity_footerplugins {
+    background: url('img/bg-trans.png') repeat;
+    padding: 8px 10px;
+    margin: 8px 0;
+    color: #fff;
+    border: 1px solid #111;
+}
+
+.serendipity_freeTag {
+    background: url('img/tags.gif') left center no-repeat;
+    display: block;
+    font-size: 100%;
+    margin: 7px 5px 7px 0;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.serendipity_freeTag a {
+    font-size: 100%;
+    text-decoration: none;
+}
+
+.archive-year strong {
+    display: inline-block;
+    font-weight: normal;
+    font-size: 100%;
+    width: 150px;
+}
+
+#pages-found a:hover,
+#pages-found a:focus,
+.archive-year a:hover,
+.archive-year a:focus,
+#archive-summary a:hover,
+#archive-summary a:focus,
+.serendipity_freetag_taglist a:hover,
+.serendipity_freetag_taglist a:focus,
+.serendipity_footerplugins a:hover,
+.serendipity_footerplugins a:focus {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.serendipity_freeTag_related {
+    display: block;
+    font-size: 100%;
+    margin: 7px 0;
+    text-align: left;
+}
+
+.freetag_cloud h2 {
+    font-size:15pt;
+    font-weight:normal;
+    letter-spacing:-2px;
+}
+
+.serendipity_freetag_taglist { margin: 0 0 14px; }
+
+.commentlist li.odd { background: #000; }

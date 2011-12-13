@@ -1,0 +1,497 @@
+/*
+Theme Name: Be Nice
+Theme URI: http://blog.gigadesign.be/?page_id=36
+Description: Be Nice, my first WPTheme and i'am so proud
+Version: 1.0
+Author: Creeten Mark
+Author URI: http://www.gigadesign.be/
+
+Ported to Serendipity by Carl Galloway
+http://www.carlgalloway.com
+*/ 
+
+* {
+	margin: 0;
+	padding: 0; }
+
+html, body {
+	text-align: center;
+	color: #494949;
+	font-size: small;
+	font-family: Verdana, Tahoma, Arial, Serif;
+	background : #627894 url({TEMPLATE_PATH}img/achter.gif) repeat-x top left; }
+
+.s9y_wrap {
+	background: #e4ecf8;text-align:left;padding-left:2px; }
+
+ul, ol {
+	margin : 10px 0 15px 15px; }
+
+ul li, ol li {
+	margin : 6px 0 3px 0; }
+
+dt { 
+	font-weight: 700; }
+
+dd {
+	margin: 1px 0 12px 15px; }
+
+fieldset {
+	border: none; }
+
+pre {
+	overflow:auto;
+	margin:0 0 18px 0;
+	padding:4px; }
+
+pre, code, kbr {
+	font-family:Courier, Monaco, monospace; }
+
+code {
+	padding: 5px;
+	background-color: #F3F7FC;
+	color: #363;
+	border: 1px solid #8F8F8F;
+	display: block;
+	margin: 10px 0; }
+
+blockquote {
+	padding: 5px 5px 5px 5px;
+	background-color: #F3F7FC;
+	color: #363;
+	border: 1px solid #8F8F8F;
+	display: block;
+	margin: 10px 110px 10px 20px; }
+
+abbr, acronym {
+	font-size: 0.9em;
+	letter-spacing: 1px;
+	border-bottom: 1px dotted;
+	cursor: help; }
+
+/*invulformulier dingen ------------------------------------------------------ */
+
+.serendipity_commentsTitle {
+	font: bold 1.2em Georgia, serif;
+	border-top: 1px solid;
+	padding: 10px 0 10px 13px;
+	color: #7EB40D;
+	background: url({TEMPLATE_PATH}img/documents.gif) no-repeat 0 50%;
+	margin-top: 10px; }
+
+#sidebar input, #sidebar select {
+	width: 96%;
+	margin: 5px 0 5px 5px;
+	border: 1px solid #507405;
+	padding: 2px 2px 3px 3px;
+	font-size: 0.9em;
+	color: #444;
+	vertical-align: middle;}
+
+#sidebar td input {width:150px;}
+
+#searchform input {
+	width: 92%;
+	margin: 5px 0 5px 5px;
+	border: 1px solid #507405;
+	padding: 2px 2px 3px 3px;
+	font-size: 0.9em;
+	color: #444;
+	vertical-align: middle;
+	background: #FFF url({TEMPLATE_PATH}img/mag_glass.gif) no-repeat 97% 50%; }
+
+/*weergave van reacties ---------------------------------------------*/
+
+.commentlist {
+	padding: 7px 3px 7px 15px; }
+
+.serendipity_comment {
+	margin: 8px 0;
+	letter-spacing: normal; }
+
+.comment_evenbox {
+	background-color: #D9E4F4;
+	border: 1px solid #B4C9E9;
+	padding: 8px 5px 8px 5px;
+	margin: 5px 0 15px 0; }
+
+.comment_oddbox {
+	background-color: #F3F7FC;
+	border: 1px solid #CCDDF2;
+	padding: 8px 5px 8px 5px;
+	margin: 5px 0 15px 0; }
+
+.comment_source_date {
+	font-size: smaller; }
+
+.serendipity_commentBody {}
+.comment_threaded_child0 {padding: 8px 5px 8px 5px;background: #F3F7FC; border:1px solid #CCDDF2;}
+.comment_threaded_child1 {margin-left:14px; padding: 8px 5px 8px 5px;background: #D9E4F4;border:1px solid #B4C9E9;}
+.comment_threaded_child2 {margin-left:30px;padding: 8px 5px 8px 5px;background: #F3F7FC;border:1px solid #B4C9E9;}
+
+/* enkele classes -----------------------------------------*/
+
+.cmtinfo, .serendipity_comment_source{
+	font: 0.9em Verdana, sans-serif;
+	border-left: 1px solid #8F8F8F;
+	padding: 0 0 0 5px; }
+
+.tagging {
+	margin: 6px 0 9px 3px; }
+
+.center, .serendipity_entrypaging {
+	border-bottom: 1px solid #C4C4C4;
+	border-top: 1px solid #C4C4C4;
+	margin: 12px 0 29px 0;
+	background-color: #D8E0F5;
+	height: 20px;
+	padding: 5px 3px 3px 3px;
+	color:#555; }
+
+.staticpage_navigation {
+	border-bottom: 1px solid #C4C4C4;
+	border-top: 1px solid #C4C4C4;
+	margin: 12px 0px 29px 10px;
+	background-color: #D8E0F5;
+	height: 20px;
+	padding: 5px 0 3px 0;
+	color:#555; }
+
+.smal {
+	font-size: smaller; }
+
+.big {
+	font-size: 2em;
+	font-weight: bold; }
+
+.niks {
+	display: none;
+	clear: both; }
+
+.left {
+	float: left;
+	width: 49%; }
+
+.previous {
+	float: left;
+	width:25%; }
+
+.entries_info {float:left;width:50%;text-align:center;}
+.next {
+	float: left;
+	width:25%;
+	text-align:right; }
+
+.right {
+	float: right;
+	width: 49%; }
+
+/* alles in het midden zetten ------------------------------------------------------- */
+
+#container, #mainpane, #footer, #navigation {
+	margin: 0 auto; }
+
+#container {
+	width: 768px;
+	text-align: left;
+	padding-top: 6px; }
+
+#mainpane {
+	background: url({TEMPLATE_PATH}img/faux.gif) repeat-y top left;
+	width: 758px;
+	overflow: hidden; }
+
+/* alle header stuff ----------------------------------*/
+
+#serendipity_banner {
+	background: url({TEMPLATE_PATH}img/header.gif) no-repeat top left;
+	height: 123px; }
+
+#serendipity_banner_alt {
+	background: url({TEMPLATE_PATH}img/header2.gif) no-repeat top left;
+	height: 123px; }
+
+#serendipity_banner h1, #serendipity_banner_alt h1 {
+	text-align: right;
+	padding: 19px 21px 0 0; }
+
+#serendipity_banner h4, #serendipity_banner_alt h4 {
+	font: italic 110% "Trebuchet MS", Verdana, serif;
+	padding: 10px 0 0 100px; }
+
+#serendipity_banner a, #serendipity_banner_alt a {
+	color:#FFF;
+	font:bold 40px "Trebuchet MS", serif;
+	text-decoration:none; }
+
+#serendipity_banner a:hover, #serendipity_banner_alt a:hover {
+	color:#F0A727; }
+
+/* navigatie dingen staan hier ---------------------------------------------------*/
+
+#navigation {
+	width:748px;
+	background-color:#FFF;
+	padding:1px 5px 5px 5px;
+	text-align:right; }
+
+#navigation ul {
+	margin:0;
+	height:25px;
+	background:#8AC708 url({TEMPLATE_PATH}img/navi.gif) repeat-x top left;
+	list-style-type:none; }
+
+#navigation ul li {
+	display:inline;
+	padding:5px 4px 2px 1px; }
+
+#navigation a {
+	font:1.4em "Times New Roman", "Trebuchet MS", serif;
+	color:#FFF;
+	text-decoration:none;
+	padding:3px; }
+
+#navigation a:hover {
+	background-color : #FFF;
+	color:#7BB407; }
+
+/* alles wat met posts te maken heeft ----------------------------------------------*/
+
+#content {
+	float:right;
+	width:73%;
+	text-align:left;
+	padding:0 10px 0 10px; }
+
+div#content h3.serendipity_title, div#content h4.serendipity_title {
+	font:bold 1.5em/1.0em Georgia, "Trebuchet MS", serif;
+	border-bottom:1px solid #D5D5D5;
+	margin:8px 0 5px;
+	color:#CE4104; }
+
+div#content h2.serendipity_title {
+	font: bold 1.9em/1.0em Georgia, "Trebuchet MS", serif;
+	border-bottom: 1px solid #D5D5D5;
+	margin: 8px 0 5px;
+	color: #80B60C; }
+
+div#content h1.cal {
+	background: url({TEMPLATE_PATH}img/cal.gif) no-repeat 0 50%;
+	padding-left: 25px; }
+
+div#content h1.cat {
+	background: url({TEMPLATE_PATH}img/file.gif) no-repeat 0 50%;
+	padding-left: 25px; }
+
+div#content h3.serendipity_title a, div#content h4.serendipity_title a {
+	color: #CE4104;
+	text-decoration: none;
+	background: url({TEMPLATE_PATH}img/simple_arrow.gif) no-repeat 0 50%;
+	padding: 0 0 0 15px; }
+
+div#content h3.serendipity_title a:visited, div#content h3.serendipity_title a:active, div#content h4.serendipity_title a:visited, div#content h4.serendipity_title a:active {
+	color: #CE4104;
+	text-decoration: none; }
+
+div#content h3.serendipity_title a:hover, div#content h4.serendipity_title a:hover {
+	color: #466289;
+	background: url({TEMPLATE_PATH}img/simple_arrow_o.gif) no-repeat 0 50%; }
+
+div#content.archive h3 {
+	border-bottom: 2px dotted;
+	margin: 10px 0 5px 8px;
+	font-size: 1.1em;
+	color: #6A6A6A; }
+
+div#content a:link, .s9y_wrap a:link {
+	color: #75A907;
+	text-decoration: none; }
+
+div#content a:visited, .s9y_wrap a:visited {
+	color: #066;
+	text-decoration: none; }
+
+div#content a:hover, div#content a:active, .s9y_wrap a:hover, .s9y_wrap a:active {
+	text-decoration: underline;
+	color: #FA6121; }
+
+p.day-date, .commentmeta, .serendipity_date {
+	color: #6E6E6E;
+	margin: 6px 0 4px 10px;
+	font-size: 0.8em;
+	line-height: 1.3em;
+	border-left: 1px solid #8C8C8C;
+	padding: 0 0 0 4px; }
+
+div#content p.day-date span.editlink a {
+	background: url({TEMPLATE_PATH}img/wrench.gif) no-repeat 0 50%;
+	color: #E7E7E7;
+	text-decoration: none;
+	padding: 0 0 0 15px; }
+
+div.serendipity_entry_body, div.serendipity_entry_extended {
+	color: #494949;
+	font-size: 1.0em;
+	line-height: 1.1em;
+	padding: 10px 9px 0 10px; }
+
+.staticpage_author, .staticpage_metainfo {margin-left:10px;}
+
+div.post-content ul, div.post-content ol {
+	margin: 3px 0 5px 25px; }
+
+div.post-content ul li, div.serendipity_entry_body ul li, div.serendipity_entry_extended ul li {
+	background: transparent url({TEMPLATE_PATH}img/orange.gif) no-repeat 0 50%;
+	padding-left: 15px;
+	list-style: none; }
+
+.serendipity_entryFooter {
+	margin:10px 0 5px 0;
+	text-align:right;
+	color : #494949;
+	font-size : 0.8em;
+	line-height:0.9em; }
+
+.serendipity_entryFooter_comment {
+	clear:both;
+	font: 0.8em Verdana, sans-serif;
+	border-bottom: 1px solid #D5D5D5;
+	border-top: 1px solid #D5D5D5;
+	margin: 12px 0 35px 0;
+	padding: 6px 0 3px 14px;
+	background: #EEF2FB url({TEMPLATE_PATH}img/speech_bubble.gif) no-repeat 0 50%; }
+
+.serendipity_entryFooter_trackback {
+	padding: 6px 0 3px 19px;
+	background: url({TEMPLATE_PATH}img/trackbacks.gif) no-repeat 0 50%; }
+
+a.more {
+	background: url({TEMPLATE_PATH}img/book.gif) no-repeat 0 50%;
+	margin-left: 10px;
+	padding: 0 0 0 15px; }
+
+a.permalink {
+	padding-left: 16px;
+	background: transparent url({TEMPLATE_PATH}img/permalink.gif) no-repeat 0% 50%; }
+
+
+/* dingen voor de zijkant ---------------------------------------------------------*/
+
+#sidebar {
+	vertical-align:top;
+	float: left;
+	width: 170px;
+	margin: 0 0 0 3px; }
+
+.serendipitySideBarTitle {
+	font: bold 1em Georgia, serif;
+	margin: 18px 0 10px 4px;
+	background: url({TEMPLATE_PATH}img/cube.gif) no-repeat 0 50%;
+	padding: 0 0 0 14px;
+	color: #555; }
+
+.serendipitySideBarContent {
+	list-style-type: none;
+	margin: 0 0 5px 15px;
+	font: 0.9em/1.2em Tahoma, Arial, serif;
+	color:#e6f6e6; }
+
+.serendipitySideBarContent a, .serendipitySideBarContent a:visited {
+	text-decoration: none;
+	color: #555; }
+
+#sidebar a:hover, #sidebar a:active {
+	text-decoration: underline;
+	color: #B83903; }
+
+
+
+/* footer stuff staat hier ---------------------------------------------*/
+
+#footer {
+	clear: both;
+	background: url({TEMPLATE_PATH}img/onder.gif) no-repeat;
+	height: 45px;
+	width: 768px;
+	margin: 0 0 15px 0; }
+
+#footer a {
+	font-weight: bold;
+	text-decoration: none;
+	color: #066; }
+
+#footer a:visited {
+	font-weight: normal;
+}
+
+#footer a:hover, #footer a:active {
+	color: #066;
+	text-decoration: underline; }
+
+#footer p {
+	padding: 14px 0 0 0;
+	font: 0.8em Verdana, sans-serif;
+	text-align: center; }
+
+.serendipity_center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; }
+
+.serendipity_msg_important {
+    color: red; }
+
+.serendipity_msg_notice {
+    color: green; }
+
+img.serendipity_freeTag_xmlButton {
+	border:none;
+	padding-left:2px;
+	vertical-align:bottom; }
+
+
+
+/********* Embedded images with the s9y image manager *********/
+
+/* container for images and text */
+.serendipity_imageComment_center, .serendipity_imageComment_left, .serendipity_imageComment_right {
+	margin:0 0 20px 0;
+	padding:10px;
+	border:1px solid #c0c0c0;
+	background-color:#fafbfc;
+	color:#505050;
+	line-height:1.5em; }
+
+/* style to center image and text within entry */
+.serendipity_imageComment_center {
+	display:block; margin:0 auto 5px auto; }
+
+/* style to left align image and text within entry */
+.serendipity_imageComment_left {
+	float:left; margin:0 12px 5px 0; }
+
+/* style to right align image and text within entry */
+.serendipity_imageComment_right {
+	float:right; margin:0 0 5px 12px; }
+
+/* styles for the images */
+.serendipity_imageComment_img, .serendipity_imageComment_img img {
+	text-align: center; }
+
+/* styles for the text below the image if used */
+.serendipity_imageComment_txt {
+     clear: both;
+     text-align: center; }
+
+div.serendipity_entry_body img.emoticon, div.serendipity_entry_extended img.emoticon, .serendipity_entryIcon {
+	background:transparent;
+	border:none; 
+	padding:0; 
+	margin:0; }
+
+img.serendipity_entryIcon {
+	float:right;
+	margin:0 0 5px 5px;
+	padding:0; }
+
+/********* End of Image Manager Styles *********/

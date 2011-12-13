@@ -1,0 +1,3 @@
+Name: Ladybird 1.0 (2008-02-14)
+Author: Jude Anthony - restyled by David Cummins
+Date: 2006-1-29

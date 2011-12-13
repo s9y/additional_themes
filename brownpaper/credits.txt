@@ -1,0 +1,15 @@
+Credits
+
+The following photoshop tutorials were used:
+	http://www.alanhettinger.com/tutorials/wornpaper/001.php
+	http://www.timfx.com/tutorials/old_paper/
+	
+This theme is a modification of the following theme
+
+Name: Serendipity v2.3
+Author: Tom Sommer
+Date: 12/8-2004
+Require Serendipity: 0.8
+
+RSS feed icons from
+http://www.carlgalloway.com/archives/109-Selection-of-colorful-feed-icons-to-download.html

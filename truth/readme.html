@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<p>Truth Template MODS: </p>
+<p>Just upload the truth template into your templates folder. Here are a few simple instructions to get you going. </p>
+<p>To Change Categories Icons </p>
+<p>Change plugin_internal.inc.php </p>
+<p>Line958 </p>
+<p>$image = $this-&gt;get_config('image', serendipity_getTemplateFile('img/nav_icon_c.gif'));</p>
+<p>Line 992</p>
+<p>$html .= '&lt;a href=&quot;'. serendipity_rewriteURL(PATH_FEEDS .'/'. PATH_CATEGORIES .'/'. serendipity_makePermalink(PERM_FEEDS_CATEGORIES, array('id' =&gt; $cat['categoryid'], 'title' =&gt; $cat['category_name']))) .'&quot;&gt;&lt;img src=&quot;../templates/truth/img/nav_icon_c.gif&quot; alt=&quot;Catagories&quot; style=&quot;border: 0px&quot; /&gt;&lt;/a&gt; ';</p>
+<p>To change Static Pages Icons I have included the static pages plugin of the base template directory. Stick that into your serendipity plugins folder. </p>
+<p>The rest is a matter of changing the index.tpl file the sidebar.tpl file and style.css to suit your tastes.</p>
+<p>A link back to <a href="http://www.truthrealization.com/">http://www.truthrealization.com/</a> or <a href="http://www.dhtmlnirvana.com/">http://www.dhtmlnirvana.com/</a> is appreciated. </p>
+<p>You can also email me with any bugs at <a href="mailto:etraversa@dhhtmlnirvana.com">etraversa@dhhtmlnirvana.com</a></p>
+<p>There will be DHTML Version of this template coming shortly so keep an eye out for that if interested. </p>
+<p>Thanks</p>
+<p>Eddie Traversa</p>
+</body>
+</html>

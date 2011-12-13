@@ -1,0 +1,146 @@
+/*** Styles used by s9y ***/
+.serendipity_entry_extended { clear: both; }
+
+.serendipity_pageFooter {
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.serendipity_center {
+    margin: 5px auto 10px;
+    text-align: center;
+}
+
+.serendipity_msg_important {
+    color: red;
+    margin: 1em;
+}
+.serendipity_msg_notice {
+    color: green;
+    margin: 1em;
+}
+/*** /Styles used by s9y ***/
+
+#content .post h3 {
+    padding: 6px 0 6px 0;
+    margin: 22px 0 4px 0;
+}
+
+/*** Comment form ***/
+#commentform p select {
+    margin: 5px 5px 1px 0;
+    width: 170px;
+}
+
+#checkbox_remember,
+#checkbox_subscribe { width: 15px!important; }
+/*** /Comment form ***/
+
+/*** s9y image manager ***/
+.serendipity_imageComment_center,
+.serendipity_imageComment_left,
+.serendipity_imageComment_right {
+    border: 1px dotted #b6b6b6;
+    background-color: #f2f2f2;
+    padding: 0;
+    text-align: center;
+}
+
+.serendipity_imageComment_center {
+    margin: 10px auto 5px;
+}
+
+.serendipity_imageComment_left {
+    float: left;
+    margin: 0 10px 5px 0;
+}
+
+.serendipity_imageComment_right {
+    float: right;
+    margin: 0 0 5px 10px;
+}
+
+.serendipity_imageComment_img,
+.serendipity_imageComment_img img {
+    margin: 0!important;
+    padding: 0!important;
+    border: none!important;
+    text-align: center;
+}
+
+.serendipity_imageComment_txt {
+    border-top: 1px dotted #b6b6b6;
+    margin: 0;
+    padding: 1%;
+    clear: both;
+    font-size: 80%;
+    text-align: center;
+}
+
+#rightcol .serendipity_imageComment_center,
+#rightcol .serendipity_imageComment_left,
+#rightcol .serendipity_imageComment_right { display: none!important; }
+/*** /s9y image manager ***/
+
+/*** freetag ***/
+.serendipity_freeTag {
+    background:#eef5e1;
+    display: inline;
+    font-size: 0.95em;
+    margin: 0;
+    padding: 3px 6px;
+    text-align: left;
+    width: auto;
+}
+
+.serendipity_freeTag a { font-size: 0.95em; }
+.serendipity_freeTag a:hover { color:#333; }
+
+.serendipity_freeTag_related {
+    display: block;
+    font-size: 0.95em;
+    margin: 15px 0;
+    text-align: left;
+}
+
+.serendipity_freetag_taglist {
+    background-color: #eef5e1;
+    border: none;
+    margin: 0 0 15px 0;
+    padding: 5px;
+    text-align: justify;
+}
+
+.serendipity_freetag_taglist_related {
+    color: #5f5f5f;
+    font: 1em Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    margin-bottom:4px;
+    text-transform: uppercase;
+}
+/*** /freetag ***/
+
+/*** static pages ***/
+.staticpage_navigation { margin-top: 10px; }
+/*** /static pages ***/
+
+/*** archives ***/
+.archives_header h3,
+.summary_title { font-size: 1.2em; }
+
+.archives_row td { padding: 2px 3px; }
+
+.archiverule { margin: 10px 0 5px; }
+/*** /archives ***/
+
+.serendipity_entrypaging,
+#response { margin-top: 22px; }
+
+ul, ol { margin: 15px 0; }
+
+/*** karma plugin ***/
+.serendipity_karmaVoting_links li {
+    margin: 0!important;
+}
+/*** /karma plugin ***/

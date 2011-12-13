@@ -1,0 +1,590 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #FFFFFF url({TEMPLATE_PATH}images/img01.gif) repeat-x;
+	font: normal small Verdana, Arial, Helvetica, sans-serif;
+	color: #959595;
+}
+
+h1, h2, h3 {	
+}
+
+h1 {
+}
+
+h2 {
+}
+
+h3 {
+	margin-bottom: 1em;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: x-small;
+}
+
+p, blockquote, ul, ol {
+	margin-bottom: 2em;
+	line-height: 1.6em;
+}
+
+p {
+}
+
+blockquote {
+	margin-left: 2em;
+	margin-right: 2em;
+	padding: 1em 1em 0 1em;
+	text-align: center;
+	font-style: italic;
+}
+
+ul {
+	list-style: none;
+}
+
+ul li {
+}
+
+ol {
+	list-style-position: inside;
+}
+
+ol li {
+}
+
+a {
+	color: #666666;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #000000;
+}
+
+img {
+}
+
+/* Page Elements */
+
+ 
+ input,  textarea {
+	 font-size: x-small;
+}
+ 
+
+#mainpane {
+ 
+	clear: both;
+	width: 760px;
+	margin: 0 auto;
+
+}
+
+
+/* Menu */
+
+#menu {
+	width: 760px;
+	height: 50px;
+	margin: -50px auto 0 auto;
+}
+
+#menu ul {
+	float: right;
+	margin: 0;
+	list-style: none;
+}
+
+#menu li {
+	display: inline;
+}
+
+#menu a {
+	position: relative;
+	margin-left: 1.6em;
+	text-decoration: none;
+	text-transform: uppercase;
+	border-bottom: 5px solid #CC6600;
+	font-size: xx-small;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+#menu a:hover, #menu .active a {
+	border-bottom-color: #000000;
+	color: #CCCCCC;
+}
+
+
+
+#content {
+ 
+	margin-bottom:10px;
+}
+ 
+
+/* header */
+
+#header {
+	width: 760px;
+	height: 70px;
+	margin: 0 auto;
+	padding: 40px 0 0 0;
+}
+
+#header h1 {
+	float: left;
+	letter-spacing: -2px;
+	font-size: 3em;
+}
+
+#header h2 {
+	float: left;
+	font-size: 1em;
+}
+
+#header a {
+	text-decoration: none;
+	text-transform: lowercase;
+	font-weight: normal;
+	color: #FFFFFF
+}
+
+ .serendipity_entry {
+	 
+}
+.posttime {
+	 font-size: x-small;
+	 line-height:120%;
+}
+.serendipity_entry_body_folded, .serendipity_entry_body_unfolded, .serendipity_entry_extended {
+}
+
+div.serendipity_Entry_Date {
+ 
+	font-size: small;
+}
+
+.serendipity_date {
+	 
+	font-size: xx-small;
+}
+
+.serendipity_commentTitle {
+	 
+}
+
+div.serendipity_entryFooter {
+	
+	font-size: xx-small;
+	text-align: left;
+ 
+}
+
+img.serendipity_entryIcon {
+	 float: left;
+	 margin:3px 10px 10px 0;
+	 border: 1px solid #efefef;
+}
+
+td.serendipity_commentsLabel {
+	 font-size: x-small;
+	 font-weight: bold;
+	 vertical-align: top;
+}
+
+td.serendipity_commentsValue input, td.serendipity_commentsValue select, td.serendipity_commentsValue textarea {
+	width: 200px;
+	border: 1px solid #333;
+	padding: 2px;
+}
+
+.serendipity_commentForm {
+	 font-size:x-small;
+	 margin-bottom: 13px;
+	 margin-right: 10px;
+	 margin-left: 10px;
+	 
+}
+.serendipity_comment {
+	 width:200px;
+	 font-size: x-small;
+	 border-right: 1px dotted #BBB;
+	 overflow: auto;
+}
+
+.serendipity_comment_source {
+	 margin-top: 5px;
+	 padding-left: 5px;
+}
+
+td.serendipity_admin {
+	 padding: 10px;
+}
+
+a {	
+	 text-decoration:none;
+}
+
+a:hover {
+	 color:#666666;
+	 text-decoration:underline;}
+
+table.serendipity_calendar td {
+	text-align: center;
+}
+table.serendipity_calendar a {
+	text-decoration:underline;
+}
+
+table.serendipity_calendar a:hover {
+	text-decoration: none;
+}
+
+td.serendipity_weekDayName {
+	text-align: center;
+	font-weight: normal;
+}
+td.serendipity_calendarHeader a:link, td.serendipity_calendarHeader a:visited, td.serendipity_calendarHeader a:hover {
+	color: #135022;
+	font-size: x-small;
+	text-align: left;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 3px;
+	letter-spacing: .25em;
+	text-decoration: none;
+}
+
+
+.serendipitySideBarContent img {  border:none;
+                                   align:bottom;}
+/* Container for each item on the side bar */
+div.serendipitySideBarItem {
+ 
+}
+
+/* title of an individual item */
+ 
+
+.serendipityImageButton {
+	 cursor: pointer;
+}
+
+td.serendipitySideBar {
+	  
+
+}
+
+div.serendipity_admin_title {
+	 font-size: 22px;
+	 font-weight: bold;
+	 margin-bottom: 12px;
+}
+
+div.serendipity_admin_list_title {
+	 font-size: 12px;
+	 font-weight: bold;
+	 margin-bottom: 8px;
+}
+
+td.serendipity_admin_list_item {
+	 border: dashed 1px #000000;
+}
+
+.serendipity_entry p {
+	  
+}
+.serendipity_entry b {
+	 
+}
+.serendipity_entry i {
+	 color:#135022;
+}
+
+/** Embedded images with the s9y image manager **/
+.serendipity_imageComment_center,
+.serendipity_imageComment_left,
+.serendipity_imageComment_right {
+    border: 1px solid black;
+    background-color: #EFEFEF;
+    margin: 3px;
+}
+
+.serendipity_imageComment_center {
+    margin: 0px;
+}
+
+.serendipity_imageComment_left {
+    float: left;
+}
+
+.serendipity_imageComment_right {
+    float: right;
+}
+
+.serendipity_imageComment_img,
+.serendipity_imageComment_img img {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    text-align: center;
+}
+
+.serendipity_imageComment_txt {
+    margin: 0px;
+    padding: 3px;
+    clear: both;
+    font-size: xx-small;
+    text-align: center;
+}
+.serendipity_admin_list_item_even {
+	background-color: #fefefe;
+}
+
+.serendipity_admin_list_item_uneven {
+	background-color: #eee;
+}
+
+.serendipity_admin_filters {
+	border: 1px dashed;
+	background-color: #FFFFFF;
+	font-size: 10px;
+	margin-bottom: 10px;
+	padding: 2px;
+}
+
+.serendipity_admin_filters_headline {
+	border-bottom: 1px solid;
+}
+
+.serendipity_admin_sortorder {
+	font-size: 10px;
+	text-align: center;
+}
+
+.serendipity_admin_sortorder input, .serendipity_admin_sortorder select, .serendipity_admin_filters input, .serendipity_admin_filters select {
+	font-size: 10px;
+}
+
+.serendipity_comments {
+}
+
+.serendipity_center {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.serendipity_msg_important {
+	color: red;
+	font-weight: bold;
+	font-size: small;
+}
+
+.serendipity_msg_notice {
+	color: green;
+	font-weight: bold;
+	font-size: small;
+}
+
+.serendipity_entry_author_self {
+}
+
+.serendipity_comment_author_self {
+	border-right: 1px dashed #B22222;
+}
+
+
+.serendipity_entry blockquote {
+		margin-left: 2em;
+		margin-right: 2em;
+		padding: 1em 1em 0 1em;
+		text-align: center;
+	font-style: italic;
+}
+.emoticon {border:none;}
+
+
+
+/* Column One */
+
+#serendipityRightSideBar {
+	float: right;
+	width: 180px;
+	margin-left: 5px;
+}
+
+#serendipityRightSideBar .boxed {
+	margin-bottom: 10px;
+}
+
+#serendipityRightSideBar .boxed .title {
+	height: 20px;
+	padding: 10px 0 0 10px;
+	background: url({TEMPLATE_PATH}images/img02.gif) no-repeat;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 10px;
+	color: #FFFFFF;
+}
+
+#serendipityRightSideBar .boxed .content {
+	padding: 9px;
+	background: #E8EDE5 url({TEMPLATE_PATH}images/img03.gif) repeat-x;
+	border: 1px solid #648952;
+	border-top: none;
+	font-size: xx-small;
+}
+
+#serendipityRightSideBar .boxed .content form {
+}
+
+#serendipityRightSideBar .boxed .content fieldset {
+	border: none;
+}
+
+#serendipityRightSideBar .boxed .content legend {
+	display: none;
+}
+
+#serendipityRightSideBar .boxed .content label {
+	display: block;
+	font-size: xx-small;
+	font-weight: bold;
+}
+
+#serendipityRightSideBar .boxed .content .textfield {
+	width: 148px;
+	margin: 0 0 5px 0;
+	padding: 3px 5px;
+	border: 1px solid #C8C8C8;
+	background: #FAFAFA url({TEMPLATE_PATH}images/img04.gif) repeat-x;
+	font: normal x-small Verdana, Arial, Helvetica, sans-serif;
+	color: #464646;
+}
+
+#serendipityRightSideBar .boxed .content .button {
+	float: right;
+	width: 70px;
+	height: 18px;
+	margin: 0 0 5px 0;
+	padding: 0;
+	border: 1px solid #464646;
+	background: #FAFAFA url({TEMPLATE_PATH}images/img05.gif) repeat-x;
+	font: normal x-small Verdana, Arial, Helvetica, sans-serif;
+	color: #464646;
+}
+
+#serendipityRightSideBar .boxed .content .tiny {
+	clear: both;
+	margin: 0;
+	font-size: x-small;
+}
+
+#serendipityRightSideBar .boxed .content .tiny a {
+	padding: 0 0 0 10px;
+	background: url({TEMPLATE_PATH}images/img06.gif) no-repeat left bottom;
+}
+
+/* Column Two */
+
+#col-two {
+	float: left;
+	width: 380px;
+ 
+}
+
+#col-two .boxed {
+	margin-bottom: 10px;
+	padding-bottom:10px;
+}
+
+#col-two .boxed .title {
+	height: 20px;
+	padding: 10px 0 0 10px;
+	background: url({TEMPLATE_PATH}images/img07.gif) no-repeat;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 10px;
+	color: #FFFFFF;
+}
+
+#col-two .boxed .title a {
+	
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 10px;
+	color: #FFFFFF;
+	text-decoration:none;
+}
+
+#col-two .boxed .content {
+	padding: 19px 19px 0 10px;
+	background: #E5ECED url({TEMPLATE_PATH}images/img08.gif) repeat-x;
+	border: 1px solid #528489;
+	border-top: none;
+}
+
+#col-two .boxed blockquote {
+	background: #E5ECED url({TEMPLATE_PATH}images/img08.gif) repeat-x;
+}
+
+/* Column Three */
+
+#serendipityLeftSideBar {
+	float: right;	
+	width: 180px;
+	margin-right: 10px;
+	 
+}
+
+#serendipityLeftSideBar .boxed {
+	margin-bottom: 10px;
+	margin-left: 10px;
+	
+	
+}
+
+#serendipityLeftSideBar .boxed .title {
+	height: 20px;
+	padding: 10px 0 0 10px;
+	background: url({TEMPLATE_PATH}images/img09.gif) no-repeat;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 10px;
+	color: #FFFFFF;
+}
+
+#serendipityLeftSideBar .boxed .content {
+	padding: 19px 19px 0 10px;
+	background: #EFEBE2 url({TEMPLATE_PATH}images/img10.gif) repeat-x;
+	border: 1px solid #977C44;
+	border-top: none;
+	font-size: xx-small;
+}
+
+#serendipityLeftSideBar .boxed .content li {
+	margin-left: -1em;
+	padding-left: 1em;
+	xbackground: url({TEMPLATE_PATH}images/img12.gif) no-repeat 0 9px;
+	letter-spacing: normal;
+}
+
+/* Footer */
+
+#footer {
+	clear: both;
+	padding: 30px 0 50px 0;
+	background: #464646 url({TEMPLATE_PATH}images/img13.gif) repeat-x;
+}
+
+#footer p {
+	width: 760px;
+	margin: 0 auto;
+	font-size: x-small;
+}
+

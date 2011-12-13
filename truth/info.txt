@@ -1,0 +1,4 @@
+Name: Truth (2008-02-14)
+Author: Eddie Traversa
+Date: 7/11-2005
+Require Serendipity: 0.8

@@ -1,0 +1,41 @@
+a .desc {
+     color: #00f1f4; }
+
+.title {color: #00f1f4; }
+
+h3.serendipity_title, h4.serendipity_title, .serendipity_date, .serendipity_commentsTitle {
+     color: #00f1f4; }
+
+.serendipity_title a:link, .serendipity_title a:visited, .serendipity_title a:hover {
+     color: #00f1f4; }
+
+.posttime {
+     color:#00f1f4; }
+
+.serendipity_entry_body a, .serendipity_entry_extended a {
+     color: #00f1f4; }
+
+.serendipity_commentsTitle {
+     color: #00f1f4; }
+
+.serendipity_comment_author_self {
+	border: 3px solid #00f1f4;}
+
+.oddbox {
+     border: 1px solid #00f1f4; }
+
+.serendipitySideBarTitle {
+     color: #00f1f4; }
+
+/* style used by recent entries plugin */
+.serendipitySideBarDate {
+     color:#00f1f4; }
+
+table.serendipity_calendar a, table.serendipity_calendar a:link, table.serendipity_calendar a:visited {
+     color: #00f1f4; }
+
+td.serendipity_calendarHeader a:link, td.serendipity_calendarHeader a:visited, td.serendipity_calendarHeader a:hover {
+     color: #00f1f4; }
+
+.highlight {
+     color: #00f1f4; }

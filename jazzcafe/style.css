@@ -1,0 +1,646 @@
+/* jazzcafe theme - screen styles */
+
+body {
+	background: #A72002 url("{TEMPLATE_PATH}images/bg-tile.png") 0 0 repeat-x;
+	margin: 20px 0;
+	text-align: center;
+	font-family: georgia, times, serif;
+	font-size: 100%;
+	font-weight: normal;
+	line-height: 140%;
+	color: #000;
+}
+
+#container {
+
+	background-color: #fff;
+
+	margin: 0 auto;
+
+	padding: 10px;
+
+	width: 750px;
+
+	text-align: left;
+
+	background: #fff;
+
+	font-size: 80%;
+
+}
+	
+#page {
+	background-color: #fff;
+	margin: 0 auto;
+	padding: 10px;
+	width: 750px;
+	text-align: left;
+	background: #fff;
+	font-size: 80%;
+}
+	
+#header { 
+	background: #fff url("{TEMPLATE_PATH}images/banner.jpg") 50% 0 no-repeat;
+	height: 185px;
+	margin: 0;
+	text-align: center;
+}
+	
+#content {
+	background: #fff url("{TEMPLATE_PATH}images/bg-content.png") 0 0 repeat-y;
+	border-top: 1px solid #F3D7C7;
+	border-right: 1px solid #EEC1A9;
+	border-bottom: 1px solid #F3D7C7;
+	border-left: 1px solid #EEC1A9; 
+	margin-top: 7px;
+}
+
+/* Serendipity Start
+
+img.categoryIcon {
+    float: right;
+    border: 0px;
+    margin: 5px;
+}
+#serendipityQuickSearchTermField {
+    width: 90%;
+}
+
+/* Serendipity finish */
+#main { 
+	background-color: transparent;
+	float: left;
+	width: 500px;
+	margin: 0; 
+	padding: 10px;
+}
+
+#search {
+	background-color: #000;
+	font-family: verdana, sans-serif;
+	height: 30px;
+	margin: 10px 0;
+	padding: 0;
+}
+	
+#sidebar {
+	background-color: transparent;
+	margin-left: 530px;
+	padding: 0 10px 0 0;
+}
+	
+/*Stretcher Styles */
+#sidebar .stretcher {
+	background: none !important;
+	background: transparent;
+	height:100%;
+
+}
+
+#footer {
+	background: #fff url("{TEMPLATE_PATH}images/footer.jpg") 50% 0 no-repeat;
+	margin-top: 10px;
+	padding: 0px;
+	height: 35px;
+}
+#s9y_debug{
+	display: none;
+}
+/*- LINKS -*/
+#sitename { border: none; color: #fff; font-size: 1em; text-decoration: none; }
+#sitename h1 a { border: none; color: #fff; font-size: 2em; text-decoration: none; }
+#sitename h2 { color: #fff; padding-top: .2em; font-size: 1.5em; letter-spacing: .1em; }
+a {
+  	color: #A72002;
+	text-decoration: none;
+	border-bottom: 1px dotted #A72002;
+}
+	
+a:hover { color: #A72002; border-bottom: 1px solid #A72002; }
+
+/*- UTILITY -*/
+  
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+  	margin: 0;
+	padding: 0;
+}
+	
+form, div { padding: 0; margin: 0; }
+p { margin: 0 0 1em 0; padding: 0; }
+img { border: 0; }
+strong { color: #951C02; }  
+
+.navigation {     display:none;         }
+/*- HEADER -*/
+  
+#logo { padding-top: 50px; }
+#logo h1 a { border: none; color: #fff; font-size: 2em; text-decoration: none; }
+#logo h2 { color: #fff; padding-top: .2em; font-size: 1.5em; letter-spacing: .1em; }
+
+/* SEARCH -*/
+
+#sform { color: #fff; font-size: 85%; padding: 4px 0 0 5px; }
+ 
+#sidebar #searchform #s {
+	width: 130px;
+	margin-top: 20px;
+}
+
+#sidebar #searchsubmit {
+	padding: 1px;
+}
+	
+#search-results {
+	padding: 2px;
+}
+
+input, textarea, select {
+	background:#D87243 url("{TEMPLATE_PATH}images/bg-main.png") 0 0 repeat-y;
+ 	border: none;
+        font-size:small;
+	color: #fff;
+}
+
+input[type=text]:focus, textarea:focus {
+	border:none;
+	background: none;
+        background-color: #fff;
+        font-size: small;
+	color: #ff0000;
+	padding-left: .2em;
+}
+
+/*- POST -*/
+
+.post {
+	margin: 0 0 5px 5px;
+	padding: 10px 0 50px 0;
+}
+	
+.post h2 {
+	background: url("{TEMPLATE_PATH}images/floral.gif") no-repeat 0 40%;
+	font-size: 150%;
+	padding: 0 0 0 30px;
+	font-weight: bold;
+}
+	
+.post h2 a {
+  	color: #A72002;
+	text-decoration: none;
+	border: none;
+}
+	
+.post h2 a:hover {
+ 	color: #000;
+}
+
+.post h3 {
+  	font-size: 120%;
+	font-weight: bold;
+	padding: 0;
+}
+	
+.post h3 a {
+	color: #A72002;
+	text-decoration: none;
+	border: none;
+	}
+	
+.post h3 a:hover {
+	background-color: transparent;
+	color: #000;
+}
+
+
+
+
+
+/* Begin Images */
+p img {
+    padding: 0;
+    max-width: 100%;
+    }
+
+/*  Using 'class="alignright"' on an image will (who would've
+    thought?!) align the image to the right. And using 'class="centered',
+    will of course center the image. This is much better than using
+    align="center", being much more futureproof (and valid) */
+    
+img.centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    
+
+
+.alignright {
+    float: right;
+    }
+    
+.alignleft {
+    float: left
+    }
+
+
+.imgright {
+        display: block;
+        border: 0;
+	float: right;
+        margin: 10px 0px 10px 10px;
+}
+
+.imgleft {
+        display: block;
+        border: 0;
+	float: left;
+        margin: 10px 10px 10px 0px;
+}
+
+/* End Images */	
+p.meta {
+  	font-size: 85%;
+	text-align: right;
+	margin: 0 5px 0 0;
+	padding: 0;
+}
+	
+p.auth {
+	font-size: 85%;
+	font-weight: bold;
+	margin-left: 0;
+ 	padding: 0;
+	color: #666;
+}
+
+.post ul {
+	font-size: 1em;
+ 	list-style-type: none;
+	margin: 0 0 1em 1.5em;
+ 	padding: 0;
+}
+ 		
+.post ul li {
+	background: transparent url("{TEMPLATE_PATH}images/bullet.gif") 0 50% no-repeat;
+ 	padding-left: 12px;
+}
+
+.post blockquote {
+	background-color: transparent;
+	background: transparent url("{TEMPLATE_PATH}images/q-open.gif") 0 0 no-repeat;
+	font-style: italic;
+	margin: .2em 2em .2em 2em;
+	padding: .4em .4em .4em 2.5em;
+}
+
+.post pre {
+	background-color: #fff;
+	border: 1px solid #efefef;
+	padding: .4em;	
+}
+
+h4.blueblk {
+ 	background: transparent;
+	color: #A72002;
+	font-weight: bold;
+ 	padding: 0;
+ 	margin: 10px 5px;
+	border-bottom: 1px dotted #EEC1A9;
+}
+/* Calendar Styles */ 
+table.serendipity_calendar td {
+    font-size:11px;
+    padding: 2px;
+    color:#fff;
+}
+table.serendipity_calendar a {
+    color: #FFF;
+    font-weight: bold;
+    text-decoration:none;
+}
+
+table.serendipity_calendar a:hover {
+    text-decoration: none;
+}
+
+td.serendipity_weekDayName {
+    font-size:10px;
+    font-weight:bold;
+}
+td.serendipity_calendarHeader a:link,
+td.serendipity_calendarHeader a:visited,
+td.serendipity_calendarHeader a:hover {
+    border: 0;
+    text-decoration: none;
+}
+
+/*- SIDEBAR -*/
+  
+#sidebar h3 {
+	background: #A72002 url("{TEMPLATE_PATH}images/bg-sidebar-h.png") no-repeat 60% 80%;
+	border: 1px solid #780C04;
+	color: #fff;
+	font-weight: 400;
+        font-size:95%;
+	letter-spacing: .1em;
+	margin: 5px 0 10px 0;
+	padding: 0 10px 0 5px;
+}
+
+#sidebar h3 a {
+	color: #760C00;
+	border-bottom: 1px dotted #760C00;
+}
+
+#sidebar h3 a:hover { color: #85ab02; border-bottom-color: #85ab02; }
+
+#sidebar ul {
+	list-style-type: none;
+ 	margin: 0 0 10px 10px;
+ 	padding: 0 0 30px 0;
+}
+
+
+#sidebar ul li
+{
+/* 	background: transparent url("{TEMPLATE_PATH}images/bullet.gif") 0 50% no-repeat;  */
+ 	padding-left: 6px;
+        padding-bottom: 10px;
+}
+#sidebar ul li .stretcher {
+	background: none !important;
+	background: transparent;
+	height:100%;
+
+}
+
+
+#sidebar a {
+  	color: #fff;
+	text-decoration: none;
+	border-bottom: 1px dotted #fff;
+}
+	
+#sidebar a:hover { color: #fff; border-bottom: 1px solid #fff; }
+
+#sidebar a.powered { border: none; text-decoration: none;}
+#sidebar a.powered img { border-bottom: none; margin-top: 20px; }
+
+/*- FLICKR -*/
+
+#flickr {
+	height: 250px;
+}
+ 	 
+#flickr div img {
+ 	border: 4px solid #fff;
+}
+ 	
+#flickr div {
+	width: 108px;
+ 	border: 2px solid #dedede;
+ 	margin-bottom: 5px;
+}
+
+#flickr div.flickrsquare { 
+        width: 82px;
+        border: 1px solid #80180F;
+        float:left;
+        margin-right: 5px;
+}
+
+#flickr div a { border: none }
+#flickr div a:hover { border: none }
+
+#flickr h3 a {
+	border-bottom: 1px dotted #fff;
+	color: #fff;
+	text-decoration: none;
+}
+	
+#flickr h3 a:hover { 
+	background-color: transparent; 
+	border-bottom: 1px solid #fff; 
+	color: #fff; 
+}
+
+/*- Footer -*/
+  
+#footer { color: #F4A469; }
+
+#footer ul {
+	font-size: .85em;
+  	margin: 0;
+  	padding: 5px 0 0 20px;
+ 	list-style: none;
+	text-align: left; 
+}
+  	
+#footer ul li {
+  	display: inline;
+  	margin: 0;
+  	padding: 0;
+}
+
+/*- COMMENTS -*/
+
+.comment-box {
+	margin: 1em 0 0 0;
+	padding: 1em;
+}
+
+.comment-list li {
+  	background: transparent;
+  	padding: 5px;
+  	margin-bottom: 8px;
+  	color: #555;
+}
+
+ol.comment-list {
+	margin: 2em;
+	padding: 0;
+}
+
+.comment-box input[type=text], textarea {
+	background: none;
+	border: 1px solid #B8522F;
+	background-color: #fff;
+	padding: 2px;
+        font-size: small;
+	color: #000;
+}
+
+.comment-box input[type=text]:focus, textarea:focus {
+	border: 1px #951C02 solid;
+        background-color: #fff;
+        font-size: small;
+	color: #000;
+}
+
+.frm-tbl td { vertical-align: top; padding: 5px; }
+td#frm-btns { text-align: right; }
+	
+#comment_body { height: 220px; }
+#form-submit-button { background: #F4A469; border: 1px solid #E37E4C; }
+  
+/* MISC */
+   
+.light-bg { background: #eee; padding: 2px; }
+
+.clearfix:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+ 
+#errors {
+   color: red;
+}
+
+.admintools {
+  float: right;
+  background-color: #fff;
+  font-size: smaller;
+  padding: 0 2px;
+  margin: 0 1px;
+  color: #ccc;
+  border: 1px solid #ccc;
+}
+
+.admintools:hover {
+  color: #c00;
+  border: 1px solid #c00;
+}
+
+a[name] { border: none; }
+
+ /* Hides from IE-mac \*/
+ * html .clearfix {height: 1%;}
+ /* End hide from IE-mac */
+
+#categories li em, #archives li em {
+  color: #000;
+  font-size: smaller;
+}
+
+/*- Menu Tabs 6--------------------------- */
+
+    #tabs6 {
+      float:left;
+      width:100%;
+      background:#000;
+      font-size:93%;
+      line-height:normal;
+      
+      
+      }
+    #tabs6 ul {
+	  margin:0;
+	  padding:10px 10px 0 50px;
+	  list-style:none;
+      }
+    #tabs6 li {
+      display:inline;
+      margin:0;
+      padding:0;
+      }
+    #tabs6 a {
+      float:left;
+      background:url("{TEMPLATE_PATH}images/tableft6.gif") no-repeat left top;
+      margin:0;
+      padding:0 0 0 4px;
+      text-decoration:none;
+      }
+    #tabs6 a span {
+      float:left;
+      display:block;
+      background:url("{TEMPLATE_PATH}images/tabright6.gif") no-repeat right top;
+      padding:5px 15px 4px 6px;
+      color:#FFF;
+      }
+    /* Commented Backslash Hack hides rule from IE5-Mac \*/
+    #tabs6 a span {float:none;}
+    /* End IE5-Mac hack */
+    #tabs6 a:hover span {
+      color:#FFF;
+      }
+    #tabs6 a:hover {
+      background-position:0% -42px;
+      }
+    #tabs6 a:hover span {
+      background-position:100% -42px;
+      }
+
+/* container style for comments popup */
+.s9y_wrap {
+font:90% Arial,Helvetica, Sans Serif;
+background:#fff;
+text-align:left;
+padding:5px;
+
+}
+	
+/* container cloud for tags and static page navigation */
+.serendipity_freetag_taglist, .staticpage_navigation, .serendipity_search {
+	margin:0 0 50px 0;
+	padding:0;
+	border:1px solid Maroon;
+	background-color:#fafbfc;
+	color:Maroon;
+	line-height:1em;
+	clear:both; }
+
+.container_serendipity_plugin_freetag a {
+	font:90% 
+	line-height: 1!important; }
+
+/* shift the feed icon in the freetag sidebar plugin */
+.serendipity_freeTag_xmlButton {
+	padding-left:2px; }
+
+/* place freetag list on new line in entry footer */
+.serendipity_freeTag {
+	clear:both; }
+
+/* adjust line height in entry footer */
+.serendipity_karmaVoting, .serendipity_freeTag {line-height: 1!important;}
+
+/********* End of Plugin Styles *********/
+/** nicetitle styles **/
+#nicetitlecontainer{
+color: #fff;
+border:2px solid Maroon;
+background-color:#000;
+filter: alpha(opacity=80);
+ filter: progid:DXImageTransform.Microsoft.Alpha(opacity=80);
+ -moz-opacity: 0.80; opacity:0.8;
+}
+div.nicetitle{
+font-size: 10px;
+left: 0;
+padding: 7px;
+position: absolute;
+top: 0;
+text-align:left;
+width: 25em;
+z-index: 100;
+width: auto;
+height: auto;
+}
+div.nicetitle p {
+margin: 0;
+padding-bottom: 3px;
+font-weight:bold;
+font-size:10px;
+
+}
+div.nicetitle p.destination {
+
+font-weight: normal;
+font-size: 10px;
+padding-bottom: 0px;
+text-align: left;
+}

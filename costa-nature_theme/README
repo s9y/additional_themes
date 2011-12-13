@@ -1,0 +1,41 @@
+theme version: 0.1
+ release date: 2006.02.26
+
+bugs known:
+- some problems with Internet Explorers <blockquote> tag parsing
+  * will be fixed soon
+
+
+----------------------------------------------------------------------
+Hello!
+
+I'm glad You downloaded my little Nature Theme for Serendipity weblog
+engine. I hope You'll use it with pleasure, same as was mine making
+this theme for Serendipity Community.
+
+It is an initial release of this theme so expect some bugs. Please,
+feel free to report them to me. I'll try to fix them as soon, as it
+will be possible. There will be some upgrades to this theme since
+I have a lot of ideas how to improve it. Don't hesitate to mail me
+Your ideas or (better) go to Serendipity's Forum Page and make them
+public. I'm not a professional templates designer, I'm doing it for
+pure fun and as a contribute to Serendipity Community.
+
+Please, if You use this theme, leave a link to my blog (now resides
+in page footer).
+
+Many thanks are going to Garvin and especially Carl Galloway for their
+help. Thanks guys!
+
+links:
+* http://www.s9y.org/
+  Serendipity Weblog System
+* http://blog.s9y.org/
+  The official Serendipity blog
+* http://www.carlgalloway.com/
+  Carl Galloway page
+* http://costa.kofeina.net/
+  CoSTa's Family Page
+
+Regards, CoSTa
+costa.msm@gmail.com

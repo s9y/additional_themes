@@ -1,0 +1,86 @@
+.serendipity_center{margin-left:auto;margin-right:auto;text-align:center}
+.serendipity_msg_important{color:red}
+.serendipity_msg_notice{color:green}
+.grey{color:#999}
+#serendipityRightSideBar{width:170px;vertical-align:top;margin:0;padding:0 0 0 10px}
+#serendipityLeftSideBar{width:170px;vertical-align:top;margin:0;padding:0 10px 0 1px}
+a.homelink1,a.homelink1:hover,a.homelink1:link,a.homelink1:visited,#serendipity_banner h1{color:#fff;font-family:Verdana, Arial, Geneva, Helvetica, sans-serif;font-size:20px;padding-left:15px;padding-top:20px;text-decoration:none;margin:0}
+a.homelink2,a.homelink2:hover,a.homelink2:link,a.homelink2:visited,#serendipity_banner h2{color:#fff;padding-left:15px;font-size:14px;text-decoration:none;margin:0}
+#footer p{color:#666;text-transform:lowercase;font-size:9pt;font-weight:700;line-height:1.5}
+#footer a{color:#215385;text-decoration:none}
+.serendipity_entry{font-family:arial, helvetica, sans-serif;color:#333;font-size:9.5pt;font-weight:400;margin:10px 0 40px}
+.serendipity_Entry_Date{clear:both}
+.serendipity_date{text-align:right;line-height:.85em;color:#999;text-transform:lowercase;display:block;font-size:.9em;border-bottom:1px solid #ddd;margin:10px 0 0;padding:10px 12px 0 0}
+.serendipity_title{font-size:medium;font-weight:700;margin-top:5px;color:#235587}
+.serendipity_meta_title{font-size:small;font-weight:700;color:#235587;margin:0;padding:0}
+.serendipity_title a:link,.serendipity_title a:visited{text-decoration:none;font-weight:700;border:0;background:none;color:#235587}
+.serendipity_title a:hover{color:#e37235}
+.serendipity_entry p{margin-top:0;padding-bottom:0}
+.serendipity_entry_extended{margin-top:20px}
+#extended{background:none;display:none}
+div.serendipity_entryFooterx{border:1px solid #CFE6F2;background-color:#f6f8fb;font-size:.8em;color:#000;margin:15px;padding:10px}
+div.serendipity_entryFooter a:hover{color:#e37235;text-decoration:none}
+img.serendipity_entryIcon{float:right;border:0;margin-top:1px}
+.continue_reading{display:block;margin-top:10px;clear:left}
+.continue_reading a{font-weight:400;background:none}
+.continue_reading a:hover{color:#5f90ba;background:none;text-decoration:underline}
+.serendipity_pageFooter{clear:both;margin-top:10px}
+.archive_summary{clear:both;font-size:.9em;margin:15px 0 0 10px}
+.archive_summary_title{font-size:1em;font-weight:700;margin:0;padding:0}
+.serendipity_commentsTitle{font-size:medium;font-weight:700;margin-top:10px;color:#336d9f;clear:left}
+.serendipity_comment{padding:3px}
+.serendipity_comment_source{margin-top:5px;padding-left:5px;margin-bottom:5px;padding-bottom:3px}
+.serendipity_comment_author_self{border-top:3px solid #e37235;border-bottom:3px solid #e37235}
+.comment_evenbox{border-top:1px solid #5f90ba;border-bottom:1px solid #5f90ba;background-color:#fafbfc;color:#505050;line-height:1.5em;margin:0 0 20px}
+.comment_oddbox{border-top:1px solid silver;border-bottom:1px solid silver;background-color:#fafbfc;color:#505050;line-height:1.5em;margin:0 0 20px}
+.serendipity_commentForm{font-size:13px;color:#404040;margin-bottom:13px;margin-right:10px;margin-left:10px;background-color:#FFF}
+td.serendipity_commentsLabel{font-size:12px;font-weight:700;vertical-align:top}
+td.serendipity_commentsValue input,td.serendipity_commentsValue select,td.serendipity_commentsValue textarea{font-size:12px;padding:2px}
+div.serendipitySideBarContent{padding-bottom:12px;margin-bottom:12px;font-size:12px;font-weight:400}
+.serendipitySideBarTitle{line-height:.85em;color:#999;text-transform:lowercase;display:block;font-size:.9em;border-bottom:1px solid #ddd;margin:10px 0 4px;padding:10px 0 0 12px}
+div.serendipityPlug img{padding-left:5px}
+div.serendipityPlug a{text-decoration:none;border:0}
+.serendipitySideBarContent input,.serendipitySideBarContent select{width:150px}
+.serendipitySideBarDate{line-height:.9em}
+table.serendipity_calendar{border-bottom:1px solid #ddecfb;border-left:1px solid #ddecfb;border-right:1px solid #ddecfb}
+table.serendipity_calendar td{text-align:center;padding:3px}
+table.serendipity_calendar a{font-weight:700;text-decoration:none}
+.serendipity_calendarHeader{background:#235587}
+td.serendipity_calendarHeader a:link,td.serendipity_calendarHeader a:visited,td.serendipity_calendarHeader a:hover{border:0;color:#fff;text-decoration:none}
+td.serendipity_weekDayName{font-size:95%!important;font-weight:575;color:#fff;background:#5f90ba}
+td.serendipity_calendarDay{color:#888;font-size:90%}
+td.Today{color:#444;text-decoration:overline}
+.row1{background:#ddecfb}
+.row2{background:#e2eefb}
+.row3{background:#e7f1fb}
+.row4{background:#ecf3fb}
+.row5{background:#f1f6fb}
+.row6{background:#f6f8fb}
+.serendipity_imageComment_center,.serendipity_imageComment_left,.serendipity_imageComment_right{border:1px solid #DDD;background-color:#EFEFEF;text-align:center;margin:3px;padding:3px}
+.serendipity_imageComment_center{margin:auto}
+.serendipity_imageComment_left{float:left}
+.serendipity_imageComment_right{float:right}
+.serendipity_imageComment_img,.serendipity_imageComment_img img{border:none;text-align:center;margin:0;padding:0}
+.serendipity_imageComment_txt{border-top:1px solid #DDD;clear:both;font-size:8pt;text-align:center;margin:0;padding:3px}
+.serendipity_search,.staticpage_navigation,.serendipity_overview_noentries{border:1px solid silver;background-color:#E6EFF4;color:#505050;line-height:1.5em;clear:both;margin:10px 10px 20px;padding:10px}
+#serendipityQuickSearchTermField{width:70%;margin:10px 0 0!important;padding:0}
+.searchterm,.searchresults{color:#235587;font-weight:700}
+.serendipity_freetag_taglist{font-size:80%;color:#505050;border:1px solid silver;background-color:#fafbfc;line-height:1.5em;text-align:justify;margin:10px 0 20px;padding:15px}
+img.serendipity_freeTag_xmlButton{border:none;padding-left:2px}
+.serendipity_karmaVoting_links{display:block;clear:left}
+.serendipity_karmaVoting_exits_sep,.serendipity_karmaVoting br{display:none}
+.container_serendipity_plugin_comments{color:#333}
+.container_serendipity_plugin_comments br{line-height:.5em}
+.plugin_comment_wrap{display:block;border-top:1px solid #ddecfb;border-bottom:1px solid #ddecfb;background-color:#fafbfc;color:#505050;margin:15px 0 0}
+.plugin_comment_body{font-style:oblique;padding:3px 0}
+.container_serendipity_archives_plugin ul,.container_serendipity_syndication_plugin ul,.container_serendipity_authors_plugin ul,.container_serendipity_plugin_entrylinks ul{list-style:none;margin-left:0;padding-left:12px}
+.container_serendipity_authors_plugin .serendipitySideBarContent div{padding-left:12px;margin:5px 0}
+.serendipity_history_intro,.serendipity_history_info{margin-bottom:3px}
+.serendipity_history_body{margin-bottom:10px}
+.serendipity_recententries_entrylink{margin-bottom:2px}
+.serendipity_recententries_entrydate{margin:0 0 4px}
+.serendipity_shoutbox_date{margin:5px 0 2px}
+.serendipity_shoutbox_comment{padding:3px 0}
+#footer a:hover,table.serendipity_calendar a:hover{text-decoration:underline}
+div.serendipity_entryFooter a,.serendipity_history_author{font-weight:bolder}
+.serendipity_freeTag,.serendipity_karmaVoting{margin-top:10px}

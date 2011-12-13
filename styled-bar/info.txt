@@ -1,0 +1,3 @@
+Name: Styled Bar (colorsets) (2008-02-14)
+Author: Mads Sigvert @ www.evilsun.dk
+Date: 07-10-2005

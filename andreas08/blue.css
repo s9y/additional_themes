@@ -1,0 +1,35 @@
+a { color:#467aa7; font-weight:bold; text-decoration:none; background-color:inherit; }
+a:hover{color:#2a5a8a; text-decoration:none; background-color:inherit;}
+
+blockquote {border-left: 4px solid #467aa7; }
+
+body {background:#e8eaec;}
+
+#pagetop {
+	border-top:2px solid #a0a0a0;
+	border-left:2px solid #a0a0a0;
+	border-right:2px solid #a0a0a0;}
+
+#header {background:#467aa7;}
+
+#navigation {background:#578bb8;}
+
+#navigation .selected, #navigation a:hover{
+	background:#80b0da;}
+#mainpane {	
+	border-left:2px solid #a0a0a0;
+	border-right:2px solid #a0a0a0;}
+
+#footer {
+	border-bottom:2px solid #a0a0a0;
+	border-left:2px solid #a0a0a0;
+	border-right:2px solid #a0a0a0; }
+
+.footerbg {background-color:#467aa7; }
+
+/* style for today's date in calendar */
+td.Today {
+	border: 1px solid #578bb8; }
+
+.searchterm, .searchresults {color:#467aa7;}
+

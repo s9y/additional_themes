@@ -1,0 +1,9 @@
+body,
+h2, h3, h4, h5, h6,
+.post h2, .sidebar h2,
+.commentlist li,
+#serendipity_comment input,
+#serendipity_comment textarea,
+#serendipity_comment p {
+font-family: Arial, sans serif;
+}

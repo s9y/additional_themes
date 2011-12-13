@@ -1,0 +1,38 @@
+#header {
+background-image: url(../img/headerbg.png);
+background-repeat: repeat-x;
+}
+h1 {
+padding: 0;
+margin: 0;
+}
+h1 span {
+display: none;
+}
+h1 a, h1 a:link, h1 a:hover, h1 a:visited {
+padding-top: 16px;
+margin: 0 0 0px 16px;
+}
+
+.description {
+color: #fff;
+margin: -34px 20px 0 0;
+}
+
+.obut {
+background-image: url(../img/button.png);
+background-repeat: no-repeat;
+}
+.obut a {
+padding: 20px 0 0 0;
+}
+.obut a:link,
+.obut a:visited {
+color: #fff;
+text-decoration: none;
+}
+.obut a:hover,
+.obut a:active {
+color: #000;
+text-decoration: none;
+}

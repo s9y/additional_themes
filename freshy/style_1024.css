@@ -1,0 +1,97 @@
+#page
+{
+background:url("images/1024/page_bg.gif") center #7F7F7F repeat-y;
+	width:1024px;
+}
+#frame
+{
+	width:1010px;
+}
+#content
+{
+padding:0 20px 0 15px;margin-left:5px;
+}
+
+
+.rightsidebar,.leftsidebar {
+	width:220px;
+	padding:0px;
+	float:left;
+	background-color:#F3F3F3;
+}
+
+
+
+.rightsidebar div,
+.rightsidebar ul {
+	padding:0 9px 9px 9px;
+}
+.leftsidebar div,.leftsidebar ul
+
+{
+	padding:0 0px 9px 0px !important;
+}
+.rightsidebar div div,.leftsidebar div div {
+	padding:0 0 0 0;
+}
+#header
+{
+	width:1024px;
+}
+#footer {
+	background:url("images/1024/page_bottom.gif") bottom center transparent no-repeat;
+	padding-bottom:10px;width:1024px;
+margin-left:1px;margin-bottom:0px;
+}
+
+body, html {
+	margin:0;margin-bottom:30px;
+	}
+body {
+	margin:0;
+	padding:0;
+	background:#7F7F7F;
+}
+#title_image {	
+		background:url("images/headers/Cards_large.jpg") center center transparent repeat-y;
+		}
+		
+#title {
+	background:url("images/1024/header.gif") top #7F7F7F no-repeat;
+}
+
+.rightsidebar,.leftsidebar {
+	font-size:.9em;background-color:#FFFFFF;
+}
+ 
+.rightsidebar ul,
+.rightsidebar ol,.leftsidebar ul,.leftsidebar ol {
+	padding:0;
+}
+
+.rightsidebar form,
+.rightsidebar p,.leftsidebar form,.leftsidebar p {
+	padding:0;
+	margin:0 0 1em 0;
+}
+
+.rightsidebar h2,.leftsidebar h2 {
+	background:#FFF url("images/stripe_gray-large.gif");
+	padding: 8px;
+	margin:10px 0 10px 0px;
+	font-size: 1em;
+	font-weight:normal;
+	text-transform:uppercase;
+	color:#f78b0c;border-bottom-color:#f78b0c;
+}
+.menu {
+	margin:0 0 0 6px;
+		width:1000px;
+	}
+	
+	#footer .footer_content {	
+	width:1010px !important;
+	width:1010px;}
+	
+	.post {	margin-bottom:10px;padding-left:20px;}
+	

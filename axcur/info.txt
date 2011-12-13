@@ -1,0 +1,3 @@
+Name: xcur (2009-08-13)
+Author: reinhardl
+Date: 29/06/2009

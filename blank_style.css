@@ -1,0 +1,294 @@
+/* #################### */
+/* # GENERIC ELEMENTS # */
+/* #################### */
+
+h4,h3 {
+
+}
+
+input, textarea {
+
+}
+
+p, td, th, div, span {
+
+}
+
+a:link,
+a:visited,
+a:active {
+
+}
+
+a:hover {
+
+}
+
+
+/* ###################### */
+/* # MAIN BODY ELEMENTS # */
+/* ###################### */
+
+body {
+
+}
+
+#serendipity_banner {
+
+}
+
+a.homelink1,
+a.homelink1:hover,
+a.homelink1:link,
+a.homelink1:visited,
+#serendipity_banner h1 {
+
+}
+
+a.homelink2,
+a.homelink2:hover,
+a.homelink2:link,
+a.homelink2:visited,
+#serendipity_banner h2 {
+
+}
+
+#mainpane {
+
+}
+
+#content {
+
+}
+
+#serendipityRightSideBar {
+
+}
+
+#serendipityLeftSideBar {
+
+}
+
+/* ################## */
+/* # ENTRY ELEMENTS # */
+/* ################## */
+
+.serendipity_entry_date {
+
+}
+
+.serendipity_date {
+
+}
+
+.serendipity_title {
+
+}
+
+.serendipity_title a:link,
+.serendipity_title a:visited,
+.serendipity_title a:hover {
+
+}
+
+.serendipity_entry {
+
+}
+
+.serendipity_entry_body,
+.serendipity_entry_body_folded,
+.serendipity_entry_body_unfolded,
+.serendipity_entry_extended {
+/* Inner blocks of .serendipity_entry, can be used for further customization */
+
+}
+
+div.serendipity_entryFooter {
+
+}
+
+.serendipity_entry p {
+
+}
+
+.serendipity_entry_author_self {
+
+}
+
+img.serendipity_entryIcon {
+
+}
+
+
+/* #################### */
+/* # SIDEBAR ELEMENTS # */
+/* #################### */
+
+.serendipitySideBarContent input {
+
+}
+
+/* Container for each item on the side bar */
+div.serendipitySideBarItem {
+
+}
+
+/* title of an individual item */
+.serendipitySideBarTitle {
+
+}
+
+
+/* ##################### */
+/* # CALENDAR ELEMENTS # */
+/* ##################### */
+
+table.serendipity_calendar td {
+
+}
+table.serendipity_calendar a {
+
+}
+
+table.serendipity_calendar a:hover {
+
+}
+
+td.serendipity_weekDayName {
+
+}
+
+td.serendipity_calendarHeader a:link,
+td.serendipity_calendarHeader a:visited,
+td.serendipity_calendarHeader a:hover {
+
+}
+
+
+/* #################### */
+/* # COMMENT ELEMENTS # */
+/* #################### */
+
+.serendipity_comments {
+
+}
+
+.serendipity_commentsTitle {
+
+}
+
+.serendipity_commentBody {
+
+}
+
+.serendipity_comment_source {
+
+}
+
+td.serendipity_commentsLabel {
+
+}
+
+td.serendipity_commentsValue input,
+td.serendipity_commentsValue select,
+td.serendipity_commentsValue textarea {
+
+}
+
+.serendipity_commentForm {
+
+}
+.serendipity_comment {
+
+}
+
+
+/* ################## */
+/* # IMAGE ELEMENTS # */
+/* ################## */
+
+.serendipityImageButton {
+
+}
+
+/** Embedded images with the s9y image manager **/
+.serendipity_imageComment_center,
+.serendipity_imageComment_left,
+.serendipity_imageComment_right {
+
+}
+
+.serendipity_imageComment_center {
+
+}
+
+.serendipity_imageComment_left {
+
+}
+
+.serendipity_imageComment_right {
+
+}
+
+.serendipity_imageComment_img,
+.serendipity_imageComment_img img {
+
+}
+
+.serendipity_imageComment_txt {
+
+}
+
+
+/* ################## */
+/* # OTHER ELEMENTS # */
+/* ################## */
+
+div.serendipityPlug {
+
+}
+
+div.serendipityPlug a {
+
+}
+
+.serendipity_center {
+
+}
+
+.serendipity_msg_important {
+
+}
+
+.serendipity_msg_notice {
+
+}
+
+.serendipity_comment_author_self .serendipity_comment_source {
+
+}
+
+.serendipity_freeTag
+{
+
+}
+
+.serendipity_freetag_taglist
+{
+
+}
+
+.serendipity_freeTag a
+{
+
+}
+
+.serendipity_freeTag a:hover
+{
+
+}
+
+img.serendipity_freeTag_xmlButton
+{
+
+}

@@ -1,0 +1,21 @@
+body {
+	
+		margin: 0;
+		background: #FFFFFF url(images/beige-orange2.gif) repeat-y;
+		font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+		color: #666666;
+
+}
+h4.serendipitySideBarTitleRight {
+
+	font-size:font-size: 2.2em;
+	border-bottom: 5px solid #FFDE42;
+	color: #000000;
+}
+h4.serendipitySideBarTitleLeft {
+
+	font-size:font-size: 2.2em;
+	border-bottom: 5px solid #DE8400;
+	color: #000000;
+	
+}

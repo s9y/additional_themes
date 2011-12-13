@@ -1,0 +1,128 @@
+body, #primary{
+	color:#444;
+}
+#header, #primary{
+	background:#FFF;
+}
+
+#secondary{
+	background:#F3F3F3;
+}
+
+body, #ancillary{
+	background:#E5E5E5;
+}
+#ancillary{
+	border-top:1px solid #D5D5D5;
+}
+
+a, .story .details a, .story .details a:hover{
+	color:#000;
+}
+.story .details a:hover{
+	text-decoration:underline;
+}
+.story .details{ border-top:1px solid #7F7F7F; }
+
+h1, h2, h3, h3.serendipity_date{ color:#000; }
+
+#primary h2{ color:#333; }
+
+blockquote{ color:#333; }
+
+table th{ color:#FFF; background:#333; }
+table td{ color:#000; background:#EAEAEA; }
+
+#header h2{ border-right:1px solid #7F7F7F; }
+
+.secondary .featured p{
+	border-bottom:1px solid #CCC;
+	border-top: 1px solid #CCC;
+}
+.secondary .featured dl{
+	border-bottom:1px solid #CCC;
+}
+.secondary dd a, .secondary .featured a{ color:#7F7F7F; }
+.secondary dd a:hover, .secondary .featured a:hover{ color:#000; }
+
+
+.secondary .featured dt{
+	color:#333;
+}
+#primary .story h2, #primary .primary h2, #primary .single-story .primary h3, .story h3, .story h3 a{
+	color:#333;
+}
+
+#secondary{
+	border-top:1px solid #E3E3E3;
+}
+.comment-head{
+	border-bottom:1px solid #E3E3E3;
+}
+#comments .pingback cite .author{
+	background:url(img/white/trackback_pingback.gif) 100% 0 no-repeat;
+}
+ul.dates, ul.counts, ul.blogroll li ul, ul.pages, .serendipitySideBarContent{
+	border-top:1px solid #C2C2C2; }
+
+.serendipitySideBarContent{
+	border-bottom:1px solid #C2C2C2; }
+
+ul.dates li, ul.counts li, ul.blogroll ul li, ul.pages li, .container_serendipity_plugin_staticpage a, 
+.container_serendipity_plugin_recententries .serendipitySideBarContent div, .container_serendipity_syndication_plugin .serendipitySideBarContent div, .container_serendipity_archives_plugin a, .container_serendipity_authors_plugin div, .serendipitySideBarContent li, .plugin_comment_wrap{
+	border-bottom:1px solid #C2C2C2;
+}
+
+ul.dates .date, ul.counts .count{
+	color:#7A7A7A;
+}
+ul.dates a, ul.counts a, ul.blogroll a, ul.pages a,.container_serendipity_plugin_staticpage a, .serendipitySideBarContent div a, .container_serendipity_archives_plugin a, .container_serendipity_superuser_plugin a, .serendipitySideBarContent li a, .serendipitySideBarContent td a, .container_serendipity_plugin_recententries a, .container_serendipity_plugin_recententries a {
+	color:#404040;
+}
+ul.dates a:hover, ul.dates a:hover .date, ul.counts a:hover, ul.counts a:hover .count, ul.blogroll a:hover, ul.pages a:hover,.container_serendipity_plugin_staticpage a:hover, .serendipitySideBarContent div a:hover, .container_serendipity_archives_plugin a:hover, .container_serendipity_superuser_plugin a:hover, .serendipitySideBarContent li a:hover, .serendipitySideBarContent td a:hover, .container_serendipity_plugin_recententries a:hover,.dtree a.node:hover, .dtree a.nodeSel:hover, div.linklist a:hover { color:#000; }
+
+#footer{ color: #666; }
+#footer a, #footer p.attributes a{
+	color:#333;
+}
+#footer a:hover, #footer p.attributes a:hover{ color:#000; }
+
+
+/* Images */
+
+#footer .inside{
+	background:url(img/white/footer.gif) 50% 0 repeat-x;
+}
+#search .searchimg{
+	background:url(img/white/search.gif) 0 0 no-repeat;
+}
+/* Embedded images with the s9y image manager */
+.serendipity_imageComment_center, .serendipity_imageComment_left, .serendipity_imageComment_right {
+	border: 1px solid #f1f1f1;
+	background-color: #F5F5F5;
+	margin: 5px;
+	padding: 5px;
+	text-align: center; }
+
+.serendipity_imageComment_center {
+	margin: auto; }
+
+.serendipity_imageComment_left {
+	float: left; }
+
+.serendipity_imageComment_right {
+	float: right; }
+
+.serendipity_imageComment_img, .serendipity_imageComment_img img {
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	border: 0px; }
+
+.serendipity_imageComment_txt {
+	border-top: 1px solid #f1f1f1;
+	margin-top: 3px;
+	padding: 3px;
+	clear: both;
+	font-size: 8pt;
+	text-align: center; }

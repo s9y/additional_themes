@@ -1,0 +1,198 @@
+/* Based heavily on the default WordPress theme by Dave Shea (http://mezzoblue.com)
+ * Modifications by Matthew Mullenweg (http://photomatt.net)
+ * Serendipity port by Evan Nemerson (http://coeusgroup.com/en) */
+
+/* HTML Elements */
+
+body {
+  background: #fff;
+  border: solid 2px #565;
+  border-bottom: solid 1px #565;
+  border-top: solid 3px #565;
+  color: #000;
+  font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #675;
+}
+
+a:visited {
+  color: #342;
+}
+
+a:active,
+a:hover {
+  color: #9a8;
+}
+
+a img {
+  border: none;
+}
+
+/* Basic */
+
+#serendipity_banner {
+  background: #90a090;
+  border-bottom: double 3px #aba;
+  border-left: solid 1px #9a9;
+  border-right: solid 1px #565;
+  border-top: solid 1px #9a9;
+  letter-spacing: 0.2em;
+  margin: 0;
+  padding-right: 10px;
+  padding-bottom: 15px
+  color: #fff;
+}
+
+#serendipity_banner h1 {
+  font: italic normal 230% 'Times New Roman', Times, serif;
+  padding-left: 60px;
+}
+
+#serendipity_banner h2 {
+  font: italic normal 100% 'Times New Roman', Times, serif;
+  padding-left: 60px;
+}
+
+#serendipity_banner a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#serendipity_banner a:hover {
+  text-decoration: underline;
+}
+
+/* Entries */
+
+div.serendipity_Entry_Date {
+  margin: 10px;
+  padding: 10px;
+  width: auto;
+}
+
+.serendipity_date {
+  border-bottom: 1px dotted #ccc;
+  font: 95% "Times New Roman", Times, serif;
+  letter-spacing: 0.2em;
+  margin: 15px 0 2px 0;
+  padding-bottom: 2px;
+}
+
+.serendipity_title,
+.serendipity_Admin_title {
+  font: 115% "Times New Roman", Times, serif;
+  margin: 0;
+}
+
+.serendipity_title a,
+.serendipity_Admin_title a {
+  text-decoration: none;
+}
+
+.serendipity_entry,
+.serendipity_admin {
+  border-top: 0;
+  line-height: 140%;
+  font: 90%/175% 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+  letter-spacing: -1px;
+}
+
+div.serendipity_entryFooter {
+  font: 90%/175% 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+  letter-spacing: -1px;
+  color: black;
+  text-align: right;
+  clear: all;
+  margin-bottom: 2.5em;
+}
+
+/* Sidebars */
+
+#serendipityLeftSideBar,
+#serendipityRightSideBar {
+  background: #fff;
+  border-left: 1px dotted #ccc;
+  border-top: solid 3px #e0e6e0;
+  border-bottom: solid 3px #e0e6e0;
+  padding: 20px 0 10px 30px;
+  right: 2px;
+  width: 11em;
+  display: block;
+  vartical-align: top;
+}
+
+.serendipitySideBarTitle {
+  color: #ccc;
+  font-weight: bold;
+  list-style-type: none;
+  margin: 0;
+  padding-left: 3px;
+  text-transform: lowercase;
+  font: italic normal 110% 'Times New Roman', Times, serif;
+  letter-spacing: 0.1em;
+  margin-top: 10px;
+  padding-bottom: 2px;
+}
+
+.serendipitySideBarContent {
+  font: normal normal 70%/115% 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+  padding-left: 1em;
+}
+
+/* Calendar */
+
+.serendipity_calendar {
+  border: 1px solid #ddd;
+  empty-cells: show;
+  font-size: 14px;
+  margin: 0;
+  width: 90%;
+  padding-left: 0;
+}
+
+table.serendipity_calendar a,
+table.serendipity_calendar a:link,
+table.serendipity_calendar a:visited {
+  display: block;
+  text-decoration: none;
+}
+
+table.serendipity_calendar a:hover {
+  background: #e0e6e0;
+  color: #333;
+}
+
+table.serendipity_calendar td {
+  color: #ccc;
+  font: normal 12px 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+  letter-spacing: normal;
+  padding: 2px 0;
+  text-align: center;
+}
+
+td.serendipity_weekDayName {
+  font-style: normal;
+  text-transform: capitalize;
+}
+
+td.serendipity_calendarHeader a:link,
+td.serendipity_calendarHeader a:visited,
+td.serendipity_calendarHeader a:hover {
+  border: 0;
+  text-decoration: none;
+}
+
+/* Misc */
+
+img.serendipity_entryIcon {
+  float: right;
+  border: 0px;
+}
+
+.serendipity_admin_list_item_uneven {
+    background-color: #e0e6e0;
+}

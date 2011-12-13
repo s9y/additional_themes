@@ -1,0 +1,341 @@
+/****** Structure Styles ******/
+body {background: #8b8b8b; 
+   color: #303030; 
+   font: 76% Verdana,Tahoma,Arial,sans-serif;
+   margin: 0; 
+   padding: 0; 
+   text-align: center; }
+#mainpane {background:#f0f0f0 url({TEMPLATE_PATH}img/bodybg.jpg) repeat-x;
+   color:#303030;	
+   margin:0; 
+   min-width:770px; 
+   padding:0; 
+   text-align:left; 
+   width:100%; }
+#wrap {clear:both; 
+   font-size:0.9em; 
+   padding:0; }
+
+
+
+
+/****** General Styles ******/
+a {color:#505050; 
+   font-weight:bold; 
+   text-decoration:none; }
+a:hover {color:#808080;  
+   text-decoration:underline; }
+p, .serendipity_entry {line-height:1.5em; 
+   margin:0 0 15px; }
+
+code, pre {font-size:1.3em; }
+img.emoticon, img.serendipity_entryIcon {border:none;}
+img.serendipity_entryIcon {float:right;
+   margin:0 0 4px 10px;}
+
+blockquote {border-top:1px solid #d8d8d8; 
+   border-right:1px solid #d8d8d8;
+   border-bottom:1px solid #d8d8d8; 
+   border-left:4px solid #cccccc;
+   margin:16px; 
+   width:75%; 
+   padding:7px 7px 7px 11px; 
+   background-color:#f0f0f0;
+   color:#505050; }
+
+.serendipity_center {margin-left: auto; 
+   margin-right: auto; 
+   text-align: center; }
+.serendipity_msg_important {color: red; }
+.serendipity_msg_notice {color: green; }
+
+
+
+
+/****** Header Styles ******/
+#serendipity_banner {color:#ffffff; 
+   height:92px; 
+   margin:0 20px 10px; 
+   text-align:left; }
+#serendipity_banner h1, #serendipity_banner a, #serendipity_banner h2 {
+   font-weight:400; 
+   letter-spacing:-2px; 
+   margin:0; 
+   padding:0; }
+#serendipity_banner h1 {font-size:2.4em; 
+   padding-top:20px; }
+#serendipity_banner h1 a {color:#ffffff; 
+   text-decoration:none; }
+#serendipity_banner h2 {font-size:1.6em; }
+
+
+
+
+/****** Mainmenu Styles ******/
+#mainmenu {float:left; 
+   margin-bottom:25px; }
+#mainmenu ul {font-size:16px; 
+   margin:0; padding:0; }
+#mainmenu li {float:left; 
+   height:35px; 
+   list-style:none; 
+   margin:0; 
+   padding:0; }
+
+#mainmenu a {border-right:1px solid #b0b0b0; 
+   color:#606060; 
+   display:block;
+   font-size:0.7em; 
+   padding:11px 10px 10px; 
+   text-transform:uppercase; }
+#mainmenu a:hover {background:#f0f0f0 url({TEMPLATE_PATH}img/menuhover.jpg) top left repeat-x;
+   color:#505050;	
+   text-decoration:none; }
+#mainmenu a.current {background:#f0f0f0 url({TEMPLATE_PATH}img/menuhover.jpg) top left repeat-x;
+   color:#505050; 
+   text-decoration:none; }
+
+
+
+
+/****** Column Styles ******/
+#leftsideA, #leftsideB {margin:0; 
+   padding:0 10px 10px; 
+   float:left; 
+   margin-right:10px; }
+#rightsideA, #rightsideC {margin:0; 
+   padding:0 10px 10px; 
+   float:right; 
+   margin-left:10px; }
+#contentA, #contentB, #contentC {background-color:#fafcff; 
+   border:1px solid #909090; 
+   color:#2a2a2a; 
+   padding:15px 20px 5px; }
+
+
+/**********
+to change the width of your left or right column you must also change the content margin otherwise your leftside column or your rightside column could overlap your content area
+***********/
+
+/*****  we have three columns displayed *****/
+#leftsideA {width:175px;}
+#rightsideA {width:175px;}
+#contentA {margin: 0px 210px 0px 210px;}
+
+/*****  we have a left column and center column displayed *****/
+#leftsideB {width:175px;}
+#contentB {margin: 0px 10px 0px 200px;}
+
+/***** we have right column and center column displayed *****/
+#rightsideC {width:175px;}
+#contentC {margin:0 200px 0 20px;}
+
+
+
+
+/****** Footer Styles ******/
+.clearingdiv {clear:both; height:30px; width:1px; }
+#footer {background:#8b8b8b url({TEMPLATE_PATH}img/footerbg.jpg) top left repeat-x;
+   clear:both; 
+   color:#d0d0d0; 
+   font-size:0.9em; 
+   font-weight:bold;  
+   margin:0;
+   padding:20px 0; 
+   text-align:center; 
+   width:100%; }
+#footer a {color:#d0d0d0; 
+   font-weight:bold; }
+
+
+
+
+/****** Entry Styles ******/
+.serendipity_entry {overflow:auto;}
+h3.serendipity_title, h2.serendipity_date, h3.serendipity_date,
+   .serendipity_commentsTitle, .staticpage_result_header {
+   background-color:inherit;
+   color:#606060;
+   font-size:1.4em;
+   font-weight:bold;
+   letter-spacing:-1px;
+   margin:5px 0 10px 0;
+   padding:0;}
+h3.serendipity_title a {text-decoration:none; 
+   color:#606060; }
+.continue_reading {display:block; 
+   margin:10px 0 20px 0; }
+.serendipity_entryFooter {margin-top:10px; 
+   clear:both;
+   margin-bottom:70px; 
+   border-top: 1px solid #dedede; 
+   padding:0px;
+   padding-top:3px; 
+   font-size:0.78em; 
+   color: #31314B; 
+   text-align:center; }
+
+div.serendipity_pageFooter {font-size:0.8em; 
+   clear:both;
+   margin:10px auto 50px auto; 
+   text-align:center; }
+.center, .serendipity_entrypaging {margin: 20px 0 5px 0; 
+   height: 20px;
+   padding: 0px 3px 0px 3px; }
+.previous {float: left; 
+   width:25%; }
+.entries_info {float:left;
+   width:50%;
+   text-align:center; }
+.next {float: left; 
+   width:25%; 
+   text-align:right; }
+
+
+
+
+/****** Sidebar Styles ******/
+h3.serendipitySideBarTitle {color:#505050;
+   font-size:1.6em;
+   font-weight:bold;
+   letter-spacing:-1px;
+   margin:0 0 12px; }
+
+.serendipitySideBarContent {font-size:0.9em;
+   line-height:1.4em;
+   margin:0 0 16px 10px; }
+
+#sidebar input, #sidebar textarea, #sidebar select {width:95%; 
+   font-size:1.0em;}
+#sidebar td input {width:150px;}
+
+
+
+
+/****** Comment Styles ******/
+.serendipity_comment {margin-bottom:20px; }
+.commentauthor, .comment_source_author {margin: 0;
+   border-bottom: 1px solid #dedede; 
+   font-size: 1.1em; 
+   font-weight:normal; }
+.commentmeta {margin: 0 0 0.8em 0;
+   padding: 0.2em 0 0 0;
+   font-size: 0.92em; }
+#comment {width: 98%; }
+#commentlist {padding-left:3px; }
+.serendipity_commentBody {margin-bottom:20px; }
+.comment_threaded_child0 {padding-left:5px;
+   padding-right:5px;
+   background:#f4f4f4;
+   border:1px solid #d8d8d8; }
+.comment_threaded_child1 {margin-left:14px; 
+   padding-left:5px;
+   padding-right:5px;
+   background:#f4f4f4;	
+   border:1px solid #d8d8d8; }
+.comment_threaded_child2 {margin-left:30px; 
+   padding-left:5px;
+   padding-right:5px;
+   background:#f4f4f4;
+   border:1px solid #d8d8d8; }
+
+
+
+
+/****** Comment Form Styles ******/
+form dt {float: left; 
+   margin-bottom: 5px; }
+form dd {padding-left: 0em; 
+   margin-left: 100px; 
+   margin-bottom: 5px; }
+form textarea {margin-bottom: 10px; }
+
+
+
+
+/********* Calendar Plugin Styles *********/
+table.serendipity_calendar a {text-decoration:none; }
+table.serendipity_calendar a:hover {text-decoration: none; }
+td.serendipity_weekDayName {font-weight:bold; 
+   text-align:center; }
+td.serendipity_calendarHeader a:link, td.serendipity_calendarHeader a:visited, 
+   td.serendipity_calendarHeader a:hover {text-decoration: none; }
+td.serendipity_weekDayName {border-bottom:1px solid #dddddd; }
+tr.serendipity_calendar td {text-align:center; }
+
+
+
+
+/****** Image Manager ******/
+.serendipity_imageComment_center, .serendipity_imageComment_left, 
+   .serendipity_imageComment_right {border:1px solid #b0b0b0; 
+   margin: 0 5px 5px 0; 
+   padding: 5px 5px 0 5px; 
+   text-align: center; }
+.serendipity_imageComment_center {margin: 0px auto; }
+.serendipity_imageComment_center br {line-height:0.01;}
+.serendipity_imageComment_left {float: left; }
+.serendipity_imageComment_right {float: right; }
+.serendipity_imageComment_img, .serendipity_imageComment_img img {
+   margin: 0px; 
+   padding: 0px; 
+   text-align: center; 
+   border: 0px; }
+.serendipity_imageComment_txt {border-top: 1px solid #d0d0d0;
+   margin-top: 3px; 
+   padding: 3px; 
+   clear: both; 
+   font-size: 8pt;
+   text-transform:uppercase; 
+   text-align: center; }
+
+
+
+
+/****** Plugin Styles ******/
+.searchterm, .searchresults {font-weight:bold; }
+.plugin_comment_wrap {margin:0 0 20px 0; 
+   border-top:1px solid #c0c0c0; 
+   border-bottom:1px solid #c0c0c0;
+   background-color:#fafbfc; 
+   color:#505050; 
+   line-height:1.5em; }
+.container_serendipity_plugin_comments {color:#333; }
+.container_serendipity_plugin_comments br {line-height:0.5em; }
+.plugin_comment_body {font-style:oblique; }
+.serendipity_freetag_taglist, .staticpage_navigation, .serendipity_search {
+   padding:15px; 
+   margin:0 0 50px 0; 
+   padding:10px; 
+   border:1px solid #c0c0c0;
+   background-color:#f0f0f0; 
+   color:#505050; 
+   line-height:1.5em; }
+.container_serendipity_plugin_freetag a {font:85% Verdana,Tahoma,Arial,sans-serif;
+    line-height: 1!important; }
+.serendipity_freeTag_xmlButton {padding-left:2px; }
+.serendipity_karmaVoting, .serendipity_freeTag {line-height: 1!important;}
+
+
+
+
+/****** Colorset Styles ******/
+#purple #mainpane {background:#f0f0f0 url({TEMPLATE_PATH}img/bodybg-purple.jpg) repeat-x;}
+#purple #mainmenu a:hover{background:#f0f0f0 url({TEMPLATE_PATH}img/menuhover-purple.jpg) top left repeat-x;}
+#purple #mainmenu a.current{background:#f0f0f0 url({TEMPLATE_PATH}img/menuhover-purple.jpg) top left repeat-x;}
+
+#red #mainpane {background:#f0f0f0 url({TEMPLATE_PATH}img/bodybg-red.jpg) repeat-x;}
+#red #mainmenu a:hover{background:#f0f0f0 url({TEMPLATE_PATH}img/menuhover-red.jpg) top left repeat-x;}
+#red #mainmenu a.current{background:#f0f0f0 url({TEMPLATE_PATH}img/menuhover-red.jpg) top left repeat-x;}
+
+#black #mainpane {background:#f0f0f0 url({TEMPLATE_PATH}img/bodybg-black.jpg) repeat-x;}
+#black #mainmenu a:hover{background:#f0f0f0 url({TEMPLATE_PATH}img/menuhover-black.jpg) top left repeat-x;}
+#black #mainmenu a.current{background:#f0f0f0 url({TEMPLATE_PATH}img/menuhover-black.jpg) top left repeat-x;}
+
+#green #mainpane {background:#f0f0f0 url({TEMPLATE_PATH}img/bodybg-green.jpg) repeat-x;}
+#green #mainmenu a:hover{background:#f0f0f0 url({TEMPLATE_PATH}img/menuhover-green.jpg) top left repeat-x;}
+#green #mainmenu a.current{background:#f0f0f0 url({TEMPLATE_PATH}img/menuhover-green.jpg) top left repeat-x;}
+
+#orange #mainpane {background:#f0f0f0 url({TEMPLATE_PATH}img/bodybg-orange.jpg) repeat-x;}
+#orange #mainmenu a:hover{background:#f0f0f0 url({TEMPLATE_PATH}img/menuhover-orange.jpg) top left repeat-x;}
+#orange #mainmenu a.current{background:#f0f0f0 url({TEMPLATE_PATH}img/menuhover-orange.jpg) top left repeat-x;}

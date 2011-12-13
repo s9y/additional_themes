@@ -1,0 +1,4 @@
+Name: xkur (2009-08-17)
+Author: Reinhard Linnemann Based on Carl Galloway`s Serendipity Theme 3.0
+Date: 26-01-2006
+Require Serendipity: 1.5

@@ -1,0 +1,4 @@
+Name: Hemingway WP-port &#160;&#160;<i><small>Requires Serendipity v1.1</small></i> (2009-08-25)
+Author: Carl Galloway 
+Date: 27 August 2006
+Require Serendipity: 1.1

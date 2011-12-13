@@ -1,0 +1,29 @@
+.art-Sheet-tl{clip:rect(auto 28px 28px auto)}
+.art-Sheet-tr{clip:rect(auto auto 28px 28px)}
+.art-Sheet-bl{clip:rect(28px 28px auto auto)}
+.art-Sheet-br{clip:rect(28px auto auto 28px)}
+.art-Sheet-tc{clip:rect(auto auto 28px auto)}
+.art-Sheet-bc{clip:rect(28px auto auto auto)}
+.art-Sheet-cr{clip:rect(auto auto auto 28px)}
+.art-Sheet-cl{clip:rect(auto 28px auto auto)}
+.art-nav .r{clip:rect(auto auto auto 988px)}
+.art-menu a .r{clip:rect(auto auto auto 400px)}
+.art-BlockHeader .r{clip:rect(auto auto auto 986px)}
+.art-BlockContent-tl{clip:rect(auto 7px 7px auto)}
+.art-BlockContent-tr{clip:rect(auto auto 7px 7px)}
+.art-BlockContent-bl{clip:rect(7px 7px auto auto)}
+.art-BlockContent-br{clip:rect(7px auto auto 7px)}
+.art-BlockContent-tc{clip:rect(auto auto 7px auto)}
+.art-BlockContent-bc{clip:rect(7px auto auto auto)}
+.art-BlockContent-cr{clip:rect(auto auto auto 7px)}
+.art-BlockContent-cl{clip:rect(auto 7px auto auto)}
+.art-Post-tl{clip:rect(auto 5px 5px auto)}
+.art-Post-tr{clip:rect(auto auto 5px 5px)}
+.art-Post-bl{clip:rect(5px 5px auto auto)}
+.art-Post-br{clip:rect(5px auto auto 5px)}
+.art-Post-tc{clip:rect(auto auto 5px auto)}
+.art-Post-bc{clip:rect(5px auto auto auto)}
+.art-Post-cr{clip:rect(auto auto auto 5px)}
+.art-Post-cl{clip:rect(auto 5px auto auto)}
+.art-PostContent{height:1%}
+.art-button-wrapper .r{clip:rect(auto auto auto 401px)}

@@ -1,0 +1,599 @@
+/******************************************************/
+/* Organised and commented by Carl Galloway           */
+/* http://www.carlgalloway.com                        */
+/* This is the stylesheet for reflection theme        */
+/*                                                    */
+/* Styles have been organised into the following      */
+/* groups; general, header, footer, entry, comments   */
+/* commentform, sidebar, calendar, image media.       */
+/*                                                    */
+/* My comments are inside the /*  */, these can       */
+/* safely be deleted if you do not require them.      */
+/******************************************************/
+
+
+/********* General Styles  *********/
+
+/* temporarily change the color to white */
+.white {
+     color: #fff; }
+
+/* styles for tables, this is used in archives page */
+td {
+     margin: 1.2em 1.2em 2em 1.2em;
+     font-size: 0.8em;
+     line-height: 1.4em; }
+
+/* style for acronyms and abbreviations */
+acronym, abbr {
+     cursor: help; }
+
+/* style for code, adjusts size because browsers make it smaller and harder to read */
+code, cite {
+     font-size: 1.2em; }
+
+/* all links are white and underlined */
+a {
+     text-decoration: underline;
+     color: #fff; }
+
+/* change link color to light grey, dark grey background and underlined when hovered over */
+a:hover {
+     color: #DDD;
+     background-color: #888;
+     text-decoration:underline; }
+
+/* style for quotes, be careful of adjusting margin and padding, different browsers do weird things */
+blockquote {
+     margin: 15px 30px 10px 45px;
+     padding: 0px 0px 10px 45px;
+     background: url({TEMPLATE_PATH}img/blockquote.gif) no-repeat left top;
+     font-style:italic; }
+
+/* style for all linked images, emoticons, and archive horizontal bar */
+a img, img, .emoticon, .serendipity_entry img {
+     border: none; }
+
+/* add some spacing around user images within posts */
+.serendipity_entry_body img, .serendipity_entry_extended img {
+     padding:3px; }
+
+/* warning messages from s9y */
+.serendipity_msg_important {
+     color: #b22222;
+     font-weight: bold;
+     font-size: small; }
+
+/* messages letting you know something has happened eg comment saved */
+.serendipity_msg_notice {
+     color: green;
+     font-weight: bold;
+     font-size: small; }
+
+/* used when s9y needs to center something */
+.serendipity_center {
+     margin-left: auto;
+     margin-right: auto;
+     text-align: center; }
+
+/* used when s9y needs to left align something */
+.serendipity_left {
+     margin-left: auto;
+     margin-right: auto;
+     text-align: left;
+}
+
+/* used when s9y needs to right align something */
+.serendipity_right {
+     margin-left: auto;
+     margin-right: auto;
+     text-align: right; }
+
+/* style to align rounded corner bottom of sidebar, see index.tpl */ 
+.bottomCorner {
+     text-align: right; }
+
+/* style to align rounded corner bottom of content and sidebar, see index.tpl */
+.vBottom {
+     vertical-align: bottom; }
+
+/********* End of General Styles *********/
+
+
+
+
+/********* Structural Styles *********/
+
+/* preset styles for entire blog unless overruled elsewhere, page footer is here as well */
+body {
+     margin: 1em 1em 1em 1em;
+     padding: 0px;
+     font-family: verdana, sans-serif;
+     font-size: 1.0em;
+     background-color: #333; }
+
+/* wrapper style for comment popup window */
+.s9y_wrap {
+     color: #fff;
+     font-family: verdana, sans-serif;
+     font-size: 0.8em;
+     line-height: 1.8em;
+     text-align: left;
+     padding: 0px;
+     background-color: #777;
+     margin: 1.2em 1.2em 2em 1.2em;
+     overflow:auto; }
+
+/* container for content and sidebar */
+#wrap {
+     float: left;
+     width: 100%;
+     color: #fff; }
+
+/* styles for banner container */
+#serendipity_banner {
+     float: left;
+     width: 100%;
+     height: 4em;
+     background: #25509F url({TEMPLATE_PATH}img/hdr.jpg) no-repeat bottom left; }
+
+/* container for content and sidebar */
+#mainpane {
+     float: left;
+     width: 100%;
+     padding: 1em 0 1em 0;
+     background-color: #666; }
+
+/* container for entries column */
+#content {
+     float: right;
+     width: 75%;
+     background: #777 url({TEMPLATE_PATH}img/corner_sub_tl.gif) no-repeat top left; }
+
+/* container for both sidebars, see index.tpl */
+#sidebar {
+     float: left;
+     width: 23.3%;
+     margin-bottom: 1em;
+     background: #777 url({TEMPLATE_PATH}img/corner_sub_tr.gif) no-repeat top right; }
+
+/* container for footer */
+#footer {
+     float: left;
+     width: 100%;
+     height: 3em;
+     margin-bottom: 1em !important;
+     margin-bottom: 0;
+     font-size: 0.6em;
+     text-transform: lowercase;
+     line-height: 2.6em;
+     color: #0ad;
+     background: #25509F url({TEMPLATE_PATH}img/hdr.jpg) repeat-y top left; }
+
+/********* End of Structural Styles *********/
+
+
+
+
+/********* Header/Banner Styles *********/
+
+/* the menu links at top right of banner */
+#serendipity_banner a {
+     float: right;
+     width: 8em;
+     padding: 5px 10px 5px 10px;
+     font-size: 0.6em;
+     text-align: center;
+     text-transform: uppercase;
+     text-decoration: none;
+     color: #FFF;
+     background-color: #666;
+     border-bottom: 2px solid #333;
+     border-right: 1px solid #333;
+     border-left: 1px solid #333; }
+
+/* the hover and active state for the menu links at top right of banner */
+#serendipity_banner a:hover, ##serendipity_banner a:active {
+     padding-top: 10px;
+     background-color: #333; }
+
+/* the last menuitem, needed to get the rounded corner */
+#serendipity_banner a.lastMenuItem {
+     background-image: url({TEMPLATE_PATH}img/corner_tr.gif);
+     background-repeat: no-repeat;
+     background-position: top right;
+     border-right: 0px; }
+
+/* hides the menu tabs */
+a .desc {
+     display: none;
+     text-transform: lowercase; }
+
+/* unhides the menu tabs when rolled over */
+a:hover .desc, .active .desc {
+     display: block; }
+
+/* the blog title if used, see index.tpl
+.title {
+     float: left;
+     padding: 1em 30px 0 2em;
+     font-size: 1.4em;
+     font-weight: bold;
+     text-transform: uppercase;
+     text-align: right;
+     line-height: 0.75em;
+     letter-spacing: -0.15em; }
+
+/* the blog description if used, see index.tpl */
+.subTitle {
+     display: block;
+     font-size: 0.4em;
+     text-transform: lowercase;
+     line-height: 1.2em;  
+     letter-spacing: 0.01em; }
+
+/********* End of Header/Banner Styles *********/
+
+
+
+
+/********* Footer Styles *********/
+
+/* container for the footer message and left rounded corner */
+#footerLeft {
+     float: left;
+     width: 60%;
+     height: 3em;
+     text-align: left;
+     background: url({TEMPLATE_PATH}img/corner_bl.gif) no-repeat bottom left; }
+
+/* container for the right rounded corner */
+#footerRight {
+     float: right;
+     width: 35%;
+     height: 3em;
+     text-align: right;
+     background: url({TEMPLATE_PATH}img/corner_br.gif) no-repeat bottom right; }
+
+/* styles for footer links */
+#footer a {
+     color: #0ad; }
+
+/* styles for footer linswhen hovered over, change color to grey */
+#footer a:hover {
+     color: #666666;
+     background-color:transparent; }
+
+/********* End of Footer Styles *********/
+
+
+
+
+/********* Entry Styles *********/
+
+/* style for entry title, serendipity_date used in archive page */
+h3.serendipity_title, h4.serendipity_title, .serendipity_date, .serendipity_commentsTitle {
+     margin: 1.2em 1.2em 0 1.2em;
+     font-weight: bold;
+     font-size: 0.8em;
+     text-transform: lowercase;
+     border-bottom: 1px solid #aaa; }
+
+/* style for entry title link */
+.serendipity_title a:link, .serendipity_title a:visited, .serendipity_title a:hover {
+     text-decoration: none; }
+
+/* container for the entry/post */
+.serendipity_entry {
+     margin: 1.2em 1.2em 2em 1.2em;
+     font-size: 0.8em;
+     line-height: 1.8em; }
+
+/* style for post meta info, eg posted by... */
+.posttime {
+     font-size: x-small;
+     line-height:130%;
+     margin-bottom:5px; 
+     clear:left;}
+
+/* not used in reflection theme, but can be used to apply additional styles for full entry */
+.serendipity_entry_body_folded, .serendipity_entry_body_unfolded, .serendipity_entry_extended {
+    }
+.serendipity_entry_extended {
+     float:left; 
+     margin-top:20px;}
+
+
+/* the small text at the end of each entry 'comments, trackbacks etc' */
+div.serendipity_entryFooter {
+     color: #ccc;
+     font-size: x-small;
+     text-align: center;
+     margin: 10px 0 50px 0;
+     line-height: normal;
+     clear:both; }
+
+/* styles for category icon if used */
+img.serendipity_entryIcon {
+     float: right;
+     margin:3px 10px 10px 0; }
+
+/* links in posts are yellow with bottom border */
+.serendipity_entry_body a, .serendipity_entry_extended a {
+     text-decoration: none;
+     border-bottom: 1px solid #aaa; }
+
+/* links in posts, change to light grey, dark grey backgound */
+.serendipity_entry_body a:hover, .serendipity_entry_extended a:hover {
+     color: #DDD;
+     background-color: #888;
+     border-bottom: 1px solid #eee; }
+
+/********* End of Entry Styles *********/
+
+
+
+
+/********* Comment Styles *********/
+
+/* comments, trackbacks and commentform titles */
+.serendipity_commentsTitle {
+     line-height: 103%;
+     font-size: 14px;
+     text-align: left;
+     font-weight: bold;
+     text-transform:lowercase;
+	margin-left:0; }
+
+/* container for all comments */
+.serendipity_comments {
+     margin: 1.2em 1.2em 2em 1.2em;
+     font-size: 0.8em;
+     line-height: 1.8em; }
+
+/* fix a left align problem in some browsers */
+.serendipity_comment p {
+     padding: 0 0 0 3px; }
+
+/* style for comment author if logged in */
+.serendipity_comment_author_self {
+	padding-right:3px; }
+
+/* style for the body of the comment */
+.serendipity_commentBody {
+     line-height:20px; }
+
+/* style for odd numbered comment */
+.oddbox {
+     width:80%;
+     margin-bottom:20px;
+     padding: 0 5px 0 3px; }
+
+/*style for even numbered comment */
+.evenbox {
+     width:80%;
+     border:1px solid #fffbde;
+     margin-bottom:20px;
+     padding: 0 5px 0 3px; }
+
+/********* End of Comment Styles *********/
+
+
+
+
+/********* Comment Form *********/
+
+/* container style for entire comment form */
+.serendipityCommentForm{
+     font-size:x-small;
+     color: #fff; }
+
+/* style for name, email etc fields in comments form */
+td.serendipity_commentsLabel {
+     font-size: x-small;
+     font-weight: bold;
+     vertical-align: top; }
+
+/* styles for input boxes in comments form */
+td.serendipity_commentsValue input, td.serendipity_commentsValue select, td.serendipity_commentsValue textarea {
+     border: 1px solid #333;
+     padding: 2px; }
+
+/* style for small text under comment form */
+.serendipity_commentDirection {
+     font-size:x-small;
+     width:400px; }
+
+/********* End of Comment Form *********/
+
+
+
+
+/********* Sidebar Styles *********/
+
+/* container style for individual sidebar blocks */
+div.serendipitySideBarItem {
+     margin: 1.2em 1.2em 3em 1.2em;
+     font-size: 0.8em; }
+
+/* style for each sidebar title */
+.serendipitySideBarTitle {
+     display: block;
+     clear: both;
+     text-transform: lowercase;
+     border-bottom: 1px solid #AAA; 
+     font-weight: bold; }
+
+/* links within sidebar */
+.serendipitySideBarContent a, .serendipitySideBarContent a:link, .serendipitySideBarContent a:visited {
+     text-decoration:none; }
+
+/* links within sidebar when hovered over */
+.serendipitySideBarContent a:hover {
+     color: #ddd;
+     background-color: #888;
+     text-decoration:underline; }
+
+/* adjust width of form elements within sidebar, stops template chooser throwing out design */
+.serendipitySideBarContent input, .serendipitySideBarContent select, .serendipitySideBarContent textarea {
+	width: 90%;
+	margin:3px auto 3px auto; }
+
+/* needed to keep feed icon in correct postion */
+#sidebar img {
+	padding:0; }
+
+/* style for the powered by sidebar entry */
+div.serendipityPlug {
+     padding-left: 10px; }
+
+/* style for the powered by link */
+div.serendipityPlug a {
+     text-decoration: none;
+     border: 0px; }
+
+/* style for the s9y banner button */
+div.serendipityPlug img {
+     padding: 3px 0 0 0;
+     text-decoration: none;
+     border: 0px; }
+
+/********* End of Sidebar Styles *********/
+
+
+
+
+/********* Calendar Styles *********/
+
+/* style for calendar date links */
+table.serendipity_calendar a, table.serendipity_calendar a:link, table.serendipity_calendar a:visited {
+     font-size: x-small;
+     text-decoration:underline; }
+
+/* style for calendar links when hovered over */
+table.serendipity_calendar a:hover {
+     background-color: #888;
+     color:#fff; }
+
+/* prevent borders around the arrows */
+table.serendipity_calendar img {
+     border:none;
+     padding:none; }
+
+/* conatiner style for calendar table rows */
+table.serendipity_calendar td {
+     line-height: 140%;
+     font-size: x-small;
+     text-align:center;
+     width:14.2%; }
+
+/* style for calendar weekday names */
+td.serendipity_weekDayName {
+     font-size: x-small;
+     font-weight: bold;
+     line-height: 140%; }
+
+/* styles for month name and arrows in calendar */
+td.serendipity_calendarHeader a:link, td.serendipity_calendarHeader a:visited, td.serendipity_calendarHeader a:hover {
+     font-size: small;
+     letter-spacing: 0.3em;
+     text-decoration: none; }
+
+/********* End of Calendar Styles *********/
+
+
+
+
+/********* Embedded images with the s9y image manager *********/
+
+/* container for images and text */
+.serendipity_imageComment_center, .serendipity_imageComment_left, .serendipity_imageComment_right {
+     border: 1px solid #aaa;
+     margin: 3px;
+     padding: 3px;
+     text-align: center; }
+
+/* style to center image and text within entry */
+.serendipity_imageComment_center {
+     margin: auto; }
+
+/* style to left align image and text within entry */
+.serendipity_imageComment_left {
+     float: left; }
+
+/* style to right align image and text within entry */
+.serendipity_imageComment_right {
+     float: right; }
+
+/* styles for the images */
+.serendipity_imageComment_img, .serendipity_imageComment_img img {
+     margin: 0px;
+     padding: 0px;
+     text-align: center; }
+
+/* styles for the text below the image if used */
+.serendipity_imageComment_txt {
+	margin: 0px auto;
+	padding: 3px;
+	clear: both;
+	color: #efefef;
+	font-size: 8pt;
+	text-align: center;
+	line-height:120%; }
+
+/********* End of Media Manager Styles *********/
+
+
+
+
+
+/********* Begin Plugin Styles *********/
+
+/* tidy up spacing for xml button when freetag is in sidebar */
+.serendipity_freeTag_xmlButton {
+     padding-left:2px; }
+
+/* styles for freetag when at top of content pane */
+.serendipity_freetag_taglist, .serendipity_search, .staticpage_navigation {
+     padding:15px;
+     border:1px solid #fffbde;
+     background-color:#888; 
+     margin: 1.2em 1.2em 0.8em 1.2em; }
+
+/* additional styles used in sidebar */
+.serendipity_plugin_freetag {
+     font-size:12px; }
+
+/* styles for freetag at end of post */
+.serendipity_freeTag {
+     color: #ccc;
+     font-size: x-small;
+     text-align: center;
+     clear:both; }
+
+/* style used by recent comments plugin if used */
+.highlight {
+     text-decoration: none;
+     border-bottom: 1px solid #aaa; }
+
+/********* Static Pages Styles *********/
+.staticpage_navigation_left {}
+.staticpage_navigation_center {}
+.staticpage_navigation_right {}
+#staticpage_childpages {}
+.staticpage_author, .staticpage_metainfo {
+     margin: 0.6em 1.2em 0 1.2em;
+     font-size: 0.8em; }
+
+.staticpage_metainfo_lastchange {}
+.staticpage_metainfo_editlink {}
+.staticpage_content {}
+/********* End of Static Pages Styles *********/
+
+/* container for karma even plugin */
+.serendipity_karmaVoting {}
+
+
+
+/********* End of Plugin Styles *********/
+

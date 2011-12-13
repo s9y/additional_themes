@@ -1,0 +1,110 @@
+/* $id$ */
+
+a:active	   { color:			 #497ED7;
+		     text-decoration:		 underline; }
+
+a:link, a:visited  { color:			 #497ED7;
+		     text-decoration:		 underline; }
+
+a:hover		   { color:			 #3B4471;
+		     text-decoration:		 none; }
+
+body		   { background-color:		 white; 
+		     color:			 #666666;
+		     font-family:		 verdana, arial, sans-serif;
+		     font-size:			 80%;
+		     margin:			 0;
+		     padding:			 0;
+		     text-align:		 left; }
+
+div		   { margin:			 0;
+		     padding:			 0; }
+
+h1		   { color:			 #497ED7;
+		     font-family:		 "Trebuchet MS", verdana, arial, sans-serif; 
+		     font-size:			 250%; 
+		     font-style:		 italic; 
+		     font-weight:		 normal;
+		     padding:			 0;
+		     margin:			 0; }
+
+h3.serendipity_date { background-color:		 #999999;
+		     color:			 white;
+		     line-height:		 3em; 
+		     padding:			 0 0 0 1.5em;
+		     margin:			 0; }
+
+h3.serendipitySideBarTitle,
+h4.serendipity_title { background-color:	 #DDDDDD; 
+		     font-family:		 "Trebuchet MS", verdana, arial, sans-serif;
+  	             font-size:			 100%; 
+		     font-style:		 italic; 
+		     font-weight:		 normal; 
+		     margin:			 0.2em; 
+		     padding:			 0 0 0 1.5em; }
+
+h4.serendipity_title a {
+		     color:			 #3B4471;
+		     text-decoration:		 none; }
+
+p		   { margin:			 0.2em 0 1.2em 0;
+		     padding:			 0.3em; }
+
+#serendipity_banner { background-image:		 url({TEMPLATE_PATH}/img/earphone.jpg);
+		     background-repeat:		 no-repeat; 
+		     background-position:	 right bottom; 
+		     margin:			 0;
+		     min-height:		 100px;
+		     padding:			 2em;
+		     text-align:		 left; }
+
+#serendipity_banner a {
+		     text-decoration:		 none; }
+
+#serendipity_banner h2 {
+		     text-indent:		 4em; }
+
+#serendipity_banner h2 a {
+		     color:			 #3B4471; }
+
+#serendipityLeftSideBar,
+#serendipityRightSideBar {
+		      margin:			 1em 0 0 0;
+		      padding:			 0;
+		      width:			 13em; }
+
+.serendipity_comments { font-size:		 90%;
+		      padding-left:		 1.5em; }
+
+.serendipitySideBarItem {
+		      border:			 1px solid #999999;
+	              font-size:		 90%;
+		      margin:			 0.5em;
+		      padding:			 0.3em;
+		      text-align:		 left; }
+
+.serendipitySideBarItem h3 {
+		      padding:			 0 0 0 1.5em;
+		      text-align:		 left; }
+
+.serendipitySideBarItem h3 a {
+		      color:			 #3B4471;
+		      text-decoration:		 none; }
+
+.serendipitySideBarContent {
+		      padding:			 0.5em; }
+
+.serendipity_comment {
+		      border:			 1px dotted #999999;
+		      padding:			 0.5em;
+		      margin:			 0.5em; }
+
+.serendipity_entryFooter {
+		      border-top:		 1px solid #999999; 
+		      color:			 #999999;
+		      font-size:		 75%; 
+		      margin:			 2.5em 0.2em 0.5em 0.5em; 
+		      padding:			 0.8em; 
+		      text-align:		 left; }
+
+/* --- end of file */

@@ -1,0 +1,13 @@
+/* Red colorset adapted from http://femina-amens.blogspot.com */
+
+a {color:#cd182c; }
+
+h1 a{text-transform:none; color:#cd182c;}
+
+h2, .serendipity_commentsTitle, .serendipity_date, .serendipity_title, .staticpage_result_header {color:#cd182c;}
+.serendipity_title a:hover {text-decoration:underline; }
+.serendipitySideBarTitle {color:#585468;}
+
+
+
+

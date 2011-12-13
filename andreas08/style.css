@@ -1,0 +1,411 @@
+/********* General Styles *********/
+
+
+a img{border:none; }
+
+p{padding:0 0 1.6em 0;}
+p form{margin-top:0; margin-bottom:20px; }
+
+blockquote { margin: 15px 30px 0 15px; padding-left: 15px; }
+code, pre {font-size:1.3em; }
+
+/* used when s9y needs to center something */
+.serendipity_center {  
+     margin-left: auto;
+     margin-right: auto;
+     text-align: center; }
+
+/* warning messages from s9y */
+.serendipity_msg_important { 
+     color: red; }
+
+/* messages letting you know something has happened eg comment saved */
+.serendipity_msg_notice {	
+     color: green; }
+
+/* style to temporarily change something to grey, used in pagefooter */
+.grey {
+	color:#999; }
+
+/********* End of General Styles *********/
+
+
+
+
+/********* Structure Styles *********/
+
+/* Define every style unless explicitly mentioned alsewhere */
+*{margin:0; padding:0; }
+
+body {
+	font:76% Verdana,Tahoma,Arial,sans-serif;
+	margin:8px auto;
+	line-height:1.4em; 
+	text-align:center; 
+	color:#303030; }
+
+/* container for page */
+#mainpane {
+	height:100%; /*leave in, needed by firefox for preview in admin suite */
+	width:760px;
+	margin:0 auto;
+	padding:1px 0;
+	text-align:left;
+	color:#303030; }
+
+.contentleft {background:#ffffff url({TEMPLATE_PATH}img/contentbgleft.gif) -10px 0px repeat-y; }
+
+.contentright {background:#ffffff url({TEMPLATE_PATH}img/contentbgright.gif) 0px 0px repeat-y; }
+
+/* container style for comments popup */
+.s9y_wrap {text-align:left;padding:5px;}
+
+/********* End of Structure Styles *********/
+
+
+
+
+/********* Header and navigation styles *********/
+
+#pagetop {
+	width:760px;
+	margin:0 auto;
+	padding:1px 0 0 0;
+	text-align:left;
+	background: url({TEMPLATE_PATH}img/bgwhite.gif) repeat; }
+
+#header {
+	height:110px;
+	width:758px;
+	margin:0 1px 1px 1px;
+	color:#ffffff; }
+
+#header h1{
+	padding:35px 0 0 20px;
+	font-size:2.2em;
+	background-color:inherit;
+	color:#ffffff;
+	letter-spacing:-2px;
+	font-weight:normal; }
+
+#header h2{
+	margin:10px 0 0 40px;
+	font-size:1.4em;
+	background-color:inherit;
+	color:#f0f2f4;
+	letter-spacing:-1px;
+	font-weight:normal; }
+
+#navigation {
+     height:2.2em;
+     line-height:2.2em;
+     width:758px;
+     margin:0 1px;
+     padding: 0;
+     color:#ffffff; }
+
+#navigation li {
+	float:left;
+	list-style-type:none;
+	border-right:1px solid #ffffff;
+	white-space:nowrap; }
+
+#navigation li a{
+	display:block;
+	padding:0 10px;
+	font-size:0.8em;
+	font-weight:normal;
+	text-transform:uppercase;
+	text-decoration:none;
+	background-color:inherit;
+	vertical-align:middle;
+	color: #ffffff; }
+
+* html #navigation a {width:1%;}
+
+#navigation .selected, #navigation a:hover{
+	color:#ffffff;
+	text-decoration:none; }
+
+/* style for quicksearch form in header */
+#searchform {
+	margin:0 5px 0 0;
+	background-color:inherit;
+	border-right:none;
+	text-align:right; }
+
+#searchform input {
+	width:193px; 
+	margin-top:5px;
+	border: 1px solid #aaa;
+	font-size: 1.1em;
+	vertical-align:middle;
+	color: #999;
+	background: #FFF url({TEMPLATE_PATH}img/mag_glass.gif) no-repeat 97% 50%; }
+
+/******** End of Header and Navigation Styles *********/
+
+
+
+
+/**************** Footer styles ****************/
+
+#footer{
+	width:760px;
+	margin:0 auto;
+	padding:1px 0;
+	font-size:0.9em;
+	background:#fff url({TEMPLATE_PATH}img/whitebg.gif) repeat;
+	color:#f0f0f0; }
+.footerbg {
+	width:758px;
+	padding:5px 0;
+	margin:0 1px;}
+#footer p{padding:0; margin:0; text-align:center;}
+#footer a{color:#f0f0f0; background-color:inherit; font-weight:bold;}
+#footer a:hover{color:#ffffff; background-color:inherit; text-decoration: underline;}
+
+.clearingdiv {
+	clear:both;
+	height:1px;
+	width:1px;
+}
+
+/********* End of Footer Styles *********/
+
+
+
+
+/********* Content styles *********/
+
+.contentleft #content {
+float:right;
+width:515px;
+font-size:0.9em;
+padding:20px 20px 3px 0px; }
+
+.contentright #content {
+float:left;
+width:515px;
+font-size:0.9em;
+padding:20px 0px 3px 20px; }
+
+#content h2, .serendipity_date, .serendipity_commentsTitle, .staticpage_result_header {
+color:#505050;
+margin:0 0 16px 0;
+padding:0;
+font-size:1.7em;
+font-weight:normal;
+letter-spacing:-1px;
+background-color:inherit; }
+
+.staticpage_result_header {font-weight:bolf;}
+
+.serendipity_entry_body a:visited, .serendipity_entry_extended a:visited { text-decoration: line-through; }
+
+.serendipity_entry li {
+	margin-bottom:10px;
+	list-style-position: inside; }
+
+.serendipity_entry_extended {
+	margin-top:20px; 
+	clear:left; }
+
+/* the small text at the end of each entry 'Posted by etc' */
+.serendipity_entryFooter {
+	margin-top:10px;
+	margin-bottom:70px;
+	padding:0px;
+	padding-top:3px;
+	border-top: 1px solid #dedede;
+	font-size:0.78em;
+	color: #31314B;  
+	text-align:center;
+	clear:both; }
+
+/* styles for bottom of page next and previos page links */
+div.serendipity_pageFooter {
+	font-size:0.8em;
+	clear:both;
+	margin:10px auto 50px auto;
+	text-align:center; }
+
+#content img {padding: 0; margin-bottom:3px; border: 1px solid #ddd;}
+#content img.emoticon, #content img.serendipity_entryIcon {border:none;}
+#content img.serendipity_entryIcon {float:right;}
+#content h2 a{font-weight:normal;}
+#content h3{margin:0 0 5px 0; font-size:1.4em; letter-spacing:-1px;}
+#content a:hover,#sidebar a:hover{text-decoration:underline;}
+#content ul,#content ol{margin:0 5px 16px 35px;}
+#content dl{margin:0 5px 10px 25px;}
+#content dt{font-weight:bold; margin-bottom:5px;}
+#content dd{margin:0 0 10px 15px;}
+
+/********* End of Content Styles **********/
+
+
+
+
+/********* Sidebar styles *********/
+
+.contentleft #sidebar {
+	float:left;
+	width:175px;
+	line-height:1.4em;
+	margin:10px 0px 0 15px;
+	font-size:0.9em; }
+
+.contentright #sidebar {
+	float:left;
+	width:175px;
+	line-height:1.4em;
+	margin:10px 0px 0 35px;
+	font-size:0.9em; }
+
+.serendipitySideBarItem{padding:10px 10px 10px 0;}
+
+#sidebar h2, .serendipitySideBarTitle {
+	display:block;
+	margin:4px 0 15px 0;
+	font-size:1.6em;
+	font-weight:normal;
+	text-align:left;
+	letter-spacing:-1px;
+	color:#505050;
+	background-color:inherit; }
+
+#sidebar .serendipitySideBarContent{margin:0 0 16px 0; font-size:0.9em;}
+#sidebar input, #sidebar textarea, #sidebar select {width:95%;}
+#sidebar td input {width:150px;}
+
+/********* End of Sidebar Styles *********/
+
+
+
+
+/********* Calendar Styles *********/
+
+/* style for calendar date links */
+table.serendipity_calendar a {
+	text-decoration:none; }
+
+/* style for calendar links when hovered over */
+table.serendipity_calendar a:hover {
+	text-decoration: none; }
+
+/* style for calendar weekday names */
+td.serendipity_weekDayName {
+	font-weight:bold;
+	text-align:center; }
+
+/* styles for month name and arrows in calendar */
+td.serendipity_calendarHeader a:link, td.serendipity_calendarHeader a:visited, td.serendipity_calendarHeader a:hover {
+	text-decoration: none; }
+
+/* style for wekday names in calendar */
+td.serendipity_weekDayName {border-bottom:1px solid #dddddd; }
+
+/* style to center dates */
+tr.serendipity_calendar td {text-align:center; }
+
+
+
+/********* End of Calendar Styles *********/
+
+
+
+
+/********* Embedded images with the s9y image manager *********/
+
+/* container for images and text */
+.serendipity_imageComment_center, .serendipity_imageComment_left, .serendipity_imageComment_right {
+	margin:0 0 20px 0;
+	padding:10px;
+	border:1px solid #c0c0c0;
+	background-color:#fafbfc;
+	color:#505050;
+	line-height:1.5em; }
+
+/* style to center image and text within entry */
+.serendipity_imageComment_center {
+	display:block; margin:0 auto 5px auto; }
+
+/* style to left align image and text within entry */
+.serendipity_imageComment_left {
+	float:left; margin:0 12px 5px 0; }
+
+/* style to right align image and text within entry */
+.serendipity_imageComment_right {
+	float:right; margin:0 0 5px 12px; }
+
+/* styles for the images */
+.serendipity_imageComment_img, .serendipity_imageComment_img img {
+	text-align: center; }
+
+/* styles for the text below the image if used */
+.serendipity_imageComment_txt {
+     clear: both;
+     text-align: center; }
+
+/********* End of Image Manager Styles *********/
+
+
+
+
+
+/********* Plugin Stlyes *********/
+
+/* style for the seearch term and number of results using quicksearch */
+.searchterm, .searchresults {font-weight:bold; }
+
+/* used in comments */
+.oddbox, .plugin_comment_wrap {
+	margin:0 0 20px 0;
+	border-top:1px solid #c0c0c0;
+	border-bottom:1px solid #c0c0c0;
+	background-color:#fafbfc;
+	color:#505050;
+	line-height:1.5em; }
+
+/* not used */
+.evenbox {}
+
+/* container for comments plugin within sidebar */
+.container_serendipity_plugin_comments {
+	color:#333; }
+
+/* style for line break in comments plugin */
+.container_serendipity_plugin_comments br {
+	line-height:0.5em; }
+
+/* style for comment body within sidebar */
+.plugin_comment_body {
+	font-style:oblique; }
+
+/* container cloud for tags and static page navigation */
+.serendipity_freetag_taglist, .staticpage_navigation, .serendipity_search {
+	padding:15px;
+	margin:0 0 50px 0;
+	padding:10px;
+	border:1px solid #c0c0c0;
+	background-color:#fafbfc;
+	color:#505050;
+	line-height:1.5em;
+	clear:both; }
+
+.container_serendipity_plugin_freetag a {
+	font:85% Verdana,Tahoma,Arial,sans-serif;
+	line-height: 1!important; }
+
+/* shift the feed icon in the freetag sidebar plugin */
+.serendipity_freeTag_xmlButton {
+	padding-left:2px; }
+
+/* place freetag list on new line in entry footer */
+.serendipity_freeTag {
+	clear:both; }
+
+/* adjust line height in entry footer */
+.serendipity_karmaVoting, .serendipity_freeTag {line-height: 1!important;}
+
+/********* End of Plugin Styles *********/

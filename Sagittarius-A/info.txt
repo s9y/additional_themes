@@ -1,0 +1,4 @@
+Name: Sagittarius-A (2009-08-16)
+Author: Blueprint Theme port with yaml by RL  
+Date: 2009-04-01
+Require Serendipity: 1.5

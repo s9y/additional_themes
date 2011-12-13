@@ -1,0 +1,333 @@
+/*
+Stylesheet by Vladimir Simovic (aka Perun)
+www.perun.net | www.vlad-design.de
+Don't remove these Lines
+*/
+
+a {
+color: #0E8BB8;
+}
+
+a:hover {
+text-decoration: none;
+}
+
+/* Allgemeine Elemente */
+
+img {
+border: none;
+}
+
+body {
+margin: 0;
+padding: 0;
+text-align: center;
+background: #eee;
+font: 62.5% arial, sans-serif;
+color: #444;
+}
+
+/* IDs */
+
+#mainpane {
+background:  url({TEMPLATE_PATH}img/mitte.gif) repeat-y;
+text-align: left;
+margin: 0 auto;
+padding: 0 0 1em 0;
+width: 765px;
+font-size: 1.1em;
+letter-spacing: 1px;
+}
+
+#banner {
+padding: 0;
+margin: 0;
+height: 125px;
+background: url({TEMPLATE_PATH}img/oben.gif) no-repeat;
+color: #fff;
+}
+
+#banner #header {
+padding: 15px 15px 0 35px;
+font: italic normal 2.2em 'times new roman' times, serif;
+}
+
+#banner h1 {
+font-weight: normal;
+font-size: 1em;
+display: inline;
+letter-spacing: 2px;
+line-height: 80px;
+}
+
+#banner h2 {
+display: inline;
+font: .6em arial, sans-serif;;
+letter-spacing: 2px;
+line-height: 80px;
+}
+
+#banner h1 a, #banner h2 a {
+color: #fff;
+text-decoration: none;
+}
+
+#banner h1 a:hover, #banner h2 a:hover {
+color: #fff;
+}
+
+#content {
+margin: 0 240px 0 40px !important;
+width: 480px;
+padding: 0;
+}
+
+#content h3 {
+font: bold 1.2em arial, sans-serif;
+background: #D9EAF1;
+padding: .1em 5px;
+margin: 0;
+text-align: right;
+}
+
+#content h4 {
+font: 180% 'trebuchet ms' arial, sans-serif;
+border-bottom: 1px solid #0E8BB8;
+margin: .3em 0 .2em 0;
+}
+
+#content h4 a {
+text-decoration: none;
+}
+
+#sidebar {
+margin-top: 0;
+padding-top: 0;
+width: 205px;
+float: right;
+line-height: 130%;
+}
+
+#sidebar h3 {
+margin: .2em 0;
+font: bold 1.3em 'trebuchet ms' arial, sans-serif;
+}
+
+#sidebar a {
+color: #0E8BB8;
+text-decoration: none;
+}
+
+#sidebar a:hover {
+color: #444;
+}
+
+#sidebar form {
+margin-top: 0;
+padding-top: 0;
+}
+
+#sidebar input {
+border: 1px solid #0E8BB8;
+width: 165px;
+background: #eee;
+}
+
+/* Klassen */
+
+.serendipity_entryFooter {
+padding-top: 10px;
+padding-bottom: 10px;
+}
+
+.serendipity_comment {
+margin: 10px 10px 0 10px;
+padding: 3px;
+overflow: auto;
+}
+
+.serendipity_entry {
+line-height: 130%;
+margin-bottom: 1em;
+}
+
+.autor {
+margin: 1em 0;
+}
+
+.copyright {
+font-size: .8em;
+letter-spacing: 1px;
+margin: 10px 240px 0 40px;
+text-align: center;
+}
+
+/*.copyright a, copyright a:hover {
+color: #fff;
+}*/
+
+/**//**//**/
+
+.serendipity_entry_date {
+margin: auto;
+}
+
+.serendipity_commentsTitle {
+font-size: small;
+font-weight: bold;
+margin-top: 10px;
+padding-left: 5px;
+border-bottom: 1px solid #0E8BB8;
+}
+
+img.serendipity_entryIcon {
+float: right;
+border: 0px;
+}
+
+img.serendipity_entryIcon {
+float: right;
+border: 0px;
+}
+
+td.serendipity_commentsLabel {
+font-weight: bold;
+vertical-align: top;
+}
+
+td.serendipity_commentsValue input,
+td.serendipity_commentsValue select,
+td.serendipity_commentsValue textarea {
+padding: 2px;
+width: 350px;
+}
+
+.serendipity_commentForm {
+margin-bottom: 13px;
+margin-right: 10px;
+margin-left: 10px;
+}
+
+.serendipity_comment_source {
+margin-top: 5px;
+padding-left: 5px;
+margin-bottom: 5px;
+padding-bottom: 3px;
+border-bottom: 1px solid #0E8BB8;
+}
+
+table.serendipity_calendar td {
+padding: 2px;
+}
+table.serendipity_calendar a {
+color: #f00;
+font-weight: bold;
+text-decoration:none;
+}
+
+table.serendipity_calendar a:hover {
+text-decoration: none;
+}
+
+td.serendipity_calendarHeader a:link,
+td.serendipity_calendarHeader a:visited,
+td.serendipity_calendarHeader a:hover {
+border: 0;
+text-decoration: none;
+}
+
+div.serendipityPlug {
+padding-left: 10px;
+}
+
+div.serendipityPlug a {
+text-decoration: none;
+border: 0px;
+}
+
+/* Container for each item on the side bar */
+.serendipitySideBarItem {
+margin-bottom: 1em;
+}
+
+/* title of an individual item */
+
+.serendipityImageButton {
+cursor: pointer;
+}
+.serendipity_entry p {
+margin: 0px;
+padding-bottom: 0px;
+}
+
+/** Embedded images with the s9y image manager **/
+.serendipity_imageComment_center,
+.serendipity_imageComment_left,
+.serendipity_imageComment_right {
+border: 1px solid #eee;
+background-color: #EFEFEF;
+margin: 3px;
+padding: 3px;
+text-align: center;
+}
+
+.serendipity_imageComment_center {
+margin: auto;
+}
+
+.serendipity_imageComment_left {
+float: left;
+}
+
+.serendipity_imageComment_right {
+float: right;
+}
+
+.serendipity_imageComment_img,
+.serendipity_imageComment_img img {
+margin: 0px;
+padding: 0px;
+text-align: center;
+}
+
+.serendipity_imageComment_txt {
+border-top: 1px solid #D9EAF1;
+margin: 0px;
+padding: 3px;
+clear: both;
+font-size: 8pt;
+text-align: center;
+}
+
+.serendipity_center {
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+}
+
+.serendipity_msg_important {
+color: red;
+}
+
+.serendipity_msg_notice {
+color: green;
+}
+
+.serendipity_comment_author_self .serendipity_comment_source {
+background-color: #eee;
+}
+
+/* Internet Explorer 5.x ist doof */
+.serendipity_calendar {
+font-size: 11px;
+}
+.serendipityCommentForm table {
+font-size: 11px;
+width: auto;
+}
+
+/* Fuer Popups */
+#serendipity_comment_page, .s9y_wrap {
+padding: 1em;
+background: #fff;
+}

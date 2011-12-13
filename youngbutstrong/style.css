@@ -1,0 +1,252 @@
+/*
+** YoungButStrong
+** Theme by Stefan2k1
+** s9y port by fwaggle
+** http://www.hungryhacker.com/
+*/
+
+a {
+	color: #dabc73;
+	text-decoration: underline;
+}
+
+body {
+	background: #ffffff;
+	color #564736;
+	font-family: tahoma, sans-serif, helvetica;
+	font-size: 11px;
+	margin: 40px 0 0 0;
+	padding: 0;
+}
+
+div#container {
+	width: 850px;
+	background: #342b22 url('{TEMPLATE_PATH}images/bg_body.jpg') repeat-y;
+	margin: 0 auto;
+	overflow: auto;
+}
+
+div#logo {
+	width: 374px;
+	height: 90px;
+	background: #ffffff url('{TEMPLATE_PATH}images/logo.gif') no-repeat;
+	float: left;
+}
+
+div#logo h1 {
+	margin: 0;
+	padding: 0;
+}
+
+div#logo h1 a {
+	display: block;
+	width: 374px;
+	height: 90px;
+}
+
+div#logo span {
+	display: none;
+}
+
+div#ad_space {
+	width: 476px;
+	height: 90px;
+	background: #ffffff url('{TEMPLATE_PATH}images/ad_space_bg.gif') no-repeat;
+	float: right;
+}
+
+div#top {
+	clear: both;
+	width: 850px;
+	height: 68px;
+	background: url('{TEMPLATE_PATH}images/top.gif') no-repeat;
+}
+
+div#left {
+	height: 100%;
+	width: 511px;
+	padding: 0 37px 50px 26px;
+	background: url('{TEMPLATE_PATH}images/content_left_bg.gif') repeat-y;
+	float: left;
+}
+
+div#content {
+	width: 803px;
+	padding: 0 18px 0 29px;
+	clear: both;
+}
+
+div#right {
+	width: 213px;
+	float: right;
+}
+
+div#footer {
+	width: 850px;
+	height: 44px;
+	clear: both;
+	background: url('{TEMPLATE_PATH}images/footer.gif') no-repeat;
+}
+
+div#footer_links {
+	width: 832px;
+	margin: 0 auto;
+}
+
+div#footer_sponsors {
+	width: 850px;
+	height: 22px;
+	text-align: center;
+	background: #ffffff;
+}
+
+div.content_date {
+	font-size: 24px;
+	color: #d8bb6f;
+	text-align: center;
+	width: 53px;
+	height: 51px;
+	padding: 5px 0 0 0;
+	background: url('{TEMPLATE_PATH}images/date.gif') no-repeat;
+	float: left;
+}
+
+div.content_month {
+	font-size: 10px;
+	color: #ffffff;
+	text-align: center;
+	padding-bottom: 5px;
+}
+
+div.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+div.clearfix {
+	display: inline-block;
+}
+
+div.content_post {
+	width: 437px;
+	float: right;
+	margin: 0 0 30px 0;
+}
+
+div.content_post_cat {
+	color: #d8bb6f;
+	float: left;
+}
+
+div.content_post_comments {
+	color: #d8bb6f;
+	float: right;
+}
+
+div.content_post_body {
+	clear: both;
+}
+
+div.content_post hr {
+	height: 2px;
+	width: 100%;
+	clear: both;
+	margin: 0;
+	padding: 0;
+	border-top:1px dashed #afa18f;
+	border-bottom:1px dashed #ffffff;
+	border-left:1px dashed #ffffff;
+	border-right:1px dashed #ffffff;
+}
+
+div.navigation {
+	clear: both;
+	text-align: center;
+}
+
+div.box_right {
+	width: 201px;
+	margin-bottom: 20px;
+	padding-bottom: 15px line-height: 20px;
+	background: #2d251c url('{TEMPLATE_PATH}images/box_right_bg.gif') repeat-x;
+	padding: 13px 0px 15px 13px;
+}
+
+h2.box_right_top {
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 12px;
+	width: 204px;
+	height: 31px;
+	padding: 15px 0 0 10px;
+	margin: 0;
+	background: url('{TEMPLATE_PATH}images/box_right.gif') no-repeat;
+}
+
+h2.content_title {
+	margin: 0;
+	font-weight: normal;
+	font-size: 24px;
+}
+
+h2.content_title a:link, .content_title a:visited {
+	text-decoration: none;
+	color: #564736;
+}
+
+h3 a, h3 a:visited {
+	color: #564736;
+	text-decoration: none;
+}
+
+form#searchform {
+	
+}
+
+form#searchform input#serendipityQuickSearchTermField {
+	height: 20px;
+	width: 90%;
+	background: #3d3328;
+	border: 1px dashed #2b231b;
+	color: #816647;
+	font-family: tahoma, helvetica, sans-serif;
+	font-size: 12px;
+}
+
+img {
+	border: 0;
+}
+
+ul#categories_list {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+ul#categories_list li {
+	color: #d8bb6f;
+	padding: 0 0 2px 21px;
+	background: url('{TEMPLATE_PATH}images/star.gif') 0px 2px no-repeat;
+	margin: 0;
+}
+
+ul#categories_list li a {
+	color: #ffffff;
+}
+
+ul#categories_list li a:hover {
+	color: #d8bb6f;
+}
+
+td.serendipity_calendarDay {
+	color: #ffffff;
+	text-align: right;
+	padding-right: 5px;
+}
+
+td.serendipity_weekDayName {
+	color: #ffffff;
+}

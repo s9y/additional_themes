@@ -1,0 +1,3 @@
+Name: square v1.0.1 (2008-02-14)
+Author: David Cummins
+Date: 02 October 2006

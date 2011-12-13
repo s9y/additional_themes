@@ -1,0 +1,670 @@
+h4,h3 { 
+	margin: 0;
+}
+
+input, textarea {                                    
+	font-size: 9pt;
+	font-family: Arial, Helvetica, sans-serif;
+	width: auto;
+}  
+
+
+th, td {
+	font-size: 9pt;
+}
+
+p, td, th, div, span {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+a:link, a:visited, a:active {    
+	color: #9B1414;
+	text-decoration: none;
+}  
+
+a:hover {                    
+	color: #666666;
+	text-decoration: underline;
+}
+
+.serendipity_center {  
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.serendipity_msg_important { 
+	color: red;
+} 
+
+.serendipity_msg_notice {    
+	color: green;
+}
+
+
+/* Structural Styles */
+
+body {
+	font-size: 9pt;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: normal;
+	margin: 0px;
+	padding: 0px;
+}
+
+#serendipity_banner {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#mainpane {
+	width: 100%;
+	background-image: url({TEMPLATE_PATH}img/main-gradient.png);
+}
+
+#content {
+	padding-left: 10px;
+	padding-right: 5px;
+	vertical-align: top;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #999999;
+}
+
+#serendipityRightSideBar {
+	width: 170px;
+	padding: 10px;
+	vertical-align: top;
+}
+
+#serendipityLeftSideBar {
+	width: 170px;
+	padding: 10px;
+	vertical-align: top;
+}
+
+
+/* Header/Banner Styles */
+
+a.homelink1, 
+a.homelink1:hover, 
+a.homelink1:link, 
+a.homelink1:visited, 
+#serendipity_banner h1 {
+	color: #ffffff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size : 20pt;
+	margin: 0px;
+	text-decoration: none;
+}
+
+a.homelink2, 
+a.homelink2:hover, 
+a.homelink2:link, 
+a.homelink2:visited, 
+#serendipity_banner h2 {
+	color: #ffffff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16pt;
+	margin-top: 0px;
+	margin-bottom: 5px;
+	text-decoration: none;
+}
+
+
+/* Entry Styles */
+
+.serendipity_entry_date {
+}
+
+.serendipity_date {
+	font-size: 14pt;
+	padding-top: 25px;
+	padding-bottom: 5px;
+	color: #666666;
+	text-align: right;
+}
+
+.serendipity_title {
+	font-size: 12pt;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+.serendipity_title a:link,
+.serendipity_title a:visited {
+	color: #663333;
+	background: transparent url({TEMPLATE_PATH}img/title.gif) 0% 50% no-repeat; padding-left: 17px;
+}
+
+.serendipity_title a:hover {
+	color: #666666;
+	text-decoration: none;
+	background: transparent url({TEMPLATE_PATH}img/title_hover.gif) 0% 50% no-repeat; padding-left: 17px;
+}
+
+.serendipity_entry {
+	font-size: 10pt;
+	clear: both;
+	overflow: auto;
+	display: block;
+	width: 100%;
+}
+
+.serendipity_entry p {
+	margin-bottom: 10px;
+	line-height: 120%;
+}
+
+.serendipity_entry_body_folded, 
+.serendipity_entry_body_unfolded, 
+.serendipity_entry_extended {
+	clear: both;
+	overflow: auto;
+	display: block;
+	width: 100%;
+}
+
+.serendipity_entryFooter {
+	font-size: 8pt;
+	padding-top: 10px;
+	padding-bottom: 3px;
+	text-align: right;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #999999;
+	color: #666666;
+	clear: both;
+}
+
+img.serendipity_entryIcon {
+	float: right;
+	border: 0px;
+	padding: 5px;
+	clear: both;
+}
+
+.serendipity_entry_author_self {
+}
+
+
+/* Comment Styles */
+
+.serendipity_comments {
+	width: 420px
+}
+
+.serendipity_commentsTitle {
+	font-size: 9pt;
+	font-weight: bold;
+	margin-top: 10px;
+	padding-top: 5px;
+	padding-bottom: 10px;
+}
+
+.serendipity_comment {
+	clear: both;
+	margin-bottom: 20px;
+	border: 1px solid #999999;
+	padding-right: 5px;
+	padding-top: 5px;
+	background-color: #F0F0F0;
+}
+
+.serendipity_comment_source {
+	font-size: 8pt;
+	color: #666666;
+	margin-top: 5px;
+	padding-left: 5px;
+	margin-bottom: 5px;
+	padding-bottom: 3px;
+	padding-top: 3px;
+	border-top: 1px solid #999999;
+	clear: both;
+}
+
+.serendipity_comment_author_self {
+     background-color: #FAF5F5;
+}
+
+
+/* Comment Form */
+
+.serendipity_commentForm {
+	font-size: 8pt;
+	color: #999999;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	margin-left: 10px;
+	background-color: #FFFFFF;
+}
+
+td.serendipity_commentsLabel {
+	font-size: 8pt;
+	font-weight: bold;
+	vertical-align: top;
+}
+
+td.serendipity_commentsValue input, 
+td.serendipity_commentsValue select, 
+td.serendipity_commentsValue textarea {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 8pt;
+	padding: 2px;
+	width: 340px;
+}
+
+
+/* Sidebar Styles */
+
+div.serendipitySideBarItem {
+	padding-top: 10px;
+	padding-bottom: 15px;
+	font-size: 8pt;
+}
+
+.serendipitySideBarTitle {
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: center;
+	font-style: oblique;
+	padding-bottom: 5px;
+}
+
+div.serendipityPlug {
+	text-align: center;
+}
+
+div.serendipityPlug a {
+	text-decoration: none;
+	border: 0px;
+}
+
+.serendipityImageButton {
+	cursor: pointer;
+}
+
+
+/* Calendar Styles */
+
+table.serendipity_calendar td {
+	font-size: 8pt;
+	padding: 3px;
+	text-align: center;
+}
+
+table.serendipity_calendar a {
+	color: #663333;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+table.serendipity_calendar a:hover {
+	color: #666666;
+	text-decoration: underline;
+}
+
+td.serendipity_weekDayName {
+	font-size: 8pt;
+	font-weight: bold;
+	border-bottom: 1px solid #B4B4B4;
+}
+
+td.serendipity_calendarDay.Today {
+	background-color: #E6E6E6;
+}
+
+td.serendipity_calendarHeader a:link, 
+td.serendipity_calendarHeader a:visited, 
+td.serendipity_calendarHeader a:hover {
+	border: 0;
+	text-decoration: none;
+}
+
+
+/* Embedded images with the s9y image manager */
+
+.serendipity_imageComment_center, 
+.serendipity_imageComment_left, 
+.serendipity_imageComment_right {
+	border: 1px solid #333333;
+	background-color: #F5F5F5;
+	margin: 5px;
+	padding: 5px;
+	text-align: center;
+}
+
+.serendipity_imageComment_center {
+	margin: auto;
+}
+
+.serendipity_imageComment_left {
+	float: left;
+}
+
+.serendipity_imageComment_right {
+	float: right;
+}
+
+.serendipity_imageComment_img, .serendipity_imageComment_img img {
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	border: 0px;
+}
+
+.serendipity_imageComment_txt {
+	border-top: 1px solid #333333;
+	margin-top: 3px;
+	padding: 3px;
+	clear: both;
+	font-size: 8pt;
+	text-align: center;
+}
+
+
+/* ============================================================ */
+/*                        added styles                          */
+/* ============================================================ */
+
+blockquote {
+	margin-left: 10px;
+	padding-left: 60px;
+	padding-top: 5px;
+	padding-right: 5px;
+	min-height: 45px;
+	background-image: url({TEMPLATE_PATH}img/cite.gif);
+	background-repeat: no-repeat;
+	background-position: 5px 5px;
+}
+
+/* blockquoting */
+
+code, pre {
+	width: 420px;
+	overflow-x: auto;
+	overflow-y: hidden;
+	padding-bottom: 2em;
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+	border: 1px solid #dfdfdf;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 12px;
+	text-align: left;
+	background-color: #FFFFFF;
+	background-image: url({TEMPLATE_PATH}img/code.gif);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	color: #000000;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-left: 15px;
+}
+
+/* coding */
+
+#searchform {
+	text-align: center;
+}
+
+/* quicksearch plugin */
+
+#theme_chooser {
+	text-align: center;
+}
+
+/* theme chooser */
+
+.serendipity_relatedlinks {
+	font-size: 9pt;
+	font-weight: bold;
+}
+
+#serendipity_relatedlinks_list {
+	font-weight: normal;
+}
+
+/* related links */
+
+.continue_reading {
+	clear: both;
+}
+
+.continue_reading a:link,
+.continue_reading a:visited,
+.continue_reading a:active {
+	color: #9B1414;
+	text-decoration: none;
+	background: transparent url({TEMPLATE_PATH}img/arrow_right-01.png) 0% 50% no-repeat; padding-left: 14px;
+}
+
+.continue_reading a:hover {
+	color: #666666;
+	text-decoration: underline;
+}
+
+/* "continue reading" feature */
+
+.serendipity_entrypaging {
+	padding-top: 10px;
+	text-align: center;
+}
+
+/* links to next/previous entry plugin */
+
+.plugin_comment_author {
+	font-weight: bold;
+}
+
+.plugin_comment_date {
+	font-style: italic;
+}
+
+.plugin_comment_body {
+	clear: both;
+}
+
+/* comments plugin */
+
+.gravatar {
+	border: 1px solid #E1E1E1;
+	clear: both;
+}
+
+/* gravatar/favatar plugin */
+
+.one-image {
+	text-align: center;
+	border: 0px;
+}
+
+/* gallery plugin */
+
+td.template_banner_title {
+	height: 100px;
+	vertical-align: bottom;
+	background-image: url({TEMPLATE_PATH}img/banner-title.jpg);
+}
+
+/* template style for td cell where blog title and subtitle goes */
+
+td.template_banner_bottom {
+	vertical-align: middle;
+	background-color: #000000;
+	background-image: url({TEMPLATE_PATH}img/banner-bottom.jpg);
+	background-repeat: no-repeat;
+	background-position: bottom;
+}
+
+/* template style for td cell with bottom banner graphics */
+
+.template_banner_bottom_left {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 7pt;
+	color: #CCCCCC;
+	text-align: left;
+	vertical-align: top;
+	padding: 5px;
+	font-weight: bold;
+}
+
+/* template style for banner at the bottom where some white text goes - left */
+
+.template_banner_bottom_right {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	color: #CCCCCC;
+	text-align: right;
+	vertical-align: top;
+	padding: 5px;
+	padding-right: 20px;
+	font-weight: bold;
+}
+
+/* template style for banner at the bottom where some white text goes - right */
+
+.template_banner_bottom_right a:link,
+.template_banner_bottom_right a:visited,
+.template_banner_bottom_right a:active {
+	color: #CCCCCC;
+}
+
+.template_banner_bottom_right a:hover {
+	color: #CCCCCC;
+	text-decoration: underline;
+}
+
+.template_banner_bottom_left a:link,
+.template_banner_bottom_left a:visited,
+.template_banner_bottom_left a:active {
+	color: #CCCCCC;
+}
+
+.template_banner_bottom_left a:hover {
+	color: #CCCCCC;
+	text-decoration: underline;
+}
+
+/* template bottom banner link styles */
+
+.serendipity_freeTag_xmlButton {
+	text-align: absolute-middle;
+	border: 0px;
+}
+
+/* style for rss image of tags */
+
+.serendipitySideBarDate {
+	font-style: italic;
+}
+
+/* sidebar's date style, used by some plugins */
+
+.serendipity_entry_body a:link,
+.serendipity_entry_body a:visited,
+.serendipity_entry_body a:active {
+	color: #9B1414;
+	text-decoration: none;
+	background: transparent url({TEMPLATE_PATH}img/link.gif) 100% 50% no-repeat; padding-right: 10px;
+}
+
+.serendipity_entry_extended a:link,
+.serendipity_entry_extended a:visited,
+.serendipity_entry_extended a:active {
+	color: #9B1414;
+	text-decoration: none;
+	background: transparent url({TEMPLATE_PATH}img/link.gif) 100% 50% no-repeat; padding-right: 10px;
+}
+
+.serendipity_entry a:hover {
+	color: #666666;
+	text-decoration: underline;
+}
+
+/* a little fix for entry's link - just added a small gif on the right */
+
+a.serendipity_image_link:link,
+a.serendipity_image_link:visited,
+a.serendipity_image_link:active {
+	background: none;
+	border: 0px;
+}
+
+/* a little fix for entry image link - we do NOT show link symbol on the right */
+
+
+/* === bbcode === */
+.bb-code-title {
+	border-left: 3px solid lightgray;
+	margin-left: 10px;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-right: 5px;
+}
+.bb-code {
+	font-style: italic;
+}
+
+
+/* === livesearch === */
+.serendipity_livesearch_result {
+	background: white;
+	background-image: url({TEMPLATE_PATH}img/search.png);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	padding-left: 10px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: left;
+}
+
+.serendipity_livesearch_result a:link,
+.serendipity_livesearch_result a:visited,
+.serendipity_livesearch_result a:active {
+	color: #9B1414;
+	text-decoration: none;
+	background: transparent url({TEMPLATE_PATH}img/link.gif) 0% 50% no-repeat; padding-left: 12px;
+}
+
+.serendipity_livesearch_result a:hover {
+	color: #666666;
+	text-decoration: underline;
+}
+
+#LSShadow {
+	background: grey;
+}
+
+
+/* === navbar === */
+#navcontainer ul {
+	padding: 0;
+	margin: 0;
+	background-color: #000000;
+	color: #ffffff;
+	float: left;
+	width: 100%;
+	font-family: arial, helvetica, sans-serif;
+	letter-spacing: 2px;
+	font-weight: normal;
+}
+
+#navcontainer ul li {
+	display: inline;
+}
+
+#navcontainer ul li a {
+	padding: 0.2em 1em;
+	background-color: #969696;
+	color: #ffffff;
+	text-decoration: none;
+	float: left;
+	border-right: 1px solid #ffffff;
+}
+
+#navcontainer ul li a:hover {
+	background-color: #000000;
+	color: #ffffff;
+}

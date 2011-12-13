@@ -1,0 +1,2 @@
+Rotes Template für Serendipity 0.8
+Version 1.0

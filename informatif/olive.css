@@ -1,0 +1,37 @@
+body {
+	
+		margin: 0;
+		background: #FFFFFF url(images/olive.gif) repeat-y;
+		font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+		color: #666666;
+
+}
+h4.serendipitySideBarTitleRight {
+
+	font-size:font-size: 2.2em;
+	border-bottom: 5px solid #A1965B;
+	color: #000000;
+}
+h4.serendipitySideBarTitleLeft {
+
+	font-size:font-size: 2.2em;
+	border-bottom: 5px solid #5C5F3D;
+	color: #000000;
+	
+}
+#serendipityLeftSideBar a{
+	color: #000000;}
+	#serendipityLeftSideBar {
+	color: #000000;}
+	
+td.serendipity_calendarHeader a:link, td.serendipity_calendarHeader a:visited, td.serendipity_calendarHeader a:hover {
+	color: #000000;
+
+}
+
+table.serendipity_calendar td {
+	color: #41432C;
+}
+
+#serendipity_calendar_plugin{
+	color: #000000;}

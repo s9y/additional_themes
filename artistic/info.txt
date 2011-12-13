@@ -1,0 +1,3 @@
+Name: Artistic v1.1 (2009-08-27)
+Author: Carl Galloway & Ricky Wilson
+Date: 24 August 2006

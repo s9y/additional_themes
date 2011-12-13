@@ -1,0 +1,4 @@
+Name: codeschmiede (2008-02-14)
+Author: Florian Anderiasch
+Date: 08-11-2005
+Require Serendipity: 0.8

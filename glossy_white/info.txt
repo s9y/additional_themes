@@ -1,0 +1,3 @@
+Name: glossy white (2008-02-14)
+Author: Christian Hoffmann (ported by Ziyad Saeed)
+Date: 13/12/2005

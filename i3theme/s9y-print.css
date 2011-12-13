@@ -1,0 +1,7 @@
+/*** Additional print styles for s9y ***/
+.postdata .category, .postdata .comments,
+.serendipity_imageComment_left,
+.serendipity_imageComment_right { float: none !important; }
+
+.serendipity_entrypaging,
+#sidebar-left, #sidebar-right { display: none !important; }

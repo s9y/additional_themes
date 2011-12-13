@@ -1,0 +1,10 @@
+.serendipity_xml_icon {
+    background: url('img/mini-rss.gif') center center no-repeat;
+    padding: 10px 0;
+    margin: 0;
+    visibility: visible;
+}
+
+ .serendipity_xml_icon img {
+    visibility: hidden;
+}

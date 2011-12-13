@@ -1,0 +1,18 @@
+Hinweis
+-----
+Dieses Template ist ein 2-Spalten-Template d.h. die ganze Navigation befindet sich auf der rechten Seite. Empofhlen wird, daß man die Popups für Kommentare deaktiviert lässt.
+
+Getestet wurde bei einer Standardinstallation (ohne zusätzliche Plugins) und unter folgenden Browsern: Mozilla 1.7.5, Firefox 1.0, Opera 7.54, Internet Explorer 5.0, 5.5 und 6.0 (Win XP) und Safari 1.2.
+
+Lizenz
+-----
+Du kannst mit diesem Template machen was du willst. Auch für kommerzielle Zwecke verwenden. ABER, die Copyrightvermerke (in der CSS-Datei und in der HTML-Ausgabe) MÜSSEN stehen bleiben.
+
+Falls du das Template modifizierst, dann kannst du gerne an der jeweiligen Stelle "modified by: ..." hinzufügen.
+
+Haftungsausschluss
+-----
+Ich übernehme keinerlei Haftung für evtl. Schäden, die theoretisch durch den Einbau eines Templates entstehen könnten.
+
+Vladimir Simovic aka Perun
+www.vlad-design.de | www.perun.net

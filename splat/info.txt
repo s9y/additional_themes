@@ -1,0 +1,4 @@
+Name: SPLAT! v1.0.1 (2008-07-10)
+Author: David Cummins
+Date: 24-01-07
+

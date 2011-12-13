@@ -1,0 +1,4 @@
+Name: Modern World (2008-02-14)
+Author: nerdwg.org port of Luka Cvrk Theme
+Date: 2006-07-23
+Require Serendipity: 0.8

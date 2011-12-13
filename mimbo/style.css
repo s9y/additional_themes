@@ -1,0 +1,490 @@
+/*  
+Theme Name: Mimbo
+Theme URI: http://www.darrenhoyt.com/2007/08/05/wordpress-magazine-theme-released/
+Description: A magazine-style layout for Wordpress
+Version: 2.2
+Author: Darren Hoyt
+Author URI: http://www.darrenhoyt.com/2007/08/05/wordpress-magazine-theme-released/
+
+The CSS, XHTML and design is released under GPL:
+http://www.opensource.org/licenses/gpl-license.php
+
+
+
+/* HTML Elements */
+
+* {
+	margin:0;
+	padding:0;
+	}
+
+body,html {
+	min-height:101%;
+	}
+	
+body {
+	background: #3c3c3c;
+	color: #545454;
+	padding: 13px 0 25px 0;
+	}
+
+body, select, input, textarea {
+	font: 100% Arial, Verdana, Sans-Serif;
+	}
+	
+p {	
+	margin: 15px 0;
+	}
+
+a:link, a:visited {
+	color: #7da939;
+	text-decoration:none
+	}
+
+a:hover, a:active {
+	color:#333;
+	text-decoration:underline;
+	}
+
+hr {
+	display: block;
+	height:1px;
+	background:#333;
+	border:0;
+	}
+
+small {
+	font-size: 0.95em;
+	background:#eef5e1;
+	padding:3px 6px;
+	}
+
+img, a:link img, a:visited img {
+	border:0
+	}
+	
+		
+
+/* Structure */
+
+#page {
+	width:880px;
+	margin:0 auto;
+	font-size:0.7em;
+	background:#FFF;
+	padding: 10px 25px 35px 25px;
+	}
+
+#branding {
+	width:625px;
+	padding-bottom:15px;
+	}
+
+.left {
+	float:left;
+	}
+
+.right {
+	float:right;
+	}
+
+#sidebar {
+	width: 250px;
+	float:right
+	}
+
+#leftcol {
+	width:287px;
+	border-right:1px dotted #b6b6b6;
+	padding-right:18px;
+	}
+
+#leftcol, #rightcol {
+	margin-top:10px;
+	float:left
+	}	
+	
+#rightcol {
+	width:277px;
+	padding-left:18px;
+	margin-top: -2px;
+	}
+
+
+		
+/*Subnav */
+
+.subnav li {
+	list-style:none;
+	border-bottom:1px solid #FFF;
+	}
+
+.subnav li a:link, .subnav li a:visited {
+	background:#eef5e1;
+	display:block;
+	padding:4px 4px 4px 8px;
+	border-left:4px solid #e4efd5;
+	}
+		
+.subnav li a:hover, .subnav li a:active {
+	background:#e4efd5;
+	text-decoration:none;
+	color: #7da939;
+	}
+
+.subnav li li a:link, .subnav li li a:visited {
+	border-left:none
+	}
+		
+	 
+	
+	
+/*	Headers */
+
+h1 {
+	font:2.95em Georgia, "Times New Roman", Times, serif;
+	font-weight:bold;
+	letter-spacing:-0.02em;
+	}
+	
+h2 {
+	font: 2.3em Georgia, "Times New Roman", Times, serif;
+	padding-bottom:8px;
+	border-bottom:1px solid #333;
+	margin: 20px 0;
+	}
+
+h3, #sidebar h2 {
+	font: 1em Arial, Helvetica, sans-serif;
+	text-transform:uppercase;
+	letter-spacing:0.1em;
+	margin-bottom:4px;
+	font-weight:bold;
+	color:#5f5f5f;
+	}
+
+#sidebar h3, #sidebar h2 {
+	border-top:5px solid #BBB;
+	border-bottom:1px solid #BBB;
+	padding:6px 0 6px 2px;
+	margin:22px 0 15px 0;
+	font-size:1em;
+	}
+
+h3#respond {
+	border-top:1px dotted #b6b6b6;
+	margin-top:25px;
+	padding-top:20px
+	}
+
+h3#comments {
+	margin-top:32px
+	}
+
+h4 {
+	font-size:1.6em;
+	margin-bottom:6px;
+	}
+	
+	
+	
+/* Content */
+
+#content {
+	width:605px;
+	float:left
+	}
+	
+.description {
+	font-size: 1.3em;
+	font-weight: bold; 
+	font-style:italic;
+	color:#545454;
+	margin-top:-4px;
+	}
+
+.feature {
+	background:#f2f2f2;
+	padding:15px;
+	border-bottom:1px dotted #b6b6b6;
+	border-top:1px dotted #b6b6b6;
+	}
+
+.feature:hover {
+	background:#e9e9e9;
+	}
+	
+.feature p, #rightcol p {
+	margin:0;
+	}
+
+.feature img, #rightcol img {
+	padding:1px;
+	border:1px solid #000;
+	}
+			
+#leadpic {
+	float:left;
+	margin: 0 18px 8px 0;
+	}
+
+#lead {
+	margin-top:22px;
+	}
+
+.title {
+	font-size:1.2em;
+	font-weight:bold;
+	line-height:115%;
+	}
+	
+.feature#lead .title {
+	font:1.8em Georgia, "Times New Roman", Times, serif;
+	line-height:100%;
+	display:block;
+	padding-bottom:7px;
+	}
+
+#leftcol .feature {
+	margin-bottom: 5px;
+	border-bottom:none
+	}
+
+#rightcol img {
+	float:left;
+	margin:3px 10px 4px 0;
+	}
+
+#leftcol img {
+	margin-bottom: 4px;
+	display:block
+	}
+	
+#rightcol .clearfloat {
+	border-bottom:1px dotted #b6b6b6;
+	padding:12px 0;
+	}	
+
+.sidelist li {
+	list-style:none
+	}
+	
+.bullets li {
+	list-style:none;
+	border-bottom:1px solid #FFF;
+	}
+	
+.sidelist .bullets li {
+	list-style:square;
+	margin-bottom:5px;
+	line-height:115%;
+	margin-left:22px;
+	}
+
+.sidelist .children {
+	background:#e4efd5;
+	}
+	
+.sidelist .children li {
+	list-style: square;
+	margin-left:28px;
+	border-bottom:1px solid #e4efd5;
+	}
+	
+.sidelist .children li a, .sidelist .children li a:visited {
+	padding:2px 2px 2px 0px;
+	border:0;
+	background:#e4efd5;
+	color: #818d6f;
+	}
+
+.sidelist .children li a:hover, .sidelist .children li a:active	{				
+	color:#465d23
+	}
+
+.postmetadata {
+	margin: 30px 0;
+	}
+
+#writer {
+	background:#eef5e1;
+	margin:25px 0 15px 0;
+	padding:12px;
+	}
+
+#writer img {
+	padding:1px;
+	border:1px solid #7da939;
+	float:left;
+	width:80px;
+	}
+
+#writer span {
+	display:block;
+	padding-top:4px;
+	border-top:1px solid #cbd8b4;
+	margin-top:12px;
+	}
+
+#writer p {
+	margin:0;
+	width:482px;
+	}	
+
+.entry {
+	padding-bottom:28px;
+	}
+
+h3 a:link, h3 a:visited {
+	color:#5f5f5f;
+	}
+
+
+
+/*Post Formatting*/
+
+.picleft {
+	float:left;
+	margin:3px 14px 10px 0;
+	border:7px solid #f2f2f2;
+	}
+
+.picright {
+	float:right;
+	margin:3px 0 10px 14px;
+	border:7px solid #f2f2f2;
+	}	
+
+.post blockquote {
+	color:#76767a;
+	background:#f2f2f2;
+	padding:6px 14px;
+	margin:18px 35px;
+	border-right:1px solid #DDD;
+	border-bottom:1px solid #DDD;
+	}	
+
+.post ul li {
+	list-style:square;
+	margin-bottom:5px;
+	line-height:115%;
+	margin-left:42px;
+	}
+
+.post ol li {
+	margin-bottom:5px;
+	line-height:115%;
+	margin-left:48px;
+	}
+	
+#tags {
+	padding:3px;
+	border-bottom:1px solid #DDD;
+	border-top:1px solid #DDD;
+	}	
+				
+
+/* Form Elements */
+
+select {
+	background:#f2f2f2;
+	border:1px solid #9c9c9c;
+	width:100%
+	}
+	
+#searchform {
+	padding:16px 5px 0 0; 
+	}
+
+.button {
+	padding: 1px;
+	background:#000;
+	color:#e7e7e7;
+	border:none;
+	}
+
+.button:hover {
+	background:#777;
+	color:#FFF;
+	text-decoration:none
+	}
+
+#commentform input {
+	width: 170px;
+	margin: 5px 5px 1px 0;
+	}
+
+#commentform textarea {
+	width: 100%;
+	margin-top:5px;
+	}
+
+
+
+/* Comments*/
+
+.commentlist {
+	padding-left:30px;
+	}
+	
+.commentlist li {
+	margin: 15px 0 3px;
+	padding: 8px 15px 10px 15px;
+	background:#f2f2f2;
+	border-top: 1px solid #ddd;
+	}
+
+#commentform small {
+	background:#FFF;
+	font-weight:bold;
+	padding:0;
+	}
+	
+.commentmetadata {
+	display: block;
+	}
+
+.commentlist small {
+	background:#e9e9e9
+	}
+
+.commentlist cite {
+	font: 1.6em Georgia, "Times New Roman", Times, serif;
+	font-weight:bold;
+	letter-spacing:-0.05em;
+	}	
+	
+
+/* Float Properties*/
+
+.clearfloat:after {
+	display:block;
+	visibility:hidden;
+	clear:both;
+	height:0;
+	content:".";
+	}
+	
+.clearfloat {
+	display:inline-block
+	}
+
+.clearfloat {
+	display:block
+	}
+	
+
+
+/* Footer*/
+
+#footer {
+	margin: 0 auto;
+	width: 900px;
+	font-size:0.7em;
+	padding-top:15px;
+	color:#FFF;
+	}
+
+#footer a {
+	color:#d3d1d1;
+	}

@@ -1,0 +1,31 @@
+/* Modern World s9y CSS 
+   www.nerdwg.org      */
+body { font-family: Arial, Sans-Serif; font-size: 70%; color: #000; background: #595959 url({TEMPLATE_PATH}images/bg.gif) repeat-y top center; margin: 0; padding: 0; line-height: 140%; }
+a { color: #3E6984; background-color: inherit; text-decoration: none; }
+a:hover { color: #000; background-color: inherit; text-decoration: none; }
+.marked_green {	background: #E8F7E6; color: inherit; }
+.marked_blue { background: #ECF3FB; color: inherit; }
+#content { margin: auto; padding: 0; text-align: left; width: 850px; background: #595959 url({TEMPLATE_PATH}images/contentbg.gif) repeat-y top left; color: inherit; }
+#message { text-align: center; font-size: 170%; font-weight: bold; color: #FFF; margin: 0 0 50px 0; background-color: inherit; }
+#navigation { font-size: 100%; text-transform: uppercase; background: url({TEMPLATE_PATH}images/navbg.gif) repeat-x bottom left; padding: 0 0 22px 10px; }
+#navigation a {	color: #9f9f9f;	display: inline; text-decoration: none;	font-weight: bold; margin-right: 10px; padding-left: 5px; background-color: inherit; background-image: url({TEMPLATE_PATH}images/linkcorner.gif); background-repeat: repeat; background-position: top left; }
+#navigation a:hover { color: #000; background-color: inherit; text-decoration: none; }
+.left {	margin-right: 630px; padding: 0px 10px 10px 0px; background: url({TEMPLATE_PATH}images/logo.gif) no-repeat top center; }
+.left p { padding: 0 0 0 10px; }
+#sidebar { padding: 0 0 0 11px; }
+.left h1 { font-size: 140%; letter-spacing: -1px; color: #74CF7A; margin: 10px 0 0 0; padding: 0 0 0 10px; background-color: inherit; }
+#logo {	padding: 22px 0 0 13px; margin-bottom: 90px; }
+#logo h2 { font-size: 140%;	letter-spacing: -1px; font-weight: bold; color: #000; margin: 0; padding: 0; background-color: inherit; }
+#logo p { margin: 0; padding: 3px 0 0 2px; color: #95BAE3; background-color: inherit; }
+.right { margin: 0px;	padding: 15px 10px 10px 12px; width: 608px;	float: right; background: url({TEMPLATE_PATH}images/header.gif) repeat-x top left; }
+.right h1 { font-size: 190%; letter-spacing: -1px; font-weight: bold; color: #2980DE; margin: 10px 0px 0px 0px; padding: 0px 0px 0px 0px; background-color: inherit; }
+.quote { padding: 20px; background: #ECF3FB url({TEMPLATE_PATH}images/quotebg.gif) no-repeat center left; font-size:100%; color: inherit; }
+#footer { clear:both; background: #FFF url({TEMPLATE_PATH}images/footerbg.gif) repeat-x bottom left; color: #808080; border-top: 1px solid #eee; padding: 4px 10px 4px 4px;  font-family: Verdana, "lucida console", sans-serif; letter-spacing: -1px; font-size: 80%; text-align: right; text-transform: uppercase; }
+#footer a { color: #2980DE; background-color: inherit; text-decoration: none; }
+#footer a:hover { background: #FEFDD6; color: inherit; text-decoration: none; }
+.serendipity_title { font-size: 150%; font-weight: bolder; color: #000; }
+.serendipity_date { font-size: 200%; text-align: right; color: #ABCADE; }
+.serendipity_linklist { text-decoration: none; }
+.serendipitySideBarTitle { color: #74CF7A; font-weight: bolder; font-size: 120%; }
+.serendipity_commentBody { padding: 20px; background: #F5F5F5 url({TEMPLATE_PATH}images/commentbg.gif) no-repeat center left; font-size:100%; color: inherit; }
+.serendipity_comment_source { padding: 5px 0 5px 0; }

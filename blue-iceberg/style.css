@@ -1,0 +1,241 @@
+/* HTML Elements */
+
+body {
+  background-color: #0a3968;
+  color: white;
+  margin: 0px;
+}
+
+a,
+a:link,
+a:visited {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+a:active,
+a:hover {
+  text-decoration: none;
+}
+
+h3, h4 {
+  margin: 0;
+}
+
+/* Banner */
+
+#serendipity_banner {
+  font-weight: bold;
+  padding-left: 15px;
+}
+
+a.homelink1,
+a.homelink1:hover,
+a.homelink1:link,
+a.homelink1:visited,
+#serendipity_banner h1 {
+  font-size: x-large;
+}
+
+a.homelink2,
+a.homelink2:hover,
+a.homelink2:link,
+a.homelink2:visited,
+#serendipity_banner h2 {
+  font-size: small;
+  text-transform: none;
+  letter-spacing: none;
+}
+
+/* Calendar */
+
+table.serendipity_calendar a,
+table.serendipity_calendar a:link,
+table.serendipity_calendar a:visited,
+table.serendipity_calendar a:hover {
+  font-size: x-small;
+}
+
+table.serendipity_calendar td {
+  font-size: x-small;
+}
+
+td.serendipity_weekDayName {
+  font-size: x-small;
+  font-weight: bold;
+  line-height: 140%;
+}
+
+td.serendipity_calendarHeader a:link,
+td.serendipity_calendarHeader a:visited,
+td.serendipity_calendarHeader a:hover {
+  border: 0;
+  text-decoration: none;
+}
+
+/* Sidebars */
+
+#serendipityLeftSideBar,
+#serendipityRightSideBar {
+  display: block;
+  margin-top: 35px;
+  padding: 10px;
+  vertical-align: top;
+}
+
+.serendipitySideBarTitle {
+  border: medium solid white;
+  border-bottom: 0;
+  background: #1b4a7c;
+  margin: 0;
+  font-size: x-small;
+  font-weight: bold;
+  font-family: Courier New;
+  padding: 0.7em;
+  text-transform: uppercase;
+}
+
+.serendipitySideBarContent {
+  border: medium solid white;
+  padding: 0.7em;
+}
+
+div.serendipitySideBarItem {
+  font-size: small;
+  font-weight: normal;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+}
+
+/* Entries */
+
+div.serendipity_Entry_Date {
+  margin: 10px;
+  padding: 10px;
+  width: auto;
+}
+
+.serendipity_date {
+  font-size: normal;
+  font-weight: bold;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+.serendipity_title,
+.serendipity_Admin_title {
+  font-family: Courier New;
+  border: medium white solid;
+  border-bottom: 0;
+  background: #1b4a7c;
+  font-size: small;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.serendipity_entry,
+.serendipity_admin {
+  border: medium white solid;
+  font-size: small;
+  font-weight: normal;
+  line-height: 140%;
+  padding: 10px;
+  margin-bottom: 0.7em;
+}
+
+div.serendipity_entryFooter {
+  clear: both;
+  color: #999999;
+  font-size: x-small;
+}
+
+/* Comments */
+
+.serendipity_comment {
+  border-left: medium white solid;
+  font-size: small;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 3px;
+}
+
+.serendipity_commentsLabel {
+  font-size: small;
+}
+
+.serendipity_commentsTitle {
+  font-size: normal;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Admin */
+
+.serendipity_admin td {
+}
+
+/* Misc */
+
+#content {
+  width: 100%;
+}
+
+/** Embedded images with the s9y image manager **/
+.serendipity_imageComment_center,
+.serendipity_imageComment_left,
+.serendipity_imageComment_right {
+    border: 1px solid black;
+    background-color: #EFEFEF;
+    margin: 3px;
+}
+
+.serendipity_imageComment_center {
+    margin: 0px;
+}
+
+.serendipity_imageComment_left {
+    float: left;
+}
+
+.serendipity_imageComment_right {
+    float: right;
+}
+
+.serendipity_imageComment_img,
+.serendipity_imageComment_img img {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+.serendipity_imageComment_txt {
+    margin: 0px;
+    padding: 3px;
+    clear: both;
+    font-size: 9pt;
+}
+
+img.serendipity_entryIcon {
+    float: right;
+    border: 0px;
+}
+
+.serendipity_imageCommentClosing_center {
+    clear: both;
+    display: block;
+}
+
+.serendipity_admin_list_item_even {
+    background-color: #1b4a7c;
+}
+
+.serendipity_admin_list_item_uneven {
+}
+
+.serendipity_admin_filters,
+.serendipity_admin_filters input,
+.serendipity_admin_filters select {
+}
+
+.serendipity_comments {
+}

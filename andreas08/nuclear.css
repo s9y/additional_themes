@@ -1,0 +1,48 @@
+a { color:#111; font-weight:bold; text-decoration:none; background-color:inherit; }
+a:hover{color:#666; text-decoration:none; background-color:inherit;}
+
+blockquote {
+border-top:1px solid #d8d8d8;
+border-right:1px solid #d8d8d8;
+border-bottom:1px solid #d8d8d8;
+border-left:4px solid #cccccc;
+margin:16px;
+width:75%;
+padding:7px 7px 7px 11px;
+color:#505050;
+}
+
+body {background:#fff url(img/bg_nuclear.gif) repeat;color:#3a3a3a;}
+
+#pagetop {
+	border-top:2px solid #222;
+	border-left:2px solid #222;
+	border-right:2px solid #222;}
+
+#header {background:#fbd214 url(img/bg_id_nuclear.gif) repeat-x;}
+
+#header h1 {background-color:transparent;color:#111;}
+
+#header h2 {background-color:transparent;color:#444;}
+
+#navigation {background:#333;}
+
+#navigation .selected, #navigation a:hover{
+	background:#666;}
+#mainpane {	
+	border-left:2px solid #222;
+	border-right:2px solid #222;}
+
+#footer {
+	border-bottom:2px solid #222;
+	border-left:2px solid #222;
+	border-right:2px solid #222; }
+
+.footerbg {background-color:#333; }
+
+/* style for today's date in calendar */
+td.Today {
+	border: 1px solid #fdce05;background:#f3ea83; }
+
+.searchterm, .searchresults {color:#111;}
+

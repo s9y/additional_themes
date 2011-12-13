@@ -1,0 +1,206 @@
+h2 {
+
+	color: #a42d41;
+
+}
+
+blockquote {
+
+	float: left;
+
+	width:90%;
+
+	margin: 5px 5px 20px 7px !important;
+
+	margin: 5px 5px 10px 5px;
+
+	padding:3px;
+
+	background: #3E4448;
+
+	border-left: 3px solid #356083;
+
+	font-style:italic;
+
+}
+
+a {
+
+	color: #9AAEBF;
+
+}
+
+
+
+a:hover {
+
+  color: #ffffff;
+
+}
+
+
+
+#serendipity_banner {
+
+	height: 53px;
+
+	
+
+}
+
+#menu a {
+
+	color: #92A2AE;
+
+}
+
+#menu a:hover, #menu a.active {
+
+	padding: 5px 5px 5px 5px;
+
+	color:#1C3447;
+
+}
+
+
+
+#wrapper {
+
+	background: url(img/transblue/redtop.gif) no-repeat top left;
+
+}
+
+
+
+body {
+
+	background: url(img/transblue/bg.gif) center repeat-y;
+
+	background-color: #7B7B7B;
+
+}
+
+
+
+.serendipity_comment_source {
+
+	background-color:#3E4448;
+
+	color:#9AAEBF;
+
+}
+
+
+
+.serendipity_comment_source a {
+
+	color:#9AAEBF;
+
+}
+
+
+div.serendipity_entryFooter {
+	background:#93A4B1 url(img/transblue/entryfootertop.gif) no-repeat top left;
+	height:6px;
+	width:auto;
+}
+
+div.serendipity_entryFooterMain {
+	color: #1C3447;
+	font-size: xx-small;
+	background-color:#93A4B1;
+}
+
+div.serendipity_entryFooterMain a {
+	color: #ffffff;
+	text-decoration:none;
+}
+
+div.serendipity_entryFooterBottom {
+	background: url(img/transblue/entryfooterbottom.gif) no-repeat top left;
+	height:6px;
+	width:auto;
+}
+
+
+
+
+.serendipity_imageComment_center,
+
+.serendipity_imageComment_left,
+
+.serendipity_imageComment_right {
+
+	background: #3E4448;
+
+}
+
+
+
+.serendipity_commentBody {
+
+background-color:#3E4448;
+
+}
+
+
+
+.serendipity_commentFooter {
+
+	color:#9AAEBF;
+
+	background-color:#3E4448;
+
+}
+
+.serendipitySideBarContent a:hover {
+
+	color:#9AAEBF;
+
+}
+
+#footer {
+
+	background: url(img/transblue/footer.gif) no-repeat top left;
+
+}
+
+#footer a {color:#1C3447; text-decoration:none;}
+
+#content b {
+
+	font-size: 1.0em;
+
+	color: #a42d41;
+
+}
+
+#content ul {
+
+	list-style-image: url(img/li_bullet_dark.gif);
+
+}
+
+#sidebar {
+
+	float: right;
+
+	width: 175px;
+
+}
+
+
+
+.serendipity_freetag_taglist {
+
+	padding:15px;
+
+	background-color:#F3F6ED;
+
+	border:1px solid #ddd;
+
+	margin: 15px 0 40px 0;
+
+	font-size:0.7em;
+
+}

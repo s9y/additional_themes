@@ -1,0 +1,4 @@
+Name:Brown Paper (2008-02-14)
+Author: Abdussamad Abdurrazzaq 
+Date: 28 April 2006
+Require Serendipity: 0.8

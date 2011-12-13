@@ -1,0 +1,204 @@
+ .serendipity_center {
+    margin: 5px auto 10px;
+    text-align: center;
+}
+
+.serendipity_msg_important {
+    color: red;
+    margin: 1em;
+}
+.serendipity_msg_notice {
+    color: green;
+    margin: 1em;
+}
+
+/*** s9y image manager ***/
+.serendipity_imageComment_center,
+.serendipity_imageComment_left,
+.serendipity_imageComment_right {
+    border: 1px solid #ddd;
+    background-color: #efefef;
+    padding: 0;
+    text-align: center;
+}
+
+.serendipity_imageComment_center {
+    margin: auto;
+}
+
+.serendipity_imageComment_left {
+    float: left;
+    margin: 0 10px 5px 0;
+}
+
+.serendipity_imageComment_right {
+    float: right;
+    margin: 0 0 5px 10px;
+}
+
+.serendipity_imageComment_img,
+.serendipity_imageComment_img img {
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-align: center;
+}
+
+.serendipity_imageComment_txt {
+    border-top: 1px solid #ddd;
+    margin: 0;
+    padding: 1%;
+    clear: both;
+    font-size: 80%;
+    text-align: center;
+}
+
+img.serendipity_entryIcon {
+    float: right;
+    border: 0;
+}
+
+div.serendipity_entry_extended,
+p.submeta { clear: both; }
+
+#serendipity_categories_plugin ul li {
+    background: url(img/mini-category.gif) no-repeat;
+    padding-left: 18px;
+}
+
+#serendipity_plugin_staticpage div.dbx-content a,
+#serendipity_plugin_recententries div.dbx-content a {
+    background: url(img/mini-page.gif) no-repeat;
+    padding-left: 18px!important;
+}
+
+#serendipity_archives_plugin div.dbx-content a {
+    background: url(img/mini-archive.gif) no-repeat;
+    padding-left: 18px;
+}
+
+span.plugin_comment_author {
+    background: url(img/mini-comment.gif) no-repeat;
+    padding-left: 18px;
+}
+
+.serendipity_freeTag,
+.serendipity_freeTag_related {
+    display: block;
+    font-size: 11px;
+    margin: 0 0 15px;
+    text-align: left;
+}
+
+.serendipity_freeTag a,
+.serendipity_freeTag a:hover {
+    color: #44a1d0;
+    font-size: 11px;
+}
+
+.freetag_cloud h2.serendipity_date {
+    border-bottom: none;
+    margin: 0;
+    padding: 0;
+}
+
+.serendipity_freetag_taglist {
+    background-color: #fff;
+    border: none;
+    margin: 0 0 10px 0;
+    padding: 0;
+    text-align: justify;
+}
+
+.serendipity_freetag_taglist_related {
+    color: #333;
+    font-family: "Lucida Grande",Arial,sans-serif;
+    font-size: 150%;
+    font-weight: normal;
+    line-height: 100%;
+    padding: 0 0 10px 0;
+}
+
+#checkbox_remember,
+#checkbox_subscribe { width: 15px!important; }
+
+#commentform #preview {
+    font: 12px/100% Arial, Helvetica, sans-serif;
+    color: #000000;
+    background: url(img/submit-btn.gif) no-repeat top left;
+    border: none;
+    width: 135px;
+    height: 25px;
+    padding-bottom: 6px;
+    margin-left: 355px;
+    margin-top: 10px;
+}
+#commentform #preview:hover {
+    background: url(img/submit-btn.gif) no-repeat bottom left;
+}
+
+h2#contact {
+    background: url(img/respond.gif) no-repeat;
+    padding-left: 22px;
+    font: normal 140%/120% Arial, Helvetica, sans-serif;
+    margin: 20px 0px 0px;
+    clear: both;
+}
+
+#contactpreface { margin-bottom: 10px; }
+
+.serendipity_entrypaging {
+    clear: both;
+    background: url(img/navigation-bg.gif) no-repeat left center;
+    height: 21px;
+    margin-bottom: 10px; 
+}
+.serendipity_entrypaging a, .serendipity_entrypaging a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+.serendipity_entrypaging a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+.epicon { display: none; }
+
+.serendipity_entrypaging_left a {
+    float: left;
+    padding-left: 10px;
+    margin-left: 10px;
+    background: url(img/navigation-left.gif) no-repeat left center;
+}
+.serendipity_entrypaging_right a {
+    float: right;
+    padding-right: 10px;
+    margin-right: 10px;
+    background: url(img/navigation-right.gif) no-repeat right center;
+}
+
+.sidebar-right-ssb {
+    float: left!important;
+    margin-left: 0!important;
+    margin-right: 10px!important;
+}
+
+.sidebar-left-bss {
+    float: right!important;
+    margin-left: 10px!important;
+    margin-right: 0!important;
+}
+
+#comments_h3 {
+    background: url({TEMPLATE_PATH}img/comments.gif) no-repeat;
+    padding-left: 22px;
+    font: normal 140%/120% Arial, Helvetica, sans-serif;
+    clear: both;
+}
+
+#trackbacks_h3 {
+    background: url(img/comments.gif) no-repeat;
+    padding-left: 22px;
+    font: normal 140%/120% Arial, Helvetica, sans-serif;
+    clear: both;
+}

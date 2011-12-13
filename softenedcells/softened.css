@@ -1,0 +1,51 @@
+h2 {
+	color: #56B600;
+}
+
+blockquote {
+	float: left;
+	width:100%;
+	margin: 5px 0 20px 5px !important;
+	margin: 5px 0 10px 3px;
+	background: #fefade;
+	border-left: 2px solid #FEE456;
+}
+
+a {
+	color: #4ca000;
+}
+
+a:hover {
+	color: #326901;
+	background-color: #DDD;
+}
+
+#serendipity_banner {
+	height: 144px;
+	background: url(img/hdr_cones.jpg) no-repeat top center;
+}
+
+#menu a:hover, #menu a.active {
+	background: url(img/menu_tab.gif) no-repeat top center;
+}
+
+#content b {
+	font-size: 1.0em;
+	color: #4ca000;
+}
+#content ul {
+	list-style-image: url(img/li_bullet.gif);
+}
+
+.serendipity_freetag_taglist {
+	padding:15px;
+	background-color:#F3F6ED;
+	border:1px solid #ddd;
+	margin: 15px 0 40px 0;
+	font-size:0.7em;
+}
+#sidebar {
+  float: left;
+  width: 175px;
+  padding: 0 20px 0 0;
+}

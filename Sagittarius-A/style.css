@@ -1,0 +1,169 @@
+ #page_margins, #page, .page_margins, .page { height: 1%; }                              
+  #page_margins, #page, .page_margins, .page, #header, #nav, #main, #footer { zoom:1; }   
+  .page_margins { width: auto;  min-width: 740px; max-width: 90em; background: #ddd; padding: 12px; }
+  .page_margins { margin: 0 auto; }
+
+  * { margin:0; padding: 0; }
+
+  .page { padding: 12px 24px; border: 1px #aaa solid; background: #fff; }
+  #header { padding: 12px 24px 0 24px; color: #000; background: #fff; }
+  #header, #nav, #main, #footer { clear:both; }
+
+  #header { position:relative; }
+
+  #header #topnav {
+    position:absolute;
+    top: 10px;
+    right: 10px; /* LTR */
+  }
+
+  #topnav { top: 24px; right: 24px; color: #aaa; background: transparent; }
+  #topnav { text-align: right; }  
+
+  #topnav a { color: #999; font-weight: normal; background:transparent; text-decoration:none; }
+  .skip, .hideme, .print, dfn {
+    position: absolute;
+    left: -1000em; /* LTR */
+    top: -1000em;
+  }
+
+  a {color: #4D87C7; text-decoration:none;}
+  
+  h1 { font-size: 300%; line-height: .5em; margin-top: .5em; margin-bottom: .5em; letter-spacing: -2px; }
+
+  h1,h3,h4,h5,h6 {
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-weight:normal;
+  letter-spacing: -1px;
+    color:#000;
+  }
+
+  #header h2 {border-top: 1px #ddd solid; border-bottom: 1px #ddd solid; margin: 0; padding: .75em 0 .75em 0;}
+  h2 { font-size: 200%; line-height: 1.5em; margin-top: .75em; margin-bottom: .75em; color: #666; }    
+
+  h2, h3 em {
+    font-family: "Warnock Pro","Goudy Old Style","Palatino","Book Antiqua",Georgia,serif;
+  font-weight:normal;
+  letter-spacing: 0px;
+  font-style:italic;
+  }
+#serendipity_commentform_comment {width:90%;}
+#serendipity_commentform_name {padding-left:30px;margin-right:10px;}
+#serendipity_commentform_email,#serendipity_commentform_url {margin-right:10px;}
+  .subcolumns { border-bottom: 1px #ddd solid; }
+  .entry {padding-top:20px;}
+   .post h2 {color:black;
+   font-family: "Warnock Pro","Goudy Old Style","Palatino","Book Antiqua",Georgia,serif;
+   
+   font-weight: normal;
+   
+   letter-spacing: 0px;
+   
+font-style: italic;
+   }
+  .subcolumns { width: 100%; overflow:hidden; }
+
+  .c50l, .c25l, .c33l, .c38l, .c66l, .c75l, .c62l,
+  .c50r, .c25r, .c33r, .c38r, .c66r, .c75r, .c62r { display:inline; }
+
+  .c33l, .c33r { width: 33.333%; }
+  
+  .c50l, .c25l, .c33l, .c38l, .c66l, .c75l, .c62l {float: left; }
+  .subc, .subcl, .subcr { height: 1%; }
+
+  .subcl { padding: 0 24px 0 0; }
+  .subcl { padding: 0 1em 0 0; }
+  h6 { font-size: 116.67%; line-height: 1.286em; margin-top: 1.286em; margin-bottom: 1.286em; font-weight:bold;}  
+
+  ul, ol, dl { line-height: 1.5em; margin: 0 0 1em 1em }
+  ul, ol, dl { margin: 0 0 1em 1em } 
+  li { margin-left: 1.5em; line-height: 1.5em }
+
+  li {
+    margin-left: 0.8em; /* LTR */
+    line-height: 1.5em;
+  }
+
+  #header .subc  { border-left: 1px #ddd solid; border-right: 1px #ddd solid; }
+  
+  #header .subc  { padding: 0 24px; }
+  
+  .subc  { padding: 0 0.5em; }
+  #header .subcolumns p, .subcolumns .subcolumns p { margin-bottom: 0; padding-bottom: 1.5em;}
+
+  p { font-size: 1em; color: #444; line-height: 1.5em; margin: 1.5em 0; }
+  .c50r, .c25r, .c33r, .c38r, .c66r, .c75r, .c62r {float: right; margin-left: -5px; }
+
+  .subcr { padding: 0 0 0 24px; }
+  .subcr { padding: 0 0 0 1em; }
+
+  #main { position: relative; } 
+
+  #main { padding: 0px 24px; }
+
+  #main { margin: 12px 0; background: #fff; }
+  .c66l, .c66r { width: 66.666%; }
+  #main .subcl { border-right: 1px #ddd solid; }
+  
+  .maincontent { padding-left: 6px; }
+
+  .float_left { float: left; display:inline; margin: 0 1.5em 1em -36px; }
+  
+  img {padding: 5px; border: 1px #888 solid; }
+  fieldset, img { border: 0 solid; }
+
+  em,i { font-style:italic }
+
+  #main p + p { text-indent: 2em; }
+  blockquote { margin: 1.5em 0 1.5em 2em; color: #888;}
+
+  cite, blockquote { font-style:italic }
+  
+  blockquote { margin: 0 0 1em 0.8em; } 
+
+  hr {
+    color: #fff;
+    background:transparent;
+    margin: 1.5em 0;
+  padding:0;
+    border:0;
+    border-bottom: 2px #ddd solid;
+  }
+  .subcolumns  .subcolumns {border-bottom: 0px #ddd solid; }
+
+  .c50l, .c50r { width: 50%; }
+  
+  .subcolumns .subcolumns p { text-indent: 0; margin-left: 0;}
+
+  h3 {  color:#464646; font-size: 150%; line-height: 1.0em; margin-top: 1.0em; margin-bottom: 1.0em; }                 
+  h3 a{  color:#464646; font-size: 110%; line-height: 1.0em; margin-top: 1.0em; margin-bottom: 1.0em; }                 
+
+  .note { text-indent: 0 !important; color: #333; background: #f4f4f4; padding: 1.5em; }
+  p.small { font-size: 0.8333em; line-height: 1.8em; margin: 1.8em 0; }
+  #footer { padding: 0px 24px; color:#666; }
+
+  #footer h2 {border-bottom: 1px #ddd solid; margin-bottom: 0; padding-bottom: .75em;}
+
+  #footer a { color: #222; background:transparent; font-weight: bold;}
+
+ .clearfloat h6 a {  color:#464646; 
+                      
+                   font-size: 150%; line-height: 1.0em; margin-top: 1.0em; margin-bottom: 1.0em;font-weight: normal;
+                   
+                   }   
+  .title  {
+  font-family: Arial;
+
+  
+  font-weight: bold;font-size: 100%; line-height: 1.0em;}
+  .sidelist li  {list-style:none;}
+  .serendipity_calendarDay {text-align:center;}
+  .link a { color: #222; background:transparent; font-weight: bold;}
+  
+  table.serendipity_calendar a  
+  
+  {
+  
+   font-weight: bold;
+  
+}

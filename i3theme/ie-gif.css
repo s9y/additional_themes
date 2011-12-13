@@ -1,0 +1,21 @@
+#searchform {
+	background: url(img/gif/searchform-bg.gif) no-repeat right bottom;
+}
+#searchform #searchsubmit { 
+	background: url(img/gif/search-btn.gif) no-repeat left top;
+}
+.dbx-handle {
+	background:url(img/gif/sidep-handle.gif) no-repeat 0 0; 
+}
+a.dbx-toggle, a.dbx-toggle:visited {
+	background:url(img/gif/sidep-toggle.gif) no-repeat;
+}
+.dbx-content {
+	background: url(img/gif/sidep-bottom.gif) no-repeat 0 100%;
+}
+#nav {
+	background: url(img/gif/content-top-bg.gif) no-repeat left top;
+}
+#footer {
+	background: url(img/gif/content-bottom-bg.gif) no-repeat;
+}
