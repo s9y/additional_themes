@@ -1,4 +1,4 @@
-<?php # $Id: config.inc.php,v 1.1 2006/08/04 14:25:37 garvinhicking Exp $
+<?php # $Id$
 
 
 $template_config = array(

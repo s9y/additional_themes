@@ -1,4 +1,4 @@
-<?php # $Id: lang_en.inc.php,v 1.4 2006/11/14 09:13:21 garvinhicking Exp $
+<?php # $Id$
 @define('DATE_FORMAT_ENTRY_ANDREAS06', '%d/%m/%Y');
 @define('BLOG_HOME', 'Blog Home');
 @define('BACK_TO_TOP', 'Back to Top');

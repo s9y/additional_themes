@@ -1,4 +1,4 @@
-<?php # $Id: lang_en.inc.php,v 1.1 2007/06/20 13:36:12 garvinhicking Exp $
+<?php # $Id$
 @define('NAVNUM', 'Number of main navigation links');
 @define('NAVNUMDESC', 'Enter the number of navlinks you want to use in the main navbar.');
 @define('NAV_LINK_TEXT', 'Navbar link');

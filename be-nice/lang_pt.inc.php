@@ -1,4 +1,4 @@
-<?php # $Id: lang_pt.inc.php,v 1.2 2006/11/14 09:13:22 garvinhicking Exp $
+<?php # $Id$
 @define('FILED_UNDER', 'Arquivado em');
 @define('DATE_FORMAT_ENTRY_BE_NICE', '%d/%m/%Y');
 @define('SAYS', 'Disse');

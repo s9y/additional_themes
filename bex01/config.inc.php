@@ -1,4 +1,4 @@
-<?php # $Id: config.inc.php,v 1.1 2006/05/13 09:06:58 garvinhicking Exp $
+<?php # $Id$
 
 $probelang = dirname(__FILE__) . '/lang_' . $serendipity['lang'] . '.inc.php';
 if (file_exists($probelang)) {

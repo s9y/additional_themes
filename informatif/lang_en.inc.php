@@ -1,4 +1,4 @@
-<?php # $Id: lang_en.inc.php,v 1.1 2007/07/13 09:13:07 garvinhicking Exp $
+<?php # $Id$
 @define('NAV_LINK_TEXT', 'Navbar link');
 @define('NAV_LINK_DESC', 'Enter the navbar link text');
 @define('NAV_LINK_URL', 'URL for Navbar link');

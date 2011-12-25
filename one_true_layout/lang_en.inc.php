@@ -1,4 +1,4 @@
-<?php # $Id: lang_en.inc.php,v 1.1 2006/11/27 22:01:36 garvinhicking Exp $
+<?php # $Id$
 @define('THEME_COLORSET', 'Color Choice');
 @define('THEME_COLORSET_DESC', 'Choose the colorset you want your blog to use');
 @define('FOOTER_POSITION', 'Position of Entry Footer');

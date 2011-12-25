@@ -1,4 +1,4 @@
-﻿<?php # $Id: lang_tr.inc.php,v 1.1 2006/03/19 11:58:24 garvinhicking Exp $
+﻿<?php # $Id$
 @define('REPLY', 'Yanıtla');
 @define('SAYS', 'dedi');
 @define('LINK_TO_COMMENT', 'Yorum Linki #%d');

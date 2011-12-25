@@ -1,4 +1,4 @@
-<?php # $Id: lang_ko.inc.php,v 1.2 2007/05/15 10:03:10 garvinhicking Exp $
+<?php # $Id$
 @define('REPLY', '답글');
 @define('SAYS', '왈');
 @define('LINK_TO_COMMENT', '%d번 덧글의 링크');

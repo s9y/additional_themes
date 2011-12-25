@@ -1,4 +1,4 @@
-<?php # $Id: lang_en.inc.php,v 1.5 2006/11/14 09:13:21 garvinhicking Exp $
+<?php # $Id$
 @define('SAYS', 'said');
 @define('SORRY', 'Sorry');
 @define('DATE_FORMAT_ENTRY_ANDREAS', '%a, %b %e. %Y');

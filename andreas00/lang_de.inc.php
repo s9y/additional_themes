@@ -1,4 +1,4 @@
-<?php # $Id: lang_de.inc.php,v 1.1 2006/04/18 00:29:52 carl_galloway Exp $
+<?php # $Id$
 @define('SAYS', 'besagt');
 @define('SORRY', 'traurig');
 @define('READ_MORE', 'lesen Sie mehr');

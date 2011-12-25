@@ -1,4 +1,4 @@
-<?php # $Id: lang_pl.inc.php,v 1.1 2007/07/02 09:49:04 garvinhicking Exp $
+<?php # $Id$
 
 @define('RECENTENTRIES', 'Ostatnie wpisy');
 @define('COMMENTS_RSS', 'Komentarze RSS');

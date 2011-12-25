@@ -1,4 +1,4 @@
-<?php # $Id: lang_en.inc.php,v 1.2 2006/11/14 09:13:22 garvinhicking Exp $
+<?php # $Id$
 @define('THEME_COLORSET', 'Color Choice');
 @define('THEME_COLORSET_DESC', 'Choose the colorset you want your blog to use');
 @define('NAV_LINK_TEXT', 'Navbar link');

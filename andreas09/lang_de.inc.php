@@ -1,4 +1,4 @@
-<?php # $Id: lang_de.inc.php,v 1.2 2006/11/14 09:13:22 garvinhicking Exp $
+<?php # $Id$
 @define('THEME_COLORSET', 'Farbwahl');
 @define('THEME_COLORSET_DESC', 'Farbset auswählen, welches das Blog benutzen soll');
 @define('NAV_LINK_TEXT', 'Navigationsleisten-Link');

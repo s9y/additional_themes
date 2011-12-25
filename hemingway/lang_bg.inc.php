@@ -1,4 +1,4 @@
-<?php # $Id: lang_bg.inc.php,v 1.1 2007/07/02 09:49:04 garvinhicking Exp $
+<?php # $Id$
 
 @define('RECENTENTRIES', 'Последни статии');
 @define('COMMENTS_RSS', 'Емисии на коментари');

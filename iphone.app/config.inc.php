@@ -1,4 +1,4 @@
-<?php # $Id: config.inc.php,v 1.1 2008/05/05 07:35:36 garvinhicking Exp $
+<?php # $Id$
 
 if (IN_serendipity !== true) {
     die ("Don't hack!");

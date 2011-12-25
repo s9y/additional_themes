@@ -1,4 +1,4 @@
-<?php # $Id: lang_de.inc.php,v 1.1 2007/07/16 07:40:08 garvinhicking Exp $
+<?php # $Id$
 @define('NAV_LINK_TEXT', 'Navigationsleisten-Link');
 @define('NAV_LINK_DESC', 'Text für den Navigationsleisten-Link');
 @define('NAV_LINK_URL', 'URL des Navigationsleisten-Links');

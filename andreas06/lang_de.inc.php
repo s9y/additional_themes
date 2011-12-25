@@ -1,4 +1,4 @@
-<?php # $Id: lang_de.inc.php,v 1.2 2006/11/14 09:13:21 garvinhicking Exp $
+<?php # $Id$
 @define('SAYS', 'besagt');
 @define('SORRY', 'traurig');
 @define('BLOG_HOME', 'Startseite');

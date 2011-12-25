@@ -1,4 +1,4 @@
-<?php # $Id: lang_de.inc.php,v 1.1 2007/06/20 13:36:12 garvinhicking Exp $
+<?php # $Id$
 @define('NAVNUM', 'Anzahl an Navigations links');
 @define('NAVNUMDESC', 'Hier eine Anzahl für die Navigationsleisten-Links im Kopf der Seite angeben.');
 @define('NAV_LINK_TEXT', 'Navigationsleisten-Link');
