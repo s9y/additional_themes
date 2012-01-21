@@ -1,13 +1,23 @@
 <html>
     <head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
         <title>Dokumentace: styl Truth</title>
+		<style>
+        	pre {
+				display: block;
+				padding: 5px;
+				border: solid 1px #333333;
+				background-color: #cccccc;
+			}         
+		</style>    
     </head>
 
 <body>
 
-<h1>Dokumentace ke stylu/šabloně vzhledu 'Truth'</h1>
+<h1>Dokumentace ke stylu/šabloně vzhledu 'Truth'<br />
+	<small>(truth)</small></h1>
 
-<p>Dokumentaci k této šabloně přeložil do češtiny Vladimír Ajgl (vlada [zavinac] ajgl [tecka] cz) dne 16.5.2010. Od té doby mohla být šablona pozměněna nebo mohly být rozšířené její funkce. Zkontrolujte pro jistotu i <a href="readme.html">aktuální anglické "readme"</a>.
+<p>Dokumentaci k této šabloně přeložil do češtiny Vladimír Ajgl (vlada [zavinac] ajgl [tecka] cz) a naposledy zkontroloval dne 16.1.2012. Od té doby mohla být šablona pozměněna nebo mohly být rozšířené její funkce. Zkontrolujte pro jistotu i <a href="../readme.html">aktuální anglické "readme"</a>.
 <p>
 
 <h2>MODS šablony Truth: </h2>
@@ -20,11 +30,11 @@
 
 <p>Řádek 958 </p>
 
-<p>$image = $this-&gt;get_config('image', serendipity_getTemplateFile('img/nav_icon_c.gif'));</p>
+<p><pre>$image = $this-&gt;get_config('image', serendipity_getTemplateFile('img/nav_icon_c.gif'));</pre></p>
 
 <p>Řádek 992</p>
 
-<p>$html .= '&lt;a href=&quot;'. serendipity_rewriteURL(PATH_FEEDS .'/'. PATH_CATEGORIES .'/'. serendipity_makePermalink(PERM_FEEDS_CATEGORIES, array('id' =&gt; $cat['categoryid'], 'title' =&gt; $cat['category_name']))) .'&quot;&gt;&lt;img src=&quot;../templates/truth/img/nav_icon_c.gif&quot; alt=&quot;Catagories&quot; style=&quot;border: 0px&quot; /&gt;&lt;/a&gt; ';</p>
+<p><pre>$html .= '&lt;a href=&quot;'. serendipity_rewriteURL(PATH_FEEDS .'/'. PATH_CATEGORIES .'/'. serendipity_makePermalink(PERM_FEEDS_CATEGORIES, array('id' =&gt; $cat['categoryid'], 'title' =&gt; $cat['category_name']))) .'&quot;&gt;&lt;img src=&quot;../templates/truth/img/nav_icon_c.gif&quot; alt=&quot;Catagories&quot; style=&quot;border: 0px&quot; /&gt;&lt;/a&gt; ';</pre></p>
 
 <h2>Ikony statických stránek</h2>
 <p>Pro změnu ikon statických stránek jsem přiložil plugin statických stránek do základního adresáře šablony. Vlepte ho do adresáře pluginů Serendipity.</p>
