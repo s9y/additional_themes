@@ -1,0 +1,4 @@
+Name: RESY - Responsive Template for S9Y
+Author: Manuel Hiptmair, based on a template by Jonathan Verrecchia
+Date: Apr 21, 2012
+Require Serendipity: 1.6
