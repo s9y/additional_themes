@@ -51,7 +51,12 @@
     <div id="main-container">
         <div id="main" class="wrapper clearfix">
 
-            
+            <article 
+                {if $template_option.sidebar_position == 'left'}
+                    class="right"
+                {/if}>
+                {$CONTENT}
+            </article>
             <aside 
                 {if $template_option.sidebar_position == 'left'}
                     class="left"
@@ -63,12 +68,6 @@
                         {serendipity_printSidebar side="right"}
                     {/if}
             </aside>
-            <article 
-                {if $template_option.sidebar_position == 'left'}
-                    class="right"
-                {/if}>
-                {$CONTENT}
-            </article>
 
         </div> <!-- #main -->
     </div> <!-- #main-container -->
