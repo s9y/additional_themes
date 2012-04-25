@@ -92,8 +92,8 @@ nav a,.serendipity_sideNavigation,.serendipity_title{background:#7fbf00;}
 .content a,#main article a,.serendipity_section_trackbacks,.serendipity_commentsTitle{color:#008000;}
 #header-container,aside,.archive_graph{background:#008000 !important;}
 #title,#main aside,#footer-container footer,header h2,header h2 a{color:white !important;}
-header h1,header h1 a,header h1 a:hover,aside h3{color:#ffff00;}
-aside a,aside a:hover{color:#7fbf00;color:white;}
+header h1,header h1 a,header h1 a:hover,aside h3{color:#ffff00 !important;}
+aside a,aside a:hover{color:white;}
 #header-container,#footer-container,#main aside,.serendipity_section_trackbacks,.serendipity_entryFooter{border-color:#7fbf00;}
 .serendipity_comment_source{border-color:white;}
 .serendipity_comment{background:#ffff00;}

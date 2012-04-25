@@ -2,8 +2,8 @@ nav a,.serendipity_sideNavigation,.serendipity_title{background:#cbe4bf;}
 .content a,#main article a,.serendipity_section_trackbacks,.serendipity_commentsTitle{color:#f07a81;}
 #header-container,aside,.archive_graph{background:#f07a81 !important;}
 #title,#main aside,#footer-container footer,header h2,header h2 a{color:white !important;}
-header h1,header h1 a,header h1 a:hover,aside h3{color:#dcfa7c;}
-aside a,aside a:hover{color:#cbe4bf;color:white;}
+header h1,header h1 a,header h1 a:hover,aside h3{color:#dcfa7c !important;}
+aside a,aside a:hover{color:white;}
 #header-container,#footer-container,#main aside,.serendipity_section_trackbacks,.serendipity_entryFooter{border-color:#cbe4bf;}
 .serendipity_comment_source{border-color:white;}
 .serendipity_comment{background:#dcfa7c;}
