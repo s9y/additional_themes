@@ -1,2 +1,5 @@
-
+/.settings
+/.project
+/.buildpath
+/*.zip
 .DS_Store
