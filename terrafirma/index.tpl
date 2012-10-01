@@ -39,9 +39,9 @@
 			<h1><span>{$head_title|@default:$blogTitle|truncate:20:" ...":true}</span></h1>
 			<h2>{$head_subtitle|@default:$blogDescription}</h2>
 		</div>
-	
+
 		<div id="splash"></div>
-	
+
 		<div id="menu">
 			<ul>
 			{if $head_version < 1.1}
@@ -56,23 +56,23 @@
 								<a href="{$serendipityBaseURL}">{$CONST.HOMEPAGE}</a>
 							</li>
     					 {foreach from=$navlinks item="navlink"}
-      						 
+
 							 <li class="{if $currpage==$navlink.href}current_{/if}page_item"><a href="{$navlink.href}" title="{$navlink.title}">{$navlink.title}</a></li>
    					     {/foreach}
   						{/if}
 			</ul>
 		<div id="date">{$smarty.now|date_format:"%B %d, %Y"}</div>
 		</div>
-	
+
 		<div id="primarycontent">
-		{$CONTENT}	
+		{$CONTENT}
 		</div>
-	
+
 		<div id="secondarycontent">
 		{if $template_option.about_text_toggle == 'true'}
 		<h3>{$template_option.abouttitle}</h3>
 			<div class="content">
-				<a href="{$template_option.aboutpageurl}"><img src="templates/terrafirma/img/user.jpg" class="picB" alt="" style="border:none;"/></a>
+				<a href="{$template_option.aboutpageurl}"><img src="{$serendipityHTTPPath}templates/{$template}/img/user.jpg" class="picB" alt="" style="border:none;"/></a>
 				<p>{if $head_version < 1.1}
 					<p>Welcome to my site, please bookmark this page. Read all about me. <a href="#"> More &raquo;</a></p>
 					{else}
@@ -83,13 +83,13 @@
 			{elseif $template_option.about_text_toggle == 'false'}
 			{/if}
 			{serendipity_printSidebar side="left"}{serendipity_printSidebar side="right"}
-		
+
 		</div>
-		
+
 		<div id="footer">
-		
+
 			Design by <a href="http://www.nodethirtythree.com/">NodeThirtyThree</a> | portetd to <a href="http://www.s9y.org">Serendipity</a> by <a href="http://www.taeglichanders.de">taeglichanders.de</a>.
-		
+
 		</div>
 
 	</div>
