@@ -4,7 +4,7 @@
     {foreach from=$entries item="dategroup"}
     <div class="post">
 	{foreach from=$dategroup.entries item="entry"}
-        {assign var="entry" value=$entry scope=parent}
+        {assign var="entry" value=$entry scope="parent"}
 		<div class="header"><h3>
 		<a href="{$entry.link}">{$entry.title|@default:$entry.body|truncate:37:" ..."}</a></h3><div class="date">{if $dategroup.is_sticky}
       	{$CONST.STICKY_POSTINGS}
@@ -13,7 +13,7 @@
 		{/if}</div>
 
 
-		
+
         <div class="serendipity_entry serendipity_entry_author_{$entry.author|@makeFilename} {if $entry.is_entry_owner}serendipity_entry_author_self{/if}">
             {if $entry.categories}
             <span class="serendipity_entryIcon">
@@ -37,11 +37,11 @@
             <div class="content"><a id="extended"></a>{$entry.extended}</div>
             {/if}
 			<br />
-            
+
             <div class='footer'>
                 <ul>
-					
-					   
+
+
 						<li class="comments"><a href="#">{if $entry.has_comments}
                     			{if $use_popups}
                      			<a href="{$entry.link_popup_comments}" onclick="window.open(this.href, 'comments', 'width=480,height=480,scrollbars=yes'); return false;">{$entry.label_comments} ({$entry.comments})</a>
@@ -50,7 +50,7 @@
                   				{/if}
                	 		{/if}</a>
 						</li>
-				 
+
 						{if $entry.has_trackbacks}
                     {if $use_popups}
                        <li class="trackbacks"> <a href="{$entry.link_popup_trackbacks}" onclick="window.open(this.href, 'comments', 'width=480,height=480,scrollbars=yes'); return false;">{$entry.label_trackbacks} ({$entry.trackbacks})</a>
@@ -58,13 +58,13 @@
                        <li class="trackbacks"> <a href="{$entry.link}#trackbacks">{$entry.label_trackbacks} [{$entry.trackbacks}]</a>
                     {/if}
                 {/if}</li>
-				
-				
+
+
 				<br>
-				
-					   
-				 <li class="author">{$CONST.POSTED_BY} <a href="{$entry.link_author}">{$entry.author}</a> 
-                {if $entry.categories}{$CONST.IN} 
+
+
+				 <li class="author">{$CONST.POSTED_BY} <a href="{$entry.link_author}">{$entry.author}</a>
+                {if $entry.categories}{$CONST.IN}
                    {foreach from=$entry.categories item="entry_category" name="categories"}<a href="{$entry_category.category_link}">{$entry_category.category_name|@escape}</a>{if not $smarty.foreach.categories.last} &amp; {/if}{/foreach}
                 {/if}</li>
 

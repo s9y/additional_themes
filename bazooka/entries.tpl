@@ -10,7 +10,7 @@
         {/if}
 
         {foreach name="dategroup" from=$dategroup.entries item="entry"}
-        {assign var="entry" value=$entry scope=parent}
+        {assign var="entry" value=$entry scope="parent"}
                     {if $entry.categories}
             <span class="serendipity_entryIcon">
             {foreach from=$entry.categories item="category"}
@@ -19,7 +19,7 @@
                 {/if}
             {/foreach}
             </span>
-            {/if}<h4 class="serendipity_title"><a href="{$entry.link}">{$entry.title}</a></h4> 
+            {/if}<h4 class="serendipity_title"><a href="{$entry.link}">{$entry.title}</a></h4>
 
         <div class="serendipity_entry serendipity_entry_author_{$entry.author|@makeFilename} {if $entry.is_entry_owner}serendipity_entry_author_self{/if} {if not $smarty.foreach.dategroup.last}entry_separator{/if}">
 
@@ -184,7 +184,7 @@
 
     <div class='serendipity_pageFooter' style="text-align: center">
     {if $footer_prev_page}
-        <a href="{$footer_prev_page}">&laquo; {$CONST.PREVIOUS_PAGE}</a>&#160;&#160;  
+        <a href="{$footer_prev_page}">&laquo; {$CONST.PREVIOUS_PAGE}</a>&#160;&#160;
     {/if}
 
     {if $footer_info}
@@ -197,4 +197,4 @@
 
     {serendipity_hookPlugin hook="entries_footer"}
     </div>
-<!-- ENTRIES END --> 
+<!-- ENTRIES END -->

@@ -3,12 +3,12 @@
 {assign var="pixforthis" value=$CONST.PIX_FORTHIS}
 {foreach from=$entries item="dategroup"}
   {foreach from=$dategroup.entries item="entry"}
-    {assign var="entry" value=$entry scope=parent}
+    {assign var="entry" value=$entry scope="parent"}
     <div class="topPost{if $dategroup.is_sticky} sticky{/if}">
         <h2 class="topTitle"><a href="{$entry.link}">{$entry.title}</a></h2>
-        
+
         <p class="topMeta">{$CONST.POSTED_BY} <a href="{$entry.link_author}">{$entry.author}</a> {$CONST.ON} {$entry.timestamp|@formatTime:DATE_FORMAT_ENTRY}{if $entry.categories} {$CONST.IN} {foreach from=$entry.categories item="entry_category" name="categories"}<a href="{$entry_category.category_link}">{$entry_category.category_name|@escape}</a>{if not $smarty.foreach.categories.last}, {/if}{/foreach}{/if}</p>
-        
+
         <div class="topContent">
             {$entry.body}
         {if $entry.is_extended}
@@ -63,12 +63,12 @@
     <p class="serendipity_msg_notice">{$CONST.DATA_COMMENT_APPROVED|@sprintf:$CONST.COMMENT_APPROVED}</p>
     {/if}
   {/if}
-  
+
   {if $is_single_entry and not $is_preview}
     <div id="comments">
     {if $entry.comments > 0}
         <h3 id="commentstitle">{$entry.comments} {$entry.label_comments} {$pixforthis}</h3>
-        
+
         <p>{$CONST.DISPLAY_COMMENTS_AS}
         {if $entry.viewmode eq $CONST.VIEWMODE_LINEAR}
             {$CONST.COMMENTS_VIEWMODE_LINEAR} | <a href="{$entry.link_viewmode_threaded}#comments" rel="nofollow">{$CONST.COMMENTS_VIEWMODE_THREADED}</a>

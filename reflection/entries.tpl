@@ -4,13 +4,13 @@
     {foreach from=$entries item="dategroup"}
     <div class="serendipity_Entry_Date">
         {if $dategroup.is_sticky}
-        
+
         {else}
-        
+
         {/if}
 
         {foreach from=$dategroup.entries item="entry"}
-         {assign var="entry" value=$entry scope=parent}
+         {assign var="entry" value=$entry scope="parent"}
         <h4 class="serendipity_title"><a href="{$entry.link}">{$entry.title|@default:$entry.id}</a></h4>
 		{if $entry.categories}
             <span class="serendipity_entryIcon">
@@ -26,7 +26,7 @@
             <p class="posttime">{$CONST.POSTED_BY} <a href="{$entry.link_author}">{$entry.author}</a> {$CONST.IN}
 {foreach from=$entry.categories item="category" name="categories"}<a href="{$category.category_link}">{$category.category_name|@escape}</a>{if not $smarty.foreach.categories.last}, {/if}{/foreach}<br />
 
-{$entry.timestamp|@formatTime:DATE_FORMAT_ENTRY} 
+{$entry.timestamp|@formatTime:DATE_FORMAT_ENTRY}
 
 
             <div class="serendipity_entry_body">

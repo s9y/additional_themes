@@ -2,17 +2,17 @@
     {serendipity_hookPlugin hook="entries_header" addData="$entry_id"}
     {foreach from=$entries item="dategroup"}
     {foreach from=$dategroup.entries item="entry"}
-     {assign var="entry" value=$entry scope=parent}
+     {assign var="entry" value=$entry scope="parent"}
         <div id="post-{$entry.id}" class="post">
             <div class="date">
-                <span>{$entry.timestamp|@formatTime:'%b'}</span> 
+                <span>{$entry.timestamp|@formatTime:'%b'}</span>
                       {$entry.timestamp|@formatTime:'%e'}
             </div><!-- /.date -->
 
             <div class="title">
                 <h2><a href="{$entry.link}" rel="bookmark" title="{$entry.title}" >{$entry.title}</a></h2>
                 <div class="postdata">
-                    <span class="category">{if $entry.categories}{foreach from=$entry.categories item="entry_category" name="categories"}<a href="{$entry_category.category_link}">{$entry_category.category_name|@escape}</a>{if not $smarty.foreach.categories.last}, {/if}{/foreach}{/if}</span> 
+                    <span class="category">{if $entry.categories}{foreach from=$entry.categories item="entry_category" name="categories"}<a href="{$entry_category.category_link}">{$entry_category.category_name|@escape}</a>{if not $smarty.foreach.categories.last}, {/if}{/foreach}{/if}</span>
                     <span class="comments">{if $entry.has_comments}{if $use_popups}<a href="{$entry.link_popup_comments}" onclick="window.open(this.href, 'comments', 'width=480,height=480,scrollbars=yes'); return false;">{if $entry.comments == 0}{$CONST.NO_COMMENTS}{else}{$entry.comments} {$entry.label_comments}{/if}&nbsp;&raquo;</a>{else}<a href="{$entry.link}#comments">{if $entry.comments == 0}{$CONST.NO_COMMENTS}{else}{$entry.comments} {$entry.label_comments}{/if}&nbsp;&raquo;</a>{/if}{/if}</span>
                 </div><!-- /.postdata -->
             </div><!-- /.title -->
@@ -80,7 +80,7 @@
                 <h3 id="trackbacks_h3">{$entry.trackbacks} {$CONST.TRACKBACKS}</h3>
 
                 <div class="serendipity_center"><a rel="nofollow" style="font-weight: normal" href="{$entry.link_trackback}" onclick="alert('{$CONST.TRACKBACK_SPECIFIC_ON_CLICK|@escape:html}'); return false;" title="{$CONST.TRACKBACK_SPECIFIC_ON_CLICK|@escape}">{$CONST.TRACKBACK_SPECIFIC}</a></div>
-                    
+
                 {serendipity_printTrackbacks entry=$entry.id}
             </div>
         {/if}
@@ -91,7 +91,7 @@
                 <h3 id="comments_h3">{$entry.comments} {$CONST.COMMENTS}</h3>
 
                 <div class="serendipity_center">{$CONST.DISPLAY_COMMENTS_AS}{if $entry.viewmode eq $CONST.VIEWMODE_LINEAR} ({$CONST.COMMENTS_VIEWMODE_LINEAR} | <a href="{$entry.link_viewmode_threaded}#comments" rel="nofollow">{$CONST.COMMENTS_VIEWMODE_THREADED}</a>){else}(<a rel="nofollow" href="{$entry.link_viewmode_linear}#comments">{$CONST.COMMENTS_VIEWMODE_LINEAR}</a> | {$CONST.COMMENTS_VIEWMODE_THREADED}){/if}</div>
-                
+
                 {serendipity_printComments entry=$entry.id mode=$entry.viewmode}
 
                 {if $entry.is_entry_owner}

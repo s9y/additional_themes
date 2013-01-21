@@ -4,7 +4,7 @@
 
     {foreach from=$entries item="dategroup"}
         {foreach from=$dategroup.entries item="entry"}
-        {assign var="entry" value=$entry scope=parent}
+        {assign var="entry" value=$entry scope="parent"}
 
       <div class="post-info">
       <h1 class="serendipity_title">{if $dategroup.is_sticky}
@@ -29,7 +29,7 @@
             <br /><div class='serendipity_entryFooter'></div>
 	 				<div class='serendipity_entryFooterMain'>
 	<a href="{$entry.link_author}"><img src="templates/translucency/img/icons/user.gif">{$CONST.POSTED_BY}: {$entry.author}</a> {$CONST.IN} <img src="templates/translucency/img/icons/category.gif">:{foreach from=$entry.categories item="category" name="categories"}<a href="{$category.category_link}"> {$category.category_name|@escape}</a>{if not $smarty.foreach.categories.last}, {/if}{/foreach}<br>
-                
+
                 {if $entry.has_comments}
                     {if $use_popups}
                     <a href="{$entry.link_popup_comments}" onclick="window.open(this.href, 'comments', 'width=480,height=480,scrollbars=yes'); return false;">{$entry.label_comments} ({$entry.comments})</a>
@@ -47,12 +47,12 @@
 
                 {if $entry.is_entry_owner and not $is_preview}
                     <a href="{$entry.link_edit}"><img src="templates/translucency/img/icons/edit.gif">: {$CONST.EDIT_ENTRY}</a>
-                {/if}                
+                {/if}
 		</p>
                 {$entry.add_footer}
 					</div>
             <div class='serendipity_entryFooterBottom'>
-        
+
         <!--
         <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
                  xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
@@ -156,7 +156,7 @@
 
         {$entry.backend_preview}
         {/foreach}
-    
+
     {foreachelse}
     {if not $plugin_clean_page}
         {$CONST.NO_ENTRIES_TO_PRINT}
@@ -165,7 +165,7 @@
 
     <div style="text-align: center">
     {if $footer_prev_page}
-        <a href="{$footer_prev_page}">&laquo; {$CONST.PREVIOUS_PAGE}</a>&#160;&#160;  
+        <a href="{$footer_prev_page}">&laquo; {$CONST.PREVIOUS_PAGE}</a>&#160;&#160;
     {/if}
 
     {if $footer_info}
@@ -176,7 +176,7 @@
         &#160;&#160;<a href="{$footer_next_page}">{$CONST.NEXT_PAGE} &raquo;</a>
     {/if}
 
-	
+
     {serendipity_hookPlugin hook="entries_footer"}
     </div>
 <!-- ENTRIES END -->

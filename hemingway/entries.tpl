@@ -5,12 +5,12 @@
 		<ul class="dates">
 {foreach from=$entries item="dategroup"}
 	{foreach from=$dategroup.entries item="entry"}
-        {assign var="entry" value=$entry scope=parent}
+        {assign var="entry" value=$entry scope="parent"}
 	<li>
 		<span class="date">{$entry.timestamp|@formatTime:$HEMINGWAY_DATE}</span>
-		<a href="{$entry.link}">{$entry.title|@default:$entry.id}</a> 
+		<a href="{$entry.link}">{$entry.title|@default:$entry.id}</a>
 		{if $entry.categories} {$CONST.IN} {foreach from=$entry.categories item="entry_category" name="categories"}<a href="{$entry_category.category_link}">{$entry_category.category_name|@escape}</a>{if not $smarty.foreach.categories.last}, {/if}{/foreach}
-		{/if}		 
+		{/if}
 	</li>
 	{/foreach}
 {foreachelse}
@@ -58,7 +58,7 @@
 <div class="primary">
     {foreach from=$entries item="dategroup"}
 	{foreach from=$dategroup.entries item="entry"}
-        {assign var="entry" value=$entry scope=parent}
+        {assign var="entry" value=$entry scope="parent"}
 	<h1 class="serendipity_title">{$entry.title|@default:$entry.id}</h1>
 	    <div class="serendipity_entry_body">
 		{$entry.body}
@@ -83,7 +83,7 @@
 			{if $entry.categories}<dl>
 			<dt>{$CONST.CATEGORY}:</dt>
 			<dd>
-			{foreach from=$entry.categories item="entry_category" name="categories"}<a href="{$entry_category.category_link}">{$entry_category.category_name|@escape}</a>{if not $smarty.foreach.categories.last}, {/if}{/foreach}			
+			{foreach from=$entry.categories item="entry_category" name="categories"}<a href="{$entry_category.category_link}">{$entry_category.category_name|@escape}</a>{if not $smarty.foreach.categories.last}, {/if}{/foreach}
 			</dd>
 			</dl>{/if}
 			{if $entry.is_entry_owner and not $is_preview}<dl><dd><a href="{$entry.link_edit}">{$CONST.EDIT_ENTRY}</a></dd>

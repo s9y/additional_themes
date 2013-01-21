@@ -2,7 +2,7 @@
     {serendipity_hookPlugin hook="entries_header" addData="$entry_id"}
 
     {foreach from=$entries item="dategroup"}
-     
+
         {if $dategroup.is_sticky}
         <h2  >{$CONST.STICKY_POSTINGS}</h2>
         {else}
@@ -10,7 +10,7 @@
         {/if}
 
         {foreach from=$dategroup.entries item="entry"}
-        {assign var="entry" value=$entry scope=parent}
+        {assign var="entry" value=$entry scope="parent"}
         <h3  ><a href="{$entry.link}">{$entry.title}</a></h3>
 
                     {if $entry.categories}
@@ -23,9 +23,9 @@
             </span>
             {/if}
 
-             
+
                 {$entry.body}
-            
+
 
             {if $entry.is_extended}
             <div class="serendipity_entry_extended"><a id="extended"></a>{$entry.extended}</div>
@@ -69,7 +69,7 @@
 
                 {$entry.add_footer}
             </div>
-         
+
         <!--
         <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
                  xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
@@ -173,7 +173,7 @@
 
         {$entry.backend_preview}
         {/foreach}
-  
+
     {foreachelse}
     {if not $plugin_clean_page}
         {$CONST.NO_ENTRIES_TO_PRINT}

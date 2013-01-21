@@ -10,7 +10,7 @@
         {/if}
 
         {foreach name="dategroup" from=$dategroup.entries item="entry"}
-        {assign var="entry" value=$entry scope=parent}
+        {assign var="entry" value=$entry scope="parent"}
         <div class="serendipity_entry serendipity_entry_author_{$entry.author|@makeFilename} {if $entry.is_entry_owner}serendipity_entry_author_self{/if}">
 {if $template_option.entryfooterposition == 'true' OR $head_version < 1.1}
 <div class='serendipity_entryFooter small_box'>
@@ -66,7 +66,7 @@
             </span>
             {/if}
 {/if}
-            
+
 <div class="serendipity_entry_body">
                 {$entry.body}
             {if $entry.has_extended and not $is_single_entry and not $entry.is_extended}
@@ -115,7 +115,7 @@
 {/if}
 
 
-            
+
         </div>
         <!--
         <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"

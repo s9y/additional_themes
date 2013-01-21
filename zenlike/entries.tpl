@@ -3,7 +3,7 @@
 
     {foreach from=$entries item="dategroup"}
     {foreach from=$dategroup.entries item="entry"}
-    {assign var="entry" value=$entry scope=parent}
+    {assign var="entry" value=$entry scope="parent"}
     <div class="post">
         <h4><a href="{$entry.link}">{$entry.title}</a> {if $dategroup.is_sticky}({$CONST.STICKY_POSTINGS}){/if}</h4>
         <div class="contentarea">

@@ -8,13 +8,13 @@
          {/if}
 
         {foreach from=$dategroup.entries item="entry"}
-        {assign var="entry" value=$entry scope=parent}
+        {assign var="entry" value=$entry scope="parent"}
         <h3 class="serendipity_title"><a href="{$entry.link}">{$entry.title|@default:$entry.id}</a></h3>
 
         <div class="serendipity_entry serendipity_entry_author_{$entry.author|@makeFilename} {if $entry.is_entry_owner}serendipity_entry_author_self{/if}">
             <div class="serendipity_entry_body">
                 {$entry.body}
-            
+
 		{if $entry.has_extended and not $is_single_entry and not $entry.is_extended}
             <br /><a href="{$entry.link}#extended">{$CONST.VIEW_EXTENDED_ENTRY|@sprintf:$entry.title}</a>
             {/if}</div>
@@ -42,10 +42,10 @@
                 {/if}
 		{/if}
 		{$entry.add_footer}
-               </div> 
-        {$entry.plugin_display_dat}   
+               </div>
+        {$entry.plugin_display_dat}
         </div>
-         
+
 
         <!--
         <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"

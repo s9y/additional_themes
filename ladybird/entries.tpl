@@ -6,7 +6,7 @@
 
 
         {foreach from=$dategroup.entries item="entry"}
-         {assign var="entry" value=$entry scope=parent}
+         {assign var="entry" value=$entry scope="parent"}
         <div class="shadow">
           <div class="serendipity_entry serendipity_entry_author_{$entry.author|@makeFilename} {if $entry.is_entry_owner}serendipity_entry_author_self{/if} drop">
             <h3 class="serendipity_title"><a href="{$entry.link}">{$entry.title}</a></h3>
@@ -197,7 +197,7 @@
     {/if}
 
     {serendipity_hookPlugin hook="entries_footer"}
-    <br /> 
+    <br />
     theme 'Ladybird' by <a href="http://themes.daves.me.uk">David Cummins</a> a variation on 'Ladybug' by <a href="http://judebert.com">Jude Anthony</a>
     </div>
 <!-- ENTRIES END -->

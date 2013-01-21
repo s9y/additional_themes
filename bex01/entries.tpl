@@ -3,23 +3,23 @@
 
     {foreach from=$entries item="dategroup"}
     <div class="serendipity_Entry_Date">
-        
+
                 {if $dategroup.is_sticky}
 	        <h2 class="serendipity_date">{$CONST.STICKY_POSTINGS}</h2>
 	        {else}
-	        
-	        
+
+
 	        <h2 class="serendipity_date"><span class="serendipity_datetab">{$dategroup.date|@formatTime:DATE_FORMAT_ENTRY}
 		</span></h2>
 
         	{/if}
-        
+
     {foreach from=$dategroup.entries item="entry"}
-        {assign var="entry" value=$entry scope=parent}
-        
+        {assign var="entry" value=$entry scope="parent"}
+
         <h2 class="serendipity_commentsTitle"><a href="{$entry.link}">{$entry.title|@default:$entry.body|truncate:200:" ..."}</a></h2>
-        
-        
+
+
         <div class="serendipity_entry serendipity_entry_author_{$entry.author|@makeFilename} {if $entry.is_entry_owner}serendipity_entry_author_self{/if}">
             {if $entry.categories}
             <span class="serendipity_entryIcon">

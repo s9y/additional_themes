@@ -1,12 +1,12 @@
 <!-- ENTRIES START -->
     {serendipity_hookPlugin hook="entries_header" addData="$entry_id"}
         {foreach from=$entries item="dategroup"}
-    
+
 
         {foreach from=$dategroup.entries item="entry"}
-        {assign var="entry" value=$entry scope=parent}
+        {assign var="entry" value=$entry scope="parent"}
         <div class="post" id="post-{$entry.id}">
-     
+
         <h2><a href="{$entry.link}" rel="bookmark" title="{$entry.title}">{$entry.title}</a></h2>
 			<small class="date">
 					<span class="date_day">{$dategroup.date|@formatTime:'%d'}</span>
@@ -42,13 +42,13 @@
                         <a href="{$entry.link}#comments" title="Comment on {$entry.title}">{if $entry.comments==0}{$CONST.NO_COMMENTS}{else} {$entry.comments} {$entry.label_comments}  {/if} &#187;</a>
                     {/if}
                     <br />
-                {/if}    
-            
+                {/if}
+
                 {if $entry.categories}
                    {$CONST.CATEGORIES} : {foreach from=$entry.categories item="entry_category" name="categories"}<a href="{$entry_category.category_link}">{$entry_category.category_name|@escape}</a>{if not $smarty.foreach.categories.last}, {/if}{/foreach}<br />
                 {/if}
                 {if $entry.has_trackbacks}
-                    {$CONST.TRACKBACKS} : 
+                    {$CONST.TRACKBACKS} :
                     {if $use_popups}
                          <a href="{$entry.link_popup_trackbacks}" onclick="window.open(this.href, 'comments', 'width=480,height=480,scrollbars=yes'); return false;">{if $entry.trackbacks==0}{$CONST.NO_TRACKBACKS}{else}{$entry.trackbacks} {$entry.label_trackbacks} {/if}&#187;</a>
                     {else}
@@ -62,7 +62,7 @@
 
                 {$entry.add_footer}
             </small>
-       
+
         </div>
         <!--
         <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -112,7 +112,7 @@
         {/if}
 
         {if $is_single_entry and not $is_preview}
-            
+
                 <h3 id="comments">{$CONST.COMMENTS}</h3>
                 {$CONST.DISPLAY_COMMENTS_AS}
                 {if $entry.viewmode eq $CONST.VIEWMODE_LINEAR}
@@ -153,16 +153,16 @@
 
                 {else}
                 <br />
-            
+
 	                <h3 id="respond">{$CONST.ADD_COMMENT}</h3>
 	                {$COMMENTFORM}
                {/if}
-            
+
         {/if}
 
         {$entry.backend_preview}
         {/foreach}
-    
+
     {foreachelse}
     {if not $plugin_clean_page}
         {$CONST.NO_ENTRIES_TO_PRINT}
@@ -185,4 +185,4 @@
     {serendipity_hookPlugin hook="entries_footer"}
     </div>
 <!-- ENTRIES END -->
-        
+

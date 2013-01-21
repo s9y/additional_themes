@@ -4,7 +4,7 @@
 
     {foreach from=$entries item="dategroup"}
         {foreach from=$dategroup.entries item="entry"}
-         {assign var="entry" value=$entry scope=parent}
+         {assign var="entry" value=$entry scope="parent"}
     <div class="serendipity_Entry_Date">
 
       <div class="post-info">
@@ -12,7 +12,7 @@
 </div>
             <div class="serendipity_entry_body">
             {$entry.body}
-            </div> 
+            </div>
 
             {if $entry.is_extended}
             <div class="serendipity_entry_extended"><a id="extended"></a>{$entry.extended}</div>
@@ -27,7 +27,7 @@
       	<p class="post-date">{$CONST.STICKY_POSTINGS}
       	{else}
 		<p class="post-date">{$dategroup.date|@formatTime:DATE_FORMAT_ENTRY}
-	{/if} 
+	{/if}
 	<br />{$CONST.POSTED_BY} <a href="{$entry.link_author}">{$entry.author}</a> {$CONST.IN}
 {foreach from=$entry.categories item="category" name="categories"}<a href="{$category.category_link}">{$category.category_name|@escape}</a>{if not $smarty.foreach.categories.last}, {/if}{/foreach}
                 <br />
@@ -48,11 +48,11 @@
 
                 {if $entry.is_entry_owner and not $is_preview}
                         | <a href="{$entry.link_edit}">{$CONST.EDIT_ENTRY}</a>
-                {/if}                
+                {/if}
 		</p>
                 {$entry.add_footer}
-            
-        
+
+
         <!--
         <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
                  xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
@@ -165,7 +165,7 @@
 
     <div class='serendipity_entryFooter' style="text-align: center">
     {if $footer_prev_page}
-        <a href="{$footer_prev_page}">&laquo; {$CONST.PREVIOUS_PAGE}</a>&#160;&#160;  
+        <a href="{$footer_prev_page}">&laquo; {$CONST.PREVIOUS_PAGE}</a>&#160;&#160;
     {/if}
 
     {if $footer_info}

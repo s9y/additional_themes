@@ -3,7 +3,7 @@
     {foreach from=$entries item="dategroup"}
     <div class="serendipity_Entry_Date">
         {foreach from=$dategroup.entries item="entry"}
-        {assign var="entry" value=$entry scope=parent}
+        {assign var="entry" value=$entry scope="parent"}
         <h3><a href="{$entry.link}">{$entry.title|@default:$entry.id}</a> <span class="postdate">{if $dategroup.is_sticky}{$CONST.STICKY_POSTINGS}{else}{$dategroup.date|@formatTime:DATE_FORMAT_CEEJAY01_TITLE}{/if}</span></h3>
         <div class="serendipity_entry serendipity_entry_author_{$entry.author|@makeFilename} {if $entry.is_entry_owner}serendipity_entry_author_self{/if}">
             {if $entry.categories}
@@ -36,7 +36,7 @@
                 <span class="editlink"><a href="{$entry.link_edit}" alt="{$CONST.EDIT_ENTRY}" title="{$CONST.EDIT_ENTRY}">{$CONST.EDIT_ENTRY}</a></span>
                 {/if}
 <br />
-				
+
 		{if $entry.has_comments}
                     {if $use_popups}
                         <a class="comments" href="{$entry.link_popup_comments}" onclick="window.open(this.href, 'comments', 'width=480,height=480,scrollbars=yes'); return false;">{if $entry.comments == 0}{$CONST.ADD_COMMENT}{else}{$entry.comments} {$entry.label_comments}{/if}</a>
@@ -164,7 +164,7 @@
     {/if}
     {/foreach}
 
-  
+
   <div class='serendipity_pageFooter' style="text-align: center">
   	{if $footer_info}
 		{if $footer_prev_page}

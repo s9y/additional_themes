@@ -10,9 +10,9 @@
         {/if}
 
         {foreach from=$dategroup.entries item="entry"}
-        {assign var="entry" value=$entry scope=parent}
+        {assign var="entry" value=$entry scope="parent"}
         <h4 class="serendipity_title"><a href="{$entry.link}">{$entry.title}</a></h4>
-        
+
         <div class="autor">{$CONST.POSTED_BY} <a href="{$entry.link_author}">{$entry.author}</a>
                 {if $entry.categories}
                    {$CONST.IN} {foreach from=$entry.categories item="category" name="categories"}<a href="{$category.category_link}">{$category.category_name|@escape}</a>{if not $smarty.foreach.categories.last}, {/if}{/foreach}
@@ -48,7 +48,7 @@
             {/if}
 
             <div class='serendipity_entryFooter'>
-                
+
                 {if $entry.has_comments}
                     {if $use_popups}
                         <a href="{$entry.link_popup_comments}" onclick="window.open(this.href, 'comments', 'width=480,height=480,scrollbars=yes'); return false;">{$entry.label_comments} ({$entry.comments})</a>

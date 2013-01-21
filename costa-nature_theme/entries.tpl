@@ -1,6 +1,6 @@
 <!-- ENTRIES START -->
     {serendipity_hookPlugin hook="entries_header" addData="$entry_id"}
-		
+
 
     {foreach from=$entries item="dategroup"}
     <div class="serendipity_Entry_Date">
@@ -11,7 +11,7 @@
         {/if}
 
         {foreach from=$dategroup.entries item="entry"}
-        {assign var="entry" value=$entry scope=parent}
+        {assign var="entry" value=$entry scope="parent"}
 		{if !$entry.is_extended}
         <h4 class="serendipity_title"><a href="{$entry.link}">{$entry.title}</a></h4>
 		{/if}

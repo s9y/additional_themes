@@ -2,10 +2,10 @@
     {serendipity_hookPlugin hook="entries_header" addData="$entry_id"}
   <div class="boxed">
       {foreach from=$entries item="dategroup"}
-       
-			
+
+
            {foreach from=$dategroup.entries item="entry"}
-            {assign var="entry" value=$entry scope=parent}
+            {assign var="entry" value=$entry scope="parent"}
            <h2 class="title"><a href="{$entry.link}" >{$entry.title}</a></h2>
              <div class="content">
                  <div class="serendipity_Entry_Date">
@@ -13,8 +13,8 @@
                       {$dategroup.date|@formatTime:DATE_FORMAT_ENTRY}, {if $dategroup.is_sticky}{$entry.timestamp|@formatTime:DATE_FORMAT_ENTRY} {/if}{$entry.timestamp|@formatTime:'%I:%M %p'}
                  </div>
              </div>
-               
-               
+
+
               <div class="serendipity_entry serendipity_entry_author_{$entry.author|@makeFilename} {if $entry.is_entry_owner}serendipity_entry_author_self{/if}">
                  {if $entry.categories}
                    <span class="serendipity_entryIcon">
@@ -27,7 +27,7 @@
                  {/if}
               <div class="serendipity_entry_body">
                  {$entry.body}
-              </div> 
+              </div>
 
             {if $entry.is_extended}
                    <div class="serendipity_entry_extended"><a id="extended"></a>{$entry.extended}</div>
@@ -40,10 +40,10 @@
             <div class='serendipity_entryFooter'>
                 {$CONST.POSTED_BY} <a href="{$entry.link_author}">{$entry.author}</a>
             	{if $entry.categories}
-                      {$CONST.IN} {foreach from=$entry.categories item="category" name="categories"}<a href="{$category.category_link}">{$category.category_name|@escape}</a>{if not $smarty.foreach.categories.last}, {/if}{/foreach} 
+                      {$CONST.IN} {foreach from=$entry.categories item="category" name="categories"}<a href="{$category.category_link}">{$category.category_name|@escape}</a>{if not $smarty.foreach.categories.last}, {/if}{/foreach}
                 {/if}
 
-				
+
 			   {if $entry.has_comments} <br />
                     {if $use_popups}
                          <a href="{$entry.link_popup_comments}" onclick="window.open(this.href, 'comments', 'width=640,height=640,scrollbars=yes'); return false;">{$entry.label_comments} ({$entry.comments})</a>
@@ -67,7 +67,7 @@
                 {$entry.add_footer}
             </div>
         </div>
-        
+
         <!--
         <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
                  xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
@@ -108,11 +108,11 @@
                 <div class="serendipity_commentsTitle">{$CONST.TRACKBACKS}</div>
                     <div class="serendipity_center">
                         <a rel="nofollow" style="font-weight: normal" href="{$entry.link_trackback}" onclick="alert('{$CONST.TRACKBACK_SPECIFIC_ON_CLICK|@escape:html}'); return false;" title="{$CONST.TRACKBACK_SPECIFIC_ON_CLICK|@escape}">{$CONST.TRACKBACK_SPECIFIC}</a>
-                   
+
                     <br />
                         {serendipity_printTrackbacks entry=$entry.id}
-           
-            
+
+
         {/if}
 
         {if $is_single_entry and not $is_preview}
@@ -168,16 +168,16 @@
 
                 {/if}
             </div>
-           
+
         {/if}
         {$entry.backend_preview} <br/></div> <br/>
        {/foreach}
-     
+
     {foreachelse}</div>
     {if not $plugin_clean_page}
         {$CONST.NO_ENTRIES_TO_PRINT}
     {/if}
-    {/foreach} </div><br/> 
+    {/foreach} </div><br/>
 <br/>
    <div class='serendipity_entryFooter' style="text-align: center">
     {if $footer_prev_page}
@@ -193,6 +193,6 @@
     {/if}
 
     {serendipity_hookPlugin hook="entries_footer"}
-   </div> 
-    
+   </div>
+
 <!-- ENTRIES END -->

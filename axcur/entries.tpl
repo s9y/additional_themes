@@ -12,21 +12,21 @@
                                  <div class="art-Post-cl"></div>
                                  <div class="art-Post-cr"></div>
                                  <div class="art-Post-cc"></div>
-                                 <div class="art-Post-body">   
-                                 
-                                 
+                                 <div class="art-Post-body">
+
+
                                  <div class="art-Post-inner art-article">
-                       
 
 
-        {if $dategroup.is_sticky} 
+
+        {if $dategroup.is_sticky}
             <div class="art-PostHeaderIcons art-metadata-icons">
 		 <img class="art-metadata-icon" src="/info/templates/rl1/img/PostDateIcon.png"  width="18" height="18" alt="PostDateIcon" />
 		   {$CONST.STICKY_POSTINGS}
 	    </div>
         {else}
-        
-        
+
+
         <div class="art-PostHeaderIcons art-metadata-icons">
 	                            <img class="art-metadata-icon" src="/info/templates/rl1/img/PostDateIcon.png" width="18" height="18" alt="PostDateIcon" />
 	                            {$dategroup.date|@formatTime:DATE_FORMAT_ENTRY}
@@ -34,8 +34,8 @@
         {/if}
 
         {foreach from=$dategroup.entries item="entry"}
-        {assign var="entry" value=$entry scope=parent}
-           <h2 class="art-PostHeaderIcon-wrapper">    <span class="art-PostHeader">  <a href="{$entry.link}">{$entry.title}</a></span>  </h2> 
+        {assign var="entry" value=$entry scope="parent"}
+           <h2 class="art-PostHeaderIcon-wrapper">    <span class="art-PostHeader">  <a href="{$entry.link}">{$entry.title}</a></span>  </h2>
            <div class="serendipity_entry serendipity_entry_author_{$entry.author|@makeFilename} {if $entry.is_entry_owner}serendipity_entry_author_self{/if}">
               {if $entry.categories}
                 <span class="serendipity_entryIcon">
@@ -60,13 +60,13 @@
  	<span class="art-button-wrapper">
                              		<span class="l"> </span>
                              		<span class="r"> </span>
-                             		
-                             		
-    {assign var="weiter" value= $entry.title|truncate:30}                          		
+
+
+    {assign var="weiter" value= $entry.title|truncate:30}
 <a class="readon art-button" href="{$entry.link}#extended">{$CONST.VIEW_EXTENDED_ENTRY|@sprintf:$weiter:50}</a>                             	</span>
 
 	                                    </p>
- 
+
             {/if}
 
             <div class='serendipity_entryFooter'>
@@ -80,7 +80,7 @@
                 {else}
                     {$CONST.AT}
                 {/if}
-                
+
                 <a href="{$entry.link}">{if $dategroup.is_sticky}{$entry.timestamp|@formatTime:DATE_FORMAT_ENTRY} {/if}{$entry.timestamp|@formatTime:'%H:%M'}</a>
                 {if $entry.has_comments}
                     {if $use_popups}
@@ -103,7 +103,7 @@
                 {/if}
 <br/><br/>
                 {$entry.add_footer}
-                
+
             </div>
           </div>
         </div>

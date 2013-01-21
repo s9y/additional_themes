@@ -1,10 +1,10 @@
 <!-- ENTRIES START -->
     {serendipity_hookPlugin hook="entries_header" addData="$entry_id"}
- 
+
       {foreach from=$entries item="dategroup"}
- 
+
         {foreach from=$dategroup.entries item="entry"}
-        {assign var="entry" value=$entry scope=parent}
+        {assign var="entry" value=$entry scope="parent"}
         <h3 class="serendipity_title"><a href="{$entry.link}" >{$entry.title}</a></h3>
 				   <div class="serendipity_Entry_Date">
 <div class="serendipity_date">
@@ -34,10 +34,10 @@
             <div class='serendipity_entryFooter'>
                 {$CONST.POSTED_BY} <a href="{$entry.link_author}">{$entry.author}</a>
             	{if $entry.categories}
-                  {$CONST.IN} {foreach from=$entry.categories item="category" name="categories"}<a href="{$category.category_link}">{$category.category_name|@escape}</a>{if not $smarty.foreach.categories.last}, {/if}{/foreach} 
+                  {$CONST.IN} {foreach from=$entry.categories item="category" name="categories"}<a href="{$category.category_link}">{$category.category_name|@escape}</a>{if not $smarty.foreach.categories.last}, {/if}{/foreach}
                 {/if}
 
-				
+
 			   {if $entry.has_comments} <br />
                     {if $use_popups}
                          <a href="{$entry.link_popup_comments}" onclick="window.open(this.href, 'comments', 'width=640,height=640,scrollbars=yes'); return false;">{$entry.label_comments} ({$entry.comments})</a>
@@ -163,7 +163,7 @@
         {/if}
         {$entry.backend_preview}
         {/foreach}
-        
+
     {foreachelse}
     {if not $plugin_clean_page}
         {$CONST.NO_ENTRIES_TO_PRINT}

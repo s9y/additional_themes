@@ -3,7 +3,7 @@
 
     {foreach from=$entries item="dategroup"}
         {foreach from=$dategroup.entries item="entry"}
-        {assign var="entry" value=$entry scope=parent}
+        {assign var="entry" value=$entry scope="parent"}
         <div class="post">
             <h2 id="post-{$entry.id}"><a href="{$entry.link}">{$entry.title}</a></h2>
 		<div class="serendipity_date">
@@ -38,7 +38,7 @@
             <div class="postmetadata {if $is_single_entry} graybox{/if}">
                 {if $is_single_entry}
 
-		{$entry.timestamp|@formatTime:"%H:%M"} 
+		{$entry.timestamp|@formatTime:"%H:%M"}
                 {if $entry.categories}
                    | {foreach from=$entry.categories item="entry_category" name="categories"}<a href="{$entry_category.category_link}">{$entry_category.category_name|@escape}</a>{if not $smarty.foreach.categories.last}, {/if}{/foreach}.
                 {/if}<br />
@@ -51,7 +51,7 @@
                 {/if}
 
                 {else}
-                
+
                 {if $dategroup.is_sticky}
                     {$CONST.ON}
                 {else}

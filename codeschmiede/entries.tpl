@@ -5,7 +5,7 @@
     <div class="serendipity_Entry_Date">
 
         {foreach from=$dategroup.entries item="entry"}
-        {assign var="entry" value=$entry scope=parent}
+        {assign var="entry" value=$entry scope="parent"}
         <h4 class="serendipity_title"><a href="{$entry.link}">{$entry.title}</a></h4>
 
         {if $dategroup.is_sticky}
@@ -13,7 +13,7 @@
         {else}
         <h3 class="serendipity_date">{$dategroup.date|@formatTime:DATE_FORMAT_ENTRY}</h3>
         {/if}
-        
+
         <div class="serendipity_entry serendipity_entry_author_{$entry.author|@makeFilename} {if $entry.is_entry_owner}serendipity_entry_author_self{/if}">
             {if $entry.categories}
             <span class="serendipity_entryIcon">

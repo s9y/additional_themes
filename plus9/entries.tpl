@@ -5,8 +5,8 @@
     {assign var="jpost" value=$CONST.J_POSTED}
     {assign var="jcomm" value=$CONST.J_COMMTS}
     {assign var="jto" value=$CONST.J_TO}
-    
-    
+
+
 {if $template_option.show_pagitop == 'true' && $footer_totalPages > 1}
          <div class="kastentop">{$footer_info}<br/>
             {eval var=$footer_currentPage-3 assign="paginationStartPage"}
@@ -43,15 +43,15 @@
             {/if}
         </div>
      {/if}
-     
-     
-     
-     
-    
-    
+
+
+
+
+
+
     {foreach from=$entries item="dategroup"}
     {foreach from=$dategroup.entries item="entry"}
-        {assign var="entry" value=$entry scope=parent}
+        {assign var="entry" value=$entry scope="parent"}
         <h2 id="post-{$entry.id}"><a href="{$entry.link}" rel="bookmark">{$entry.title}</a>{if $dategroup.is_sticky} ({$CONST.STICKY_POSTINGS}){/if}</h2>
 
       {if $entry.has_comments}
@@ -79,7 +79,7 @@
             <div class="signature">
                 <p>{$CONST.POSTED_BY} {$entry.author} {if $entry.is_entry_owner and not $is_preview}<span class="edit"><a href="{$entry.link_edit}">Edit</a></span>{/if}</p>
                 <p>{$entry.timestamp|@formatTime:'%x'} {$CONST.AT} {$entry.timestamp|@formatTime:'%X'}</p>
-            </div>	
+            </div>
             <div class="tags">
             {if $entry.categories}
                 <p>{$jpost} {$CONST.IN} {foreach from=$entry.categories item="entry_category" name="categories"}<a href="{$entry_category.category_link}">{$entry_category.category_name|@escape}</a>{if not $smarty.foreach.categories.last}, {/if}{/foreach}</p>
@@ -89,26 +89,26 @@
         </div>
 
         <div class="addfooter">{$entry.add_footer}
-        
+
         <br/>
-	        
-	      
+
+
 	     {if $template_option.enable_ad== 'true' }
-	        <script type="text/javascript"> 
-		addthis_url = '{$entry.rdf_ident|escape:url}'; 
-		addthis_title = '{$entry.title|escape:url}'; 
-		addthis_pub = '{$template_option.my_addthis_account}'; 
-		</script> 
-		<script type="text/javascript" src="http://s7.addthis.com/js/addthis_widget.php?v=12" ></script> 
+	        <script type="text/javascript">
+		addthis_url = '{$entry.rdf_ident|escape:url}';
+		addthis_title = '{$entry.title|escape:url}';
+		addthis_pub = '{$template_option.my_addthis_account}';
+		</script>
+		<script type="text/javascript" src="http://s7.addthis.com/js/addthis_widget.php?v=12" ></script>
 	{/if}
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
         </div>
-        <br/> 
+        <br/>
 
         <!--
         <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -193,12 +193,12 @@
         <div class="alignright">{if $footer_next_page}<a href="{$footer_next_page}">{$CONST.NEXT_PAGE} &raquo;</a>{/if}</div>
      {serendipity_hookPlugin hook="entries_footer"}
     </div>
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
  {if $template_option.show_pagibottom == 'true' && $footer_totalPages > 1}
          <div class="kasten"><center>{$footer_info}<br/>
             {eval var=$footer_currentPage-3 assign="paginationStartPage"}
@@ -236,11 +236,11 @@
         </div>
      {/if}
   <div class="kasten">
- 
+
 </div>
 
 
-    
-  <br/>   
-    
-<!-- ENTRIES END --> 
+
+  <br/>
+
+<!-- ENTRIES END -->

@@ -4,7 +4,7 @@
     {foreach from=$entries item="dategroup"}
     <div class="serendipity_Entry_Date">
         {foreach from=$dategroup.entries item="entry"}
-        {assign var="entry" value=$entry scope=parent}
+        {assign var="entry" value=$entry scope="parent"}
         <h3 class="serendipity_title"><a href="{$entry.link}">{$entry.title|@default:$entry.id}</a></h3>
 
         <div class="serendipity_entry serendipity_entry_author_{$entry.author|@makeFilename} {if $entry.is_entry_owner}serendipity_entry_author_self{/if}">
@@ -48,9 +48,9 @@
                         <a class="serendipity_entryFooter_trackback" href="{$entry.link}#trackbacks">{$entry.label_trackbacks} ({$entry.trackbacks})</a>
                     {/if}
                 {/if}
-               </div> 
+               </div>
 	  {/if}
-        {$entry.plugin_display_dat}            
+        {$entry.plugin_display_dat}
         </div>
         <!--
         <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"

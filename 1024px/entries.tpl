@@ -4,10 +4,10 @@
     {foreach from=$entries item="dategroup"}
     <div class="serendipity_Entry_Date">
         {foreach from=$dategroup.entries item="entry"}
-        {assign var="entry" value=$entry scope=parent}
+        {assign var="entry" value=$entry scope="parent"}
 
         <h2 class="serendipity_title">
-	<a href="{$entry.link}">{$entry.title|@default:$entry.id}</a>   
+	<a href="{$entry.link}">{$entry.title|@default:$entry.id}</a>
 	<span class="fade">{if $dategroup.is_sticky}
         {$CONST.STICKY_POST}
         {else}
