@@ -15,6 +15,7 @@
         	{/if}
         
     {foreach from=$dategroup.entries item="entry"}
+        {assign var="entry" value=$entry scope=parent}
         
         <h2 class="serendipity_commentsTitle"><a href="{$entry.link}">{$entry.title|@default:$entry.body|truncate:200:" ..."}</a></h2>
         

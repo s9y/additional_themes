@@ -4,6 +4,7 @@
     {foreach from=$entries item="dategroup"}
     <div class="post">
 	{foreach from=$dategroup.entries item="entry"}
+        {assign var="entry" value=$entry scope=parent}
 		<div class="header"><h3>
 		<a href="{$entry.link}">{$entry.title|@default:$entry.body|truncate:37:" ..."}</a></h3><div class="date">{if $dategroup.is_sticky}
       	{$CONST.STICKY_POSTINGS}

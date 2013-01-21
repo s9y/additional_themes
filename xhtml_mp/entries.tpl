@@ -2,6 +2,7 @@
 
 {foreach from=$entries item="dategroup"}
   {foreach from=$dategroup.entries item="entry"}
+  {assign var="entry" value=$entry scope=parent}
 
   	{if !$is_single_entry}
   		<div class="ePrv">

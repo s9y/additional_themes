@@ -5,6 +5,7 @@
 		<ul class="dates">
 {foreach from=$entries item="dategroup"}
 	{foreach from=$dategroup.entries item="entry"}
+        {assign var="entry" value=$entry scope=parent}
 	<li>
 		<span class="date">{$entry.timestamp|@formatTime:$HEMINGWAY_DATE}</span>
 		<a href="{$entry.link}">{$entry.title|@default:$entry.id}</a> 
@@ -57,6 +58,7 @@
 <div class="primary">
     {foreach from=$entries item="dategroup"}
 	{foreach from=$dategroup.entries item="entry"}
+        {assign var="entry" value=$entry scope=parent}
 	<h1 class="serendipity_title">{$entry.title|@default:$entry.id}</h1>
 	    <div class="serendipity_entry_body">
 		{$entry.body}

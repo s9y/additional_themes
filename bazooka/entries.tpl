@@ -10,6 +10,7 @@
         {/if}
 
         {foreach name="dategroup" from=$dategroup.entries item="entry"}
+        {assign var="entry" value=$entry scope=parent}
                     {if $entry.categories}
             <span class="serendipity_entryIcon">
             {foreach from=$entry.categories item="category"}

@@ -2,6 +2,7 @@
     {serendipity_hookPlugin hook="entries_header" addData="$entry_id"}
     {foreach from=$entries item="dategroup"}
     {foreach from=$dategroup.entries item="entry"}
+    {assign var="entry" value=$entry scope=parent}
     <div class="post">
         <h3><a class="title" href="{$entry.link}" rel="bookmark">{$entry.title|@default:$entry.id}</a></h3>
 

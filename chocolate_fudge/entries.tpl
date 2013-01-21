@@ -4,6 +4,7 @@
     {foreach from=$entries item="dategroup"}
     <div class="serendipity_Entry_Date">
         {foreach from=$dategroup.entries item="entry"}
+        {assign var="entry" value=$entry scope=parent}
         <h3 class="serendipity_title"><a href="{$entry.link}">{$entry.title|@default:$entry.id}</a></h3>
 		<div class='serendipity_entryFooter'>
 {if $entry.categories}

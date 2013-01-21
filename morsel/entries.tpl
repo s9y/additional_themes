@@ -4,6 +4,7 @@
 <div class="morselDate">
     <h3>{$dategroup.date|@formatTime:DATE_FORMAT_ENTRY}</h3>
     {foreach from=$dategroup.entries item="entry"}
+    {assign var="entry" value=$entry scope=parent}
     <div class="aMorsel">
         <h4><a href="{$entry.link}" rel="external">{$entry.title}</a></h4>
         <div class="morselBody">

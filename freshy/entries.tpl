@@ -4,6 +4,7 @@
     
 
         {foreach from=$dategroup.entries item="entry"}
+        {assign var="entry" value=$entry scope=parent}
         <div class="post" id="post-{$entry.id}">
      
         <h2><a href="{$entry.link}" rel="bookmark" title="{$entry.title}">{$entry.title}</a></h2>

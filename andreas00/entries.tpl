@@ -4,6 +4,7 @@
     {foreach from=$entries item="dategroup"}
     <div class="serendipity_Entry_Date">
         {foreach from=$dategroup.entries item="entry"}
+        {assign var="entry" value=$entry scope=parent}
         <h2 class="serendipity_title">
 		{if not $is_single_entry}{if $dategroup.is_sticky}
         {$CONST.STICKY_POST}

@@ -11,6 +11,7 @@
         {/if}
 
         {foreach from=$dategroup.entries item="entry"}
+        {assign var="entry" value=$entry scope=parent}
 		{if !$entry.is_extended}
         <h4 class="serendipity_title"><a href="{$entry.link}">{$entry.title}</a></h4>
 		{/if}

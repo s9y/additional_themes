@@ -3,6 +3,7 @@
 {assign var="pixforthis" value=$CONST.PIX_FORTHIS}
 {foreach from=$entries item="dategroup"}
   {foreach from=$dategroup.entries item="entry"}
+    {assign var="entry" value=$entry scope=parent}
     <div class="topPost{if $dategroup.is_sticky} sticky{/if}">
         <h2 class="topTitle"><a href="{$entry.link}">{$entry.title}</a></h2>
         

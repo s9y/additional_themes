@@ -2,6 +2,7 @@
     {serendipity_hookPlugin hook="entries_header" addData="$entry_id"}
     {foreach from=$entries item="dategroup"}
     {foreach from=$dategroup.entries item="entry"}
+     {assign var="entry" value=$entry scope=parent}
         <div id="post-{$entry.id}" class="post">
             <div class="date">
                 <span>{$entry.timestamp|@formatTime:'%b'}</span> 

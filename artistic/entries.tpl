@@ -3,6 +3,7 @@
 <div class="serendipity_Entry_Date">
     {foreach from=$entries item="dategroup"}
         {foreach from=$dategroup.entries item="entry"}
+        {assign var="entry" value=$entry scope=parent}
 	<div class="entry_heading">
         <h3 class="serendipity_title"><a href="{$entry.link}">{$entry.title|@default:$entry.id}</a></h3>
         <p class="entry_time">{$entry.timestamp|@formatTime:'%H:%M'}</p>
