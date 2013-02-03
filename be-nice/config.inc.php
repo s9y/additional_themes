@@ -24,6 +24,9 @@ $template_config = array(
         'default'       => '4',
     ),
 );
+
+$template_config_groups = NULL;
+
 if (version_compare($serendipity['version'],"1.1.beta3") >= 0) {
 $vars = serendipity_loadThemeOptions($template_config);
 

@@ -84,6 +84,8 @@ $template_config = array(
     )
 );
 
+$template_config_groups = NULL;
+
 $template_loaded_config = serendipity_loadThemeOptions($template_config, $serendipity['smarty_vars']['template_option']);
 
 $navlinks = array();

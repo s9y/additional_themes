@@ -1,7 +1,7 @@
 <?php
 //s9y1.1 stuff
 //error_reporting(E_ALL);
-// Probe for a language include with constants. Still include 
+// Probe for a language include with constants. Still include
 // defines later on, if some constants were missing
 if ($serendipity['GET']['adminModule'] == 'templates' || $serendipity['POST']['adminModule'] != 'templates') {
     // Probe for a language include with constants. Still include defines
@@ -9,16 +9,16 @@ if ($serendipity['GET']['adminModule'] == 'templates' || $serendipity['POST']['a
     $probelang = dirname(__FILE__) . '/' . $serendipity['charset'] . 'lang_' . $serendipity['lang'] . '.inc.php';
     if (file_exists($probelang)) {
         include $probelang;
-        
+
     }
-  
-   	
+
+
    	 include_once dirname(__FILE__) . '/UTF-8/lang_en.inc.php';
-} 
+}
 
 if (version_compare($serendipity["version"],"1.1.beta3") >=0)
-{	
-	
+{
+
 include(dirname(__FILE__)."/functions.custom_imgsel.inc.php");
 
 
@@ -32,16 +32,16 @@ if(!$handle)
 	$imgsrc[serendipity_getTemplateFile($header_img_dir."Birds.jpg")]="Birds.jpg";
 }
 else
-{	
+{
 	while (false !== ($imgfile = readdir($handle)))
 	 {
         if ($imgfile != "." && $imgfile != "..")
         { $fullpath=serendipity_getTemplateFile($header_img_dir.$imgfile);
         		$imgsrc[$fullpath] =$imgfile;
-        		
+
     	}
 	}
-	
+
 }
 
 
@@ -50,7 +50,7 @@ $freshy_header_text=array(
 			"var"=>"freshyheader",
 			"heading"=>FRESHY_HEADER_TITLE,
 			"description"=>FRESHY_HEADER_DESCRIPTION
-			
+
 
 );
 
@@ -74,12 +74,12 @@ $template_config = array(
         'type'         => "content",
           'default'       => $freshy_header_html
             ),
-   
+
       array(
         "var"=>"sep1",
         "type"=>"seperator",
         "default"=>""
-        ),    
+        ),
      array(
         'var'           => 'navbg',
         'name'         => FRESHY_NAVBG_TITLE,
@@ -91,25 +91,25 @@ $template_config = array(
         						 "orange"=>FRESHY_NAVBG_ORANGE,
         						 "red"=>FRESHY_NAVBG_RED,
         						 "gray"=>FRESHY_NAVBG_GRAY,
-        						 "lightblue"=>FRESHY_NAVBG_LIGHT_BLUE	
+        						 "lightblue"=>FRESHY_NAVBG_LIGHT_BLUE
         						),
         'default'       => "green"
             ),
-            
-            
+
+
              array("var"=>"homelinklabel",
 	 	"name"=>FRESHY_NAVLINK_TITLE." 1",
 		"description"=>	FRESHY_HOMELINK_DESCRIPTION,
 		"type"=>"string",
 		"default"=>"Home"
-		)     
+		)
     );
 
 
 
 
+$template_config_groups = NULL;
 
- 
 $vars = serendipity_loadThemeOptions($template_config);
 
 $navlinks = array();
@@ -147,8 +147,8 @@ for (; $i <= 10; $i++) {
 						"type"=>"string",
 						"default"=>"#"
 						);
-						 
-$serendipity['smarty']->assign_by_ref('navlinks', $navlinks); 
+
+$serendipity['smarty']->assign_by_ref('navlinks', $navlinks);
 
 
 $serendipity['smarty']->assign(array('currpage'=> "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']));

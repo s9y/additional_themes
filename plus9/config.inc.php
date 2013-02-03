@@ -36,7 +36,7 @@ if (class_exists('serendipity_event_entryproperties'))  {
    if (is_array($check) && isset($check[0]['config'])) {
      $inst_ok=$inst_ok.  "Customfield Mimbo exists</span> <br>";
    } else {
-    $inst_ok=$inst_ok.  "Nö!</span> <br>";
+    $inst_ok=$inst_ok.  "NÃ¶!</span> <br>";
    }
 
    } else {
@@ -167,6 +167,8 @@ $template_config = array(
 	        'default'       => 'Info',
     )
 );
+
+$template_config_groups = NULL;
 
 $template_loaded_config = serendipity_loadThemeOptions($template_config, $serendipity['smarty_vars']['template_option']);
 

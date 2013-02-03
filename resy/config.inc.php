@@ -50,4 +50,5 @@ $template_config = array(
 
 );
 
+$template_config_groups = NULL;
 # vim: tabstop=4 shiftwidth=4 expandtab

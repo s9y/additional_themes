@@ -6,7 +6,7 @@
 
 if ($serendipity['GET']['adminModule'] == 'templates' || $serendipity['POST']['adminModule'] != 'templates') {
 
-    // Probe for a language include with constants. Still include defines 
+    // Probe for a language include with constants. Still include defines
 
     // later on, if some constants were missing
 
@@ -16,9 +16,9 @@ if ($serendipity['GET']['adminModule'] == 'templates' || $serendipity['POST']['a
 
         include $probelang;
 
-    } 
+    }
 
-    
+
 
     include dirname(__FILE__) . '/lang_en.inc.php';
 
@@ -50,7 +50,7 @@ array(
         'radio'         => array('value' => array('true', 'false'),
                                  'desc'  => array(AT_POS, AT_NEG)),
         'default'       => 'false'
-    ), 
+    ),
    		array(
         'var'           => 'aboutpageurl',
         'title'         => 'About page URL',
@@ -68,7 +68,7 @@ array(
 
 );
 
-
+$template_config_groups = NULL;
 
 if (version_compare($serendipity['version'],"1.1.beta3") >= 0) {
 

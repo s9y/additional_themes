@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 if (IN_serendipity !== true) {
   die ("Don't hack!");
@@ -39,6 +39,8 @@ $template_config = array(
         'default'       => '4',
     		),
 );
+
+$template_config_groups = NULL;
 
 $template_loaded_config = serendipity_loadThemeOptions($template_config, $serendipity['smarty_vars']['template_option']);
 

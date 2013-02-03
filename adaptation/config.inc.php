@@ -3,7 +3,7 @@
 if (IN_serendipity !== true) {
     die ("Don't hack!");
 }
-    
+
 $probelang = dirname(__FILE__) . '/lang_' . $serendipity['lang'] . '.inc.php';
 if (file_exists($probelang)) {
     include $probelang;
@@ -35,4 +35,6 @@ $template_config = array(
         'default' => 'left,hide,right'
     )
 );
+
+$template_config_groups = NULL;
 ?>

@@ -65,4 +65,6 @@ $template_config = array(
          'default'      => 'left,hide,right,middle,detail,'
     ),
  );
+
+$template_config_groups = NULL;
 ?>

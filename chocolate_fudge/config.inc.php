@@ -46,3 +46,5 @@ $template_config = array(
         'default'       => '#',
     ),
 );
+
+$template_config_groups = NULL;

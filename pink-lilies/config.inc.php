@@ -8,4 +8,6 @@ if (file_exists($probelang)) {
 }
 
 $serendipity['smarty']->assign('CONST', get_defined_constants());
+
+$template_config_groups = NULL;
 ?>

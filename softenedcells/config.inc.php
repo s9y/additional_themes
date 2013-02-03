@@ -2,13 +2,13 @@
 // Be nice to the frontend users. They don't need the additional constants
 // and file lookups. Only load them when in Admin mode.
 if ($serendipity['GET']['adminModule'] == 'templates' || $serendipity['POST']['adminModule'] != 'templates') {
-    // Probe for a language include with constants. Still include defines 
+    // Probe for a language include with constants. Still include defines
     // later on, if some constants were missing
     $probelang = dirname(__FILE__) . '/' . $serendipity['charset'] . 'lang_' . $serendipity['lang'] . '.inc.php';
     if (file_exists($probelang)) {
         include $probelang;
-    } 
-    
+    }
+
     include dirname(__FILE__) . '/lang_en.inc.php';
 }
 
@@ -30,6 +30,8 @@ $template_config = array(
         'default'       => '4',
     ),
 );
+
+$template_config_groups = NULL;
 
 if (version_compare($serendipity['version'],"1.1.beta3") >= 0) {
 

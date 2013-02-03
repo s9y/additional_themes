@@ -99,4 +99,6 @@ $template_config = array(
         'default'       => 'Send a msg',
     ),
 );
+
+$template_config_groups = NULL;
 ?>
