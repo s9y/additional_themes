@@ -39,7 +39,7 @@ $template_config = array(
     ),
 );
 
-$template_config_groups = NULL;
+// $template_config_groups = NULL;
 
 if (version_compare($serendipity['version'],"1.1.beta3") >= 0) {
 $vars = serendipity_loadThemeOptions($template_config);
