@@ -39,8 +39,6 @@ $template_config = array(
     ),
 );
 
-// $template_config_groups = NULL;
-
 if (version_compare($serendipity['version'],"1.1.beta3") >= 0) {
 $vars = serendipity_loadThemeOptions($template_config);
 
@@ -69,4 +67,6 @@ for ($i = 0; $i < $vars['amount']; $i++) {
 
 $serendipity['smarty']->assign_by_ref('navlinks', $navlinks);
 }
+
+$template_config_groups = NULL;
 ?>
