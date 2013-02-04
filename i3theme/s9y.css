@@ -151,7 +151,7 @@ h2#contact {
     clear: both;
     background: url(img/navigation-bg.gif) no-repeat left center;
     height: 21px;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
 }
 .serendipity_entrypaging a, .serendipity_entrypaging a:visited {
     color: #fff;
@@ -201,4 +201,11 @@ h2#contact {
     padding-left: 22px;
     font: normal 140%/120% Arial, Helvetica, sans-serif;
     clear: both;
+}
+
+.serendipity_findmore_like li {
+    background: inherit;
+    list-style: none;
+    margin: inherit;
+    padding-left: 0;
 }
