@@ -13,33 +13,19 @@ include dirname(__FILE__) . '/lang_en.inc.php';
 
 $serendipity['smarty']->assign(array('currpage'=> "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']));
 
-
-
-
 $xxsbmtarget= array ("self Window","new Window", "new Window with nofollow");
 $xxmenuepsition= array("side-bar-top","side-bar-bottom", "feature-bar-top",  "feature-bar-bottom","news-bar-top","news-bar-bottom","news-bar-middle","footer-l","footer-m","footer-r","footer-b","disable");
 $xxinstallation = 'Template Check:<br>';
 $xxbannerposition= array( "top1",  "top2","bottom1","bottom2","disable");
 $xxleftsidebarpos=array("footer-l","footer-m","footer-r","footer-b","disable");
 
-
-
-
-
-
-
-
-if ($serendipity['GET']['adminModule'] == 'templates') {
+if ($serendipity['GET']['adminModule'] == 'templates' || $serendipity['POST']['adminModule'] == 'templates') {
   $all_cats = serendipity_fetchCategories('all');
   $categories = serendipity_walkRecursive($categories, 'categoryid', 'parentid', VIEWMODE_THREADED);
   $catsel = array();
   foreach($all_cats AS $cat) {
-                               $catsel[$cat['categoryid']] = str_repeat('&nbsp;', $cat['depth']) . $cat['category_name'];
-
-  							}
+    $catsel[$cat['categoryid']] = str_repeat('&nbsp;', $cat['depth']) . $cat['category_name'];
 }
-
-
 
 $template_config = array(
     array(
@@ -59,16 +45,12 @@ $template_config = array(
        'type'          => 'custom',
        'custom'        => MIMBO_INSTR,
     ),
-
     array(
        'var'           => 'enablehmenue',
        'name'          => ENABLECAT_HMENUE,
        'type'          => 'boolean',
        'default'       => 'true'
     ),
-
-
-
     array(
        'var'           => 'infohm',
        'name'          => 'infohm',
@@ -81,8 +63,6 @@ $template_config = array(
         'type'        => 'string',
         'default'     => '5',
     ),
-
-
     array(
        'var'           => 'infosbm',
        'name'          => 'infosbm',
@@ -96,8 +76,8 @@ $template_config_groups = NULL;
 
 $template_loaded_config = serendipity_loadThemeOptions($template_config, $serendipity['smarty_vars']['template_option']);
 
-
 $sbmenue1 = array();
+
 for ($i = 0; $i < $template_loaded_config['sidebbarmenuesamount']; $i++) {
     $template_config[] = array(
         'var'           => 'menue1' . $i . 'sbmenue_info',
@@ -169,37 +149,8 @@ for ($i = 0; $i < $template_loaded_config['sidebbarmenuesamount']; $i++) {
         'menuepoints'      => $menuepoints,
     );
 }
+
 $serendipity['smarty']->assign_by_ref('sbmenue1', $sbmenue1);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 $navlinks = array();
 for ($i = 0; $i < $template_loaded_config['amount']; $i++) {
@@ -254,33 +205,12 @@ for ($i = 0; $i < $template_loaded_config['amount']; $i++) {
         'dropdownentries'   => $dropdownentries,
     );
 }
+
 $serendipity['smarty']->assign_by_ref('navlinks', $navlinks);
 
-
-
-
-
-
-
-
-
-
-
-
- $all_cats = serendipity_fetchCategories('all');
- $categories = serendipity_walkRecursive($categories, 'categoryid', 'parentid', VIEWMODE_THREADED);
- $catsel = array();
- foreach($all_cats AS $cat) {
-   $catsel[$cat['categoryid']] = str_repeat('&nbsp;', $cat['depth']) . $cat['category_name'];
- }
-
-
-
-
-
-
-
-
-
-
-
+$all_cats = serendipity_fetchCategories('all');
+$categories = serendipity_walkRecursive($categories, 'categoryid', 'parentid', VIEWMODE_THREADED);
+$catsel = array();
+  foreach($all_cats AS $cat) {
+    $catsel[$cat['categoryid']] = str_repeat('&nbsp;', $cat['depth']) . $cat['category_name'];
+  }
