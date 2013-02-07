@@ -13,7 +13,7 @@ include dirname(__FILE__) . '/lang_en.inc.php';
 
 $serendipity['smarty']->assign(array('currpage'=> "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']));
 
-if ($serendipity['GET']['adminModule'] == 'templates') {
+if ($serendipity['GET']['adminModule'] == 'templates' || $serendipity['POST']['adminModule'] == 'templates') {
   $all_cats = serendipity_fetchCategories('all');
   $categories = serendipity_walkRecursive($categories, 'categoryid', 'parentid', VIEWMODE_THREADED);
   $catsel = array();

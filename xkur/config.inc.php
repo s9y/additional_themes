@@ -13,30 +13,16 @@ include dirname(__FILE__) . '/lang_en.inc.php';
 
 $serendipity['smarty']->assign(array('currpage'=> "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']));
 
-
-
-
-
-
-
-
 $footerposition= array( "left-column",  "middle-column", "right-column","disable");
 
-
-
-
-
-if ($serendipity['GET']['adminModule'] == 'templates') {
+if ($serendipity['GET']['adminModule'] == 'templates' || $serendipity['POST']['adminModule'] == 'templates') {
   $all_cats = serendipity_fetchCategories('all');
   $categories = serendipity_walkRecursive($categories, 'categoryid', 'parentid', VIEWMODE_THREADED);
   $catsel = array();
   foreach($all_cats AS $cat) {
-                               $catsel[$cat['categoryid']] = str_repeat('&nbsp;', $cat['depth']) . $cat['category_name'];
-
-  							}
+    $catsel[$cat['categoryid']] = str_repeat('&nbsp;', $cat['depth']) . $cat['category_name'];
+  }
 }
-
-
 
 $template_config = array(
     array(
@@ -136,7 +122,6 @@ $template_config_groups = NULL;
 
 $template_loaded_config = serendipity_loadThemeOptions($template_config, $serendipity['smarty_vars']['template_option']);
 
-
 $sbmenue1 = array();
 for ($i = 0; $i < $template_loaded_config['sidebbarmenuesamount']; $i++) {
 
@@ -213,10 +198,6 @@ for ($i = 0; $i < $template_loaded_config['sidebbarmenuesamount']; $i++) {
 }
 $serendipity['smarty']->assign_by_ref('sbmenue1', $sbmenue1);
 
-
-
-
-
 $navlinks = array();
 for ($i = 0; $i < $template_loaded_config['amount']; $i++) {
     $template_config[] = array(
@@ -272,8 +253,6 @@ for ($i = 0; $i < $template_loaded_config['amount']; $i++) {
 }
 $serendipity['smarty']->assign_by_ref('navlinks', $navlinks);
 
-
-
  $all_cats = serendipity_fetchCategories('all');
  $categories = serendipity_walkRecursive($categories, 'categoryid', 'parentid', VIEWMODE_THREADED);
  $catsel = array();
@@ -281,13 +260,9 @@ $serendipity['smarty']->assign_by_ref('navlinks', $navlinks);
    $catsel[$cat['categoryid']] = str_repeat('&nbsp;', $cat['depth']) . $cat['category_name'];
  }
 
-
-
 $serendipity['smarty']->assign('catx1_cat', $catsel[$template_loaded_config['catx1']]);
 $serendipity['smarty']->assign('tabx2_cat', $catsel[$template_loaded_config['catx2']]);
 $serendipity['smarty']->assign('catx3_cat', $catsel[$template_loaded_config['catx3']]);
-
-
 
 // CODE EXAMPLE:  How to save custom field variables within the serendipity "Edit/Create Entry" backend.
 //                Any custom variables can later be queried inside the .tpl files through

@@ -47,21 +47,14 @@ if (class_exists('serendipity_event_staticpage'))  {
    $inst_ok=$inst_ok.$notok.' <span>MISSING: serendipity_plugin_staticpage Plugin </span> <br>';
 }
 
-
-
-
-
-if ($serendipity['GET']['adminModule'] == 'templates') {
+if ($serendipity['GET']['adminModule'] == 'templates' || $serendipity['POST']['adminModule'] == 'templates') {
   $all_cats = serendipity_fetchCategories('all');
   $categories = serendipity_walkRecursive($categories, 'categoryid', 'parentid', VIEWMODE_THREADED);
   $catsel = array();
   foreach($all_cats AS $cat) {
-                               $catsel[$cat['categoryid']] = str_repeat('&nbsp;', $cat['depth']) . $cat['category_name'];
-
-  							}
+    $catsel[$cat['categoryid']] = str_repeat('&nbsp;', $cat['depth']) . $cat['category_name'];
+  }
 }
-
-
 
 $template_config = array(
     array(
@@ -328,7 +321,6 @@ $template_config_groups = NULL;
 
 $template_loaded_config = serendipity_loadThemeOptions($template_config, $serendipity['smarty_vars']['template_option']);
 
-
 $sbmenue1 = array();
 for ($i = 0; $i < $template_loaded_config['sidebbarmenuesamount']; $i++) {
     $template_config[] = array(
@@ -403,13 +395,6 @@ for ($i = 0; $i < $template_loaded_config['sidebbarmenuesamount']; $i++) {
 }
 $serendipity['smarty']->assign_by_ref('sbmenue1', $sbmenue1);
 
-
-
-
-
-
-
-
 $tabklotz1 = array();
 for ($i = 0; $i < $template_loaded_config['tabklotzamount']; $i++) {
     $template_config[] = array(
@@ -475,25 +460,6 @@ for ($i = 0; $i < $template_loaded_config['tabklotzamount']; $i++) {
 }
 $serendipity['smarty']->assign_by_ref('tabklotz1', $tabklotz1);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 $navlinks = array();
 for ($i = 0; $i < $template_loaded_config['amount']; $i++) {
     $template_config[] = array(
@@ -549,10 +515,6 @@ for ($i = 0; $i < $template_loaded_config['amount']; $i++) {
 }
 $serendipity['smarty']->assign_by_ref('navlinks', $navlinks);
 
-
-
-
-
 $catlinks = array();
 
 for ($i = 0; $i < $template_loaded_config['amount']; $i++) {
@@ -597,14 +559,7 @@ for ($i = 0; $i < $template_loaded_config['amount']; $i++) {
     );
 }
 
-
 $serendipity['smarty']->assign_by_ref('catlinks', $catlinks);
-
-
-
-
-
-
 
  $all_cats = serendipity_fetchCategories('all');
  $categories = serendipity_walkRecursive($categories, 'categoryid', 'parentid', VIEWMODE_THREADED);
@@ -615,13 +570,3 @@ $serendipity['smarty']->assign_by_ref('catlinks', $catlinks);
 $serendipity['smarty']->assign('tabx1_cat', $catsel[$template_loaded_config['tabx1']]);
 $serendipity['smarty']->assign('tabx2_cat', $catsel[$template_loaded_config['tabx2']]);
 $serendipity['smarty']->assign('tabx3_cat', $catsel[$template_loaded_config['tabx3']]);
-
-
-
-
-
-
-
-
-
-
