@@ -1,4 +1,4 @@
-Name: CoSTa's Nature Theme v0.5 (2008-02-14)
+Name: CoSTa's Nature Theme v0.6 (2013-02-07)
 Author: Kostas CoSTa Brzezinski
-Date: 2006.05.02
+Date: 2013.02.07
 Require Serendipity: 0.8
