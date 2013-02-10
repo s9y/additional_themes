@@ -14,20 +14,21 @@ include dirname(__FILE__) . '/lang_en.inc.php';
 $serendipity['smarty']->assign(array('currpage'=> "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']));
 
 if ($serendipity['GET']['adminModule'] == 'templates' || $serendipity['POST']['adminModule'] == 'templates') {
-  $all_cats = serendipity_fetchCategories('all');
-  $categories = serendipity_walkRecursive($categories, 'categoryid', 'parentid', VIEWMODE_THREADED);
-  $catsel = array();
-  foreach($all_cats AS $cat) {
-    $catsel[$cat['categoryid']] = str_repeat('&nbsp;', $cat['depth']) . $cat['category_name'];
+    if (is_array($all_cats = serendipity_fetchCategories('all'))) {
+        $categories = serendipity_walkRecursive($categories, 'categoryid', 'parentid', VIEWMODE_THREADED);
+        $catsel = array();
+        foreach($all_cats AS $cat) {
+            $catsel[$cat['categoryid']] = str_repeat('&nbsp;', $cat['depth']) . $cat['category_name'];
+        }
   }
 }
 
 $template_config = array(
     array(
-        'var'           => 'infoxxx1',
-        'name'          => 'infoxxx1',
-        'type'          => 'custom',
-        'custom'        => MIMBO_INSTR,
+      'var'           => 'infoxxx1',
+      'name'          => 'infoxxx1',
+      'type'          => 'custom',
+      'custom'        => MIMBO_INSTR,
     ),
     array(
       'var'           => 'catlead',
@@ -65,10 +66,10 @@ $template_config = array(
       'select_values' => $catsel,
     ),
     array(
-        'var'           => 'amount',
-        'name'          => NAVLINK_AMOUNT,
-        'type'          => 'string',
-        'default'       => '5',
+        'var'         => 'amount',
+        'name'        => NAVLINK_AMOUNT,
+        'type'        => 'string',
+        'default'     => '5',
     )
 );
 
@@ -80,20 +81,20 @@ $navlinks = array();
 
 for ($i = 0; $i < $template_loaded_config['amount']; $i++) {
     $navlinks[] = array(
-        'title' => $template_loaded_config['navlink' . $i . 'text'],
-        'href'  => $template_loaded_config['navlink' . $i . 'url']
+        'title'   => $template_loaded_config['navlink' . $i . 'text'],
+        'href'    => $template_loaded_config['navlink' . $i . 'url']
     );
     $template_config[] = array(
-        'var'           => 'navlink' . $i . 'text',
-        'name'          => NAV_LINK_TEXT . ' #' . $i,
-        'type'          => 'string',
-        'default'       => 'Link #' . $i,
+        'var'     => 'navlink' . $i . 'text',
+        'name'    => NAV_LINK_TEXT . ' #' . $i,
+        'type'    => 'string',
+        'default' => 'Link #' . $i,
         );
     $template_config[] = array(
-        'var'           => 'navlink' . $i . 'url',
-        'name'          => NAV_LINK_URL . ' #' . $i,
-        'type'          => 'string',
-        'default'       => '#',
+        'var'     => 'navlink' . $i . 'url',
+        'name'    => NAV_LINK_URL . ' #' . $i,
+        'type'    => 'string',
+        'default' => '#',
     );
 }
 
