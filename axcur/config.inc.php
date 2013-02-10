@@ -13,27 +13,28 @@ include dirname(__FILE__) . '/lang_en.inc.php';
 
 $serendipity['smarty']->assign(array('currpage'=> "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']));
 
-$xxsbmtarget= array ("self Window","new Window", "new Window with nofollow");
-$xxmenuepsition= array("side-bar-top","side-bar-bottom", "feature-bar-top",  "feature-bar-bottom","news-bar-top","news-bar-bottom","news-bar-middle","footer-l","footer-m","footer-r","footer-b","disable");
-$xxinstallation = 'Template Check:<br>';
-$xxbannerposition= array( "top1",  "top2","bottom1","bottom2","disable");
-$xxleftsidebarpos=array("footer-l","footer-m","footer-r","footer-b","disable");
+$xxsbmtarget      = array ("self Window","new Window", "new Window with nofollow");
+$xxmenuepsition   = array("side-bar-top","side-bar-bottom", "feature-bar-top",  "feature-bar-bottom","news-bar-top","news-bar-bottom","news-bar-middle","footer-l","footer-m","footer-r","footer-b","disable");
+$xxinstallation   = 'Template Check:<br>';
+$xxbannerposition = array( "top1",  "top2","bottom1","bottom2","disable");
+$xxleftsidebarpos = array("footer-l","footer-m","footer-r","footer-b","disable");
 
 if ($serendipity['GET']['adminModule'] == 'templates' || $serendipity['POST']['adminModule'] == 'templates') {
-  $all_cats = serendipity_fetchCategories('all');
-  $categories = serendipity_walkRecursive($categories, 'categoryid', 'parentid', VIEWMODE_THREADED);
-  $catsel = array();
-  foreach($all_cats AS $cat) {
-    $catsel[$cat['categoryid']] = str_repeat('&nbsp;', $cat['depth']) . $cat['category_name'];
+    $all_cats = serendipity_fetchCategories('all');
+    $categories = serendipity_walkRecursive($categories, 'categoryid', 'parentid', VIEWMODE_THREADED);
+    $catsel = array();
+    foreach($all_cats AS $cat) {
+        $catsel[$cat['categoryid']] = str_repeat('&nbsp;', $cat['depth']) . $cat['category_name'];
+    }
 }
 
 $template_config = array(
     array(
-		'var' 			=> 'sidebars',
-		'name' 			=> SIDEBAR_TITLE,
-		'type' 			=> 'string',
-		'default'		=> 'left,hide,right,top'
-	),
+        'var'             => 'sidebars',
+        'name'             => SIDEBAR_TITLE,
+        'type'             => 'string',
+        'default'        => 'left,hide,right,top'
+    ),
     array(
         'var'          => 'installation_ok',
         'type'         => 'content',
@@ -193,24 +194,24 @@ for ($i = 0; $i < $template_loaded_config['amount']; $i++) {
             );
 
         $dropdownentries[] = array(
-            'title'     	=> $template_loaded_config['navlink' . $i . 'dropdowentry' . $k . 'text'],
-            'href'      	=> $template_loaded_config['navlink' . $i . 'dropdowentry' . $k . 'url'],
+            'title'         => $template_loaded_config['navlink' . $i . 'dropdowentry' . $k . 'text'],
+            'href'          => $template_loaded_config['navlink' . $i . 'dropdowentry' . $k . 'url'],
             );
     }
     $navlinks[] = array(
-        'navlinkinfo' 	=> $template_loaded_config['navlink' . $i . 'navlink_info'],
-        'title'         	=> $template_loaded_config['navlink' . $i . 'text'],
-        'href'           	=> $template_loaded_config['navlink' . $i . 'url'],
-        'drop'           	=> $template_loaded_config['navlink' . $i . 'dramount'],
-        'dropdownentries'   => $dropdownentries,
+        'navlinkinfo'     => $template_loaded_config['navlink' . $i . 'navlink_info'],
+        'title'           => $template_loaded_config['navlink' . $i . 'text'],
+        'href'            => $template_loaded_config['navlink' . $i . 'url'],
+        'drop'            => $template_loaded_config['navlink' . $i . 'dramount'],
+        'dropdownentries' => $dropdownentries,
     );
 }
 
 $serendipity['smarty']->assign_by_ref('navlinks', $navlinks);
 
-$all_cats = serendipity_fetchCategories('all');
+$all_cats   = serendipity_fetchCategories('all');
 $categories = serendipity_walkRecursive($categories, 'categoryid', 'parentid', VIEWMODE_THREADED);
 $catsel = array();
-  foreach($all_cats AS $cat) {
+foreach($all_cats AS $cat) {
     $catsel[$cat['categoryid']] = str_repeat('&nbsp;', $cat['depth']) . $cat['category_name'];
-  }
+}
