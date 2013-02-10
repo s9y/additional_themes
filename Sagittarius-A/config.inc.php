@@ -14,26 +14,27 @@ include dirname(__FILE__) . '/lang_en.inc.php';
 $serendipity['smarty']->assign(array('currpage'=> "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']));
 
 if ($serendipity['GET']['adminModule'] == 'templates' || $serendipity['POST']['adminModule'] == 'templates') {
-  $all_cats = serendipity_fetchCategories('all');
-  $categories = serendipity_walkRecursive($categories, 'categoryid', 'parentid', VIEWMODE_THREADED);
-  $catsel = array();
-  foreach($all_cats AS $cat) {
-    $catsel[$cat['categoryid']] = str_repeat('&nbsp;', $cat['depth']) . $cat['category_name'];
-  }
+    if (is_array($all_cats = serendipity_fetchCategories('all'))) {/*print_r($all_cats);*/
+        $categories = serendipity_walkRecursive($categories, 'categoryid', 'parentid', VIEWMODE_THREADED);
+        $catsel = array();
+        foreach($all_cats AS $cat) {
+            $catsel[$cat['categoryid']] = str_repeat('&nbsp;', $cat['depth']) . $cat['category_name'];
+        }
+    }
 }
 
 $template_config = array(
     array(
-		'var' 			=> 'sidebars',
-		'name' 			=> SIDEBAR_TITLE,
-		'type' 			=> 'string',
-		'default'		=> 'left,hide,right,left2'
-	),
-     array(
-        'var'           => 'newspapermode',
-        'name'          => NEWSPAPER_MODE,
-        'type'          => 'boolean',
-        'default'       => 'true',
+        'var'         => 'sidebars',
+        'name'        => SIDEBAR_TITLE,
+        'type'        => 'string',
+        'default'     => 'left,hide,right,left2'
+    ),
+    array(
+        'var'         => 'newspapermode',
+        'name'        => NEWSPAPER_MODE,
+        'type'        => 'boolean',
+        'default'     => 'true',
     ),
     array(
       'var'           => 'catx1',
@@ -75,7 +76,6 @@ $template_config = array(
         'type'          => 'boolean',
         'default'       => 'true',
     ),
-
     array(
         'var'           => 'footerslogan',
         'name'          => FOOTER_SLOGAN,
@@ -110,12 +110,6 @@ for ($i = 0; $i < $template_loaded_config['amount']; $i++) {
 }
 
 $serendipity['smarty']->assign_by_ref('navlinks', $navlinks);
-
-
-
-
-
-
 
 // CODE EXAMPLE:  How to save custom field variables within the serendipity "Edit/Create Entry" backend.
 //                Any custom variables can later be queried inside the .tpl files through
@@ -158,17 +152,16 @@ function serendipity_plugin_api_pre_event_hook($event, &$bag, &$eventData, &$add
             // should actually not even be required to do this, as serendipity loads all properties regardless of the installed plugin
 
             // The name of the variable
-            $special_key = 'special_switch';
-             $special_key2 = 'special_switch2';
-             $special_key3 = 'special_switch3';
+            $special_key  = 'special_switch';
+            $special_key2 = 'special_switch2';
+            $special_key3 = 'special_switch3';
             // Check what our special key is set to (checks both POST data as well as the actual data)
-            $is_special = helper_get_value($special_key, $eventData);
+            $is_special  = helper_get_value($special_key, $eventData);
             $is_special2 = helper_get_value($special_key2, $eventData);
-			$is_special3 = helper_get_value($special_key3, $eventData);
+            $is_special3 = helper_get_value($special_key3, $eventData);
             // This is the actual HTML output on the backend screen.
-           // echo '<pre>' . print_r($eventData, true) . '</pre>';
+            // echo '<pre>' . print_r($eventData, true) . '</pre>';
             echo "Disable the footer sidebar (LEFT and LEFT2 Sidebar) ? ";
-
 
             echo '<input type="radio" name="serendipity[properties][' . $special_key2 . ']" value="true" ' . ($is_special2 ? 'checked="checked"' : '') . ' id="' . $special_key2 . '_true">';
             echo '  <label for="' . $special_key2 . '_true">' . YES . '</label> ';
@@ -184,7 +177,6 @@ function serendipity_plugin_api_pre_event_hook($event, &$bag, &$eventData, &$add
             echo '<input type="radio" name="serendipity[properties][' . $special_key . ']" value="false" ' . (!$is_special ? 'checked="checked"' : '')  . ' id="' . $special_key . '_false">';
             echo '  <label for="' . $special_key . '_false">' . NO . '</label> ';
 
-
             echo "<br/><br/> Disable any text if comments are not allowed in entry-footer?  ";
 
             echo '<input type="radio" name="serendipity[properties][' . $special_key3 . ']" value="true" ' . ($is_special3 ? 'checked="checked"' : '') . ' id="' . $special_key3 . '_true">';
@@ -192,9 +184,6 @@ function serendipity_plugin_api_pre_event_hook($event, &$bag, &$eventData, &$add
 
             echo '<input type="radio" name="serendipity[properties][' . $special_key3 . ']" value="false" ' . (!$is_special3 ? 'checked="checked"' : '')  . ' id="' . $special_key3 . '_false">';
             echo '  <label for="' . $special_key3 . '_false">' . NO . '</label> ';
-
-
-
 
             break;
 
