@@ -1,4 +1,4 @@
-Name: Mimbo (2013-02-07)
+Name: Mimbo (2013-02-10)
 Author: Darren Hoyt, ported to s9y by Matthias 'YellowLed' Mees.
-Date: 2013-02-07
+Date: 2013-02-10
 Require Serendipity: 1.2
