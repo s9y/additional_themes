@@ -11,58 +11,58 @@ if (file_exists($probelang)) {
 
 include dirname(__FILE__) . '/lang_en.inc.php';
 
-$serendipity['smarty']->assign(array('currpage'=> "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']));
+$serendipity['smarty']->assign(array('currpage' => "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']));
 
+$istok = " <img src='" . serendipity_getTemplateFile('img/ok.gif'). "' alt='' /> ";
+$notok = " <img src='" . serendipity_getTemplateFile('img/fehler.gif'). "' alt='' /> ";
 
-$istok= " <img src='" . serendipity_getTemplateFile('img/ok.gif'). "' alt='' /> ";
-$notok= " <img src='" . serendipity_getTemplateFile('img/fehler.gif'). "' alt='' /> ";
+$sbmtarget      = array ("self Window","new Window", "new Window with nofollow");
+$menuepsition   = array("side-bar-top","side-bar-bottom", "feature-bar-top",  "feature-bar-bottom","news-bar-top","news-bar-bottom","news-bar-middle","footer-l","footer-m","footer-r","footer-b","disable");
+$installation   = 'Template Check:<br>';
+$bannerposition = array( "top1",  "top2","bottom1","bottom2","disable");
+$leftsidebarpos = array("footer-l","footer-m","footer-r","footer-b","disable");
 
-$sbmtarget= array ("self Window","new Window", "new Window with nofollow");
-$menuepsition= array("side-bar-top","side-bar-bottom", "feature-bar-top",  "feature-bar-bottom","news-bar-top","news-bar-bottom","news-bar-middle","footer-l","footer-m","footer-r","footer-b","disable");
-$installation = 'Template Check:<br>';
-$bannerposition= array( "top1",  "top2","bottom1","bottom2","disable");
-$leftsidebarpos=array("footer-l","footer-m","footer-r","footer-b","disable");
 if (class_exists('serendipity_event_freetag'))  {
-   $inst_ok=$istok.' <span>OK:serendipity_event_freetag Plugin </span> <br>';
-   } else {
-   $inst_ok=$notok.' <span>MISSING: serendipity_event_freetag Plugin </span> <br>';
+    $inst_ok = $istok.' <span>OK:serendipity_event_freetag Plugin </span> <br>';
+} else {
+    $inst_ok = $notok.' <span>MISSING: serendipity_event_freetag Plugin </span> <br>';
 }
 if (class_exists('serendipity_event_entryproperties'))  {
-   $inst_ok=$inst_ok.$istok.' <span>OK:serendipity_event_entryproperties Plugin ';
+    $inst_ok = $inst_ok.$istok.' <span>OK:serendipity_event_entryproperties Plugin ';
 
-   $check = serendipity_db_query("SELECT * FROM {$serendipity['dbPrefix']}config WHERE name LIKE '%serendipity_event_entryproperties:%/customfields' AND value LIKE '%MimboImage%'");
-   if (is_array($check) && isset($check[0]['config'])) {
-     $inst_ok=$inst_ok.  "Customfield Mimbo exists</span> <br>";
-   } else {
-    $inst_ok=$inst_ok.  " Customfield?</span> <br>";
-   }
-
-   } else {
-   $inst_ok=$inst_ok.$notok.' <span>MISSING: serendipity_event_entryproperties Plugin </span> <br>';
+    $check = serendipity_db_query("SELECT * FROM {$serendipity['dbPrefix']}config WHERE name LIKE '%serendipity_event_entryproperties:%/customfields' AND value LIKE '%MimboImage%'");
+    if (is_array($check) && isset($check[0]['config'])) {
+        $inst_ok = $inst_ok.  "Customfield Mimbo exists</span> <br>";
+    } else {
+        $inst_ok = $inst_ok.  " Customfield?</span> <br>";
+    }
+} else {
+    $inst_ok = $inst_ok.$notok.' <span>MISSING: serendipity_event_entryproperties Plugin </span> <br>';
 }
 
 if (class_exists('serendipity_event_staticpage'))  {
-   $inst_ok=$inst_ok.$istok.' <span>OK:serendipity_plugin_staticpage Plugin </span> <br>';
-   } else {
-   $inst_ok=$inst_ok.$notok.' <span>MISSING: serendipity_plugin_staticpage Plugin </span> <br>';
+    $inst_ok = $inst_ok.$istok.' <span>OK:serendipity_plugin_staticpage Plugin </span> <br>';
+} else {
+    $inst_ok = $inst_ok.$notok.' <span>MISSING: serendipity_plugin_staticpage Plugin </span> <br>';
 }
 
 if ($serendipity['GET']['adminModule'] == 'templates' || $serendipity['POST']['adminModule'] == 'templates') {
-  $all_cats = serendipity_fetchCategories('all');
-  $categories = serendipity_walkRecursive($categories, 'categoryid', 'parentid', VIEWMODE_THREADED);
-  $catsel = array();
-  foreach($all_cats AS $cat) {
-    $catsel[$cat['categoryid']] = str_repeat('&nbsp;', $cat['depth']) . $cat['category_name'];
-  }
+    if (is_array($all_cats = serendipity_fetchCategories('all'))) {
+        $categories = serendipity_walkRecursive($categories, 'categoryid', 'parentid', VIEWMODE_THREADED);
+        $catsel = array();
+        foreach($all_cats AS $cat) {
+            $catsel[$cat['categoryid']] = str_repeat('&nbsp;', $cat['depth']) . $cat['category_name'];
+        }
+	}
 }
 
 $template_config = array(
     array(
-		'var' 			=> 'sidebars',
-		'name' 			=> SIDEBAR_TITLE,
-		'type' 			=> 'string',
-		'default'		=> 'left,hide,right,top'
-	),
+        'var'          => 'sidebars',
+        'name'         => SIDEBAR_TITLE,
+        'type'         => 'string',
+        'default'      => 'left,hide,right,top'
+    ),
     array(
         'var'          => 'installation_ok',
         'type'         => 'content',
@@ -101,9 +101,9 @@ $template_config = array(
     array(
        'var'           => 'sidebarpos',
        'name'          => LEFTSIDEBAR_POS,
-      'type'          => 'select',
-      'default'       => '',
-      'select_values' => $leftsidebarpos,
+       'type'          => 'select',
+       'default'       => '',
+       'select_values' => $leftsidebarpos,
     ),
     array(
        'var'           => 'infoxtab',
@@ -131,188 +131,187 @@ $template_config = array(
        'default'       => 'true'
     ),
     array(
-      'var'           => 'tabx2',
-      'name'          => MIMBO_TAB_X2,
-      'type'          => 'select',
-      'default'       => '',
-      'select_values' => $catsel,
+       'var'           => 'tabx2',
+       'name'          => MIMBO_TAB_X2,
+       'type'          => 'select',
+       'default'       => '',
+       'select_values' => $catsel,
     ),
     array(
-      'var'           => 'enabletabx2',
-      'name'          => ENABLE_TABX2,
-      'type'          => 'boolean',
-      'default'       => 'true'
+       'var'           => 'enabletabx2',
+       'name'          => ENABLE_TABX2,
+       'type'          => 'boolean',
+       'default'       => 'true'
     ),
     array(
-      'var'           => 'tabx3',
-      'name'          => MIMBO_TAB_X3,
-      'type'          => 'select',
-      'default'       => '',
-      'select_values' => $catsel,
+       'var'           => 'tabx3',
+       'name'          => MIMBO_TAB_X3,
+       'type'          => 'select',
+       'default'       => '',
+       'select_values' => $catsel,
     ),
     array(
-      'var'           => 'enabletabx3',
-      'name'          => ENABLE_TABX3,
-      'type'          => 'boolean',
-      'default'       => 'true'
+       'var'           => 'enabletabx3',
+       'name'          => ENABLE_TABX3,
+       'type'          => 'boolean',
+       'default'       => 'true'
     ),
     array(
-      'var'           => 'enablesticky',
-      'name'          => ENABLE_STICKY,
-      'type'          => 'boolean',
-      'default'       => 'true'
+       'var'           => 'enablesticky',
+       'name'          => ENABLE_STICKY,
+       'type'          => 'boolean',
+       'default'       => 'true'
     ),
     array(
-      'var'           => 'stickyheader',
-      'name'          => SICKY_HEADER,
-      'type'          => 'string',
-      'default'       => 'Sticky',
-    ),
-
-    array(
-      'var'           => 'infoxlead',
-	  'name'          => 'infoxlead',
-      'type'          => 'custom',
-      'custom'        => INFO_LEAD,
+       'var'           => 'stickyheader',
+       'name'          => SICKY_HEADER,
+       'type'          => 'string',
+       'default'       => 'Sticky',
     ),
     array(
-      'var'           => 'enablecatlead',
-      'name'          => ENABLECAT_LEAD,
-      'type'          => 'boolean',
-      'default'       => 'true'
-    ),
-    array(
-      'var'           => 'catlead',
-      'name'          => MIMBO_CAT_LEAD,
-      'type'          => 'select',
-      'default'       => '',
-      'select_values' => $catsel,
-    ),
-    array(
-      'var'           => 'infoxrol',
-	  'name'          => 'infoxrol',
-      'type'          => 'custom',
-      'custom'        => INFO_ROL,
-    ),
-    array(
-      'var'           => 'enablecatrol',
-      'name'          => ENABLECAT_ROL,
-      'type'          => 'boolean',
-      'default'       => 'false'
-    ),
-    array(
-      'var'           => 'catrolheader',
-      'name'          => CATROL_HEADER,
-      'type'          => 'string',
-      'default'       => 'NEWS: ',
-    ),
-    array(
-      'var'           => 'catrol',
-      'name'          => MIMBO_CAT_ROL,
-      'type'          => 'select',
-      'default'       => '',
-      'select_values' => $catsel,
-    ),
-    array(
-      'var'           => 'infoxfeat',
-	  'name'          => 'infoxfeat',
-      'type'          => 'custom',
-	  'custom'        => INFO_FEAT,
-    ),
-    array(
-      'var'           => 'catfeat',
-      'name'          => MIMBO_CAT_FEAT,
-      'type'          => 'select',
-      'default'       => '',
-      'select_values' => $catsel,
-    ),
-    array(
-      'var'           => 'featamount',
-      'name'          => FEAT_AMOUNT,
-      'type'          => 'string',
-      'default'       => '0',
-    ),
-    array(
-	  'var'           => 'infoxnews',
-	  'name'          => 'infoxnews',
-	  'type'          => 'custom',
-	  'custom'        => INFO_NEWS,
-    ),
-    array(
-      'var'           => 'catx1',
-      'name'          => MIMBO_CAT_X1,
-      'type'          => 'select',
-      'default'       => '',
-      'select_values' => $catsel,
-    ),
-    array(
-      'var'           => 'catx2',
-      'name'          => MIMBO_CAT_X2,
-      'type'          => 'select',
-      'default'       => '',
-      'select_values' => $catsel,
-    ),
-    array(
-      'var'           => 'catx3',
-      'name'          => MIMBO_CAT_X3,
-      'type'          => 'select',
-      'default'       => '',
-      'select_values' => $catsel,
-    ),
-    array(
-      'var'           => 'catx4',
-      'name'          => MIMBO_CAT_X4,
-      'type'          => 'select',
-      'default'       => '',
-      'select_values' => $catsel,
-    ),
-    array(
-       'var'           => 'infohm',
-       'name'          => 'infohm',
+       'var'           => 'infoxlead',
+       'name'          => 'infoxlead',
        'type'          => 'custom',
-       'custom'        => INFO_HMENUE,
+       'custom'        => INFO_LEAD,
     ),
     array(
-        'var'         => 'amount',
-        'name'        => NAVLINK_AMOUNT,
-        'type'        => 'string',
-        'default'     => '0',
+       'var'           => 'enablecatlead',
+       'name'          => ENABLECAT_LEAD,
+       'type'          => 'boolean',
+       'default'       => 'true'
     ),
     array(
-       'var'           => 'infotkm',
-       'name'          => 'infotkm',
+       'var'           => 'catlead',
+       'name'          => MIMBO_CAT_LEAD,
+       'type'          => 'select',
+       'default'       => '',
+       'select_values' => $catsel,
+    ),
+    array(
+       'var'           => 'infoxrol',
+       'name'          => 'infoxrol',
        'type'          => 'custom',
-       'custom'        => INFO_TABKLOTZAMOUNT,
+       'custom'        => INFO_ROL,
     ),
     array(
-        'var'         => 'tabklotzamount',
-        'name'        => TABKLOTZ_AMOUNT,
-        'type'        => 'string',
-        'default'     => '0',
+       'var'           => 'enablecatrol',
+       'name'          => ENABLECAT_ROL,
+       'type'          => 'boolean',
+       'default'       => 'false'
     ),
     array(
-       'var'           => 'infotcba',
-       'name'          => 'infocba',
+       'var'           => 'catrolheader',
+       'name'          => CATROL_HEADER,
+       'type'          => 'string',
+       'default'       => 'NEWS: ',
+    ),
+    array(
+       'var'           => 'catrol',
+       'name'          => MIMBO_CAT_ROL,
+       'type'          => 'select',
+       'default'       => '',
+       'select_values' => $catsel,
+    ),
+    array(
+       'var'           => 'infoxfeat',
+       'name'          => 'infoxfeat',
        'type'          => 'custom',
-       'custom'        => INFO_CBA_AMOUNT,
+       'custom'        => INFO_FEAT,
     ),
     array(
-	        'var'         => 'catbanneramount',
-	        'name'        => CATBANNER_AMOUNT,
-	        'type'        => 'string',
-	        'default'     => '1',
+       'var'           => 'catfeat',
+       'name'          => MIMBO_CAT_FEAT,
+       'type'          => 'select',
+       'default'       => '',
+       'select_values' => $catsel,
     ),
     array(
-       'var'           => 'infosbm',
-       'name'          => 'infosbm',
+       'var'           => 'featamount',
+       'name'          => FEAT_AMOUNT,
+       'type'          => 'string',
+       'default'       => '0',
+    ),
+    array(
+       'var'           => 'infoxnews',
+       'name'          => 'infoxnews',
        'type'          => 'custom',
-       'custom'        => INFO_SBARMENUESAMOUNT,
+       'custom'        => INFO_NEWS,
     ),
     array(
-        'var'         => 'sidebbarmenuesamount',
-        'name'        => SBMENUES_AMOUNT,
-        'type'        => 'string',
-        'default'     => '0',
+       'var'           => 'catx1',
+       'name'          => MIMBO_CAT_X1,
+       'type'          => 'select',
+       'default'       => '',
+       'select_values' => $catsel,
+    ),
+    array(
+       'var'           => 'catx2',
+       'name'          => MIMBO_CAT_X2,
+       'type'          => 'select',
+       'default'       => '',
+       'select_values' => $catsel,
+    ),
+    array(
+       'var'           => 'catx3',
+       'name'          => MIMBO_CAT_X3,
+       'type'          => 'select',
+       'default'       => '',
+       'select_values' => $catsel,
+    ),
+    array(
+       'var'           => 'catx4',
+       'name'          => MIMBO_CAT_X4,
+       'type'          => 'select',
+       'default'       => '',
+       'select_values' => $catsel,
+    ),
+    array(
+        'var'          => 'infohm',
+        'name'         => 'infohm',
+        'type'         => 'custom',
+        'custom'       => INFO_HMENUE,
+    ),
+    array(
+         'var'         => 'amount',
+         'name'        => NAVLINK_AMOUNT,
+         'type'        => 'string',
+         'default'     => '0',
+    ),
+    array(
+        'var'          => 'infotkm',
+        'name'         => 'infotkm',
+        'type'         => 'custom',
+        'custom'       => INFO_TABKLOTZAMOUNT,
+    ),
+    array(
+         'var'         => 'tabklotzamount',
+         'name'        => TABKLOTZ_AMOUNT,
+         'type'        => 'string',
+         'default'     => '0',
+    ),
+    array(
+        'var'          => 'infotcba',
+        'name'         => 'infocba',
+        'type'         => 'custom',
+        'custom'       => INFO_CBA_AMOUNT,
+    ),
+    array(
+        'var'          => 'catbanneramount',
+        'name'         => CATBANNER_AMOUNT,
+        'type'         => 'string',
+        'default'      => '1',
+    ),
+    array(
+        'var'          => 'infosbm',
+        'name'         => 'infosbm',
+        'type'         => 'custom',
+        'custom'       => INFO_SBARMENUESAMOUNT,
+    ),
+    array(
+        'var'          => 'sidebbarmenuesamount',
+        'name'         => SBMENUES_AMOUNT,
+         'type'        => 'string',
+        'default'      => '0',
     )
 
 );
@@ -379,18 +378,18 @@ for ($i = 0; $i < $template_loaded_config['sidebbarmenuesamount']; $i++) {
         'select_values' => $sbmtarget,
             );
     $menuepoints[] = array(
-        'title'     => $template_loaded_config['menue1' . $i . 'menuepoint' . $s . 'text'],
-        'href'      => $template_loaded_config['menue1' . $i . 'menuepoint' . $s . 'url'],
-        'target'    => $template_loaded_config['menue1' . $i . 'menuepoint' . $s . 'target'],
+        'title'         => $template_loaded_config['menue1' . $i . 'menuepoint' . $s . 'text'],
+        'href'          => $template_loaded_config['menue1' . $i . 'menuepoint' . $s . 'url'],
+        'target'        => $template_loaded_config['menue1' . $i . 'menuepoint' . $s . 'target'],
             );
     }
     $sbmenue1[] = array(
-        'sbmenue_info' => $template_loaded_config['menue1' . $i . 'sbmenue_info'],
+        'sbmenue_info'  => $template_loaded_config['menue1' . $i . 'sbmenue_info'],
         'title'         => $template_loaded_config['menue1' . $i . 'text'],
         'href'          => $template_loaded_config['menue1' . $i . 'url'],
         'target'        => $template_loaded_config['menue1' . $i . 'target'],
         'position'      => $template_loaded_config['menue1' . $i . 'position'],
-        'menuepoints'      => $menuepoints,
+        'menuepoints'   => $menuepoints,
     );
 }
 $serendipity['smarty']->assign_by_ref('sbmenue1', $sbmenue1);
@@ -422,10 +421,10 @@ for ($i = 0; $i < $template_loaded_config['tabklotzamount']; $i++) {
         'select_values' => $menuepsition,
         );
     $template_config[] = array(
-	    'var'           => 'tabk1' . $i . 'tabk1_height',
-	    'name'          => TABKLOTZ_HEIGHT,
-	    'type'          => 'string',
-	    'default'       => '100',
+        'var'           => 'tabk1' . $i . 'tabk1_height',
+        'name'          => TABKLOTZ_HEIGHT,
+        'type'          => 'string',
+        'default'       => '100',
        );
     $tabs = array();
     for ($s = 0; $s < $template_loaded_config['tabk1' . $i . 'tabk1_amount']; $s++) {
@@ -488,29 +487,29 @@ for ($i = 0; $i < $template_loaded_config['amount']; $i++) {
     $dropdownentries = array();
     for ($k = 0; $k < $template_loaded_config['navlink' . $i . 'dramount']; $k++) {
         $template_config[] = array(
-            'var'           => 'navlink' . $i . 'dropdowentry' . $k . 'text',
-            'name'          => DROPDOWN_TEXT . ' #'. $k,
-            'type'          => 'string',
-            'default'       => 'Link #' . $i . ' dropdowentry #' . $k,
+            'var'       => 'navlink' . $i . 'dropdowentry' . $k . 'text',
+            'name'      => DROPDOWN_TEXT . ' #'. $k,
+            'type'      => 'string',
+            'default'   => 'Link #' . $i . ' dropdowentry #' . $k,
             );
         $template_config[] = array(
-            'var'           => 'navlink' . $i . 'dropdowentry' . $k . 'url',
-            'name'          => DROPDOWN_URL . ' #'. $k,
-            'type'          => 'string',
-            'default'       => '#',
+            'var'       => 'navlink' . $i . 'dropdowentry' . $k . 'url',
+            'name'      => DROPDOWN_URL . ' #'. $k,
+            'type'      => 'string',
+            'default'   => '#',
             );
 
         $dropdownentries[] = array(
-            'title'     	=> $template_loaded_config['navlink' . $i . 'dropdowentry' . $k . 'text'],
-            'href'      	=> $template_loaded_config['navlink' . $i . 'dropdowentry' . $k . 'url'],
+            'title'     => $template_loaded_config['navlink' . $i . 'dropdowentry' . $k . 'text'],
+            'href'      => $template_loaded_config['navlink' . $i . 'dropdowentry' . $k . 'url'],
             );
     }
     $navlinks[] = array(
-        'navlinkinfo' 	=> $template_loaded_config['navlink' . $i . 'navlink_info'],
-        'title'         	=> $template_loaded_config['navlink' . $i . 'text'],
-        'href'           	=> $template_loaded_config['navlink' . $i . 'url'],
-        'drop'           	=> $template_loaded_config['navlink' . $i . 'dramount'],
-        'dropdownentries'   => $dropdownentries,
+        'navlinkinfo'     => $template_loaded_config['navlink' . $i . 'navlink_info'],
+        'title'           => $template_loaded_config['navlink' . $i . 'text'],
+        'href'            => $template_loaded_config['navlink' . $i . 'url'],
+        'drop'            => $template_loaded_config['navlink' . $i . 'dramount'],
+        'dropdownentries' => $dropdownentries,
     );
 }
 $serendipity['smarty']->assign_by_ref('navlinks', $navlinks);
@@ -537,17 +536,17 @@ for ($i = 0; $i < $template_loaded_config['amount']; $i++) {
         'default'       => serendipity_getTemplateFile('header.png'),
         );
     $template_config[] = array(
-       'var'           => 'catlink'. $i . 'catselect',
-       'name'          => IMAGE_TO_CAT,
-       'type'          => 'select',
-       'default'       => 'nix',
-       'select_values' => $catsel,
-    );
-        $template_config[] = array(
-	        'var'           => 'catlink' . $i . 'position',
-	        'name'          => CATBANNER_POSITION,
-	        'type'          => 'select',
-	        'select_values' => $bannerposition,
+        'var'           => 'catlink'. $i . 'catselect',
+        'name'          => IMAGE_TO_CAT,
+        'type'          => 'select',
+        'default'       => 'nix',
+        'select_values' => $catsel,
+        );
+    $template_config[] = array(
+        'var'           => 'catlink' . $i . 'position',
+        'name'          => CATBANNER_POSITION,
+        'type'          => 'select',
+        'select_values' => $bannerposition,
         );
    $catlinks[] = array(
         'title'      => $template_loaded_config['catlink' . $i . 'text'],
@@ -561,12 +560,14 @@ for ($i = 0; $i < $template_loaded_config['amount']; $i++) {
 
 $serendipity['smarty']->assign_by_ref('catlinks', $catlinks);
 
+/* disabled, as possible doublette of LINE 50
  $all_cats = serendipity_fetchCategories('all');
  $categories = serendipity_walkRecursive($categories, 'categoryid', 'parentid', VIEWMODE_THREADED);
  $catsel = array();
  foreach($all_cats AS $cat) {
    $catsel[$cat['categoryid']] = str_repeat('&nbsp;', $cat['depth']) . $cat['category_name'];
- }
+ }*/
+ 
 $serendipity['smarty']->assign('tabx1_cat', $catsel[$template_loaded_config['tabx1']]);
 $serendipity['smarty']->assign('tabx2_cat', $catsel[$template_loaded_config['tabx2']]);
 $serendipity['smarty']->assign('tabx3_cat', $catsel[$template_loaded_config['tabx3']]);
