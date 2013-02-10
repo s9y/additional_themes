@@ -20,11 +20,12 @@ $xxbannerposition = array( "top1",  "top2","bottom1","bottom2","disable");
 $xxleftsidebarpos = array("footer-l","footer-m","footer-r","footer-b","disable");
 
 if ($serendipity['GET']['adminModule'] == 'templates' || $serendipity['POST']['adminModule'] == 'templates') {
-    $all_cats = serendipity_fetchCategories('all');
-    $categories = serendipity_walkRecursive($categories, 'categoryid', 'parentid', VIEWMODE_THREADED);
-    $catsel = array();
-    foreach($all_cats AS $cat) {
-        $catsel[$cat['categoryid']] = str_repeat('&nbsp;', $cat['depth']) . $cat['category_name'];
+    if (is_array($all_cats = serendipity_fetchCategories('all'))) {
+        $categories = serendipity_walkRecursive($categories, 'categoryid', 'parentid', VIEWMODE_THREADED);
+        $catsel = array();
+        foreach($all_cats AS $cat) {
+            $catsel[$cat['categoryid']] = str_repeat('&nbsp;', $cat['depth']) . $cat['category_name'];
+        }
     }
 }
 
@@ -209,9 +210,11 @@ for ($i = 0; $i < $template_loaded_config['amount']; $i++) {
 
 $serendipity['smarty']->assign_by_ref('navlinks', $navlinks);
 
+/* disables, as it seems to be doublette of fixed Line 23ff
 $all_cats   = serendipity_fetchCategories('all');
 $categories = serendipity_walkRecursive($categories, 'categoryid', 'parentid', VIEWMODE_THREADED);
 $catsel = array();
 foreach($all_cats AS $cat) {
     $catsel[$cat['categoryid']] = str_repeat('&nbsp;', $cat['depth']) . $cat['category_name'];
 }
+*/
