@@ -14,7 +14,7 @@ include dirname(__FILE__) . '/lang_en.inc.php';
 $serendipity['smarty']->assign(array('currpage'=> "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']));
 
 if ($serendipity['GET']['adminModule'] == 'templates' || $serendipity['POST']['adminModule'] == 'templates') {
-    if (is_array($all_cats = serendipity_fetchCategories('all'))) {/*print_r($all_cats);*/
+    if (is_array($all_cats = serendipity_fetchCategories('all'))) {
         $categories = serendipity_walkRecursive($categories, 'categoryid', 'parentid', VIEWMODE_THREADED);
         $catsel = array();
         foreach($all_cats AS $cat) {
@@ -65,22 +65,22 @@ $template_config = array(
       'select_values' => $catsel,
     ),
     array(
-        'var'           => 'amount',
-        'name'          => NAVLINK_AMOUNT,
-        'type'          => 'string',
-        'default'       => '5',
+        'var'         => 'amount',
+        'name'        => NAVLINK_AMOUNT,
+        'type'        => 'string',
+        'default'     => '5',
     ),
     array(
-        'var'           => 'enableslogan',
-        'name'          => ENABLE_SOLGAN,
-        'type'          => 'boolean',
-        'default'       => 'true',
+        'var'         => 'enableslogan',
+        'name'        => ENABLE_SOLGAN,
+        'type'        => 'boolean',
+        'default'     => 'true',
     ),
     array(
-        'var'           => 'footerslogan',
-        'name'          => FOOTER_SLOGAN,
-        'type'          => 'string',
-        'default'       => 'This is my Slogan for every page in the footer',
+        'var'         => 'footerslogan',
+        'name'        => FOOTER_SLOGAN,
+        'type'        => 'string',
+        'default'     => 'This is my Slogan for every page in the footer',
     )
 );
 
