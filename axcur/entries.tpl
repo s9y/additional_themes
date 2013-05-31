@@ -2,69 +2,63 @@
     {serendipity_hookPlugin hook="entries_header" addData="$entry_id"}
 
     {foreach from=$entries item="dategroup"}
-     <div class="art-Post">
-                                 <div class="art-Post-tl"></div>
-                                 <div class="art-Post-tr"></div>
-                                 <div class="art-Post-bl"></div>
-                                 <div class="art-Post-br"></div>
-                                 <div class="art-Post-tc"></div>
-                                 <div class="art-Post-bc"></div>
-                                 <div class="art-Post-cl"></div>
-                                 <div class="art-Post-cr"></div>
-                                 <div class="art-Post-cc"></div>
-                                 <div class="art-Post-body">
-
-
-                                 <div class="art-Post-inner art-article">
-
-
+    <div class="art-Post">
+        <div class="art-Post-tl"></div>
+        <div class="art-Post-tr"></div>
+        <div class="art-Post-bl"></div>
+        <div class="art-Post-br"></div>
+        <div class="art-Post-tc"></div>
+        <div class="art-Post-bc"></div>
+        <div class="art-Post-cl"></div>
+        <div class="art-Post-cr"></div>
+        <div class="art-Post-cc"></div>
+        <div class="art-Post-body">
+        <div class="art-Post-inner art-article">
 
         {if $dategroup.is_sticky}
             <div class="art-PostHeaderIcons art-metadata-icons">
-		 <img class="art-metadata-icon" src="/info/templates/rl1/img/PostDateIcon.png"  width="18" height="18" alt="PostDateIcon" />
-		   {$CONST.STICKY_POSTINGS}
-	    </div>
+         <img class="art-metadata-icon" src="/info/templates/rl1/img/PostDateIcon.png"  width="18" height="18" alt="PostDateIcon" />
+            {$CONST.STICKY_POSTINGS}
+            </div>
         {else}
 
-
         <div class="art-PostHeaderIcons art-metadata-icons">
-	                            <img class="art-metadata-icon" src="/info/templates/rl1/img/PostDateIcon.png" width="18" height="18" alt="PostDateIcon" />
-	                            {$dategroup.date|@formatTime:DATE_FORMAT_ENTRY}
-	                                                      </div>
-        {/if}
+            <img class="art-metadata-icon" src="/info/templates/rl1/img/PostDateIcon.png" width="18" height="18" alt="PostDateIcon" />
+    {$dategroup.date|@formatTime:DATE_FORMAT_ENTRY}
+        </div>
+    {/if}
 
-        {foreach from=$dategroup.entries item="entry"}
+    {foreach from=$dategroup.entries item="entry"}
         {assign var="entry" value=$entry scope="parent"}
            <h2 class="art-PostHeaderIcon-wrapper">    <span class="art-PostHeader">  <a href="{$entry.link}">{$entry.title}</a></span>  </h2>
            <div class="serendipity_entry serendipity_entry_author_{$entry.author|@makeFilename} {if $entry.is_entry_owner}serendipity_entry_author_self{/if}">
               {if $entry.categories}
-                <span class="serendipity_entryIcon">
+                 <span class="serendipity_entryIcon">
                   {foreach from=$entry.categories item="entry_category"}
                      {if $entry_category.category_icon}
                        <a href="{$entry_category.category_link}"><img class="serendipity_entryIcon" title="{$entry_category.category_name|@escape}{$entry_category.category_description|@emptyPrefix}" alt="{$entry_category.category_name|@escape}" src="{$entry_category.category_icon}" /></a>
                      {/if}
                   {/foreach}
-               </span>
+                </span>
              {/if}
-           <div class="serendipity_entry_body">
-             {$entry.body}
-           </div>
+                <div class="serendipity_entry_body">
+                    {$entry.body}
+                </div>
 
             {if $entry.is_extended}
-               <div class="serendipity_entry_extended"><a id="extended"></a>{$entry.extended}</div>
+                <div class="serendipity_entry_extended"><a id="extended"></a>{$entry.extended}</div>
             {/if}
 
             {if $entry.has_extended and not $is_single_entry and not $entry.is_extended}
-              <br /> <p>
- 	<span class="art-button-wrapper">
-                             		<span class="l"> </span>
-                             		<span class="r"> </span>
+                <br /> <p>
+                <span class="art-button-wrapper">
+                    <span class="l"> </span>
+                    <span class="r"> </span>
 
-
-    {assign var="weiter" value= $entry.title|truncate:30}
-<a class="readon art-button" href="{$entry.link}#extended">{$CONST.VIEW_EXTENDED_ENTRY|@sprintf:$weiter:50}</a>                             	</span>
-
-	                                    </p>
+                    {assign var="weiter" value=$entry.title|truncate:30}
+                    <a class="readon art-button" href="{$entry.link}#extended">{$CONST.VIEW_EXTENDED_ENTRY|@sprintf:$weiter:50}</a>
+                </span>
+                </p>
 
             {/if}
 
@@ -100,7 +94,7 @@
                 {if $entry.is_entry_owner and not $is_preview}
                         | <a href="{$entry.link_edit}">{$CONST.EDIT_ENTRY}</a>
                 {/if}
-<br/><br/>
+                        <br/><br/>
                 {$entry.add_footer}
 
             </div>
@@ -199,16 +193,16 @@
 
                 <br />
                 <div class="serendipity_section_commentform">
-	                <div class="serendipity_commentsTitle">{$CONST.ADD_COMMENT}</div>
-	                {$COMMENTFORM}
-				</div>
+                    <div class="serendipity_commentsTitle">{$CONST.ADD_COMMENT}</div>
+                    {$COMMENTFORM}
+                </div>
 
                 {/if}
             </div>
         {/if}
 
         {$entry.backend_preview}
-        {/foreach}
+    {/foreach}
     </div></div>
     {foreachelse}
     {if not $plugin_clean_page}
