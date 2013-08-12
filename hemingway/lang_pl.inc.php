@@ -1,4 +1,4 @@
-<?php # $Id$
+<?php # 
 
 @define('RECENTENTRIES', 'Ostatnie wpisy');
 @define('COMMENTS_RSS', 'Komentarze RSS');

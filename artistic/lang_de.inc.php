@@ -1,4 +1,4 @@
-<?php # $Id$
+<?php # 
 @define('NAV_LINK_TEXT', 'Navigationsleisten-Link');
 @define('NAV_LINK_DESC', 'Text für den Navigationsleisten-Link');
 @define('NAV_LINK_URL', 'URL des Navigationsleisten-Links');

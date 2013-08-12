@@ -1,4 +1,4 @@
-<?php # $Id$
+<?php # 
 @define('REPLY', 'Antworten');
 @define('SAYS', 'schreibt');
 @define('LINK_TO_COMMENT', 'Link zu Kommentar #%d');

@@ -1,4 +1,4 @@
-<?php # $Id$
+<?php # 
 @define('DATE_FORMAT_ENTRY_ANDREAS06', '%d/%m/%Y');
 @define('BLOG_HOME', 'Blog Home');
 @define('BACK_TO_TOP', 'Back to Top');

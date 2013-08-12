@@ -1,4 +1,4 @@
-<?php # $Id$
+<?php # 
 @define('REPLY', '답글');
 @define('SAYS', '왈');
 @define('LINK_TO_COMMENT', '%d번 덧글의 링크');

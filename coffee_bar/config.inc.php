@@ -1,4 +1,4 @@
-<?php # $Id$
+<?php # 
 
 
 $template_config = array(

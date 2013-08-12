@@ -1,4 +1,4 @@
-<?php # $Id$
+<?php # 
 @define('FILED_UNDER', 'Arquivado em');
 @define('DATE_FORMAT_ENTRY_BE_NICE', '%d/%m/%Y');
 @define('SAYS', 'Disse');

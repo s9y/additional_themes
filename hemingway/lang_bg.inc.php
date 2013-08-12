@@ -1,4 +1,4 @@
-<?php # $Id$
+<?php # 
 
 @define('RECENTENTRIES', 'Последни статии');
 @define('COMMENTS_RSS', 'Емисии на коментари');

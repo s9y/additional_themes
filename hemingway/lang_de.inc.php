@@ -1,4 +1,4 @@
-<?php # $Id$
+<?php # 
 
 @define('RECENTENTRIES', 'Neueste Einträge');
 @define('COMMENTS_RSS', 'RSS Kommentare');

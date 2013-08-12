@@ -1,4 +1,4 @@
-<?php # $Id$
+<?php # 
 @define('THEME_COLORSET', 'Color Choice');
 @define('THEME_COLORSET_DESC', 'Choose the colorset you want your blog to use');
 @define('NAV_LINK_TEXT', 'Navbar link');

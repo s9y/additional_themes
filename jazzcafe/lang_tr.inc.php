@@ -1,4 +1,4 @@
-﻿<?php # $Id$
+﻿<?php # 
 @define('REPLY', 'Yanıtla');
 @define('SAYS', 'dedi');
 @define('LINK_TO_COMMENT', 'Yorum Linki #%d');

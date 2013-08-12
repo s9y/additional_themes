@@ -1,4 +1,4 @@
-<?php # $Id$
+<?php # 
 @define('SAYS', 'besagt');
 @define('SORRY', 'traurig');
 @define('DATE_FORMAT_ENTRY_ANDREAS', '%a, %b %e. %Y');

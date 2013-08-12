@@ -1,4 +1,4 @@
-<?php # $Id$
+<?php # 
 @define('THEME_COLORSET', 'Farbwahl');
 @define('THEME_COLORSET_DESC', 'Farbset auswählen, welches das Blog benutzen soll');
 @define('FOOTER_POSITION', 'Position der Fusszeile des Eintrags');
