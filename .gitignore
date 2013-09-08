@@ -2,4 +2,8 @@
 /.project
 /.buildpath
 /*.zip
+*.db
+*~
+DEADJOE
 .DS_Store
+.editorconfig
