@@ -1,8 +1,8 @@
 {serendipity_hookPlugin hook="entries_header"}
 <h2 class="archive">{$CONST.TOPICS_OF} {$dateRange.0|@formatTime:"%B, %Y"}</h2>
 
-{foreach from=$entries item="entries"}
-  {foreach from=$entries.entries item="entry"}
+{foreach from=$entries item="sentries"}
+  {foreach from=$sentries.entries item="entry"}
     <h2><a href="{$entry.link}" rel="bookmark">{$entry.title}</a></h2>
 
     <div class="meta group">
