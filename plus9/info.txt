@@ -1,4 +1,4 @@
-Name: Plus9 (2009-08-13)
+Name: Plus9 (2013-10-26)
 Author: Reinhard Linnemann
-Date: 2009-02-14
+Date: 2013-10-26
 Require Serendipity: 1.4

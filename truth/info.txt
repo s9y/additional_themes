@@ -1,4 +1,4 @@
-Name: Truth (2008-02-14)
+Name: Truth (2013-10-26)
 Author: Eddie Traversa
-Date: 7/11-2005
+Date: 2013-10-26
 Require Serendipity: 0.8

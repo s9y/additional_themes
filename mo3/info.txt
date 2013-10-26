@@ -1,3 +1,4 @@
-Name: Mo3 (2013-02-10)
+Name: Mo3 (2013-10-26)
 Author: ReinhardL (Please install event_freetag, event_entryproperties, plugin_staticpage before you install the theme)
+Date: 2013-10-26
 Require Serendipity: 1.2
