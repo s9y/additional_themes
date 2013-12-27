@@ -1,7 +1,6 @@
-<?php # lang_cs.inc.php 1.0 2009-08-15 10:01:55 VladaAjgl $
+/<?php
 
 /**
- *  @version 1.0
  *  @author Vladimír Ajgl <vlada@ajgl.cz>
  *  @translated 2009/08/15
  */@define('THEME_COLORSET', 'Barva');

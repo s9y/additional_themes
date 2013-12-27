@@ -1,7 +1,6 @@
-<?php # lang_cz.inc.php 1.0 2009-06-05 18:45:49 VladaAjgl $
+/<?php
 
 /**
- *  @version 1.0
  *  @author Vladimír Ajgl <vlada@ajgl.cz>
  *  @translated 2009/06/05
  */@define('J_INSTR','<strong>Pluginy, které je tøeba nainstalovat</strong>: <br>aby navigaèní menu fungovalo správnì, musí být nainstalované pluginy: <em><br><br>Archiv </em>(postranní blok skrytý) <br>- Zobrazovat poèet pøíspìvkù v kategoriích?&nbsp; Ne <br>- Skrýt odkaz na archiv, pokud neobsahuje ¾ádné pøíspìvky:&nbsp; Ne<br><br><em>Kategorie </em>(skrytý postranní sloupec)<br>- XML-Tlaèítka : ¾ádná<br>- Umo¾nit náv¹tìvníkùm zobrazit více kateogirií najednou? Ne<br>- Povolit ¹ablony Smarty? &nbsp; Ano<br /><br><em>Statické stránky&nbsp; </em>&nbsp;<br />Ikony nebo èistý text <b>: </b>Èistý text<br>Pou¾ívat podadresáø s obrázky v adresáøi pluginu: <b>Ne<br><br></b>Pokud chcete pou¾ít <strong>statické stránky</strong> v navigaèní li¹tì, musíte zmìnit øádku 252 v souboru&nbsp; <em><strong>/plugins/serendipity_event_staticpage/serendipity_plugin_staticpage.php&nbsp;&nbsp; </strong></em>z <br>starý kód: <strong><em>? sprintf(&nbsp; &quot;&lt;a href=\&quot;%s\&quot; title=\&quot;%s\&quot; style=\&quot;padding-left: %dpx;\&quot;&gt;%s&lt;/a&gt;&lt;br /&gt;\n&quot;, </em></strong><br><br>na <br>nový kód: <strong><em>? sprintf( &quot;&lt;li&gt; &lt;a href=\&quot;%s\&quot; &gt;%s&lt;/a&gt;&lt;/li&gt;\n&quot;,</em></strong><b><br><br><br>Poznámky:</b>Aby se v ¹ablonì zobrazily správnì tagy, musíte jít na nastavení pluginu Tagování pøíspìvkù (klíèová slova) a nastavit volbu "Zobrazovat tagy v patièce" na <strong>Smarty</strong>.<br><b><br>');

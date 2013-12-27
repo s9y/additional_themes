@@ -1,7 +1,6 @@
-<?php # lang_cs.inc.php 1.0 2009-08-14 20:14:48 VladaAjgl $
+/<?php
 
 /**
- *  @version 1.0
  *  @author Vladimír Ajgl <vlada@ajgl.cz>
  *  @translated 2009/08/14
  */@define('DATE_FORMAT_ENTRY_ANDREAS06', '%d/%m/%Y');

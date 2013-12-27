@@ -1,7 +1,6 @@
-<?php # lang_cz.inc.php 1.0 2009-07-07 11:58:26 VladaAjgl $
+/<?php
 
 /**
- *  @version 1.0
  *  @author Vladimír Ajgl <vlada@ajgl.cz>
  *  @translated 2009/07/07
  */@define('MIMBO_INSTR','<b>Poznámka:</b> Šablona podporuje - pouze na výchozí stránce - jeden doprovodný obrázek ke každému příspěvku. Aby tato funkce správně pracovala, musí být nainstalován plugin serendipity <i>Rozšířené vlastnosti příspěvků</i>. V nastavení tohoto pluginu musí být vytvořeno pole MimboImage (pozor na velká písmena!) v nastavení <i>Vlastní pole</i>. Při psaní nového příspěvku pak může být příspěvku přiřazen obrázek z knihovny médií pomocí volby <i>Rozšířené možnosti</i>. Doporučená šířka těchto obrázků záleží na kategorii Mimbo category (viz níže), do které náleží příspěvek.<br /><br /><b>Kategorie Mimbo:</b> Šablona Mimbo zobrazuje příspěvky na výchozí stránce ve třech oblastech. Použijte následující rozbalovací tlačítka k přiřazení serendipity kategorií k těmto Mimbo kategoriím. Hlavní kategorie bude zobrazovat nejnovější příspěvky (doporučená šířka doprovodného obrázku: max 270 pixelů). Kategorie "features" zobrazuje odkazy na tři její nejnovější příspěvky (doporučená šířka doprovodného obrázku: max 255 pixelů). A nakonec můžete vybrat až tři kategorie s novinkami. Každá z nich bude zobrazovat nejnovější příspěvky jako zkrácený lákací článek (doporučená šířka doprovodného obrázku: max 60 pixelů).<br /><br />');
