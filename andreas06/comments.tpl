@@ -11,7 +11,7 @@
             {else}
                 {$comment.author|@default:$CONST.ANONYMOUS}
             {/if}{$CONST.SAYS},</h4>
-		<p class="commentmeta">
+        <p class="commentmeta">
             <span class="comment_source_date">{$comment.timestamp|@formatTime:$CONST.DATE_FORMAT_ENTRY} {$CONST.AT} <a class="comment_source_trace" href="#c{$comment.id}" title="{$CONST.PERMALINK_COMMENT}">{$comment.timestamp|@formatTime:'%H:%M'}</a> </span>
             {if $comment.url}
                 (<a class="comment_source_url" href="{$comment.url}" title="{$comment.url|@escape}">Link</a>)
@@ -21,7 +21,7 @@
             {/if}
             {if $entry.is_entry_owner}
                 (<a class="comment_source_ownerlink" href="{$comment.link_delete}" onclick="return confirm('{$CONST.COMMENT_DELETE_CONFIRM|@sprintf:$comment.id:$comment.author}');">delete</a>){/if}</p>
-<div id="serendipity_replyform_{$comment.id}"></div>
+            <div id="serendipity_replyform_{$comment.id}"></div>
         </div>
         <div class="serendipity_commentBody">{$comment.body}</div>
     </div></li>
@@ -41,8 +41,8 @@
             {else}
                 {$comment.author|@default:$CONST.ANONYMOUS}
             {/if}{if $comment.depth == 0}{$CONST.SAYS}{elseif $comment.depth == 1}{$CONST.REPLIED}{else}{$CONST.ADDS_THIS}{/if},</h4>
-		<p class="commentmeta">
-            <span class="comment_source_date">{$comment.timestamp|@formatTime:$CONST.DATE_FORMAT_ENTRY} {$CONST.AT} <a class="comment_source_trace" href="#c{$comment.id}" title="{$CONST.PERMALINK_COMMENT}">{$comment.timestamp|@formatTime:'%H:%M'}</a> </span>
+            <p class="commentmeta">
+                <span class="comment_source_date">{$comment.timestamp|@formatTime:$CONST.DATE_FORMAT_ENTRY} {$CONST.AT} <a class="comment_source_trace" href="#c{$comment.id}" title="{$CONST.PERMALINK_COMMENT}">{$comment.timestamp|@formatTime:'%H:%M'}</a> </span>
             {if $comment.url}
                 (<a class="comment_source_url" href="{$comment.url}" title="{$comment.url|@escape}">Link</a>)
             {/if}
@@ -51,7 +51,7 @@
             {/if}
             {if $entry.is_entry_owner}
                 (<a class="comment_source_ownerlink" href="{$comment.link_delete}" onclick="return confirm('{$CONST.COMMENT_DELETE_CONFIRM|@sprintf:$comment.id:$comment.author}');">delete</a>){/if}</p>
-<div id="serendipity_replyform_{$comment.id}"></div>
+             <div id="serendipity_replyform_{$comment.id}"></div>
         </div>
         <div class="serendipity_commentBody">{$comment.body}</div>
     </div>

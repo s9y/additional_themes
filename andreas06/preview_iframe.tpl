@@ -16,12 +16,12 @@
     </head>
 
     <body style="padding: 0px; margin: 0px;">
-	<div id="container"><div id="wrap1">
-	<div id="wrap2">
+    <div id="container"><div id="wrap1">
+    <div id="wrap2">
         <div id="mainpane" style="padding: 0px;margin: 5px auto 5px auto; width: 98%;">
             <div id="leftside">&nbsp;</div><div id="content" style="padding: 5px;margin:45px 10px 0 180px;">
             {$preview}
             </div>
         </div>
-	</div></div></div>
+    </div></div></div>
     </body>

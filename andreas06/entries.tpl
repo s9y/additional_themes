@@ -15,7 +15,7 @@
             <div class="serendipity_entry_body">
                 {$entry.body}
 
-		{if $entry.has_extended and not $is_single_entry and not $entry.is_extended}
+        {if $entry.has_extended and not $is_single_entry and not $entry.is_extended}
             <br /><a href="{$entry.link}#extended">{$CONST.VIEW_EXTENDED_ENTRY|@sprintf:$entry.title}</a>
             {/if}</div>
             {if $entry.is_extended}
@@ -23,7 +23,7 @@
             {/if}
 
             <div class="serendipity_entryFooter">
-			{$CONST.POSTED_BY} <a href="{$entry.link_author}">{$entry.author}</a> {$CONST.ON} {$entry.timestamp|@formatTime:DATE_FORMAT_ENTRY_ANDREAS06} {if $entry.categories}
+            {$CONST.POSTED_BY} <a href="{$entry.link_author}">{$entry.author}</a> {$CONST.ON} {$entry.timestamp|@formatTime:DATE_FORMAT_ENTRY_ANDREAS06} {if $entry.categories}
                    {$CONST.IN} {foreach from=$entry.categories item="category" name="categories"} <a href="{$category.category_link}">{$category.category_name|@escape}</a>{if not $smarty.foreach.categories.last}, {/if}{/foreach}.{/if} {if $entry.is_entry_owner and not $is_preview}&#160;&#160;<a href="{$entry.link_edit}">{$CONST.EDIT_ENTRY}</a>{/if}<br />
             {if not $is_single_entry and not $entry.is_extended}
                  {if $entry.has_comments}
@@ -40,9 +40,9 @@
                         &#160;&#160;<a class="trackback_link" href="{$entry.link}#trackbacks">{$entry.label_trackbacks} ({$entry.trackbacks})</a>
                     {/if}
                 {/if}
-		{/if}
-		{$entry.add_footer}
-               </div>
+        {/if}
+        {$entry.add_footer}
+            </div>
         {$entry.plugin_display_dat}
         </div>
 
@@ -87,30 +87,30 @@
                 <br />
                 <a id="trackbacks"></a>
                 <h3 class="serendipity_commentsTitle">{if $entry.trackbacks == 0}{$CONST.TRACKBACKS}{else}{$entry.trackbacks} {if $entry.trackbacks >= 2}{$CONST.TRACKBACKS}{else}{$CONST.TRACKBACK}{/if}{/if}</h3>
-            <div class="serendipity_comments">
+                <div class="serendipity_comments">
                     <div class="serendipity_center">
                         <a class="permalink" rel="nofollow" style="font-weight: normal" href="{$entry.link_trackback}" onclick="alert('{$CONST.TRACKBACK_SPECIFIC_ON_CLICK|@escape:html}'); return false;" title="{$CONST.TRACKBACK_SPECIFIC_ON_CLICK|@escape}">{$CONST.TRACKBACK_SPECIFIC}</a>
                     </div>
                     <br />
                         {serendipity_printTrackbacks entry=$entry.id}
-            </div>
+                </div>
 
                 <br />
                 <a id="comments"></a>
                 <h3 class="serendipity_commentsTitle">{if $entry.comments == 0}{$CONST.COMMENTS}{else}{$entry.comments} {if $entry.comments >= 2}{$CONST.COMMENTS}{else}{$CONST.COMMENT}{/if}{/if}</h3>
-            <div class="serendipity_comments">
-                <div class="serendipity_center">{$CONST.DISPLAY_COMMENTS_AS}
-                {if $entry.viewmode eq $CONST.VIEWMODE_LINEAR}
-                    ({$CONST.COMMENTS_VIEWMODE_LINEAR} | <a href="{$entry.link_viewmode_threaded}#comments">{$CONST.COMMENTS_VIEWMODE_THREADED}</a>)
-                {else}
-                    (<a href="{$entry.link_viewmode_linear}#comments">{$CONST.COMMENTS_VIEWMODE_LINEAR}</a> | {$CONST.COMMENTS_VIEWMODE_THREADED})
-                {/if}
+                <div class="serendipity_comments">
+                    <div class="serendipity_center">{$CONST.DISPLAY_COMMENTS_AS}
+                    {if $entry.viewmode eq $CONST.VIEWMODE_LINEAR}
+                        ({$CONST.COMMENTS_VIEWMODE_LINEAR} | <a href="{$entry.link_viewmode_threaded}#comments">{$CONST.COMMENTS_VIEWMODE_THREADED}</a>)
+                    {else}
+                        (<a href="{$entry.link_viewmode_linear}#comments">{$CONST.COMMENTS_VIEWMODE_LINEAR}</a> | {$CONST.COMMENTS_VIEWMODE_THREADED})
+                    {/if}
+                    </div>
+                    <br />
                 </div>
-                <br />
-			</div>
-            <div class="serendipity_comments">
+                <div class="serendipity_comments">
                     {serendipity_printComments entry=$entry.id mode=$entry.viewmode}
-</div>
+                </div>
                 {if $entry.is_entry_owner}
                     {if $entry.allow_comments}
                     <div class="serendipity_center">(<a href="{$entry.link_deny_comments}">{$CONST.COMMENTS_DISABLE}</a>)</div>
@@ -160,27 +160,27 @@
     {/if}
     {/foreach}
   <div class='serendipity_pageFooter' style="text-align: center">
-  	{if $footer_info}
-		{if $footer_prev_page}
-		<a href="{$footer_prev_page}">&laquo; {$CONST.PREVIOUS_PAGE}</a>&#160;&#160;
-		{else}
-		<span class="grey">&laquo; {$CONST.PREVIOUS_PAGE}</span>&#160;&#160;
-		{/if}
-	{else}
-	{/if}
+      {if $footer_info}
+        {if $footer_prev_page}
+        <a href="{$footer_prev_page}">&laquo; {$CONST.PREVIOUS_PAGE}</a>&#160;&#160;
+        {else}
+        <span class="grey">&laquo; {$CONST.PREVIOUS_PAGE}</span>&#160;&#160;
+        {/if}
+    {else}
+    {/if}
 
-	{if $footer_info}
-		({$footer_info})
-	{/if}
+    {if $footer_info}
+        ({$footer_info})
+    {/if}
 
-	{if $footer_info}
-		{if $footer_next_page}
-		&#160;&#160;<a href="{$footer_next_page}">{$CONST.NEXT_PAGE} &raquo;</a>
-		{else}
-		&#160;&#160;<span class="grey">{$CONST.NEXT_PAGE} &raquo;</span>
-		{/if}
-	{else}
-	{/if}
+    {if $footer_info}
+        {if $footer_next_page}
+        &#160;&#160;<a href="{$footer_next_page}">{$CONST.NEXT_PAGE} &raquo;</a>
+        {else}
+        &#160;&#160;<span class="grey">{$CONST.NEXT_PAGE} &raquo;</span>
+        {/if}
+    {else}
+    {/if}
 
 
     {serendipity_hookPlugin hook="entries_footer"}

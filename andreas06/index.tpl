@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-           "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{$lang}" lang="{$lang}">
 <head>
@@ -20,23 +20,23 @@
 <a id="topofpage"></a><p class="hide">Skip to: <a href="#menu">site menu</a> | <a href="#sectionmenu">categories</a> | <a href="#main">main content</a></p>
 
 <div id="serendipity_banner">
-    	<h1><a href="{$serendipityBaseURL}">{$head_title|@default:$blogTitle|truncate:50:" ..."}</a></h1>
-	<h2>{$head_subtitle|@default:$blogDescription}</h2>
+    <h1><a href="{$serendipityBaseURL}">{$head_title|@default:$blogTitle|truncate:50:" ..."}</a></h1>
+    <h2>{$head_subtitle|@default:$blogDescription}</h2>
 <a id="menu"></a>
 </div>
 
 <div id="nav">
 <ul>
 <li {if $startpage}class="current"{/if}><a href="{$serendipityBaseURL}"><span>{$CONST.BLOG_HOME}</span></a></li>
-	{if $head_version < 1.1}
-			<!-- ****** Change navbar links here ****** -->
-    		<li><a href="#"><span>Link</span></a></li>
-		<li><a href="#"><span>Link</span></a></li>	
-		<li><a href="#"><span>Link</span></a></li>
-		<li><a href="#"><span>Link</span></a></li>
-	{else}
-		{foreach from=$navlinks item="navlink"}<li><a href="{$navlink.href}" title="{$navlink.title}"><span>{$navlink.title}</span></a></li>{/foreach}
-	{/if}
+    {if $head_version < 1.1}
+        <!-- ****** Change navbar links here ****** -->
+        <li><a href="#"><span>Link</span></a></li>
+        <li><a href="#"><span>Link</span></a></li>
+        <li><a href="#"><span>Link</span></a></li>
+        <li><a href="#"><span>Link</span></a></li>
+    {else}
+        {foreach from=$navlinks item="navlink"}<li><a href="{$navlink.href}" title="{$navlink.title}"><span>{$navlink.title}</span></a></li>{/foreach}
+    {/if}
 </ul>
 <p class="hide"><a href="#topofpage">{$CONST.BACK_TO_TOP}</a></p>
 </div>
@@ -47,23 +47,23 @@
 <div id="topbox">
 <strong>
     <a href="{$serendipityBaseURL}">{$CONST.BLOG_HOME}</a>
-    {if $head_title && !$entry.title | $head_title != $entry.title}
+    {if ($head_title && !$entry.title) || ($head_title != $entry.title)}
       {if $entry.title}&raquo;{/if} {$category.category_name}
     {elseif $head_title && $entry.title}
-	{if $category.category_name}
+    {if $category.category_name}
       &raquo; <a href="{$category.category_link}" title="{$category.category_description}">{$category.category_name}</a>
-	{/if}
+    {/if}
       {if $entry.title == $head_title}
         &raquo; {$entry.title|truncate:40:" ...":true}
       {/if}
     {elseif $head_subtitle}
-	&raquo; {$head_subtitle}
+        &raquo; {$head_subtitle}
     {/if}
     {if $staticpage_pagetitle && !$entry.title}
       &raquo; {$staticpage_headline}
     {/if}
 </strong>
-</div> 
+</div>
 
 <div id="leftside">
 {if $leftSidebarElements < 1 && $rightSidebarElements > 0}
