@@ -9,7 +9,7 @@
         <div class="signature">
             <p>{$CONST.POSTED_BY} {$entry.author}</p>
             <p>{$entry.timestamp|@formatTime:'%x'} {$CONST.AT} {$entry.timestamp|@formatTime:'%X'}</p>
-        </div>    
+        </div>
     </div>
   {/foreach}
 {/foreach}
