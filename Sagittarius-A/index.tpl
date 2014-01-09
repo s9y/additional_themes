@@ -66,7 +66,7 @@
         <div class="subcolumns">
           <div class="c66l"> 
           <div class="subcl maincontent">  
-{elseif $view2 == "start" }<div class="subcolumns"> 
+{elseif $view2 == "start"}<div class="subcolumns"> 
     <!-- start page displaying three different areas -->     
       
         <div class="c33l"> 

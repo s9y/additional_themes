@@ -118,7 +118,7 @@
      {if $template_option.enabletopsidebar =="true"}
 	{if not $category_info.categoryid ==''}
 	  {foreach from=$catlinks item="catlink" name=catbar}
-	    {if $category_info.categoryid==$catlink.catt }
+	    {if $category_info.categoryid==$catlink.catt}
 	     {if $catlink.position=="0"}   {include file="catbanner.tpl"} {/if}       
 	     
 	    {/if}
@@ -130,7 +130,7 @@
         
 	{if not $category_info.categoryid ==''}
 	  {foreach from=$catlinks item="catlink" name=catbar}
-	    {if $category_info.categoryid==$catlink.catt }
+	    {if $category_info.categoryid==$catlink.catt}
 	     {if $catlink.position=="1"}   {include file="catbanner.tpl"} {/if}       
 	       
 	    {/if}
@@ -236,7 +236,7 @@
 {if $view2 == "entry"}
     <!-- single entry page including trackbacks, comments, and commentform -->
     {include file="entries_single.tpl"}
-{elseif $view2 == "start" }
+{elseif $view2 == "start"}
     <!-- start page displaying three different areas -->
     
  {if $template_option.enablecatrol == "true"} 
@@ -619,7 +619,7 @@
     
  {if not $category_info.categoryid ==''}
   {foreach from=$catlinks item="catlink" name=catbar}
-    {if $category_info.categoryid==$catlink.catt }
+    {if $category_info.categoryid==$catlink.catt}
      {if $catlink.position=="2"}   {include file="catbanner.tpl"} {/if}       
     {/if}
   {/foreach}
@@ -634,7 +634,7 @@
 
 {if not $category_info.categoryid ==''}
   {foreach from=$catlinks item="catlink" name=catbar}
-    {if $category_info.categoryid==$catlink.catt }
+    {if $category_info.categoryid==$catlink.catt}
      {if $catlink.position=="3"}   {include file="catbanner.tpl"} {/if}       
     {/if}
   {/foreach}

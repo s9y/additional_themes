@@ -44,7 +44,7 @@
 	</div>
 	<div class="clear"></div>
 </div>
-{elseif $view == "start" }
+{elseif $view == "start"}
 <div id="primary" class="twocol-stories">
 	<div class="inside">
  		<!-- StartPage Begins -->

@@ -1,4 +1,4 @@
-Name: Sagittarius-A (2013-10-26)
+Name: Sagittarius-A (2014-01-09)
 Author: Blueprint Theme port with yaml by RL
-Date: 2013-10-26
+Date: 2014-01-09
 Require Serendipity: 1.5
