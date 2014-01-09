@@ -1,7 +1,7 @@
 {foreach from=$comments item=comment}
     <a id="c{$comment.id}"></a>
     <div id="serendipity_comment_{$comment.id}" class="serendipity_comment serendipity_comment_author_{$comment.author|@makeFilename} {if $entry.author == $comment.author}serendipity_comment_author_self{/if}" style="padding-left: {$comment.depth*20}px">
-		<div class="commentwrap">
+        <div class="commentwrap">
         <div class="serendipity_commentSource">
             <a href="#c{$comment.id}" title="Link to comment #{$comment.trace}">#{$comment.trace}</a>
             {if $comment.email}

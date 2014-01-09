@@ -93,19 +93,14 @@
         <br/>
 
 
-	     {if $template_option.enable_ad== 'true' }
-	        <script type="text/javascript">
-		addthis_url = '{$entry.rdf_ident|escape:url}';
-		addthis_title = '{$entry.title|escape:url}';
-		addthis_pub = '{$template_option.my_addthis_account}';
-		</script>
-		<script type="text/javascript" src="http://s7.addthis.com/js/addthis_widget.php?v=12" ></script>
-	{/if}
-
-
-
-
-
+        {if $template_option.enable_ad== 'true'}
+            <script type="text/javascript">
+                addthis_url = '{$entry.rdf_ident|escape:url}';
+                addthis_title = '{$entry.title|escape:url}';
+                addthis_pub = '{$template_option.my_addthis_account}';
+            </script>
+            <script type="text/javascript" src="http://s7.addthis.com/js/addthis_widget.php?v=12" ></script>
+        {/if}
 
         </div>
         <br/>

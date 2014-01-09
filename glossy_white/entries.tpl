@@ -50,18 +50,18 @@
                 {else}
                     {$CONST.AT}
                 {/if} <a href="{$entry.link}">{if $dategroup.is_sticky}{$entry.timestamp|@formatTime:DATE_FORMAT_ENTRY} {/if}{$entry.timestamp|@formatTime:'%H:%M'}</a>
-				</div>
+                </div>
 
-				{if $entry.has_comments}
+                {if $entry.has_comments}
                 <div class="comments">
                     {if $use_popups}
                         <a href="{$entry.link_popup_comments}" onclick="window.open(this.href, 'comments', 'width=480,height=480,scrollbars=yes'); return false;">{$entry.label_comments} ({$entry.comments})</a>
                     {else}
-                    	{if $entry.comments > 0}
-                        	<a href="{$entry.link}#comments" title="Read comments">{$entry.label_comments} ({$entry.comments})</a>
-                    	{else}
-                    		<a href="{$entry.link}#feedback" title="Add comment">Add comment</a>
-                   		{/if}
+                        {if $entry.comments > 0}
+                            <a href="{$entry.link}#comments" title="Read comments">{$entry.label_comments} ({$entry.comments})</a>
+                        {else}
+                            <a href="{$entry.link}#feedback" title="Add comment">Add comment</a>
+                        {/if}
                     {/if}
                 </div>
                 {/if}
@@ -71,12 +71,12 @@
                     {if $use_popups}
                         | <a href="{$entry.link_popup_trackbacks}" onclick="window.open(this.href, 'comments', 'width=480,height=480,scrollbars=yes'); return false;">{$entry.label_trackbacks} ({$entry.trackbacks})</a>
                     {else}
-                    	<a rel="nofollow" style="font-weight: normal" href="{$entry.link_trackback}" onclick="alert('{$CONST.TRACKBACK_SPECIFIC_ON_CLICK|@escape:html}'); return false;" title="{$CONST.TRACKBACK_SPECIFIC_ON_CLICK|@escape}">Link to this post</a>
+                        <a rel="nofollow" style="font-weight: normal" href="{$entry.link_trackback}" onclick="alert('{$CONST.TRACKBACK_SPECIFIC_ON_CLICK|@escape:html}'); return false;" title="{$CONST.TRACKBACK_SPECIFIC_ON_CLICK|@escape}">Link to this post</a>
                     {/if}
                      </div>
                 {/if}
 
- 				{if $entry.is_entry_owner and not $is_preview}
+                 {if $entry.is_entry_owner and not $is_preview}
                  <div class="edit">
                 <a href="{$entry.link_edit}">{$CONST.EDIT_ENTRY}</a>
                 </div>
