@@ -11,7 +11,7 @@
 <head>
     <title>{$head_title|@default:$blogTitle} {if $head_subtitle} - {$head_subtitle}{/if}</title>
     <meta http-equiv="Content-Type" content="text/html; charset={$head_charset}" />
-    <meta name="Powered-By" content="Serendipity v.{$head_version}" />
+    <meta name="generator" content="Serendipity v.{$serendipityVersion}" />
     <link rel="stylesheet" type="text/css" href="{$head_link_stylesheet}" />
     <link rel="alternate"  type="application/rss+xml" title="{$blogTitle} RSS feed" href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/index.rss2" />
     <link rel="alternate"  type="application/x.atom+xml"  title="{$blogTitle} Atom feed"  href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/atom.xml" />
@@ -43,7 +43,7 @@
 <div id="navcontainer">
 <ul id="navlist">
 	<li class="selected"><a href="{$serendipityBaseURL}" accesskey="h">{$CONST.HOMEPAGE}</a></li>
-{if $head_version < 1.1}
+{if $serendipityVersion < 1.1}
 			<!-- ****** Change navbar links here ****** -->
 		<li><a href="#">link</a></li>
 		<li><a href="#">Link</a></li>
@@ -70,7 +70,7 @@
 </div>
 <div id="footer">
     <p>
-    {$head_title} square design by <a href="http://themes.daves.me.uk">David Cummins</a> for <a href="http://s9y.org">Serendipity v.{$head_version}</a>
+    {$head_title} square design by <a href="http://themes.daves.me.uk">David Cummins</a> for <a href="http://s9y.org">Serendipity v.{$serendipityVersion}</a>
     </p>
 </div>
 

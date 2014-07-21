@@ -11,7 +11,7 @@
 <head>
     <title>{$head_title|@default:$blogTitle} {if $head_subtitle} - {$head_subtitle}{/if}</title>
     <meta http-equiv="Content-Type" content="text/html; charset={$head_charset}" />
-    <meta name="Powered-By" content="Serendipity v.{$head_version}" />
+    <meta name="generator" content="Serendipity v.{$serendipityVersion}" />
     <link rel="stylesheet" type="text/css" href="{$head_link_stylesheet}" />
     <link rel="alternate" type="application/rss+xml" title="{$blogTitle} RSS feed" href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/index.rss2" />
     <link rel="alternate" type="application/x.atom+xml"  title="{$blogTitle} Atom feed"  href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/atom.xml" />
@@ -32,7 +32,7 @@
 			<h1><a href="{$serendipityBaseURL}">{$head_title|@default:$blogTitle|truncate:50:" ...":true}</a></h1>
 		</div>
 		<ul>
-		{if $head_version < 1.1}
+		{if $serendipityVersion < 1.1}
 				<!-- ****** Change navbar links here ****** -->
     			<li><a href="#">Link</a></li>
     			<li><a href="#">Link</a></li>
@@ -59,7 +59,7 @@
 		</div>
 
 		<div id="aboutbox_container">
-		{if $head_version < 1.1}
+		{if $serendipityVersion < 1.1}
 				<!-- ****** Change about me box here ****** -->
 			<div id="aboutbox_title"><h2 class="header">About Me</h2></div>
 			<div id="aboutbox_content"><p>Welcome to my site, feel free to bookmark this page, or comment on my entries<br /><a href="#">Read More</a></p></div>

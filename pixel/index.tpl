@@ -11,7 +11,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset={$head_charset}" />
     <title>{$head_title|@default:$blogTitle} {if $head_subtitle} - {$head_subtitle}{/if}</title>
-    <meta name="Powered-By" content="Serendipity v.{$head_version}" />
+    <meta name="generator" content="Serendipity v.{$serendipityVersion}" />
     <!-- this product is released under General Public License. Please see the attached file for details.  -->
     <!-- You can also find details about the license at http://www.opensource.org/licenses/gpl-license.php -->
     <link rel="stylesheet" type="text/css" href="{$head_link_stylesheet}" />

@@ -14,7 +14,7 @@
 <head>
     <title>{$head_title|@default:$blogTitle} {if $head_subtitle} - {$head_subtitle}{/if}</title>
     <meta http-equiv="Content-Type" content="text/html; charset={$head_charset}" />
-    <meta name="Powered-By" content="Serendipity v.{$head_version}" />
+    <meta name="generator" content="Serendipity v.{$serendipityVersion}" />
     	<link rel="stylesheet" type="text/css" href="{$head_link_stylesheet}" />
     {if $leftSidebarElements > 0 and $rightSidebarElements > 0}
        	<link rel="stylesheet" type="text/css" href="{serendipity_getFile file="style_1024.css"}" />
@@ -25,7 +25,7 @@
     <link rel="pingback" href="{$serendipityBaseURL}comment.php?type=pingback&amp;entry_id={$entry_id}" />
 {/if}
 {serendipity_hookPlugin hook="frontend_header"}
-{if $head_version>=1.1}
+{if $serendipityVersion>=1.1}
 	<style type="text/css">
 	<!--
 		{if $template_option.freshyheader!="" and $template_option.freshyheader!="custom"}
@@ -77,7 +77,7 @@
 <div id="frame">
 	<ul class="menu">
 		
-		{if $head_version<1.1}
+		{if $serendipityVersion<1.1}
 			<li class="{if $startpage}current_{/if}page_item">
 				<a class="first_menu" href="{$serendipityBaseURL}">{$CONST.FRESHY_NAVLINK_HOME}</a>
 			</li>	

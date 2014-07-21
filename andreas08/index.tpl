@@ -10,7 +10,7 @@
 <head>
     <title>{$head_title|@default:$blogTitle} {if $head_subtitle} - {$head_subtitle}{/if}</title>
     <meta http-equiv="Content-Type" content="text/html; charset={$head_charset}" />
-    <meta name="Powered-By" content="Serendipity v.{$head_version}" />
+    <meta name="generator" content="Serendipity v.{$serendipityVersion}" />
     <link rel="stylesheet" type="text/css" href="{$head_link_stylesheet}" />
     <link rel="alternate"  type="application/rss+xml" title="{$blogTitle} RSS feed" href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/index.rss2" />
     <link rel="alternate"  type="application/x.atom+xml"  title="{$blogTitle} Atom feed"  href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/atom.xml" />
@@ -56,7 +56,7 @@
 <div id="navigation">
 <ul>
 <li class="selected"><a href="{$serendipityBaseURL}" accesskey="h">{$CONST.HOMEPAGE}</a></li>
-	{if $head_version < 1.1}
+	{if $serendipityVersion < 1.1}
 			<!-- ****** Change navbar links here ****** -->
 		<li><a href="#">About</a></li>
 		<li><a href="#">Photos</a></li>
@@ -71,7 +71,7 @@
 </form>
 </div>
 </div>
-<div id="mainpane" class="{if $head_version < 1.1}contentleft{/if}{if $template_option.contentposition == 'true'}contentleft{elseif $template_option.contentposition == 'false'}contentright{/if}">
+<div id="mainpane" class="{if $serendipityVersion < 1.1}contentleft{/if}{if $template_option.contentposition == 'true'}contentleft{elseif $template_option.contentposition == 'false'}contentright{/if}">
 
 <div id="content">{$CONTENT}</div>
      

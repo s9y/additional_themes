@@ -11,7 +11,7 @@
 <head>
     <title>{$head_title|@default:$blogTitle} {if $head_subtitle} - {$head_subtitle}{/if}</title>
     <meta http-equiv="Content-Type" content="text/html; charset={$head_charset}" />
-    <meta name="Powered-By" content="Serendipity v.{$head_version}" />
+    <meta name="generator" content="Serendipity v.{$serendipityVersion}" />
     <link rel="stylesheet" type="text/css" href="{$head_link_stylesheet}" />
     <link rel="alternate"  type="application/rss+xml" title="{$blogTitle} RSS feed" href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/index.rss2" />
     <link rel="alternate"  type="application/x.atom+xml"  title="{$blogTitle} Atom feed"  href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/atom.xml" />
@@ -42,7 +42,7 @@
         <div id="serendipityLeftSideBar" valign="top">
         <ul id="navigation">
 			<li><a href="{$serendipityBaseURL}">Home</a></li>
-			{if $head_version < 1.1}
+			{if $serendipityVersion < 1.1}
         	<!--  Version 1.0 and below - change navigation links here -->
 			<li><a href="#">link 1</a></li>
 			<li><a href="#">link 2</a></li>

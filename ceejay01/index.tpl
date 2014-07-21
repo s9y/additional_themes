@@ -10,7 +10,7 @@
 <head>
     <title>{$head_title|@default:$blogTitle} {if $head_subtitle} - {$head_subtitle}{/if}</title>
     <meta http-equiv="Content-Type" content="text/html; charset={$head_charset}" />
-    <meta name="Powered-By" content="Serendipity v.{$head_version}" />
+    <meta name="generator" content="Serendipity v.{$serendipityVersion}" />
     <link rel="stylesheet" type="text/css" href="{$head_link_stylesheet}" />
     <link rel="alternate"  type="application/rss+xml" title="{$blogTitle} RSS feed" href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/index.rss2" />
     <link rel="alternate"  type="application/x.atom+xml"  title="{$blogTitle} Atom feed"  href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/atom.xml" />
@@ -31,7 +31,7 @@
 	<div id="themenu">
 		<ul>
 		<li><a href="{$serendipityBaseURL}">Home</a></li>
-		{if $head_version < 1.1}
+		{if $serendipityVersion < 1.1}
 		<li><a href="#">Link1</a></li>
 		<li><a href="#">Link2</a></li>
 		<li><a href="#">Link3</a></li>
@@ -52,7 +52,7 @@
 <input type="submit" name="quicksearch-button" value="Go!""></div></form> 
   	</div>
 	<div id="about-snippet">
-	{if $head_version < 1.1}
+	{if $serendipityVersion < 1.1}
 	<p>Welcome to my site, please bookmark this page. Read all about me. <a href="#"> More &raquo;</a></p>
 	{else}
 	<p>{$template_option.about} <a href="{$template_option.aboutpageurl}"> More &raquo;</a></p>
@@ -68,7 +68,7 @@
 	<br class="breakline">
 </div>
 {/if}
-    <div id="footer"><p><span style="float: left;">&copy; {if $head_version < 1.1}
+    <div id="footer"><p><span style="float: left;">&copy; {if $serendipityVersion < 1.1}
 	<!-- ****** Change footer links here ****** -->Your Name | <a href="#">Impressum</a>{else}{$template_option.copyrightname} | <a href="{$template_option.impressumurl}" title="{$template_option.impressum}">{$template_option.impressum}</a>{/if}</span> <span style="float: right;">Design by <a href="http://www.carlgalloway.com/authors/4-ceejay">ceejay</a> | {$CONST.POWERED_BY} <a href="http://www.s9y.org/">Serendipity</a> | <a title="Login to Admin Suite" href="{$serendipityBaseURL}serendipity_admin.php">Login</a></span></p></div>
 {$raw_data}
 {serendipity_hookPlugin hook="frontend_footer"}

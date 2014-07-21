@@ -10,7 +10,7 @@
 <head>
     <title>{$head_title|@default:$blogTitle} {if $head_subtitle} - {$head_subtitle}{/if}</title>
     <meta http-equiv="Content-Type" content="text/html; charset={$head_charset}" />
-    <meta name="Powered-By" content="Serendipity v.{$head_version}" />
+    <meta name="generator" content="Serendipity v.{$serendipityVersion}" />
     <link rel="stylesheet" type="text/css" media="screen" href="{$head_link_stylesheet}" />
     <link rel="alternate"  type="application/rss+xml" title="{$blogTitle} RSS feed" href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/index.rss2" />
     <link rel="alternate"  type="application/x.atom+xml"  title="{$blogTitle} Atom feed"  href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/atom.xml" />
@@ -18,7 +18,7 @@
     <link rel="pingback" href="{$serendipityBaseURL}comment.php?type=pingback&amp;entry_id={$entry_id}" />
 {/if}
 
-{if $head_version < 1.1 or $template_option.colorset == 'transred'}
+{if $serendipityVersion < 1.1 or $template_option.colorset == 'transred'}
 	<style type="text/css" media="all">@import "{serendipity_getFile file="transred.css"}";</style>
 {elseif $template_option.colorset == 'transblue'}
 <link rel="stylesheet" type="text/css" href="{serendipity_getFile file="transblue.css"}" />
@@ -44,7 +44,7 @@
 	</div>
   <div id="menu">
     <a href="{$serendipityBaseURL}" id="navHome" title="Posted Recently">{$CONST.HOMEPAGE}</a>
-	{if $head_version < 1.1}
+	{if $serendipityVersion < 1.1}
 			<!-- ****** Change navbar links here ****** -->
     		<a href="#">News</a>
 			<a href="#">Photos</a>

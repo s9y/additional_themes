@@ -10,7 +10,7 @@
 <head>
     <title>{$head_title|@default:$blogTitle} {if $head_subtitle} - {$head_subtitle}{/if}</title>
     <meta http-equiv="Content-Type" content="text/html; charset={$head_charset}" />
-    <meta name="Powered-By" content="Serendipity v.{$head_version}" />
+    <meta name="generator" content="Serendipity v.{$serendipityVersion}" />
     <link rel="stylesheet" type="text/css" href="{$head_link_stylesheet}" />
     <link rel="alternate"  type="application/rss+xml" title="{$blogTitle} RSS feed" href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/index.rss2" />
     <link rel="alternate"  type="application/x.atom+xml"  title="{$blogTitle} Atom feed"  href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/atom.xml" />
@@ -35,14 +35,14 @@
 		<h1><a href="{$serendipityBaseURL}">{$head_title|@default:$blogTitle|truncate:40:' ...'}</a></h1>
     		<p id="slogan">{$head_subtitle|@default:$blogDescription}</p>
 	</div>
-	<div id="{if $head_version < 1.1}content{/if}{if $template_option.contentposition == 'true'}content{elseif $template_option.contentposition == 'false'}contentalt{/if}">{$CONTENT}</div>	
+	<div id="{if $serendipityVersion < 1.1}content{/if}{if $template_option.contentposition == 'true'}content{elseif $template_option.contentposition == 'false'}contentalt{/if}">{$CONTENT}</div>	
       <div id="sidebar">
 		{serendipity_printSidebar side="right"}
 		{serendipity_printSidebar side="left"}
 	</div>
 {/if}
 <div id="footer">
-	<p>&copy; {if $head_version < 1.1}2006 Your Business Name | <a href="#">Contact us</a> | <a href="#">Privacy policy</a> | <a href="#">Impressum</a>
+	<p>&copy; {if $serendipityVersion < 1.1}2006 Your Business Name | <a href="#">Contact us</a> | <a href="#">Privacy policy</a> | <a href="#">Impressum</a>
 	{else}{$template_option.sitename} | {foreach from=$navlinks item="navlink"}<a href="{$navlink.href}" title="{$navlink.title}">{$navlink.title}</a> | {/foreach}{/if}<a href="#pagetop">Back to top</a><br />
 Design by <a href="http://andreasviklund.com/">Andreas Viklund</a> | Serendipity Template by <a href="http://www.carlgalloway.com">Carl</a>
 </p></div>

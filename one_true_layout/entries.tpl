@@ -12,7 +12,7 @@
         {foreach name="dategroup" from=$dategroup.entries item="entry"}
         {assign var="entry" value=$entry scope="parent"}
         <div class="serendipity_entry serendipity_entry_author_{$entry.author|@makeFilename} {if $entry.is_entry_owner}serendipity_entry_author_self{/if}">
-{if $template_option.entryfooterposition == 'true' OR $head_version < 1.1}
+{if $template_option.entryfooterposition == 'true' OR $serendipityVersion < 1.1}
 <div class='serendipity_entryFooter small_box'>
 		{if $entry.categories}
             <span class="serendipity_entryIcon">

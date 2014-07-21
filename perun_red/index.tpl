@@ -8,7 +8,7 @@ Serendipity-Template by Vladimir Simovic aka Perun
 www.vlad-design.de | www.perun.net
 -->
 <meta http-equiv="content-type" content="text/html; charset={$head_charset}" />
-<meta name="powered-by" content="Serendipity v.{$head_version}" />
+<meta name="generator" content="Serendipity v.{$serendipityVersion}" />
 <link rel="stylesheet" type="text/css" href="{$head_link_stylesheet}" />
 <link rel="alternate"  type="application/rss+xml" title="{$blogTitle} RSS feed" href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/index.rss2" />
 <link rel="alternate"  type="application/x.atom+xml"  title="{$blogTitle} Atom feed"  href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/atom.xml" />

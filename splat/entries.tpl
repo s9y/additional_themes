@@ -224,7 +224,7 @@
 		<a href="http://www.s9y.org">
 			Serendipity
 		</a>
-		v{$head_version}
+		v{$serendipityVersion}
 	</p>
 </div>
 <!-- ENTRIES END -->

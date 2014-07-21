@@ -17,7 +17,7 @@
 <head>
 <title>{$head_title|@default:$blogTitle} {if $head_subtitle} - {$head_subtitle}{/if}</title>
     <meta http-equiv="Content-Type" content="text/html; charset={$head_charset}" />
-    <meta name="Powered-By" content="Serendipity v.{$head_version}" />
+    <meta name="generator" content="Serendipity v.{$serendipityVersion}" />
     <link rel="stylesheet" type="text/css" media="screen" href="{$head_link_stylesheet}" />
     <link rel="alternate"  type="application/rss+xml" title="{$blogTitle} RSS feed" href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/index.rss2" />
     <link rel="alternate"  type="application/x.atom+xml"  title="{$blogTitle} Atom feed"  href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/atom.xml" />
@@ -44,7 +44,7 @@
 
 		<div id="menu">
 			<ul>
-			{if $head_version < 1.1}
+			{if $serendipityVersion < 1.1}
 								<!-- ****** Change navbar links here ****** -->
 								<li><a href="#">News</a></li>
 								<li><a href="#">Photos</a></li>
@@ -73,7 +73,7 @@
 		<h3>{$template_option.abouttitle}</h3>
 			<div class="content">
 				<a href="{$template_option.aboutpageurl}"><img src="{$serendipityHTTPPath}templates/{$template}/img/user.jpg" class="picB" alt="" style="border:none;"/></a>
-				<p>{if $head_version < 1.1}
+				<p>{if $serendipityVersion < 1.1}
 					<p>Welcome to my site, please bookmark this page. Read all about me. <a href="#"> More &raquo;</a></p>
 					{else}
 					<p>{$template_option.about} <a href="{$template_option.aboutpageurl}"> {$CONST.MORE} &raquo;</a></p>

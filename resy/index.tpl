@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>{$blogTitle}</title>
     {serendipity_hookPlugin hook="frontend_header"}
-    <meta name="Powered-By" content="Serendipity v.{$head_version}">
+    <meta name="generator" content="Serendipity v.{$serendipityVersion}">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="{$head_link_stylesheet}">
     {if $template_option.colorset != 'default'}

@@ -8,7 +8,7 @@
 
     <title>{$CONST.SERENDIPITY_ADMIN_SUITE}</title>
     <meta http-equiv="Content-Type" content="text/html; charset={$head_charset}" />
-    <meta name="Powered-By" content="Serendipity v.{$head_version}" />
+    <meta name="generator" content="Serendipity v.{$serendipityVersion}" />
 
     <link rel="stylesheet" type="text/css" href="{$head_link_stylesheet}" />
 
