@@ -957,3 +957,28 @@ img.mfp-img {
 .bx-wrapper .bx-controls-direction a.disabled {
 	display: none;
 }
+
+@font-face {
+  font-family: 'fa';
+  src: url('{TEMPLATE_PATH}/font/fa.eot?20691182');
+  src: url('{TEMPLATE_PATH}/font/fa.eot?20691182#iefix') format('embedded-opentype'),
+       url('{TEMPLATE_PATH}/font/fa.woff?20691182') format('woff'),
+       url('{TEMPLATE_PATH}/font/fa.ttf?20691182') format('truetype'),
+       url('{TEMPLATE_PATH}/font/fa.svg?20691182#fa') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fa";
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+}
+ 
+.icon-search-1:before { content: '\e801'; } /* '' */

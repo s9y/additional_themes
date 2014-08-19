@@ -12,27 +12,29 @@
     {if $template_option.headlines_webfonts == 'aleo'}
         <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Aleo:700">
     {elseif $template_option.headlines_webfonts == 'philo'}
-        <link href='http://fonts.googleapis.com/css?family=Philosopher:700' rel='stylesheet' type='text/css'>
+        {$gfonts[]="Philosopher:700"}
     {/if}
     {if $template_option.webfonts == 'droid'}
-        <link  rel="stylesheet" href="//fonts.googleapis.com/css?family=Droid+Sans:400,700&subset=latin">
+        {$gfonts[]="Droid+Sans:400,700"}
     {elseif $template_option.webfonts == 'ptsans'}
-        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin">
+        {$gfonts[]="PT+Sans:400,400italic,700,700italic"}
     {elseif $template_option.webfonts == 'osans'}
-        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic&subset=latin">
+        {$gfonts[]="Open+Sans:400,400italic,700,700italic"}
     {elseif $template_option.webfonts == 'lato'}
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic&subset=latin">
+        {$gfonts[]="Lato:400,400italic,700,700italic"}
     {elseif $template_option.webfonts == 'cabin'}
-        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Cabin:400,400italic,700,700italic&subset=latin">
+        {$gfonts[]="Cabin:400,400italic,700,700italic"}
     {elseif $template_option.webfonts == 'ubuntu'}
-        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ubuntu:400,400italic,700,700italic&subset=latin">
+        {$gfonts[]="Ubuntu:400,400italic,700,700italic"}
     {elseif $template_option.webfonts == 'dserif'}
-        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic&subset=latin">
+        {$gfonts[]="Droid+Serif:400,400italic,700,700italic"}
     {/if}
     {if $template_option.quote_webfonts}
-        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700,700italic&subset=latin">
+        {$gfonts[]="Crimson+Text:400,400italic,700,700italic"}
     {/if}
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    {if $gfonts}
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family={foreach $gfonts as $gfont}{$gfont}{if not $gfont@last}|{/if}{/foreach}&amp;subset=latin">
+    {/if}
     <link rel="stylesheet" href="{$head_link_stylesheet}">
 
     {if $template_option.colorset != "bright"}
@@ -75,7 +77,7 @@
             <div>
                 <input type="hidden" name="serendipity[action]" value="search">
                 <input id="serendipityQuickSearchTermField" name="serendipity[searchTerm]" type="search" placeholder=" Search…" value="">
-                <button type="submit" id="searchsend" name="serendipity[searchButton]"><span class="fa fa-search"></span><span class="visuallyhidden">{$CONST.GO}</span></button>
+                <button type="submit" id="searchsend" name="serendipity[searchButton]"><span class="icon-search-1"></span><span class="visuallyhidden">{$CONST.GO}</span></button>
             </div>
         </form>
         {serendipity_hookPlugin hook="quicksearch_plugin" hookAll="true"}
