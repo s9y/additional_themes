@@ -13,7 +13,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset={$head_charset}" />
     <meta name="generator" content="Serendipity v.{$serendipityVersion}" />
     <link rel="stylesheet" type="text/css" href="{$head_link_stylesheet}" media="screen" />
-    <link rel="stylesheet" type="text/css" href="{serendipity_getFile file="xxnav.css"}" media="screen" />
     <link rel="stylesheet" type="text/css" href="{serendipity_getFile file="print.css"}" media="print" />
     <link rel="stylesheet" type="text/css" href="{serendipity_getFile file="s9y.css"}" media="all" />
     <link rel="alternate"  type="application/rss+xml" title="{$blogTitle} RSS feed" href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/index.rss2" />
