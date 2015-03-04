@@ -1,0 +1,5 @@
+Name: Bartleby
+Author: onli
+Date: 2014-12-07
+Engine: 2k11
+Require Serendipity: 2.0
