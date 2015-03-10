@@ -1,102 +1,102 @@
 <?php # 
 
-$probelang = dirname(__FILE__) . '/lang_' . $serendipity['lang'] . '.inc.php';
+$probelang = dirname(__FILE__) . '/' . $serendipity['charset'] . 'lang_' . $serendipity['lang'] . '.inc.php';
 if (file_exists($probelang)) {
     include $probelang;
-} else {
-    include dirname(__FILE__) . '/lang_en.inc.php';
 }
+include dirname(__FILE__) . '/lang_en.inc.php';
+
 $template_config = array(
     array(
         'var'           => 'colorset',
-        'description'   => 'Select colorset option',
+        'name       '   => THEME_COLORSET,
         'type'          => 'select',
-        'default'       => 'yellow',
-        'select_values' => array('default' => 'Yellow', 'aqua' => 'Aqua')
+        'default'       => 'default',
+        'select_values' => array('default' => THEME_YELLOW, 'aqua' => THEME_AQUA)
     ),
     array(
         'var'           => 'navlink1text',
-        'title'         => 'Navlink #1 Text',
-        'description'   => 'Enter the first navigation text',
+        'name'          => NAVLINK1_TEXT_TITLE,
+        'description'   => NAVLINK1_TEXT_DESC,
         'type'          => 'string',
-        'default'       => 'About',
+        'default'       => NAVLINK1_TEXT_DEFAULT,
     ),
     array(
         'var'           => 'navlink1url',
-        'title'         => 'Navlink #1 URL',
-        'description'   => 'Enter the first navigation URL eg \'http://www.somesite.url\'',
+        'name'          => NAVLINK1_URL_TITLE,
+        'description'   => NAVLINK1_URL_DESC,
         'type'          => 'string',
         'default'       => '#',
     ),
     array(
         'var'           => 'navlink1alt',
-        'title'         => 'Navlink #1 Description',
-        'description'   => 'Enter the first navigation description (20 characters)',
+        'name'          => NAVLINK1_ALT_TITLE,
+        'description'   => NAVLINK1_ALT_DESC,
         'type'          => 'string',
-        'default'       => 'All About Me',
+        'default'       => NAVLINK2_ALT_DEFAULT,
     ),
     array(
         'var'           => 'navlink2text',
-        'title'         => 'Navlink #2 Text',
-        'description'   => 'Enter the second navigation text',
+        'name'          => NAVLINK2_TEXT_TITLE,
+        'description'   => NAVLINK2_TEXT_DESC,
         'type'          => 'string',
-        'default'       => 'Photos',
+        'default'       => NAVLINK2_TEXT_DEFAULT,
     ),
     array(
         'var'           => 'navlink2url',
-        'title'         => 'Navlink #2 URL',
-        'description'   => 'Enter the second navigation URL eg \'http://www.somesite.url\'',
+        'name'          => NAVLINK2_URL_TITLE,
+        'description'   => NAVLINK2_URL_DESC,
         'type'          => 'string',
         'default'       => '#',
     ),
     array(
         'var'           => 'navlink2alt',
-        'title'         => 'Navlink #2 Description',
-        'description'   => 'Enter the second navigation description (20 characters)',
+        'name'          => NAVLINK2_ALT_TITLE,
+        'description'   => NAVLINK2_ALT_DESC,
         'type'          => 'string',
-        'default'       => 'Piccies',
+        'default'       => NAVLINK2_ALT_DEFAULT,
     ),
     array(
         'var'           => 'navlink3text',
-        'title'         => 'Navlink #3 Text',
-        'description'   => 'Enter the third navigation text',
+        'name'         => NAVLINK3_TEXT_TITLE,
+        'description'   => NAVLINK3_TEXT_DESC,
         'type'          => 'string',
-        'default'       => 'Projects',
+        'default'       => NAVLINK3_TEXT_DEFAULT,
     ),
     array(
         'var'           => 'navlink3url',
-        'title'         => 'Navlink #3 URL',
-        'description'   => 'Enter the third navigation URL eg \'http://www.somesite.url\'',
+        'name'         => NAVLINK3_URL_TITLE,
+        'description'   => NAVLINK3_URL_DESC,
         'type'          => 'string',
         'default'       => '#',
     ),
     array(
         'var'           => 'navlink3alt',
-        'title'         => 'Navlink #3 Description',
-        'description'   => 'Enter the third navigation description (20 characters)',
+        'name'          => NAVLINK3_ALT_TITLE,
+        'description'   => NAVLINK3_ALT_DESC,
         'type'          => 'string',
-        'default'       => 'What I Do',
+        'default'       => NAVLINK3_ALT_DEFAULT,
     ),
     array(
         'var'           => 'navlink4text',
-        'title'         => 'Navlink #4 Text',
-        'description'   => 'Enter the fourth navigation text',
+        'name'          => NAVLINK4_TEXT_TITLE,
+        'description'   => NAVLINK4_TEXT_DESC,
         'type'          => 'string',
-        'default'       => 'Contact',
+        'default'       => NAVLINK4_TEXT_DEFAULT,
     ),
     array(
         'var'           => 'navlink4url',
-        'title'         => 'Navlink #4 URL',
-        'description'   => 'Enter the fourth navigation URL eg \'http://www.somesite.url\'',
+        'name'         => NAVLINK4_URL_TITLE,
+        'description'   => NAVLINK4_URL_DESC,
         'type'          => 'string',
         'default'       => '#',
     ),
     array(
         'var'           => 'navlink4alt',
-        'title'         => 'Navlink #4 Description',
-        'description'   => 'Enter the fourth navigation description (20 characters)',
+        'name'          => NAVLINK4_ALT_TITLE,
+        'description'   => NAVLINK4_ALT_DESC,
         'type'          => 'string',
-        'default'       => 'Send a msg',
+        'default'       => NAVLINK4_ALT_DEFAULT,
     ),
 );
 
