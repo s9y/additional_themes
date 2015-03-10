@@ -1,10 +1,42 @@
-# contains a list of theme names that will not be accepted by the templatechooser on blog.s9y.org [or your own blog]
-default-rtl
+# A list of theme names that will not be accepted by the templatechooser on blog.s9y.org [or your own blog]
+
 default-php
 default-xml
+iphone.app
+xhtml_mp
+
+
+# The core themes that only have a preview_fullsize.jpg in additional_themes
+2k11
+blue
+carl_contest
 competition
 contest
 default
-carl_contest
-2k11
-xhtml_mp
+default-rtl
+idea
+kubrick
+
+
+# The not-sures; I think these should work, but are still in 2.0-branch limbo
+moz_modern
+mt-clean
+mt-georgiablue
+mt-gettysburg
+mt-plainjane
+mt-rusty
+mt-trendy
+mt3-chalkboard
+mt3-gettysburg
+mt3-independence
+mt3-squash
+newspaper
+
+
+# The maybes; most of these do not use getFile and thus throw 404s in a demo environment
+# bex-01
+# blix
+# greenway
+# i3theme
+# informatif
+# terrafirma
