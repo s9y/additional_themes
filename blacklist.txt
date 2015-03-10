@@ -4,6 +4,7 @@ default-php
 default-xml
 iphone.app
 xhtml_mp
+splat
 
 
 # The core themes that only have a preview_fullsize.jpg in additional_themes
