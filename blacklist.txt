@@ -1,3 +1,4 @@
+# contains a list of theme names that will not be accepted by the templatechooser on blog.s9y.org [or your own blog]
 default-rtl
 default-php
 default-xml
