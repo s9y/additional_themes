@@ -119,7 +119,7 @@
 	{if not $category_info.categoryid ==''}
 	  {foreach from=$catlinks item="catlink" name=catbar}
 	    {if $category_info.categoryid==$catlink.catt}
-	     {if $catlink.position=="0"}   {include file="catbanner.tpl"} {/if}       
+	     {if $catlink.position=="0"}   {include file="./catbanner.tpl"} {/if}       
 	     
 	    {/if}
 	  {/foreach}
@@ -131,7 +131,7 @@
 	{if not $category_info.categoryid ==''}
 	  {foreach from=$catlinks item="catlink" name=catbar}
 	    {if $category_info.categoryid==$catlink.catt}
-	     {if $catlink.position=="1"}   {include file="catbanner.tpl"} {/if}       
+	     {if $catlink.position=="1"}   {include file="./catbanner.tpl"} {/if}       
 	       
 	    {/if}
 	  {/foreach}
@@ -235,7 +235,7 @@
 
 {if $view2 == "entry"}
     <!-- single entry page including trackbacks, comments, and commentform -->
-    {include file="entries_single.tpl"}
+    {include file="./entries_single.tpl"}
 {elseif $view2 == "start"}
     <!-- start page displaying three different areas -->
     
@@ -502,7 +502,7 @@
 
 {elseif $view2 == "404"}
     <!-- if some page does not exist and/or cannot be found -->
-    {include file="404.tpl"}
+    {include file="./404.tpl"}
 {else}
     {$CONTENT}
 {/if}
@@ -620,7 +620,7 @@
  {if not $category_info.categoryid ==''}
   {foreach from=$catlinks item="catlink" name=catbar}
     {if $category_info.categoryid==$catlink.catt}
-     {if $catlink.position=="2"}   {include file="catbanner.tpl"} {/if}       
+     {if $catlink.position=="2"}   {include file="./catbanner.tpl"} {/if}       
     {/if}
   {/foreach}
 {/if}   
@@ -635,7 +635,7 @@
 {if not $category_info.categoryid ==''}
   {foreach from=$catlinks item="catlink" name=catbar}
     {if $category_info.categoryid==$catlink.catt}
-     {if $catlink.position=="3"}   {include file="catbanner.tpl"} {/if}       
+     {if $catlink.position=="3"}   {include file="./catbanner.tpl"} {/if}       
     {/if}
   {/foreach}
 {/if}
