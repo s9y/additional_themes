@@ -20,6 +20,9 @@ Uncategorized
 							<div class="content_post_comments"><img src="{serendipity_getFile file="images/comments.gif"}" alt="" /><a href="{$entry.link}#comments">{$entry.comments} comments</a></div>
 							<div class="content_post_body">
 {$entry.body}
+{if $entry.has_extended and not $is_single_entry and not $entry.is_extended}
+<a href="{$entry.link}#extended">{$CONST.VIEW_EXTENDED_ENTRY|@sprintf:$entry.title}</a>
+{/if}
 {if $is_single_entry}
 							<a id="extended"></a>
 {$entry.extended}
