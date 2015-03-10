@@ -9,9 +9,9 @@
 
 {if $template_option.show_pagitop == 'true' && $footer_totalPages > 1}
          <div class="kastentop">{$footer_info}<br/>
-            {eval var=$footer_currentPage-3 assign="paginationStartPage"}
+            {assign var="paginationStartPage" value="`$footer_currentPage-3`"}
             {if $footer_currentPage+3 > $footer_totalPages}
-                {eval var=$footer_totalPages-6 assign="paginationStartPage"}
+                {assign var="paginationStartPage" value="`$footer_totalPages-6`"}
             {/if}
             {if $paginationStartPage <= 0}
                 {assign var="paginationStartPage" value="1"}
@@ -196,9 +196,9 @@
 
  {if $template_option.show_pagibottom == 'true' && $footer_totalPages > 1}
          <div class="kasten"><center>{$footer_info}<br/>
-            {eval var=$footer_currentPage-3 assign="paginationStartPage"}
+            {assign var="paginationStartPage" value="`$footer_currentPage-3`"}
             {if $footer_currentPage+3 > $footer_totalPages}
-                {eval var=$footer_totalPages-6 assign="paginationStartPage"}
+                {assign var="paginationStartPage" value="`$footer_totalPages-6`"}
             {/if}
             {if $paginationStartPage <= 0}
                 {assign var="paginationStartPage" value="1"}
