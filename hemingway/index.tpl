@@ -40,7 +40,7 @@
 {if $view == "entry" or $staticpage_pagetitle}
 <div id="primary" class="single-post">
 	<div class="inside"><!-- entries_single.tpl -->
-		{include file="entries_single.tpl"}
+		{include file="./entries_single.tpl"}
 	</div>
 	<div class="clear"></div>
 </div>
@@ -49,7 +49,7 @@
 	<div class="inside">
  		<!-- StartPage Begins -->
 		{if $template_option.startpage_option == 'true'}
-			{include file="entries_startpage.tpl"}
+			{include file="./entries_startpage.tpl"}
 		{elseif $template_option.startpage_option == 'false'}
 			{serendipity_fetchPrintEntries limit="0,2" use_hooks=0 skip_smarty_hooks=true noSticky=false template="entries_latest.tpl"}
 		{/if}
@@ -67,7 +67,7 @@
 		{elseif $searchresult_noEntries}
 		{assign var="searchtitle" value=$CONST.NONE_RESULTS}
 		{/if}
-		{include file="search.tpl"}
+		{include file="./search.tpl"}
 		<div class="secondary">
     			<h2>{$CONST.QUICKSEARCH}</h2>
 			<div class="featured">
@@ -80,7 +80,7 @@
 {elseif $view == "404"}
 <div id="primary" class="single-post">
 	<div class="inside"><!-- 404.tpl -->
-		{include file="404.tpl"}
+		{include file="./404.tpl"}
 	</div>
 	<div class="clear"></div>
 </div>
