@@ -59,7 +59,7 @@
     <div id="content">
 {if $view == "entry"}
     <!-- single entry page including trackbacks, comments, and commentform -->
-    {include file="entries_single.tpl"}
+    {include file="./entries_single.tpl"}
 {elseif $view == "start" && $staticpage_pagetitle == ''}
     <!-- start page displaying three different areas -->
         <div id="lead" class="feature clearfloat">
@@ -77,7 +77,7 @@
         </div><!-- /#rightcol -->
 {elseif $view == "404"}
     <!-- if some page does not exist and/or cannot be found -->
-    {include file="404.tpl"}
+    {include file="./404.tpl"}
 {else}
     {$CONTENT}
 {/if}

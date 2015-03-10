@@ -101,7 +101,7 @@
         <div class="c66l">
           <div class="subcl maincontent"> 
     <!-- if some page does not exist and/or cannot be found -->
-    {include file="404.tpl"}
+    {include file="./404.tpl"}
 {else}
  </div>
     <div id="main">
@@ -116,7 +116,7 @@
    
           
             {if $view2 == "entry"}    
- {include file="entries_single.tpl"}
+ {include file="./entries_single.tpl"}
  {/if}             
           
         
