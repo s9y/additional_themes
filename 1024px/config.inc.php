@@ -40,6 +40,8 @@ $template_config = array(
 );
 
 if (version_compare($serendipity['version'],"1.1.beta3") >= 0) {
+$vars = serendipity_loadThemeOptions($template_config);
+
 $navlinks = array();
 
 for ($i = 0; $i < $vars['amount']; $i++) {
@@ -65,8 +67,6 @@ for ($i = 0; $i < $vars['amount']; $i++) {
 
 $serendipity['smarty']->assign_by_ref('navlinks', $navlinks);
 }
-$template_global_config = array('navigation' => true);
-$template_loaded_config = serendipity_loadThemeOptions($template_config, $serendipity['smarty_vars']['template_option'], true);
-serendipity_loadGlobalThemeOptions($template_config, $template_loaded_config, $template_global_config);
+
 $template_config_groups = NULL;
 ?>
