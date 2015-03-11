@@ -28,7 +28,7 @@
             <div class="content">
                 {$entry.body}
 				{if $entry.has_extended and not $is_single_entry and not $entry.is_extended}
-          				<br><br><a href="{$entry.link}#extended" style="text-decoration:none; color:#656561;"><img src="templates/terrafirma/img/category.gif" style="border:none;" >{$CONST.VIEW_EXTENDED_ENTRY|@sprintf:$entry.title} &raquo;</a>
+          				<br><br><a href="{$entry.link}#extended" style="text-decoration:none; color:#656561;"><img src="{serendipity_getFile file="img/category.gif"}" style="border:none;" >{$CONST.VIEW_EXTENDED_ENTRY|@sprintf:$entry.title} &raquo;</a>
          			   {/if}
 			<br />
             </div>
