@@ -36,7 +36,6 @@ newspaper
 
 # The maybes; most of these do not use getFile and thus throw 404s in a demo environment
 # bex-01
-# blix
 # greenway
 # i3theme
 # informatif

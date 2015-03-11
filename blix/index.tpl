@@ -22,7 +22,7 @@
 <div id="container">
     <div id="serendipity_banner">
     <div class="logo">
-        <a href="{$serendipityBaseURL}"><img src="templates/blix/img/logo.png" alt="Logo" /></a>
+        <a href="{$serendipityBaseURL}"><img src="{serendipity_getFile file="img/logo.png"}" alt="Logo" /></a>
     </div>
         <div id="navigation">
             <ul>
