@@ -19,6 +19,13 @@ idea
 kubrick
 
 
+# The too-lazy-to-fix-es; these would require some kind of complicated fix just to make them work in the demo
+bex-01
+greenway
+i3theme
+informatif
+
+
 # The not-sures; I think these should work, but are still in 2.0-branch limbo
 moz_modern
 mt-clean
@@ -32,11 +39,3 @@ mt3-gettysburg
 mt3-independence
 mt3-squash
 newspaper
-
-
-# The maybes; most of these do not use getFile and thus throw 404s in a demo environment
-# bex-01
-# greenway
-# i3theme
-# informatif
-# terrafirma
