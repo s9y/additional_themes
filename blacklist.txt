@@ -27,15 +27,15 @@ informatif
 
 
 # The not-sures; I think these should work, but are still in 2.0-branch limbo
-moz_modern
-mt-clean
-mt-georgiablue
-mt-gettysburg
-mt-plainjane
-mt-rusty
-mt-trendy
-mt3-chalkboard
-mt3-gettysburg
-mt3-independence
-mt3-squash
-newspaper
+# moz_modern
+# mt-clean
+# mt-georgiablue
+# mt-gettysburg
+# mt-plainjane
+# mt-rusty
+# mt-trendy
+# mt3-chalkboard
+# mt3-gettysburg
+# mt3-independence
+# mt3-squash
+# newspaper
