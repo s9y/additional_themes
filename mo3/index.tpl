@@ -12,6 +12,17 @@
     <title>{$head_title|@default:$blogTitle} {if $head_subtitle} - {$head_subtitle}{/if}</title>
     <meta http-equiv="Content-Type" content="text/html; charset={$head_charset}" />
     <meta name="generator" content="Serendipity v.{$serendipityVersion}" />
+{if ($view == "entry" || $view == "start" || $view == "feed" || $view == "plugin" || $staticpage_pagetitle != "" || $robots_index == 'index')}
+    <meta name="robots" content="index,follow" />
+{else}
+    <meta name="robots" content="noindex,follow" />
+{/if}
+{if ($view == "entry")}
+    <link rel="canonical" href="{$entry.rdf_ident}" />
+{/if}
+{if ($view == "start")}
+    <link rel="canonical" href="{$serendipityBaseURL}" />
+{/if}
     <link rel="stylesheet" type="text/css" href="{$head_link_stylesheet}" media="screen" />
     <link rel="stylesheet" type="text/css" href="{serendipity_getFile file="print.css"}" media="print" />
     <link rel="stylesheet" type="text/css" href="{serendipity_getFile file="s9y.css"}" media="all" />
@@ -27,23 +38,23 @@
 <script type="text/javascript" src="{serendipity_getFile file="jquery.js"}"></script>
 <script type="text/javascript" src="{serendipity_getFile file="xinterface.js"}"></script>
 <script type="text/javascript" src="{serendipity_getFile file="init.js"}"></script>
- 
-    
- 
+
+
+
 <!--[if lt IE 7]>
- 
+
 <script type="text/javascript" src="{serendipity_getFile file="jquery.dropdown.js"}"></script>
 <![endif]-->
 
 <style type="text/css">
        div.xtabcontents {ldelim}
-	height: 100px ;      	 
+	height: 100px ;
     {rdelim}
-    
+
   {foreach from=$tabklotz1 item="tabklotz2" name=klotz2}
-  
+
     div.{$tabklotz2.tabklotzname} {ldelim}
-   	height: {$tabklotz2.tabwinheight}px ;   
+   	height: {$tabklotz2.tabwinheight}px ;
        	background: #f4f4f4;
     	overflow: hidden;
     	border: 1px dotted #004fae;
@@ -64,24 +75,24 @@
 
 {if $is_raw_mode != true}
 
- 
-{assign var="view2" value=$view} 
+
+{assign var="view2" value=$view}
 <div id="page" class="clearfloat">
 
 
 <h2><a class="homelink1" href="{$serendipityBaseURL}">{$blogTitle}</a></h2>
             <div class="description">{$blogDescription}</div><!-- /.description -->
 
- 
+
 {if $template_option.enablehmenue =="true"}
-<ul id="nav" class="dropdown dropdown-linear"> 
+<ul id="nav" class="dropdown dropdown-linear">
         <li><a href="{$serendipityBaseURL}"{if $currpage==$serendipityBaseURL} class="on"{/if}>{$CONST.HOMEPAGE}</a></li>
  	{foreach from=$navlinks item="navlink" name=navbar}
        <li><a href="{$navlink.href}"{if $navlink.drop != "0"} class="dir"{/if}>{$navlink.title} </a>
             {if $navlink.drop != "0"} <ul>  {foreach from=$navlink.dropdownentries item="sub" name=subnavbar} <li> <a {if $currpage==$sub.href}class="currentpage" {/if}href="{$sub.href}" title="{$sub.title}" >{$sub.title}</a></li>{/foreach}</ul> {/if}
        </li>
-	{/foreach}	
-        {if $is_logged_in}	
+	{/foreach}
+        {if $is_logged_in}
         <li><a class="dir" href="#">{$CONST.EDIT} </a>
  		    <ul>
 			<li>	<a href="{$serendipityBaseURL}/serendipity_admin.php?serendipity[adminModule]=personal">	{$CONST.PERSONAL_SETTINGS}</a> </li>
@@ -106,120 +117,120 @@
 			Logout</a></li>
  		   </ul>
  	 </li>
-	{else}  
- 	 <li><a href="{$serendipityBaseURL}/serendipity_admin.php">Login</a></li> 
+	{else}
+ 	 <li><a href="{$serendipityBaseURL}/serendipity_admin.php">Login</a></li>
 	{/if}
  </ul>
 {/if}                                                         <!-- /.template_option.enablehmenue =="true" -->
- 
+
  <div class="clearfloat">
-    <div id="content"> 
-     
+    <div id="content">
+
      {if $template_option.enabletopsidebar =="true"}
 	{if not $category_info.categoryid ==''}
 	  {foreach from=$catlinks item="catlink" name=catbar}
 	    {if $category_info.categoryid==$catlink.catt}
-	     {if $catlink.position=="0"}   {include file="./catbanner.tpl"} {/if}       
-	     
+	     {if $catlink.position=="0"}   {include file="./catbanner.tpl"} {/if}
+
 	    {/if}
 	  {/foreach}
 	{/if}
 
         <br/>  {serendipity_printSidebar side="top" template="sidebar_tab.tpl"} <br/>
 
-        
+
 	{if not $category_info.categoryid ==''}
 	  {foreach from=$catlinks item="catlink" name=catbar}
 	    {if $category_info.categoryid==$catlink.catt}
-	     {if $catlink.position=="1"}   {include file="./catbanner.tpl"} {/if}       
-	       
+	     {if $catlink.position=="1"}   {include file="./catbanner.tpl"} {/if}
+
 	    {/if}
 	  {/foreach}
-	{/if}   
-     {/if}     
-    
-    
+	{/if}
+     {/if}
+
+
 	{if $template_option.enabletaba =="true"}
 	  {if $view2 == "start"}
 		  {if $template_option.enablesticky !="true"}
-		        {assign var="tab3" value='id="selected"'} 
-		         {if $template_option.enabletabx3 !="true"}{assign var="tab2" value='id="selected"'} {/if}  
+		        {assign var="tab3" value='id="selected"'}
+		         {if $template_option.enabletabx3 !="true"}{assign var="tab2" value='id="selected"'} {/if}
 		  {/if}
- 
- 
+
+
 
 	 {assign var="view3" value="selected"}
 	  <div id="menu">
  		<ul>
  		     {if $template_option.enabletabx1 =="true"}
  			<li id={$view3}><a href="{$serendipityBaseURL}{getCategoryLinkByID cid=$template_option.tabx1}">
- 			{assign var="view3" value="noselected"}   	
+ 			{assign var="view3" value="noselected"}
  			{$tabx1_cat}
  			<!--[if gte IE 7]><!--></a><!--<![endif]-->
  		        	  <!--[if lte IE 6]> 	<table>	<tr> <td><![endif]-->
   			<ul><li>
- 				 <div class="serendipityTabSideBarContent"> 
+ 				 <div class="serendipityTabSideBarContent">
  	 				<p>{serendipity_fetchPrintEntries category=$template_option.tabx1 full=true fetchDrafts=false noSticky=true limit="0,10" template="entries_tab.tpl"}</p>
  	 			  </div> <br/>
  			</li></ul>
  			<!--[if lte IE 6]></td> </tr>	 </table> </a><![endif]-->
  					</li>
  		      {/if}
- 			
- 			
- 			
+
+
+
  		     {if $template_option.enabletabx2 =="true"}
  			<li id={$view3}><a href="{$serendipityBaseURL}{getCategoryLinkByID cid=$template_option.tabx2}">
- 			{assign var="view3" value="noselected"}   	
+ 			{assign var="view3" value="noselected"}
  			{$tabx2_cat}
  			<!--[if gte IE 7]><!--></a><!--<![endif]-->
  		        	 <!--[if lte IE 6]> 	<table>	<tr> <td><![endif]-->
  			<ul><li>
- 				 <div class="serendipityTabSideBarContent"> 
+ 				 <div class="serendipityTabSideBarContent">
  	 			   <p>{serendipity_fetchPrintEntries category=$template_option.tabx2 full=true fetchDrafts=false noSticky=true limit="0,10" template="entries_tab.tpl"}</p>
   			         </div><br/>
  			</li></ul>
  			<!--[if lte IE 6]></td> </tr>	 </table> </a><![endif]-->
  					</li>
- 		      {/if} 			
- 			 
- 			
- 			
- 			
+ 		      {/if}
+
+
+
+
   		     {if $template_option.enabletabx3 =="true"}
  			<li id={$view3}><a href="{$serendipityBaseURL}{getCategoryLinkByID cid=$template_option.tabx3}">
- 			{assign var="view3" value="noselected"}   	
- 			{$tabx3_cat}			 	 			
+ 			{assign var="view3" value="noselected"}
+ 			{$tabx3_cat}
  			<!--[if gte IE 7]><!--></a><!--<![endif]-->
  		        	 <!--[if lte IE 6]> 	<table>	<tr> <td><![endif]-->
  			<ul><li>
- 				 <div class="serendipityTabSideBarContent"> 
+ 				 <div class="serendipityTabSideBarContent">
  	 			   <p>{serendipity_fetchPrintEntries category=$template_option.tabx3 full=true fetchDrafts=false noSticky=true limit="0,10" template="entries_tab.tpl"}</p>
   				 </div> <br/>
  			</li></ul>
  			<!--[if lte IE 6]></td> </tr>	 </table> </a><![endif]-->
  					</li>
- 		    {/if} 			
- 			
- 			
- 			 
- 			
- 			
-  		     {if $template_option.enablesticky !="atrue"} 
+ 		    {/if}
+
+
+
+
+
+  		     {if $template_option.enablesticky !="atrue"}
  			<li id={$view3}><a href="#nogo">
- 			{assign var="view3" value="noselected"}   	
- 			{$template_option.stickyheader} 
+ 			{assign var="view3" value="noselected"}
+ 			{$template_option.stickyheader}
  			<!--[if gte IE 7]><!--></a><!--<![endif]-->
        				 <!--[if lte IE 6]> 	<table>	<tr> <td><![endif]-->
  			<ul><li>
- 				 <div class="serendipityTabSideBarContent"> 
+ 				 <div class="serendipityTabSideBarContent">
  	 			   {serendipity_fetchPrintEntries full=false limit="0,10" use_hooks=0  use_footer="false"  skip_smarty_hooks="true"  entryprops="ep_is_sticky=true"  template="entries_tab.tpl"}
    				 </div>  <br/>
  			</li></ul>
  			<!--[if lte IE 6]></td> </tr>	 </table> </a><![endif]-->
  					</li>
- 		     {/if}  			
-  		 	 
+ 		     {/if}
+
  		</ul>
 	</div><!-- /#MENU -->
 
@@ -227,9 +238,9 @@
    {/if}      <!-- /.view =="start" -->
  {/if}       <!-- /.template_option.enabletaba =="true" -->
 
- 
- 
-         
+
+
+
 
  {if $template_option.magazinemode == "false"}   {assign var="view2" value="magazine"}{/if}
 
@@ -238,12 +249,12 @@
     {include file="./entries_single.tpl"}
 {elseif $view2 == "start"}
     <!-- start page displaying three different areas -->
-    
- {if $template_option.enablecatrol == "true"} 
+
+ {if $template_option.enablecatrol == "true"}
        {serendipity_fetchPrintEntries category=$template_option.catrol full=true fetchDrafts=false noSticky=true limit="0,5 " template="entries_rol.tpl"}
-  {/if}  
-    
-    
+  {/if}
+
+
     {if $template_option.enablecatlead =="true"}
         <div id="lead" class="feature clearfloat">
             {serendipity_fetchPrintEntries category=$template_option.catlead full=true fetchDrafts=false noSticky=true limit="0,1" template="entries_lead.tpl"}
@@ -252,23 +263,23 @@
 
 
     <div id="leftcol">
-    
+
     <div class="arrowlistmenu">
-    
+
     <ul >
           {foreach from=$sbmenue1 item="sbmenue2" name=sbmen2}
-          
-           {if $sbmenue2.position=="2"} 
+
+           {if $sbmenue2.position=="2"}
             <h3 ><a  href="{$sbmenue1.href}" title="{$sbmenue1.title} "{if $sbmenue1.target=='true'} target="_blank"{/if}>{$sbmenue2.title}</a></h3>
-               
+
             <ul>
               {foreach from=$sbmenue2.menuepoints item="menue2" name=sbmenues1}
                 <li><a href="{$menue2.href}" title="{$menue2.title}"{if $menue2.target=='1'} target="_blank"{/if}{if $menue2.target=='2'} target="_blank" rel="nofollow"{/if}>{$menue2.title}-{$menue2.target}</a></li>
               {/foreach}
             </ul>
-            
+
            {/if}
-            
+
           {/foreach}
           {if $sbmenue2.position!="2"} {/if}
      </ul>
@@ -279,26 +290,26 @@
 
 
 
- 
+
 {foreach from=$tabklotz1 item="tabklotz2" name=klotz2}
-         
- {assign var="windowprint" value="0"}       
-           
+
+ {assign var="windowprint" value="0"}
+
                 {foreach from=$tabklotz2.tabs item="tab2" name=sbmenues1}
                   {if $tabklotz2.position=="2"} {if $windowprint=="0"}  {assign var="windowprint" value="1"} <div class="tabcontainer">  <ul class="tabnav"> {/if} <li><a href="#{$tab2.title}"> {$tab2.title} </a></li>  {/if}
                 {/foreach}
                  {if $windowprint=="1"} </ul> <div class="tabcontents {$tabklotz2.tabklotzname}">  {/if}
                {foreach from=$tabklotz2.tabs item="tab2" name=sbmenues1}
-                {if $tabklotz2.position=="2"} 
+                {if $tabklotz2.position=="2"}
                  <div class="content" id="{$tab2.title}">
                           <h2>{$tab2.title}</h2>
                           <p>{$tab2.tabstext} </p>
-                 </div>   
+                 </div>
                  {/if}
-              {/foreach}     
-              {if $tabklotz2.position=="2"} 
+              {/foreach}
+              {if $tabklotz2.position=="2"}
                </div>
-           </div> 
+           </div>
            {/if}
    {/foreach}
 
@@ -309,137 +320,137 @@
 
 
     <div class="arrowlistmenu">
-        
+
         <ul >
               {foreach from=$sbmenue1 item="sbmenue2" name=sbmen2}
-              
-               {if $sbmenue2.position=="3"} 
+
+               {if $sbmenue2.position=="3"}
                 <br/><h3 ><a  href="{$sbmenue1.href}" title="{$sbmenue1.title} "{if $sbmenue1.target=='true'} target="_blank"{/if}>{$sbmenue2.title}</a></h3>
-                   
+
                 <ul>
                   {foreach from=$sbmenue2.menuepoints item="menue2" name=sbmenues1}
                     <li><a href="{$menue2.href}" title="{$menue2.title}"{if $menue2.target=='1'} target="_blank"{/if}{if $menue2.target=='2'} target="_blank" rel="nofollow"{/if}>{$menue2.title}-{$menue2.target}</a></li>
                   {/foreach}
                 </ul>
-                
+
                {/if}
-                
+
               {/foreach}
               {if $sbmenue2.position!="3"} {/if}
          </ul>
  </div>
-               
-    
+
+
     </div><!-- /#leftcol -->
 
 
     <div id="rightcol">
-    
+
 
 
 {foreach from=$tabklotz1 item="tabklotz2" name=klotz2}
-         
- {assign var="windowprint" value="0"}       
-           
+
+ {assign var="windowprint" value="0"}
+
                 {foreach from=$tabklotz2.tabs item="tab2" name=sbmenues1}
                   {if $tabklotz2.position=="4"} {if $windowprint=="0"}  {assign var="windowprint" value="1"} <div class="tabcontainer">  <ul class="tabnav"> {/if} <li><a href="#{$tab2.title}"> {$tab2.title} </a></li>  {/if}
                 {/foreach}
                  {if $windowprint=="1"} </ul> <div class="tabcontents {$tabklotz2.tabklotzname}">  {/if}
                {foreach from=$tabklotz2.tabs item="tab2" name=sbmenues1}
-                {if $tabklotz2.position=="4"} 
+                {if $tabklotz2.position=="4"}
                  <div class="content" id="{$tab2.title}">
                           <h2>{$tab2.title}</h2>
                           <p>{$tab2.tabstext} </p>
-                 </div>   
+                 </div>
                  {/if}
-              {/foreach}     
-              {if $tabklotz2.position=="4"} 
+              {/foreach}
+              {if $tabklotz2.position=="4"}
                </div>
-           </div> 
+           </div>
            {/if}
-   {/foreach}  
+   {/foreach}
 
 
 
 
 
 
-    
+
      <div class="arrowlistmenu">
-    
+
     <ul >
           {foreach from=$sbmenue1 item="sbmenue2" name=sbmen2}
-          
-           {if $sbmenue2.position=="4"} 
+
+           {if $sbmenue2.position=="4"}
             <br/><h3 ><a  href="{$sbmenue1.href}" title="{$sbmenue1.title} "{if $sbmenue1.target=='true'} target="_blank"{/if}>{$sbmenue2.title}</a></h3>
-               
+
             <ul>
               {foreach from=$sbmenue2.menuepoints item="menue2" name=sbmenues1}
                 <li><a href="{$menue2.href}" title="{$menue2.title}"{if $menue2.target=='1'} target="_blank"{/if}{if $menue2.target=='2'} target="_blank" rel="nofollow"{/if}>{$menue2.title}-{$menue2.target}</a></li>
               {/foreach}
             </ul>
-            
+
            {/if}
-            
+
           {/foreach}
           {if $sbmenue2.position!="4"} {/if}
      </ul>
- </div>   
-    
-    
-    
-    
-    
+ </div>
+
+
+
+
+
             {serendipity_fetchPrintEntries category=$template_option.catx1 full=true fetchDrafts=false noSticky=true limit="0,1" template="entries_rcol.tpl"}
             {serendipity_fetchPrintEntries category=$template_option.catx2 full=true fetchDrafts=false noSticky=true limit="0,1" template="entries_rcol.tpl"}
 
      <div class="arrowlistmenu">
-    
+
     <ul >
           {foreach from=$sbmenue1 item="sbmenue2" name=sbmen2}
-          
-           {if $sbmenue2.position=="6"} 
+
+           {if $sbmenue2.position=="6"}
             <br/><h3 ><a  href="{$sbmenue1.href}" title="{$sbmenue1.title} "{if $sbmenue1.target=='true'} target="_blank"{/if}>{$sbmenue2.title}</a></h3>
-               
+
             <ul>
               {foreach from=$sbmenue2.menuepoints item="menue2" name=sbmenues1}
                 <li><a href="{$menue2.href}" title="{$menue2.title}"{if $menue2.target=='1'} target="_blank"{/if}{if $menue2.target=='2'} target="_blank" rel="nofollow"{/if}>{$menue2.title}-{$menue2.target}</a></li>
               {/foreach}
             </ul>
-            
+
            {/if}
-            
+
           {/foreach}
           {if $sbmenue2.position!="6"} {/if}
      </ul>
- </div>   
+ </div>
 
             {serendipity_fetchPrintEntries category=$template_option.catx3 full=true fetchDrafts=false noSticky=true limit="0,1" template="entries_rcol.tpl"}
 
 
 {foreach from=$tabklotz1 item="tabklotz2" name=klotz2}
-         
- {assign var="windowprint" value="0"}       
-           
+
+ {assign var="windowprint" value="0"}
+
                 {foreach from=$tabklotz2.tabs item="tab2" name=sbmenues1}
                   {if $tabklotz2.position=="6"} {if $windowprint=="0"}  {assign var="windowprint" value="1"} <div class="tabcontainer">  <ul class="tabnav"> {/if} <li><a href="#{$tab2.title}"> {$tab2.title} </a></li>  {/if}
                 {/foreach}
                  {if $windowprint=="1"} </ul> <div class="tabcontents {$tabklotz2.tabklotzname}">  {/if}
                {foreach from=$tabklotz2.tabs item="tab2" name=sbmenues1}
-                {if $tabklotz2.position=="6"} 
+                {if $tabklotz2.position=="6"}
                  <div class="content" id="{$tab2.title}">
                           <h2>{$tab2.title}</h2>
                           <p>{$tab2.tabstext} </p>
-                 </div>   
+                 </div>
                  {/if}
-              {/foreach}     
-              {if $tabklotz2.position=="6"} 
+              {/foreach}
+              {if $tabklotz2.position=="6"}
                </div>
-           </div> 
+           </div>
            {/if}
-   {/foreach}   
-   
-   
+   {/foreach}
+
+
    {serendipity_fetchPrintEntries category=$template_option.catx4 full=true fetchDrafts=false noSticky=true limit="0,1" template="entries_rcol.tpl"}
 
 
@@ -452,50 +463,50 @@
 
 
      <div class="arrowlistmenu">
-    
+
     <ul >
           {foreach from=$sbmenue1 item="sbmenue2" name=sbmen2}
-          
-           {if $sbmenue2.position=="5"} 
+
+           {if $sbmenue2.position=="5"}
             <br/><h3 ><a  href="{$sbmenue1.href}" title="{$sbmenue1.title} "{if $sbmenue1.target=='true'} target="_blank"{/if}>{$sbmenue2.title}</a></h3>
-               
+
             <ul>
               {foreach from=$sbmenue2.menuepoints item="menue2" name=sbmenues1}
                 <li><a href="{$menue2.href}" title="{$menue2.title}"{if $menue2.target=='1'} target="_blank"{/if}{if $menue2.target=='2'} target="_blank" rel="nofollow"{/if}>{$menue2.title}-{$menue2.target}</a></li>
               {/foreach}
             </ul>
-            
+
            {/if}
-            
+
           {/foreach}
           {if $sbmenue2.position!="5"} {/if}
      </ul>
- </div>  
- 
- 
+ </div>
+
+
  {foreach from=$tabklotz1 item="tabklotz2" name=klotz2}
-          
-  {assign var="windowprint" value="0"}       
-            
+
+  {assign var="windowprint" value="0"}
+
                  {foreach from=$tabklotz2.tabs item="tab2" name=sbmenues1}
                    {if $tabklotz2.position=="5"} {if $windowprint=="0"}  {assign var="windowprint" value="1"} <div class="tabcontainer">  <ul class="tabnav"> {/if} <li><a href="#{$tab2.title}"> {$tab2.title} </a></li>  {/if}
                  {/foreach}
                   {if $windowprint=="1"} </ul> <div class="tabcontents {$tabklotz2.tabklotzname}">  {/if}
                 {foreach from=$tabklotz2.tabs item="tab2" name=sbmenues1}
-                 {if $tabklotz2.position=="5"} 
+                 {if $tabklotz2.position=="5"}
                   <div class="content" id="{$tab2.title}">
                            <h2>{$tab2.title}</h2>
                            <p>{$tab2.tabstext} </p>
-                  </div>   
+                  </div>
                   {/if}
-               {/foreach}     
-               {if $tabklotz2.position=="5"} 
+               {/foreach}
+               {if $tabklotz2.position=="5"}
                 </div>
-            </div> 
+            </div>
             {/if}
-   {/foreach}  
- 
- 
+   {/foreach}
+
+
 
         </div><!-- /#rightcol -->
 
@@ -509,47 +520,47 @@
     </div><!-- /#content -->
 
     <div id="sidebar">&nbsp;
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
     {foreach from=$tabklotz1 item="tabklotz2" name=klotz2}
-             
-     {assign var="windowprint" value="0"}       
-               
+
+     {assign var="windowprint" value="0"}
+
                     {foreach from=$tabklotz2.tabs item="tab2" name=sbmenues1}
                       {if $tabklotz2.position=="0"} {if $windowprint=="0"}  {assign var="windowprint" value="1"} <div class="tabcontainer">  <ul class="tabnav"> {/if} <li><a href="#{$tab2.title}"> {$tab2.title} </a></li>  {/if}
                     {/foreach}
                      {if $windowprint=="1"} </ul> <div class="tabcontents {$tabklotz2.tabklotzname}">  {/if}
                    {foreach from=$tabklotz2.tabs item="tab2" name=sbmenues1}
-                    {if $tabklotz2.position=="0"} 
+                    {if $tabklotz2.position=="0"}
                      <div class="content" id="{$tab2.title}">
                               <h2>{$tab2.title}</h2>
                               <p>{$tab2.tabstext} </p>
-                     </div>   
+                     </div>
                      {/if}
-                  {/foreach}     
-                  {if $tabklotz2.position=="0"} 
+                  {/foreach}
+                  {if $tabklotz2.position=="0"}
                    </div>
-               </div> 
+               </div>
                {/if}
-   {/foreach}  
-    
-    
-    
-    
-    
-    
-    
-    
+   {/foreach}
+
+
+
+
+
+
+
+
 
   <div class="arrowlistmenu">
-                          {foreach from=$sbmenue1 item="sbmenue3" name=sbmen3}     
-                           {if $sbmenue3.position=="0"}       
-                            <h3 class="headerbar"><a  href="{$sbmenue3.href}" title="{$sbmenue3.title} "{if $sbmenue3.target=='true'} target="_blank"{/if}>{$sbmenue3.title}</a></h3>     
+                          {foreach from=$sbmenue1 item="sbmenue3" name=sbmen3}
+                           {if $sbmenue3.position=="0"}
+                            <h3 class="headerbar"><a  href="{$sbmenue3.href}" title="{$sbmenue3.title} "{if $sbmenue3.target=='true'} target="_blank"{/if}>{$sbmenue3.title}</a></h3>
                             <ul>
                               {foreach from=$sbmenue3.menuepoints item="menue3" name=sbmenues3}
                                  <li><a href="{$menue3.href}" title="{$menue3.title}"{if $menue3.target=='1'} target="_blank"{/if}{if $menue3.target=='2'} target="_blank" rel="nofollow"{/if}>{$menue3.title}</a></li>
@@ -558,17 +569,17 @@
                            {/if}
                           {/foreach}
                            {if $sbmenue1.position!="0"} {/if}
-                        
-               </div>   
+
+               </div>
 
 
 {if $rightSidebarElements > 0}
     {serendipity_printSidebar side="right"}
 {/if}
                          <div class="arrowlistmenu">
-                              {foreach from=$sbmenue1 item="sbmenue3" name=sbmen3}     
-                               {if $sbmenue3.position=="1"}       
-                                <h3 class="headerbar"><a  href="{$sbmenue3.href}" title="{$sbmenue3.title} "{if $sbmenue3.target=='true'} target="_blank"{/if}>{$sbmenue3.title}</a></h3>     
+                              {foreach from=$sbmenue1 item="sbmenue3" name=sbmen3}
+                               {if $sbmenue3.position=="1"}
+                                <h3 class="headerbar"><a  href="{$sbmenue3.href}" title="{$sbmenue3.title} "{if $sbmenue3.target=='true'} target="_blank"{/if}>{$sbmenue3.title}</a></h3>
                                 <ul>
                                   {foreach from=$sbmenue3.menuepoints item="menue3" name=sbmenues3}
                                      <li><a href="{$menue3.href}" title="{$menue3.title}"{if $menue3.target=='1'} target="_blank"{/if}{if $menue3.target=='2'} target="_blank" rel="nofollow"{/if}>{$menue3.title}</a></li>
@@ -577,170 +588,170 @@
                                {/if}
                               {/foreach}
                                {if $sbmenue1.position!="1"} {/if}
-                         </div> 
-                         
-                         
-                         
-                         
-                         
-                         
+                         </div>
+
+
+
+
+
+
  {foreach from=$tabklotz1 item="tabklotz2" name=klotz2}
-         
- {assign var="windowprint" value="0"}       
-           
+
+ {assign var="windowprint" value="0"}
+
                 {foreach from=$tabklotz2.tabs item="tab2" name=sbmenues1}
                   {if $tabklotz2.position=="1"} {if $windowprint=="0"}  {assign var="windowprint" value="1"} <div class="tabcontainer">  <ul class="tabnav"> {/if} <li><a href="#{$tab2.title}"> {$tab2.title} </a></li>  {/if}
                 {/foreach}
                  {if $windowprint=="1"} </ul> <div class="tabcontents {$tabklotz2.tabklotzname}">  {/if}
                {foreach from=$tabklotz2.tabs item="tab2" name=sbmenues1}
-                {if $tabklotz2.position=="1"} 
+                {if $tabklotz2.position=="1"}
                  <div class="content" id="{$tab2.title}">
                           <h2>{$tab2.title}</h2>
                           <p>{$tab2.tabstext} </p>
-                 </div>   
+                 </div>
                  {/if}
-              {/foreach}     
-              {if $tabklotz2.position=="1"} 
+              {/foreach}
+              {if $tabklotz2.position=="1"}
                </div>
-           </div> 
+           </div>
            {/if}
-   {/foreach}                         
-                         
-                         
-                         
-                         
-                         
-                         
-                         
-                         
+   {/foreach}
+
+
+
+
+
+
+
+
     </div><!-- /#sidebar -->
-    
-    
-    
+
+
+
  {if not $category_info.categoryid ==''}
   {foreach from=$catlinks item="catlink" name=catbar}
     {if $category_info.categoryid==$catlink.catt}
-     {if $catlink.position=="2"}   {include file="./catbanner.tpl"} {/if}       
+     {if $catlink.position=="2"}   {include file="./catbanner.tpl"} {/if}
     {/if}
   {/foreach}
-{/if}   
-    
-    
+{/if}
+
+
 </div><!-- /#page -->
 
- 
+
 {/if}
 
 
 {if not $category_info.categoryid ==''}
   {foreach from=$catlinks item="catlink" name=catbar}
     {if $category_info.categoryid==$catlink.catt}
-     {if $catlink.position=="3"}   {include file="./catbanner.tpl"} {/if}       
+     {if $catlink.position=="3"}   {include file="./catbanner.tpl"} {/if}
     {/if}
   {/foreach}
 {/if}
 
 
 
- <!-- /#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->   
+ <!-- /#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
 
-  
+
 
  <div id="footerframe"  >
- 
-  {if $template_option.enablefooter == 'true'} 
 
- 
+  {if $template_option.enablefooter == 'true'}
+
+
    <div id="footerbox1">
-       
-                {if $template_option.sidebarpos=="0"}{if $leftSidebarElements > 0} {serendipity_printSidebar side="left"} {/if} {/if}       
- 		{foreach from=$tabklotz1 item="tabklotz2" name=klotzf}         
-  		    {assign var="windowprint" value="0"}                 
+
+                {if $template_option.sidebarpos=="0"}{if $leftSidebarElements > 0} {serendipity_printSidebar side="left"} {/if} {/if}
+ 		{foreach from=$tabklotz1 item="tabklotz2" name=klotzf}
+  		    {assign var="windowprint" value="0"}
                  	{foreach from=$tabklotz2.tabs item="tab2" name=sbmenues1}{if $tabklotz2.position=="7"} {if $windowprint=="0"}  {assign var="windowprint" value="1"} <div class="tabcontainer">  <ul class="tabnav"> {/if} <li><a href="#{$tab2.title}"> {$tab2.title} </a></li>  {/if} {/foreach}
                  	{if $windowprint=="1"} </ul> <div class="tabcontents {$tabklotz2.tabklotzname}">  {/if}
-               		{foreach from=$tabklotz2.tabs item="tab2" name=sbmenues1}{if $tabklotz2.position=="7"}<div class="content" id="{$tab2.title}"><h2>{$tab2.title}</h2><p>{$tab2.tabstext} </p> </div> {/if} {/foreach}     
+               		{foreach from=$tabklotz2.tabs item="tab2" name=sbmenues1}{if $tabklotz2.position=="7"}<div class="content" id="{$tab2.title}"><h2>{$tab2.title}</h2><p>{$tab2.tabstext} </p> </div> {/if} {/foreach}
                  	{if $tabklotz2.position=="7"}  </div> </div> {/if}
    		{/foreach}
-       
+
                <div class="arrowlistmenu">
-	          {foreach from=$sbmenue1 item="sbmenue3" name=sbmen3}     
-	             {if $sbmenue3.position=="7"}       
-	                <h3 class="headerbar"><a  href="{$sbmenue3.href}" title="{$sbmenue3.title} "{if $sbmenue3.target=='true'} target="_blank"{/if}>{$sbmenue3.title}</a></h3>     
+	          {foreach from=$sbmenue1 item="sbmenue3" name=sbmen3}
+	             {if $sbmenue3.position=="7"}
+	                <h3 class="headerbar"><a  href="{$sbmenue3.href}" title="{$sbmenue3.title} "{if $sbmenue3.target=='true'} target="_blank"{/if}>{$sbmenue3.title}</a></h3>
 	                <ul> {foreach from=$sbmenue3.menuepoints item="menue3" name=sbmenues3}<li><a href="{$menue3.href}" title="{$menue3.title}"{if $menue3.target=='1'} target="_blank"{/if}{if $menue3.target=='2'} target="_blank" rel="nofollow"{/if}>{$menue3.title}</a></li> {/foreach}</ul>
 	             {/if}
 	          {/foreach}
-	          {if $sbmenue1.position!="7"} {/if}	                               
-               </div> 
+	          {if $sbmenue1.position!="7"} {/if}
+               </div>
    </div><!-- /#footerbox1 -->
-   
-   
-<!-- /#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->   
-   
-   
+
+
+<!-- /#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+
+
    <div id="footerbox2">
-       
-      
-                {if $template_option.sidebarpos=="1"} {if $leftSidebarElements > 0} {serendipity_printSidebar side="left"} {/if}  {/if}     
- 		{foreach from=$tabklotz1 item="tabklotz2" name=klotzf}         
- 		    {assign var="windowprint" value="0"}                   
+
+
+                {if $template_option.sidebarpos=="1"} {if $leftSidebarElements > 0} {serendipity_printSidebar side="left"} {/if}  {/if}
+ 		{foreach from=$tabklotz1 item="tabklotz2" name=klotzf}
+ 		    {assign var="windowprint" value="0"}
                  	{foreach from=$tabklotz2.tabs item="tab2" name=sbmenues1} {if $tabklotz2.position=="8"} {if $windowprint=="0"}  {assign var="windowprint" value="1"} <div class="tabcontainer">  <ul class="tabnav"> {/if} <li><a href="#{$tab2.title}"> {$tab2.title} </a></li>  {/if} {/foreach}
                  	{if $windowprint=="1"} </ul> <div class="tabcontents {$tabklotz2.tabklotzname}">  {/if}
-                 	{foreach from=$tabklotz2.tabs item="tab2" name=sbmenues1} {if $tabklotz2.position=="8"}<div class="content" id="{$tab2.title}"><h2>{$tab2.title}</h2> <p>{$tab2.tabstext} </p></div> {/if}{/foreach}     
+                 	{foreach from=$tabklotz2.tabs item="tab2" name=sbmenues1} {if $tabklotz2.position=="8"}<div class="content" id="{$tab2.title}"><h2>{$tab2.title}</h2> <p>{$tab2.tabstext} </p></div> {/if}{/foreach}
                  	{if $tabklotz2.position=="8"}</div> </div> {/if}
    		{/foreach}
-       
-      
+
+
                 <div class="arrowlistmenu">
-                  {foreach from=$sbmenue1 item="sbmenue3" name=sbmen3}     
-                     {if $sbmenue3.position=="8"}     
-                         <h3 class="headerbar"><a  href="{$sbmenue3.href}" title="{$sbmenue3.title} "{if $sbmenue3.target=='true'} target="_blank"{/if}>{$sbmenue3.title}</a></h3>     
+                  {foreach from=$sbmenue1 item="sbmenue3" name=sbmen3}
+                     {if $sbmenue3.position=="8"}
+                         <h3 class="headerbar"><a  href="{$sbmenue3.href}" title="{$sbmenue3.title} "{if $sbmenue3.target=='true'} target="_blank"{/if}>{$sbmenue3.title}</a></h3>
                          <ul>  {foreach from=$sbmenue3.menuepoints item="menue3" name=sbmenues3}  <li><a href="{$menue3.href}" title="{$menue3.title}"{if $menue3.target=='1'} target="_blank"{/if}{if $menue3.target=='2'} target="_blank" rel="nofollow"{/if}>{$menue3.title}</a></li>  {/foreach}  </ul>
                       {/if}
                   {/foreach}
                   {if $sbmenue1.position!="8"} {/if}
-                              
-                </div>   
+
+                </div>
    </div><!-- /#footerbox2 -->
-   
-<!-- /#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->   
-   
+
+<!-- /#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+
    <div id="footerbox3">
-              {if $template_option.sidebarpos=="2"} {if $leftSidebarElements > 0} {serendipity_printSidebar side="left"} {/if}   {/if} 
- 		{foreach from=$tabklotz1 item="tabklotz2" name=klotzf}         
- 		    {assign var="windowprint" value="0"}                   
+              {if $template_option.sidebarpos=="2"} {if $leftSidebarElements > 0} {serendipity_printSidebar side="left"} {/if}   {/if}
+ 		{foreach from=$tabklotz1 item="tabklotz2" name=klotzf}
+ 		    {assign var="windowprint" value="0"}
                  	{foreach from=$tabklotz2.tabs item="tab2" name=sbmenues1} {if $tabklotz2.position=="9"} {if $windowprint=="0"}  {assign var="windowprint" value="1"} <div class="tabcontainer">  <ul class="tabnav"> {/if} <li><a href="#{$tab2.title}"> {$tab2.title} </a></li>  {/if} {/foreach}
                  	{if $windowprint=="1"} </ul> <div class="tabcontents {$tabklotz2.tabklotzname}">  {/if}
-                 	{foreach from=$tabklotz2.tabs item="tab2" name=sbmenues1} {if $tabklotz2.position=="9"}<div class="content" id="{$tab2.title}"><h2>{$tab2.title}</h2> <p>{$tab2.tabstext} </p></div> {/if}{/foreach}     
+                 	{foreach from=$tabklotz2.tabs item="tab2" name=sbmenues1} {if $tabklotz2.position=="9"}<div class="content" id="{$tab2.title}"><h2>{$tab2.title}</h2> <p>{$tab2.tabstext} </p></div> {/if}{/foreach}
                  	{if $tabklotz2.position=="9"}</div> </div> {/if}
    		{/foreach}
 
               <div class="arrowlistmenu">
-	             {foreach from=$sbmenue1 item="sbmenue3" name=sbmen3}     
-	                     {if $sbmenue3.position=="9"}       
-	                         <h3 class="headerbar"><a  href="{$sbmenue3.href}" title="{$sbmenue3.title} "{if $sbmenue3.target=='true'} target="_blank"{/if}>{$sbmenue3.title}</a></h3>     
+	             {foreach from=$sbmenue1 item="sbmenue3" name=sbmen3}
+	                     {if $sbmenue3.position=="9"}
+	                         <h3 class="headerbar"><a  href="{$sbmenue3.href}" title="{$sbmenue3.title} "{if $sbmenue3.target=='true'} target="_blank"{/if}>{$sbmenue3.title}</a></h3>
 	                          <ul>  {foreach from=$sbmenue3.menuepoints item="menue3" name=sbmenues3}	<li><a href="{$menue3.href}" title="{$menue3.title}"{if $menue3.target=='1'} target="_blank"{/if}{if $menue3.target=='2'} target="_blank" rel="nofollow"{/if}>{$menue3.title}</a></li>  {/foreach}</ul>
 	                     {/if}
 	             {/foreach}
 	             {if $sbmenue1.position!="9"}  {/if}
-	      </div>  
+	      </div>
     </div><!-- /#footerbox3 -->
 
 
 
 
-    
+
 {/if}  <!-- /#template_option.enablefooter true -->
 
 
 
 
-   <div id="footertext"> 
-      {if $template_option.sidebarpos=="3"}  {if $leftSidebarElements > 0}     {serendipity_printSidebar side="left"} {/if}  {/if}    
-      <br/>  &#169; {$date|@formatTime:'%Y'} <span class="url fn org">{$blogTitle}</span> |   
-      <a href="{$serendipityBaseURL}feeds/index.rss2">{$CONST.ENTRIES}&nbsp;(RSS)</a> | <a href="{$serendipityBaseURL}feeds/comments.rss2">{$CONST.COMMENTS}&nbsp;(RSS)</a> |&nbsp; Theme <a href="http://www.plusneun.de/index.php" title="plusneun.de">plusneun.de</a> 
+   <div id="footertext">
+      {if $template_option.sidebarpos=="3"}  {if $leftSidebarElements > 0}     {serendipity_printSidebar side="left"} {/if}  {/if}
+      <br/>  &#169; {$date|@formatTime:'%Y'} <span class="url fn org">{$blogTitle}</span> |
+      <a href="{$serendipityBaseURL}feeds/index.rss2">{$CONST.ENTRIES}&nbsp;(RSS)</a> | <a href="{$serendipityBaseURL}feeds/comments.rss2">{$CONST.COMMENTS}&nbsp;(RSS)</a> |&nbsp; Theme <a href="http://www.plusneun.de/index.php" title="plusneun.de">plusneun.de</a>
 		Tabs:<a target="_blank" href="http://www.cssplay.co.uk/">CSSplay</a>
     </div> <!-- /#footertext -->
-   
+
  </div>
   .
 
@@ -750,7 +761,7 @@
 {if $is_embedded != true}
 </div>
 
-  
+
 
 </body>
 </html>

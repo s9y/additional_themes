@@ -8,9 +8,20 @@
 {/if}
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
- <title>{$head_title|@default:$blogTitle} {if $head_subtitle} - {$head_subtitle}{/if}</title>
-  <meta http-equiv="Content-Type" content="text/html; charset={$head_charset}" />
-   <meta name="generator" content="Serendipity v.{$serendipityVersion}" />
+    <title>{$head_title|@default:$blogTitle} {if $head_subtitle} - {$head_subtitle}{/if}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset={$head_charset}" />
+    <meta name="generator" content="Serendipity v.{$serendipityVersion}" />
+{if ($view == "entry" || $view == "start" || $view == "feed" || $view == "plugin" || $staticpage_pagetitle != "" || $robots_index == 'index')}
+    <meta name="robots" content="index,follow" />
+{else}
+    <meta name="robots" content="noindex,follow" />
+{/if}
+{if ($view == "entry")}
+    <link rel="canonical" href="{$entry.rdf_ident}" />
+{/if}
+{if ($view == "start")}
+    <link rel="canonical" href="{$serendipityBaseURL}" />
+{/if}
     <link rel="stylesheet" type="text/css" href="{$head_link_stylesheet}" />
     <link rel="alternate"  type="application/rss+xml" title="{$blogTitle} RSS feed" href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/index.rss2" />
     <link rel="alternate"  type="application/x.atom+xml"  title="{$blogTitle} Atom feed"  href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/atom.xml" />
@@ -35,7 +46,7 @@
 		  <h2 id="subtitle">{$head_subtitle|@default:$blogDescription}</h2>
         </div>
       </div>
-      
+
       <div id="search">
  <div id="tabs6">
   <ul>
@@ -48,49 +59,49 @@
   </ul>
 </div>
 </div>
-      
+
       <div id="content" class="clearfix">
-		
+
 	  <div id="main">
            {$CONTENT}
 
           </div>
 
     <div id="sidebar">
-     
+
      <div id="search-results"></div>
-    {if $rightSidebarElements > 0}         
+    {if $rightSidebarElements > 0}
 
 <div class="sidebar-node">
-   
+
 {serendipity_printSidebar side="right"}
 {serendipity_printSidebar side="left"}
-    
-	
+
+
 
   </div>
 
 
-           
+
             </div>
 
 			<br clear="all" />
-		{/if}     
+		{/if}
   <div id="footer">
 {serendipity_hookPlugin hook="frontend_footer"}
         <ul>
-          
-	  
+
+
 	  <li> |  <a href="#">Home</a> | </li><li> <a href="#">SiteMap
-    </a> | </li><li><a href="http://www.piotrpolak.com">Design by Piotr Polak</a> | <a href="mailto:ahmetusal@gmail.com">Ported by Ahmet Usal</a> |</li> 
-	</ul>  
+    </a> | </li><li><a href="http://www.piotrpolak.com">Design by Piotr Polak</a> | <a href="mailto:ahmetusal@gmail.com">Ported by Ahmet Usal</a> |</li>
+	</ul>
     </div>
-       
+
 {if $is_embedded != true}
 </div>
 
 
-     
+
 
 
 </body>

@@ -10,6 +10,17 @@
     <title>{$blogTitle}</title>
     {serendipity_hookPlugin hook="frontend_header"}
     <meta name="generator" content="Serendipity v.{$serendipityVersion}">
+{if ($view == "entry" || $view == "start" || $view == "feed" || $view == "plugin" || $staticpage_pagetitle != "" || $robots_index == 'index')}
+    <meta name="robots" content="index,follow">
+{else}
+    <meta name="robots" content="noindex,follow">
+{/if}
+{if ($view == "entry")}
+    <link rel="canonical" href="{$entry.rdf_ident}">
+{/if}
+{if ($view == "start")}
+    <link rel="canonical" href="{$serendipityBaseURL}">
+{/if}
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="{$head_link_stylesheet}">
     {if $template_option.colorset != 'default'}
@@ -51,13 +62,13 @@
     <div id="main-container">
         <div id="main" class="wrapper clearfix">
 
-            <article 
+            <article
                 {if $template_option.sidebar_position == 'left'}
                     class="right"
                 {/if}>
                 {$CONTENT}
             </article>
-            <aside 
+            <aside
                 {if $template_option.sidebar_position == 'left'}
                     class="left"
                 {/if}>

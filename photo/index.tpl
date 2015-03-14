@@ -8,6 +8,17 @@
     <meta charset="{$head_charset}">
     <title>{$head_title|@default:$blogTitle}{if $head_subtitle} | {$head_subtitle}{/if}</title>
     <meta name="generator" content="Serendipity v.{$head_version}">
+{if ($view == "entry" || $view == "start" || $view == "feed" || $view == "plugin" || $staticpage_pagetitle != "" || $robots_index == 'index')}
+    <meta name="robots" content="index,follow">
+{else}
+    <meta name="robots" content="noindex,follow">
+{/if}
+{if ($view == "entry")}
+    <link rel="canonical" href="{$entry.rdf_ident}">
+{/if}
+{if ($view == "start")}
+    <link rel="canonical" href="{$serendipityBaseURL}">
+{/if}
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {if $template_option.headlines_webfonts == 'aleo'}
         <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Aleo:700">
@@ -46,7 +57,7 @@
     <link rel="stylesheet" href="{serendipity_getFile file="user.css"}">
 {/if}
     <script src="{serendipity_getFile file="js/modernizr-2.7.1.min.js"}"></script>
-    
+
     <link rel="alternate" type="application/rss+xml" title="{$blogTitle} RSS feed" href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/index.rss2">
     <link rel="alternate" type="application/x.atom+xml"  title="{$blogTitle} Atom feed"  href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/atom.xml">
 {if $entry_id}
@@ -63,7 +74,7 @@
     <script src="{serendipity_getFile file="/js/jquery.lazyload.min.js"}"></script>
     {/if}
     <script src="{$head_link_script}"></script>
-    
+
 </head>
 <body class="{if $template_option.webfonts != 'none'}{$template_option.webfonts}{/if}{if $template_option.headlines_webfonts != 'none'} {$template_option.headlines_webfonts}{/if}">
 {else}
@@ -96,7 +107,7 @@
             <ul class="clearfix">{foreach from=$navlinks item="navlink" name="sbnav"}{if $navlink.title!=""&&$navlink.href!=""}<li>{if $currpage==$navlink.href or $currpage2==$navlink.href}<span>{else}<a href="{$navlink.href}">{/if}{$navlink.title}{if $currpage==$navlink.href or $currpage2==$navlink.href}</span>{else}</a>{/if}</li>{/if}{/foreach}</ul>
         </nav>
     {/if}
-    
+
     <main id="content" class="clearfix">
         {$CONTENT}
     </main>

@@ -12,8 +12,19 @@
     <title>{$head_title|@default:$blogTitle} {if $head_subtitle} - {$head_subtitle}{/if}</title>
     <meta http-equiv="Content-Type" content="text/html; charset={$head_charset}" />
     <meta name="generator" content="Serendipity v.{$serendipityVersion}" />
+{if ($view == "entry" || $view == "start" || $view == "feed" || $view == "plugin" || $staticpage_pagetitle != "" || $robots_index == 'index')}
+    <meta name="robots" content="index,follow" />
+{else}
+    <meta name="robots" content="noindex,follow" />
+{/if}
+{if ($view == "entry")}
+    <link rel="canonical" href="{$entry.rdf_ident}" />
+{/if}
+{if ($view == "start")}
+    <link rel="canonical" href="{$serendipityBaseURL}" />
+{/if}
     <link rel="stylesheet" type="text/css" href="{$head_link_stylesheet}" media="all" />
- 
+
 	{if $template_option.fonts == 'times'}
 	<link rel="stylesheet" href="{$serendipityBaseURL}templates/{$template}/fontsets/times.css" />
 	{elseif $template_option.fonts == 'bitstream_vera_sans'}
@@ -41,9 +52,9 @@
 	{elseif $template_option.style == 'oldskool'}
 	<link rel="stylesheet" href="{$serendipityBaseURL}templates/{$template}/style/oldskool.css" />
 	{/if}
-	
+
 	<link rel="home" title="Startseite" href="{$serendipityBaseURL}" />
-	<link rel="archive" title="Eintragsarchiv (Ã¤ltere EintrÃ¤ge)" href="{$serendipityBaseURL}archive" />
+	<link rel="archive" title="Eintragsarchiv (ältere Einträge)" href="{$serendipityBaseURL}archive" />
 	{if $is_single_entry}
 		{if $footer_prev_page}
 		<link rel="prev" title="{$CONST.PREVIOUS_PAGE}" href="{$footer_prev_page}" />
@@ -85,7 +96,7 @@
 	</div> <!-- close content -->
 
 	<div id="sidebar1"> <!-- start sidebar1 -->
-		<div class="sidebar"> 
+		<div class="sidebar">
 		{if $rightSidebarElements > 0}
 			{serendipity_printSidebar side="left"}
 		{/if}
@@ -101,7 +112,7 @@
 	{/if}
 
 		</div>
-		
+
 		<div class="sidebar">
 		{if $rightSidebarElements > 0}
 			{serendipity_printSidebar side="right"}
@@ -112,7 +123,7 @@
 </div> <!-- close column-wrap -->
 
 <div id="footer">
-	<a href="#top"><img src="{$serendipityBaseURL}/templates/{$template}/img/up.png" alt="hoch / up" title="hoch / up" /></a> {$CONST.PROUDLY_POWERED_BY} <a href="http://www.s9y.org">Serendipity {$serendipityVersion}</a>.<br />Style is <a href="http://alp-uckan.net/free/s9y/style-adapation/">adaptation 0.8</a> by <a href="http://alp-uckan.net">Alp UÃ§kan</a>
+	<a href="#top"><img src="{$serendipityBaseURL}/templates/{$template}/img/up.png" alt="hoch / up" title="hoch / up" /></a> {$CONST.PROUDLY_POWERED_BY} <a href="http://www.s9y.org">Serendipity {$serendipityVersion}</a>.<br />Style is <a href="http://alp-uckan.net/free/s9y/style-adapation/">adaptation 0.8</a> by <a href="http://alp-uckan.net">Alp Uçkan</a>
 </div>
 
 {serendipity_hookPlugin hook="frontend_footer"}

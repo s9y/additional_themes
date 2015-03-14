@@ -18,6 +18,17 @@
     <meta http-equiv="Content-Language" content="en-us" />
     <meta http-equiv="Content-Type" content="text/html; charset={$head_charset}" />
     <meta name="generator" content="Serendipity v.{$serendipityVersion}" />
+{if ($view == "entry" || $view == "start" || $view == "feed" || $view == "plugin" || $staticpage_pagetitle != "" || $robots_index == 'index')}
+    <meta name="robots" content="index,follow" />
+{else}
+    <meta name="robots" content="noindex,follow" />
+{/if}
+{if ($view == "entry")}
+    <link rel="canonical" href="{$entry.rdf_ident}" />
+{/if}
+{if ($view == "start")}
+    <link rel="canonical" href="{$serendipityBaseURL}" />
+{/if}
     <link rel="stylesheet" type="text/css" href="{$head_link_stylesheet}" />
     <link rel="alternate"  type="application/rss+xml" title="{$blogTitle} RSS feed" href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/index.rss2" />
     <link rel="alternate"  type="application/x.atom+xml"  title="{$blogTitle} Atom feed"  href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/atom.xml" />
@@ -31,7 +42,7 @@
 </head>
 
 <body>
-<!--  
+<!--
 Truth Template v.1 provided by Eddie Traversa 2005
   please leave note this intact.
   email:etraversa@dhtmlnirvana.com
@@ -47,7 +58,7 @@ Truth Template v.1 provided by Eddie Traversa 2005
     <h1><a class="homelink1" href="{$serendipityBaseURL}" title="Spiritual Enlightenment" >Spiritual Enlightenment:Truth Realization</a></h1>
     <h2><a class="homelink2" href="{$serendipityBaseURL}" title="Truth Realization">Wake Up! You Already Are That:::</a></h2>
 	<div id="urlLYR" class="urllogo">
-	:::www.truthrealization.com::: 
+	:::www.truthrealization.com:::
 	</div>
 </div>
 

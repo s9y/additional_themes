@@ -2,25 +2,36 @@
 <!DOCTYPE html PUBLIC "-//OPENWAVE//DTD XHTML Mobile 1.0//EN" "http://www.openwave.com/dtd/xhtml-mobile10.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-		<title>{$head_title|@default:$blogTitle} {if $head_subtitle} - {$head_subtitle}{/if}</title>
+	<title>{$head_title|@default:$blogTitle} {if $head_subtitle} - {$head_subtitle}{/if}</title>
     <meta http-equiv="Content-Type" content="application/xhtml+xml; charset={$head_charset}"/>
-		<meta name="generator" content="Serendipity XHTML MP Output - http://c.seo-mobile.de/"/>
+	<meta name="generator" content="Serendipity XHTML MP Output - http://c.seo-mobile.de/"/>
+{if ($view == "entry" || $view == "start" || $view == "feed" || $view == "plugin" || $staticpage_pagetitle != "" || $robots_index == 'index')}
+    <meta name="robots" content="index,follow" />
+{else}
+    <meta name="robots" content="noindex,follow" />
+{/if}
+{if ($view == "entry")}
+    <link rel="canonical" href="{$entry.rdf_ident}" />
+{/if}
+{if ($view == "start")}
+    <link rel="canonical" href="{$serendipityBaseURL}" />
+{/if}
     <link rel="stylesheet" type="text/css" href="{$head_link_stylesheet}"/>
 	</head>
 	<body>
-		
+
 		{$debug}
-		
+
 		<div id="header">
 			<div id="title"><h1>{$head_title|@default:$blogTitle}</h1></div>
 			<div id="headline"><h2>{$head_subtitle|@default:$blogDescription}</h2></div>
 			<div id="nl"><a class="n" href="#n">{$CONST.PLUGIN_EVENT_MOBILE_OUTPUT_NAVIGATION}</a></div>
 		</div>
-		
+
 		<div id="content">
 			{$CONTENT}
 		</div>
-		
+
 		<div id="footer">
 			<a id="n"></a>
 			<div id="nav">
@@ -34,20 +45,20 @@
 				{foreach from=$categories item="plugin_category"}
 					<div class="navItem">
 						{if $plugin_category.access_key <= 9}
-							<span class="naviItemAK">[{$plugin_category.access_key}]</span> 
+							<span class="naviItemAK">[{$plugin_category.access_key}]</span>
 							<a accesskey="{$plugin_category.access_key}" href="{$plugin_category.categoryURL}">{$plugin_category.category_name|escape}</a>
 						{else}
-							<span class="naviItemAK">[&#160;&#160;]</span> 
+							<span class="naviItemAK">[&#160;&#160;]</span>
 							<a href="{$plugin_category.categoryURL}">{$plugin_category.category_name|escape}</a>
 						{/if}
 					</div>
 				{/foreach}
 			</div>
 		</div>
-		
+
 		<div class="copy">
 			<a class="copy" href="http://c.seo-mobile.de/">Serendipity Mobile Plugin</a>
 		</div>
-		
+
 	</body>
 </html>

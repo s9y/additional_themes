@@ -5,6 +5,17 @@
         <title>{$head_title|@default:$blogTitle} {if $head_subtitle} - {$head_subtitle}{/if}</title>
         <meta http-equiv="Content-Type" content="text/html; charset={$head_charset}" />
         <meta name="generator" content="Serendipity v.{$serendipityVersion}" />
+    {if ($view == "entry" || $view == "start" || $view == "feed" || $view == "plugin" || $staticpage_pagetitle != "" || $robots_index == 'index')}
+        <meta name="robots" content="index,follow" />
+    {else}
+        <meta name="robots" content="noindex,follow" />
+    {/if}
+    {if ($view == "entry")}
+        <link rel="canonical" href="{$entry.rdf_ident}" />
+    {/if}
+    {if ($view == "start")}
+        <link rel="canonical" href="{$serendipityBaseURL}" />
+    {/if}
         <link rel="stylesheet" type="text/css" href="{$head_link_stylesheet}" />
         <link rel="alternate" type="application/rss+xml" title="{$blogTitle} RSS feed" href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/index.rss2" />
         <link rel="alternate" type="application/x.atom+xml" title="{$blogTitle} Atom feed" href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/atom10.xml" />
@@ -53,22 +64,22 @@
     </div>
 
     <div id="footer">
-        <div id="serendipity_breadcrumb"><a href="{$serendipityBaseURL}">Home</a> 
+        <div id="serendipity_breadcrumb"><a href="{$serendipityBaseURL}">Home</a>
             {if ($head_title && !$entry.title) || ($head_title != $entry.title)}
                   :: {$category.category_name}
-            {elseif $head_title && $entry.title} 
-                :: <a href="{$category.category_link}">{$category.category_name}</a> 
-            {if $entry.title == $head_title} 
+            {elseif $head_title && $entry.title}
+                :: <a href="{$category.category_link}">{$category.category_name}</a>
+            {if $entry.title == $head_title}
                 :: {$entry.title}
             {/if}
             {/if}
-            {if $isStaticpage && !$entry.title} 
+            {if $isStaticpage && !$entry.title}
                   :: {$StaticpageTitle}
             {/if}
         </div>
-        <div id="credits">Copyright 2005 <a href="http://myschizobuddy.com" title="Copyrights 2005">My Schizo Buddy</a> 
+        <div id="credits">Copyright 2005 <a href="http://myschizobuddy.com" title="Copyrights 2005">My Schizo Buddy</a>
             | Designed by <a href="http://www.stanch.net/" title="Designer of This template" target="_blank">Ivan Fong</a>
-            | Ported by <a href="http://myschizobuddy.com/" title="Template ported by" target="_blank">Ziyad Saeed</a> 
+            | Ported by <a href="http://myschizobuddy.com/" title="Template ported by" target="_blank">Ziyad Saeed</a>
             | <a href="http://jigsaw.w3.org/css-validator/validator?uri=http://myschizobuddy.com" title="Valid CSS" target="_blank">CSS</a>
             | <a href="http://validator.w3.org/check?uri=referer" title="Valid XHTML" target="_blank">XHTML</a>
             | <a href="http://feedvalidator.org/check.cgi?url=http://myschizobuddy.com/index.php%3F/feeds/atom10.xml" title="Valid Atom Feed">ATOM</a>

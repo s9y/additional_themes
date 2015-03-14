@@ -6,6 +6,17 @@
     <title>{$head_title|@default:$blogTitle} {if $head_subtitle} - {$head_subtitle}{/if}</title>
     <meta http-equiv="Content-Type" content="text/html; charset={$head_charset}" />
     <meta name="generator" content="Serendipity v.{$serendipityVersion}" />
+{if ($view == "entry" || $view == "start" || $view == "feed" || $view == "plugin" || $staticpage_pagetitle != "" || $robots_index == 'index')}
+    <meta name="robots" content="index,follow" />
+{else}
+    <meta name="robots" content="noindex,follow" />
+{/if}
+{if ($view == "entry")}
+    <link rel="canonical" href="{$entry.rdf_ident}" />
+{/if}
+{if ($view == "start")}
+    <link rel="canonical" href="{$serendipityBaseURL}" />
+{/if}
     <link rel="stylesheet" type="text/css" href="{$head_link_stylesheet}" />
     <link rel="alternate"  type="application/rss+xml" title="{$blogTitle} RSS feed" href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/index.rss2" />
     <link rel="alternate"  type="application/x.atom+xml"  title="{$blogTitle} Atom feed"  href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/atom.xml" />
@@ -16,7 +27,7 @@
 	<style type="text/css" media="all">@import "{serendipity_getFile file="yellow.css"}";</style>
 {elseif $template_option.colorset == 'aqua'}
 	<link rel="stylesheet" type="text/css" href="{serendipity_getFile file="aqua.css"}" />
-{/if} 
+{/if}
 
 {serendipity_hookPlugin hook="frontend_header"}
 </head>
@@ -25,7 +36,7 @@
 <div id="wrap">
 	<div id="serendipity_banner">
 		<img src="{serendipity_getFile file="img/corner_tl.gif"}" alt="corner" style="float:left;" />
-		<!-- uncomment if you want your blog title and description 
+		<!-- uncomment if you want your blog title and description
     		<span class="title">
       		<span class="white">{$head_title|@default:$blogTitle}</span>
       		<span class="subTitle">
@@ -62,7 +73,7 @@
 		<img src="{serendipity_getFile file="img/corner_sub_bl.gif"}" alt="bottom corner" class="vBottom"/>
 	</div>
 </div>
-	
+
 	<div id="footer">
 		<div id="footerLeft">&nbsp;&nbsp;design <a href="http://openwebdesign.org/userinfo.phtml?user=snop" title="OWD design work">snop</a> - photo <a href="http://www.sxc.hu/browse.phtml?f=profile&amp;l=plasticboy&amp;p=1" title="stock.xchng">plasticboy</a> - Converted to <a href="http://www.s9y.org">s9y</a> by <a href="http://www.carlgalloway.com/pages/serendipity-templates.html">Carl</a></div>
 		<div id="footerRight">&nbsp;</div>

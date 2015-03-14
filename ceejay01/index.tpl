@@ -11,6 +11,17 @@
     <title>{$head_title|@default:$blogTitle} {if $head_subtitle} - {$head_subtitle}{/if}</title>
     <meta http-equiv="Content-Type" content="text/html; charset={$head_charset}" />
     <meta name="generator" content="Serendipity v.{$serendipityVersion}" />
+{if ($view == "entry" || $view == "start" || $view == "feed" || $view == "plugin" || $staticpage_pagetitle != "" || $robots_index == 'index')}
+    <meta name="robots" content="index,follow" />
+{else}
+    <meta name="robots" content="noindex,follow" />
+{/if}
+{if ($view == "entry")}
+    <link rel="canonical" href="{$entry.rdf_ident}" />
+{/if}
+{if ($view == "start")}
+    <link rel="canonical" href="{$serendipityBaseURL}" />
+{/if}
     <link rel="stylesheet" type="text/css" href="{$head_link_stylesheet}" />
     <link rel="alternate"  type="application/rss+xml" title="{$blogTitle} RSS feed" href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/index.rss2" />
     <link rel="alternate"  type="application/x.atom+xml"  title="{$blogTitle} Atom feed"  href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/atom.xml" />
@@ -35,7 +46,7 @@
 		<li><a href="#">Link1</a></li>
 		<li><a href="#">Link2</a></li>
 		<li><a href="#">Link3</a></li>
-		{else} 
+		{else}
         	{foreach from=$navlinks item="navlink"}
         	<li><a href="{$navlink.href}" title="{$navlink.title}">{$navlink.title}</a></li>
 		{/foreach}
@@ -45,11 +56,11 @@
 
 	<div id="identity"><a id="topofpage"></a><h1><a href="{$serendipityBaseURL}">{$head_title|@default:$blogTitle|truncate:60:" ..."}</a></h1><h2><a href="{$serendipityBaseURL}">{$head_subtitle|@default:$blogDescription}</a></h2>
 	</div>
-	<div id="search"> 
+	<div id="search">
     		<form id="searchform" action="{$serendipityBaseURL}" method="get">
 		<input type="hidden" name="serendipity[action]" value="search" /><div>
-		<input type="text" name="serendipity[searchTerm]" value="{$CONST.QUICKSEARCH}..." onFocus="if(this.value=='{$CONST.QUICKSEARCH}...')value=''" onBlur="if(this.value=='')value='{$CONST.QUICKSEARCH}...';"> 
-<input type="submit" name="quicksearch-button" value="Go!""></div></form> 
+		<input type="text" name="serendipity[searchTerm]" value="{$CONST.QUICKSEARCH}..." onFocus="if(this.value=='{$CONST.QUICKSEARCH}...')value=''" onBlur="if(this.value=='')value='{$CONST.QUICKSEARCH}...';">
+<input type="submit" name="quicksearch-button" value="Go!""></div></form>
   	</div>
 	<div id="about-snippet">
 	{if $serendipityVersion < 1.1}
@@ -57,7 +68,7 @@
 	{else}
 	<p>{$template_option.about} <a href="{$template_option.aboutpageurl}"> More &raquo;</a></p>
 	{/if}
-	</div> 
+	</div>
 </div><!--end navigation-->
 
 <div id="wrapper">

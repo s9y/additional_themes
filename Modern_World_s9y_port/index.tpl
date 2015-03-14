@@ -12,6 +12,17 @@
     <title>{$head_title|@default:$blogTitle} {if $head_subtitle} - {$head_subtitle}{/if}</title>
     <meta http-equiv="Content-Type" content="text/html; charset={$head_charset}" />
     <meta name="generator" content="Serendipity v.{$serendipityVersion}" />
+{if ($view == "entry" || $view == "start" || $view == "feed" || $view == "plugin" || $staticpage_pagetitle != "" || $robots_index == 'index')}
+    <meta name="robots" content="index,follow" />
+{else}
+    <meta name="robots" content="noindex,follow" />
+{/if}
+{if ($view == "entry")}
+    <link rel="canonical" href="{$entry.rdf_ident}" />
+{/if}
+{if ($view == "start")}
+    <link rel="canonical" href="{$serendipityBaseURL}" />
+{/if}
     <link rel="stylesheet" type="text/css" href="{$head_link_stylesheet}" />
     <link rel="alternate"  type="application/rss+xml" title="{$blogTitle} RSS feed" href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/index.rss2" />
     <link rel="alternate"  type="application/x.atom+xml"  title="{$blogTitle} Atom feed"  href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/atom.xml" />
@@ -40,7 +51,7 @@
 				{$CONTENT}
 				{$raw_data}
 		</div>
-		<div class="left"> 
+		<div class="left">
 			<div id="logo">
     				<h2><a href="{$serendipityBaseURL}">{$head_title|@default:$blogTitle}</a></h2>
 				<p><a href="{$serendipityBaseURL}">{$head_subtitle}</a></p>
@@ -51,7 +62,7 @@
 				{/if}
 					{if $leftSidebarElements > 0}
 					{serendipity_printSidebar side="left"}
-				{/if}	
+				{/if}
 			</div>
 		</div>
 		<div id="footer">

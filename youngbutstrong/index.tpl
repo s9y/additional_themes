@@ -9,6 +9,17 @@
 		<title>{$head_title|@default:$blogTitle} {if $head_subtitle} - {$head_subtitle}{/if}</title>
 		<meta http-equiv="Content-Type" content="text/html; charset={$head_charset}" />
 		<meta name="generator" content="Serendipity v.{$serendipityVersion}" />
+    {if ($view == "entry" || $view == "start" || $view == "feed" || $view == "plugin" || $staticpage_pagetitle != "" || $robots_index == 'index')}
+        <meta name="robots" content="index,follow" />
+    {else}
+        <meta name="robots" content="noindex,follow" />
+    {/if}
+    {if ($view == "entry")}
+        <link rel="canonical" href="{$entry.rdf_ident}" />
+    {/if}
+    {if ($view == "start")}
+        <link rel="canonical" href="{$serendipityBaseURL}" />
+    {/if}
 		<link rel="stylesheet" type="text/css" href="{$head_link_stylesheet}" />
 		<link rel="alternate"  type="application/rss+xml" title="{$blogTitle} RSS feed" href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/index.rss2" />
 		<link rel="alternate"  type="application/x.atom+xml"  title="{$blogTitle} Atom feed" href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/atom.xml" />
@@ -40,9 +51,9 @@
 			<div id="footer"></div>
 		</div>
 <!--
-This Theme is free to use, but you are _not_ allowed to remove 
+This Theme is free to use, but you are _not_ allowed to remove
 the Sponsored Links in the Footer !
-If you remove them, you are not allowed to use this Theme anymore, 
+If you remove them, you are not allowed to use this Theme anymore,
 you have to remove it then from your Blog !
 // -->
 		<div id="footer_sponsors">
@@ -50,11 +61,11 @@ you have to remove it then from your Blog !
 			Ported by <a href="http://www.hungryhacker.com/">fwaggle</a> and <a href="http://www.infectedloser.com/">sabriena</a>
 		</div>
 <!--
-This Theme is free to use, but you are _not_ allowed to remove 
+This Theme is free to use, but you are _not_ allowed to remove
 the Sponsored Links in the Footer !
-If you remove them, you are not allowed to use this Theme anymore, 
+If you remove them, you are not allowed to use this Theme anymore,
 you have to remove it then from your Blog !
-// -->		
+// -->
 {if $is_embedded != true}
 	</body>
 </html>

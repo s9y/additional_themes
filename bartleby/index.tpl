@@ -8,6 +8,17 @@
     <meta charset="{$head_charset}">
     <title>{$head_title|@default:$blogTitle}{if $head_subtitle} | {$head_subtitle}{/if}</title>
     <meta name="generator" content="Serendipity v.{$head_version}">
+{if ($view == "entry" || $view == "start" || $view == "feed" || $view == "plugin" || $staticpage_pagetitle != "" || $robots_index == 'index')}
+    <meta name="robots" content="index,follow">
+{else}
+    <meta name="robots" content="noindex,follow">
+{/if}
+{if ($view == "entry")}
+    <link rel="canonical" href="{$entry.rdf_ident}">
+{/if}
+{if ($view == "start")}
+    <link rel="canonical" href="{$serendipityBaseURL}">
+{/if}
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {if $template_option.font_style == 'serif'}
         <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Vollkorn:400,700,400i/Alegreya:400/Latin+Modern+Mono:400">
@@ -52,7 +63,7 @@
             <ul class="clearfix">{foreach from=$navlinks item="navlink" name="sbnav"}{if $navlink.title!=""&&$navlink.href!=""}<li>{if $currpage==$navlink.href or $currpage2==$navlink.href}<span>{else}<a href="{$navlink.href}">{/if}{$navlink.title}{if $currpage==$navlink.href or $currpage2==$navlink.href}</span>{else}</a>{/if}</li>{/if}{/foreach}</ul>
         </nav>
     {/if}
-    
+
     <main id="content" class="clearfix">
         {$CONTENT}
     </main>

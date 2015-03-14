@@ -12,6 +12,17 @@
     <title>{$head_title|@default:$blogTitle} {if $head_subtitle} - {$head_subtitle}{/if}</title>
     <meta http-equiv="Content-Type" content="text/html; charset={$head_charset}" />
     <meta name="generator" content="Serendipity v.{$serendipityVersion}" />
+{if ($view == "entry" || $view == "start" || $view == "feed" || $view == "plugin" || $staticpage_pagetitle != "" || $robots_index == 'index')}
+    <meta name="robots" content="index,follow" />
+{else}
+    <meta name="robots" content="noindex,follow" />
+{/if}
+{if ($view == "entry")}
+    <link rel="canonical" href="{$entry.rdf_ident}" />
+{/if}
+{if ($view == "start")}
+    <link rel="canonical" href="{$serendipityBaseURL}" />
+{/if}
     <link rel="stylesheet" type="text/css" href="{$head_link_stylesheet}" media="screen" />
     <link rel="stylesheet" type="text/css" href="{serendipity_getFile file="print.css"}" media="print" />
     <link rel="stylesheet" type="text/css" href="{serendipity_getFile file="s9y.css"}" media="all" />
@@ -32,54 +43,54 @@
 
 
 
-{assign var="view2" value=$view} 
+{assign var="view2" value=$view}
 {if $template_option.newspapermode =="false"}
-   {assign var="view2" value="nonewspaper"} 
+   {assign var="view2" value="nonewspaper"}
 {/if}
 
 <div class="page_margins">
   <div class="page">
     <div id="header">
       <div id="topnav">
-      
+
      <a class="skip" title="skip link" href="#content">skip to content</a>
-       <span class="hideme">.</span> 
-  
+       <span class="hideme">.</span>
+
   <a class="homelink1" href="{$serendipityBaseURL}">Home</a>
-        
+
         {foreach from=$navlinks item="navlink" name=navbar}| 	       <a href="{$navlink.href}">{$navlink.title}</a>
 {/foreach}
-        
+
      </div>
       <h1><a class="homelink1" href="{$serendipityBaseURL}">{$blogTitle}</a></h1>
       <h2>{$blogDescription}</h2>
-      
-      
-       
-    
-{if $view2 == "entry"} 
- 
+
+
+
+
+{if $view2 == "entry"}
+
   <!-- single entry page including trackbacks,   include file="entries_single.tpl"  comments, and commentform -->
-   </div> 
+   </div>
       <div id="main">
         <div class="subcolumns">
-          <div class="c66l"> 
-          <div class="subcl maincontent">  
-{elseif $view2 == "start"}<div class="subcolumns"> 
-    <!-- start page displaying three different areas -->     
-      
-        <div class="c33l"> 
+          <div class="c66l">
+          <div class="subcl maincontent">
+{elseif $view2 == "start"}<div class="subcolumns">
+    <!-- start page displaying three different areas -->
+
+        <div class="c33l">
           <div class="subcl">
              {serendipity_fetchPrintEntries category=$template_option.catx1 full=true fetchDrafts=false noSticky=true limit="0,1" template="entries_rcol.tpl"}
           </div>
         </div>
-        
+
         <div class="c33l">
           <div class="subc">
               {serendipity_fetchPrintEntries category=$template_option.catx2 full=true fetchDrafts=false noSticky=true limit="0,1" template="entries_rcol.tpl"}
           </div>
         </div>
-        
+
         <div class="c33r">
           <div class="subcr">
              {serendipity_fetchPrintEntries category=$template_option.catx3 full=true fetchDrafts=false noSticky=true limit="0,1" template="entries_rcol.tpl"}
@@ -90,8 +101,8 @@
 	    <div id="main">
 	      <div class="subcolumns">
 	        <div class="c66l">
-          <div class="subcl maincontent"> 
-                    <a id="content" name="content"></a> 
+          <div class="subcl maincontent">
+                    <a id="content" name="content"></a>
 	  			       {serendipity_fetchPrintEntries category=$template_option.catlead full=true fetchDrafts=false noSticky=true limit="0,1" template="entries_lead.tpl"}
 
 {elseif $view2 == "404"}
@@ -99,28 +110,28 @@
     <div id="main">
       <div class="subcolumns">
         <div class="c66l">
-          <div class="subcl maincontent"> 
+          <div class="subcl maincontent">
     <!-- if some page does not exist and/or cannot be found -->
     {include file="./404.tpl"}
 {else}
  </div>
     <div id="main">
-      <div class="subcolumns"> 
+      <div class="subcolumns">
         <div class="c66l">
-          <div class="subcl maincontent"> 
+          <div class="subcl maincontent">
      {$CONTENT}
 {/if}
 
-   
-      
-   
-          
-            {if $view2 == "entry"}    
+
+
+
+
+            {if $view2 == "entry"}
  {include file="./entries_single.tpl"}
- {/if}             
-          
-        
- {if $entry.properties.special_switch2 !="true"}  		
+ {/if}
+
+
+ {if $entry.properties.special_switch2 !="true"}
             <hr/>
             <div class="subcolumns">
                   <div class="c50l">
@@ -138,20 +149,20 @@
                            </div>
                  </div>
             </div>
-  {/if}             
-       
+  {/if}
+
           </div>
         </div>
         <div class="c33r">
           <div class="subcr">
             <h3>A <em>Simple</em> Sidebar </h3>
-            
+
 
 	    {if $rightSidebarElements > 0}
 	        {serendipity_printSidebar side="right"}
             {/if}
-            
-            
+
+
           </div>
         </div>
       </div>
@@ -162,13 +173,13 @@
       <p><a href="http://code.google.com/p/blueprintcss/">Blueprint </a>Theme port with <a href="http://www.yaml.de">yaml</a>  by <a href="http://sagittariusa.de/">RL</a>  <br />
         </p>
     </div>
-  {/if}    
-    
-    
+  {/if}
+
+
   </div>
 </div>
 
- 
+
 {/if}
 
 {$raw_data}

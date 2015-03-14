@@ -8,6 +8,17 @@
     <title>{$head_title|@default:$blogTitle} {if $head_subtitle} - {$head_subtitle}{/if}</title>
     <meta http-equiv="Content-Type" content="text/html; charset={$head_charset}" />
     <meta name="generator" content="Serendipity v.{$serendipityVersion}" />
+{if ($view == "entry" || $view == "start" || $view == "feed" || $view == "plugin" || $staticpage_pagetitle != "" || $robots_index == 'index')}
+    <meta name="robots" content="index,follow" />
+{else}
+    <meta name="robots" content="noindex,follow" />
+{/if}
+{if ($view == "entry")}
+    <link rel="canonical" href="{$entry.rdf_ident}" />
+{/if}
+{if ($view == "start")}
+    <link rel="canonical" href="{$serendipityBaseURL}" />
+{/if}
     <meta name="mssmarttagspreventparsing" content="true" />
 
     <!-- XML Feed -->
@@ -29,7 +40,7 @@
     <h1><a href="{$serendipityBaseURL}" rel="local">{$head_title|@default:$blogTitle}</a></h1>
     <h2><a href="{$serendipityBaseURL}" rel="local">{$head_subtitle|@default:$blogDescription}</a></h2></div>
 </div>
-	
+
 <div id="content">
     <div id="contentBody">
         {$CONTENT}
@@ -37,10 +48,10 @@
     <div id="contentSide">
         {serendipity_printSidebar side="left"}
         {serendipity_printSidebar side="right"}
-    </div><!-- contentSide -->		
+    </div><!-- contentSide -->
 </div>
 <div class="clear mozclear"></div>
-	
+
 <div id="pageFoot">
     {if $footer_prev_page}
         <a href="{$footer_prev_page}" rel="local">&laquo; {$CONST.PREVIOUS_PAGE}</a>&#160;&#160;
@@ -56,7 +67,7 @@
 
     {serendipity_hookPlugin hook="entries_footer"}
 
-</div> 
+</div>
 </div>
 {serendipity_hookPlugin hook="frontend_footer"}
 </body>

@@ -6,20 +6,31 @@
 	<head>
 		<title>{$head_title|@default:$blogTitle} {if $head_subtitle} - {$head_subtitle}{/if}</title>
 		<meta name="generator" content="Serendipity IPhone Output - http://c.seo-mobile.de/"/>
+    {if ($view == "entry" || $view == "start" || $view == "feed" || $view == "plugin" || $staticpage_pagetitle != "" || $robots_index == 'index')}
+        <meta name="robots" content="index,follow" />
+    {else}
+        <meta name="robots" content="noindex,follow" />
+    {/if}
+    {if ($view == "entry")}
+        <link rel="canonical" href="{$entry.rdf_ident}" />
+    {/if}
+    {if ($view == "start")}
+        <link rel="canonical" href="{$serendipityBaseURL}" />
+    {/if}
 		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
 		<script type="application/x-javascript" src="{serendipity_getFile file="iui.js"}"></script>
     		<link rel="stylesheet" type="text/css" href="{$head_link_stylesheet}"/>
 	</head>
 	<body>
-		
+
 		<!-- {$debug} -->
-		
-		<div class="toolbar"> 
+
+		<div class="toolbar">
 			<h1 id="pageTitle">{$head_title|@default:$blogTitle}</h1>
 			<a id="backButton" class="button" href="#">{$CONST.BACK}</a>
 		        <a href="{$serendipityBaseURL}"><img src="{serendipity_getFile file="img/s9y_banner.png"}" id="s9y_banner"/></a>
 		</div>
-{/if}		
+{/if}
 
 		{if !$is_single_entry}
 		    <ul id="home" title="{$blogTitle}" selected="true">
@@ -36,7 +47,7 @@
 			<li><a class="small" href="http://c.seo-mobile.de/">Serendipity Mobile Output Plugin</a></li>
 		    </ul>
 		{/if}
-		
+
 		{if $is_single_entry}
 		    <div title="{$head_title}" id="content">
 			{if $debug}
@@ -46,7 +57,7 @@
 		    </div>
 		{/if}
 
-		                             
+
 		{if $categories}
 		    <ul title="{$CONST.CATEGORIES}" id="categories">
         		{foreach from=$categories item="plugin_category"}
@@ -58,4 +69,4 @@
 {if $ajax!=1}
 	</body>
 </html>
-{/if}		
+{/if}

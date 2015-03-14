@@ -12,6 +12,17 @@
     <meta http-equiv="Content-Type" content="text/html; charset={$head_charset}" />
     <title>{$head_title|@default:$blogTitle} {if $head_subtitle} - {$head_subtitle}{/if}</title>
     <meta name="generator" content="Serendipity v.{$serendipityVersion}" />
+{if ($view == "entry" || $view == "start" || $view == "feed" || $view == "plugin" || $staticpage_pagetitle != "" || $robots_index == 'index')}
+    <meta name="robots" content="index,follow" />
+{else}
+    <meta name="robots" content="noindex,follow" />
+{/if}
+{if ($view == "entry")}
+    <link rel="canonical" href="{$entry.rdf_ident}" />
+{/if}
+{if ($view == "start")}
+    <link rel="canonical" href="{$serendipityBaseURL}" />
+{/if}
     <!-- this product is released under General Public License. Please see the attached file for details.  -->
     <!-- You can also find details about the license at http://www.opensource.org/licenses/gpl-license.php -->
     <link rel="stylesheet" type="text/css" href="{$head_link_stylesheet}" />
@@ -50,9 +61,9 @@
                 <li><a href="#main">{$pixtocontent} &darr;</a></li>
             </ul>
         </div><!-- /#topright -->
-        
+
         <div class="cleared"></div>
-        
+
         <div id="logo">
             <h1><a href="{$serendipityBaseURL}">{$blogTitle}</a></h1>
             <span>{$blogDescription}</span>
@@ -81,7 +92,7 @@
         {if $view == '404'}
             <div class="topPost">
                 <h2 class="topTitle">{$pixnftitle}</h2>
-                
+
                 <div class="topContent">
                     <p>{$pixnftext} <a href="#searchform">{$CONST.QUICKSEARCH}</a> &darr;</p>
                 </div>
@@ -90,7 +101,7 @@
             {$CONTENT}
         {/if}
         </div><!-- /#contentwrapper -->
-        
+
         <div id="sidebars">
             <div id="sidebar_full">
                 <ul>
@@ -122,11 +133,11 @@
                     {if $topSidebarElements > 0}{serendipity_printSidebar side="top" template="topbar.tpl"}{/if}
                 </ul>
             </div>
-            
+
             <div id="sidebar_left">
             {if $leftSidebarElements > 0}{serendipity_printSidebar side="left"}{/if}
             </div>
-            
+
             <div id="sidebar_right">
             {if $rightSidebarElements > 0}{serendipity_printSidebar side="right"}{/if}
             </div>
@@ -134,13 +145,13 @@
 
         <div class="cleared"></div>
     </div><!-- /#main -->
-    
+
     <div id="morefoot">
         <div class="col1">
             <h3>{$CONST.QUICKSEARCH}</h3>
-            
+
             <p>{$CONST.SEARCH_FOR_ENTRY} {$CONST.IN} {$blogTitle}:</p>
-            
+
             <form method="get" id="searchform" action="{$serendipityHTTPPath}{$serendipityIndexFile}">
             <div><input type="hidden" name="serendipity[action]" value="search" /></div>
             <p>
@@ -149,15 +160,15 @@
             </p>
             </form>
             {serendipity_hookPlugin hook="quicksearch_plugin" hookAll="true"}
-            
+
             <p>{$pixsearchhint}</p>
         </div>
-        
+
         {if $botSidebarElements > 0}{serendipity_printSidebar side="bot" template="botbar.tpl"}{/if}
 
         <div class="cleared"></div>
     </div><!-- /#morefoot -->
-    
+
     <div id="footer">
         <div id="footerleft">
             <p>powered by serendipity and brought to you by <a href="http://www.serendipity-templates.org">http://www.serendipity-templates.org</a>. <a href="#main">Back to top &uarr;</a></p>
