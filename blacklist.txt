@@ -23,7 +23,7 @@ kubrick
 
 ## Themes that don't work in demo and would require some kind of complicated fix to make them work
 
-bex-01
+bex01
 greenway
 i3theme
 informatif
