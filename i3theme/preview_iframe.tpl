@@ -3,6 +3,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset={$head_charset}" />
         <meta name="generator" content="Serendipity v.{$serendipityVersion}" />
         <link rel="stylesheet" type="text/css" href="{$head_link_stylesheet}" media="all" />
+{if $head_link_stylesheet_frontend}
+    <link rel="stylesheet" href="{$head_link_stylesheet_frontend}">                                
+{else}
+    <link rel="stylesheet" href="{$serendipityHTTPPath}{$serendipityRewritePrefix}serendipity.css">
+{/if}
         <link rel="stylesheet" type="text/css" href="{serendipity_getFile file="print.css"}" media="print" />
         <link rel="stylesheet" type="text/css" href="{serendipity_getFile file="s9y.css"}" media="all" />
 <!--[if lt IE 7]>
