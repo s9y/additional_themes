@@ -239,6 +239,7 @@ h2 {
   margin-top: 0;
 }
 
+.serendipity_staticpage,
 .singlepage {
     max-width: 800px;
     height: 100%;

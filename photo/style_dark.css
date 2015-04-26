@@ -30,7 +30,7 @@ span.featuredImage {
     background: linear-gradient(to right,  rgba(153,61,61,0.7) 0%,rgba(153,61,61,1) 45%,rgba(153,61,61,1) 50%,rgba(153,61,61,1) 55%,rgba(153,61,61,0.86) 76%,rgba(153,61,61,0.79) 87%,rgba(153,61,61,0.7) 100%); /* W3C */
 }
 
-.serendipity_entry:not(.singlepage) {
+.serendipity_entry:not(.singlepage):not(.serendipity_staticpage) {
     background-color: rgba(0,0,0,0.7);
 }
 
