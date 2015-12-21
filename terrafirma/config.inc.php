@@ -18,7 +18,7 @@ $serendipity['smarty']->assign(array('currpage'=> "http://".$_SERVER['HTTP_HOST'
 $template_config = array(
     array(
         'var'           => 'abouttitle',
-        'title'         => 'abouttitle',
+        'name'          => 'abouttitle',
 		'name'          => ABOUT_TITLE,
         'description'   => ABOUT_TITLE_DESC,
         'type'          => 'string',
@@ -26,7 +26,7 @@ $template_config = array(
     ),
     array(
         'var'           => 'about',
-        'title'         => 'about_text',
+        'name'          => 'about_text',
 		'name'          => ABOUT_TEXT,
         'description'   => ABOUT_TEXT_DESC,
         'type'          => 'string',
@@ -42,7 +42,7 @@ $template_config = array(
     ),
     array(
         'var'           => 'aboutpageurl',
-        'title'         => 'About page URL',
+        'name'          => 'About page URL',
         'description'   => ABOUT_URL,
         'type'          => 'string',
         'default'       => '#',

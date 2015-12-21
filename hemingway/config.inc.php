@@ -1,6 +1,7 @@
-<?php # 
+<?php #
 
 $probelang = dirname(__FILE__) . '/lang_' . $serendipity['lang'] . '.inc.php';
+
 if (file_exists($probelang)) {
     include $probelang;
 } else {
@@ -24,8 +25,8 @@ $template_config = array(
         'name'          => HEMINGWAY_STARTPAGE,
         'description'   => HEMINGWAY_STARTPAGE_DESC,
         'type'          => 'radio',
-	  'radio'         => array('value' => array('true', 'false'),
-					'desc' => array(HEMINGWAY_STARTPAGE_RECENT, HEMINGWAY_STARTPAGE_TWOCOL)),
+        'radio'         => array('value' => array('true', 'false'),
+					             'desc' => array(HEMINGWAY_STARTPAGE_RECENT, HEMINGWAY_STARTPAGE_TWOCOL)),
         'default'       => 'true',
     ),
     array(

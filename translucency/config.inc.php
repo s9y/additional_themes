@@ -16,7 +16,7 @@ if ($serendipity['GET']['adminModule'] == 'templates' || $serendipity['POST']['a
 $template_config = array(
     array(
         'var'           => 'colorset',
-        'title'         => 'Color Set',
+        'name'          => 'Color Set',
         'description'   => 'Enter the color set you want to use for this site',
         'type'          => 'select',
         'default'       => 'transred',
