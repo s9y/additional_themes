@@ -3,3 +3,4 @@ Author: onli
 Date: 2014-08-10
 Engine: 2k11
 Require Serendipity: 2.0
+Recommended: Yes
