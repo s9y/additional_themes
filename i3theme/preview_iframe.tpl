@@ -4,15 +4,14 @@
         <meta name="generator" content="Serendipity v.{$serendipityVersion}" />
         <link rel="stylesheet" type="text/css" href="{$head_link_stylesheet}" media="all" />
 {if $head_link_stylesheet_frontend}
-    <link rel="stylesheet" href="{$head_link_stylesheet_frontend}">                                
+    <link rel="stylesheet" href="{$head_link_stylesheet_frontend}">
 {else}
     <link rel="stylesheet" href="{$serendipityHTTPPath}{$serendipityRewritePrefix}serendipity.css">
 {/if}
-        <link rel="stylesheet" type="text/css" href="{serendipity_getFile file="print.css"}" media="print" />
-        <link rel="stylesheet" type="text/css" href="{serendipity_getFile file="s9y.css"}" media="all" />
+        <link rel="stylesheet" type="text/css" href="{serendipity_getFile file="s9y.css" frontend=true}" media="all" />
 <!--[if lt IE 7]>
-        <link rel="stylesheet" href="{serendipity_getFile file="ie-gif.css"}" type="text/css" />
-        <link rel="stylesheet" href="{serendipity_getFile file="s9y-ie-gif.css"}" type="text/css" />
+        <link rel="stylesheet" href="{serendipity_getFile file="ie-gif.css" frontend=true}" type="text/css" />
+        <link rel="stylesheet" href="{serendipity_getFile file="s9y-ie-gif.css" frontend=true}" type="text/css" />
 <![endif]-->
         <script type="text/javascript">
            window.onload = function() {ldelim}

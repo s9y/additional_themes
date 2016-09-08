@@ -4,11 +4,11 @@
         <meta name="generator" content="Serendipity v.{$serendipityVersion}" />
         <link rel="stylesheet" type="text/css" href="{$head_link_stylesheet}" />
 {if $head_link_stylesheet_frontend}
-    <link rel="stylesheet" href="{$head_link_stylesheet_frontend}">                                
+    <link rel="stylesheet" href="{$head_link_stylesheet_frontend}">
 {else}
     <link rel="stylesheet" href="{$serendipityHTTPPath}{$serendipityRewritePrefix}serendipity.css">
 {/if}
-        <link rel="stylesheet" type="text/css" href="{serendipity_getFile file="s9y.css"}" />
+        <link rel="stylesheet" type="text/css" href="{serendipity_getFile file="s9y.css" frontend=true}" />
         <script type="text/javascript">
            window.onload = function() {ldelim}
              parent.document.getElementById('serendipity_iframe').style.height = document.getElementById('content').offsetHeight
