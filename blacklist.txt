@@ -28,3 +28,4 @@ greenway
 i3theme
 informatif
 splat
+wp
