@@ -1,4 +1,4 @@
 Name: i3Theme 1.6 (2013-10-26)
-Author: N.Design Studio & MangoOrange.<br /><i>Ported to s9y by Matthias 'YellowLed' Mees.</i>
+Author: N.Design Studio & MangoOrange, ported to s9y by YellowLed
 Date: 2013-10-26
 Require Serendipity: 1.1
