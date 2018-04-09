@@ -1,0 +1,3 @@
+This theme uses cloudflare and fastly.net CDNs to provide webfonts and
+script files. Those CDNs will receive the visitor IP address and metadata
+(requesting URL, http referer, user agent possible cookies)

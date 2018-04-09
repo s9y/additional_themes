@@ -1,0 +1,2 @@
+This theme uses googlecode some script files. Those CDNs will receive the visitor IP address and metadata
+(requesting URL, http referer, user agent possible cookies)

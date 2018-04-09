@@ -1,0 +1,2 @@
+This theme uses an AddThis widget. This service will receive the visitor IP address and metadata
+(requesting URL, http referer, user agent possible cookies)

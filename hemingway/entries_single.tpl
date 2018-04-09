@@ -14,11 +14,6 @@
             {if $entry.has_extended and not $is_single_entry and not $entry.is_extended}
             <br /><a href="{$entry.link}#extended">{$CONST.VIEW_EXTENDED_ENTRY|@sprintf:$entry.title}</a>
             {/if}
-<p>{literal}<script type="text/javascript">
-    if (typeof window.Delicious == "undefined") window.Delicious = {};
-    Delicious.BLOGBADGE_DEFAULT_CLASS = 'delicious-blogbadge-line';
-</script>
-<script src="http://images.del.icio.us/static/js/blogbadge.js"></script>{/literal}</p>
 		<!-- entry.add.footer begins -->{$entry.add_footer}{$entry.plugin_display_dat}
 	</div>
         <!--
