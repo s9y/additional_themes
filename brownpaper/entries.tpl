@@ -7,7 +7,6 @@
     <div class="serendipity_Entry_Date">
 
         {foreach from=$dategroup.entries item="entry"}
-        {assign var="entry" value=$entry scope="parent"}
 			        <h3 class="serendipity_title"><a href="{$entry.link}">{$entry.title}</a></h3>
 
         {if $dategroup.is_sticky}
@@ -40,7 +39,7 @@
             {/if}
 
             <div class='serendipity_entryFooter'>
-                {$CONST.POSTED_BY} <a href="{$entry.link_author}">{$entry.author}</a>
+                <!--{$CONST.POSTED_BY}-->by <a href="{$entry.link_author}">{$entry.author}</a>
                 {if $entry.categories}
                    {$CONST.IN} {foreach from=$entry.categories item="category" name="categories"}<a href="{$category.category_link}">{$category.category_name|@escape}</a>{if not $smarty.foreach.categories.last}, {/if}{/foreach}
                 {/if}
@@ -59,6 +58,7 @@
                     {/if}
                 {/if}
 
+            {if $CONST.DATA_DO_TRACKBACKS}
                 {if $entry.has_trackbacks}
                     {if $use_popups}
                         | <a href="{$entry.link_popup_trackbacks}" onclick="window.open(this.href, 'comments', 'width=480,height=480,scrollbars=yes'); return false;">{$entry.label_trackbacks} ({$entry.trackbacks})</a>
@@ -66,11 +66,15 @@
                         | <a href="{$entry.link}#trackbacks">{$entry.label_trackbacks} ({$entry.trackbacks})</a>
                     {/if}
                 {/if}
+            {/if}
 
                 {if $entry.is_entry_owner and not $is_preview}
                         | <a href="{$entry.link_edit}">{$CONST.EDIT_ENTRY}</a>
                 {/if}
 
+                | <a href="https://plus.google.com/110688515498064415263?rel=author" target="_blank">Google</a><!-- https://support.google.com/webmasters/bin/answer.py?hl=en&answer=1408986 -->
+                | <a href="http://www.linkedin.com/shareArticle?mini=true&url={$serendipityBaseURL|regex_replace:";/$;":""}{$entry.link}&title={$entry.title}&source=Hacker%27s+ramblings+Blog
+" target="_blank">Share in LinkedIn</a>
                 {$entry.add_footer}
             </div>
         </div>
@@ -108,6 +112,7 @@
                 <br /><div class="serendipity_center serendipity_msg_notice">{$CONST.DATA_COMMENT_APPROVED|@sprintf:$CONST.COMMENT_APPROVED}</div><br />
             {/if}
 
+            {if $CONST.DATA_DO_TRACKBACKS}
             <div class="serendipity_comments serendipity_section_trackbacks">
                 <br />
                 <a id="trackbacks"></a>
@@ -118,6 +123,7 @@
                     <br />
                         {serendipity_printTrackbacks entry=$entry.id}
             </div>
+            {/if}
         {/if}
 
         {if $is_single_entry and not $is_preview}

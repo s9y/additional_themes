@@ -1,4 +1,5 @@
-Name:Brown Paper (2008-02-14)
-Author: Abdussamad Abdurrazzaq 
-Date: 28 April 2006
-Require Serendipity: 0.8
+Name:Brown Paper 2 (responsive)
+Author: Abdussamad Abdurrazzaq / Jari Turkia
+Date: 2019-02-26
+Require Serendipity: 2.0
+Backend: No

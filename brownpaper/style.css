@@ -1,3 +1,29 @@
+/* Counter-acting boostrap.css damage: */
+*, ::after, ::before {
+    box-sizing: unset;
+}
+
+body {
+	line-height: unset;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: unset;
+    font-weight: 700;
+    /*line-height: 16px;*/
+}
+
+code {
+    font-size: 10pt;
+    color: #000000;
+	font-weight: normal;
+}
+
+tt, code, kbd, samp {
+  font-family: -moz-fixed, monospace;
+}
+/* boostrap.css damage countermeasures end */
+
+
 .bl {background: url("{TEMPLATE_PATH}img/bl.jpg") 0 100% no-repeat; }
 .br {background: url("{TEMPLATE_PATH}img/br.jpg") 100% 100% no-repeat;}
 .tl {background: url("{TEMPLATE_PATH}img/tl.jpg") 0 0 no-repeat;}
@@ -26,12 +52,15 @@ h4,h3 {
     border-top: 0px;
     background-color: #FFFFFF;
     border-top: 1px solid #000000;*/
-		
+
+    /* Make sure also admin preview is readable! */
+    background-color: #FFEAB1;
 }
 #content {
     padding: 10px;
     margin: 10px;
     width: auto;
+	overflow: hidden;
 }
 
 #serendipityRightSideBar {
@@ -48,15 +77,20 @@ width: 170px;
     vertical-align: top;
 }
 
+html {
+    font-family: verdana, arial, helvetica, sans-serif;
+}
+
 body {
 
-padding:15px;
+    padding:15px;
     font-size: 10pt;
-    margin: 0;
+    margin: 0 auto;
     background-color: #493000;
     font-size: 10px;
     font-family: verdana, arial, helvetica, sans-serif;
     margin-bottom: 30px;
+    max-width: 1400px;
 }
 
 
@@ -66,7 +100,7 @@ input, textarea {
     font-family: verdana, arial, helvetica, sans-serif;
 }
 
-th, td {
+#content {
     font-size: 10pt;
 }
 
@@ -408,3 +442,12 @@ background-color:#FFEAB1;
 
 
 }
+
+.serendipity_entry_body p {
+	padding-bottom: 12px;
+}
+
+.serendipity_entry_body td {
+	font-size: 10px;
+}
+
