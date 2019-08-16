@@ -6,6 +6,14 @@
     {assign var="jcomm" value=$CONST.J_COMMTS}
     {assign var="jto" value=$CONST.J_TO}
 
+{assign var="archiveSortStable" value="`serendipity_getConfigVar key='archiveSortStable'`"}
+{if $archiveSortStable}
+    {assign var="linkPrevPage" value="`$footer_next_page`"}
+    {assign var="linkNextPage" value="`$footer_prev_page`"}
+{else}
+    {assign var="linkPrevPage" value="`$footer_prev_page`"}
+    {assign var="linkNextPage" value="`$footer_next_page`"}
+{/if}
 
 {if $template_option.show_pagitop == 'true' && $footer_totalPages > 1}
          <div class="kastentop">{$footer_info}<br/>
@@ -16,8 +24,8 @@
             {if $paginationStartPage <= 0}
                 {assign var="paginationStartPage" value="1"}
             {/if}
-            {if $footer_prev_page}
-                <a title="{$CONST.PREVIOUS_PAGE}" href="{$footer_prev_page}"><span class="pagearrow">&#9668;</span></a>
+            {if $linkPrevPage}
+                <a title="{$CONST.PREVIOUS_PAGE}" href="{$linkPrevPage}"><span class="pagearrow">&#9668;</span></a>
             {/if}
             {if $paginationStartPage > 1}
                 <a href="{'1'|string_format:$footer_pageLink}">1</a>
@@ -38,8 +46,8 @@
             {if $smarty.section.i.index <= $footer_totalPages}
                 <a href="{$footer_totalPages|string_format:$footer_pageLink}">{$footer_totalPages}</a>
             {/if}
-            {if $footer_next_page}
-                <a title="{$CONST.NEXT_PAGE}" href="{$footer_next_page}"><span class="pagearrow">&#9658;</span></a>
+            {if $linkNextPage}
+                <a title="{$CONST.NEXT_PAGE}" href="{$linkNextPage}"><span class="pagearrow">&#9658;</span></a>
             {/if}
         </div>
      {/if}
@@ -184,8 +192,8 @@
     {/foreach}
 
     <div class="navigation group">
-        <div class="alignleft">{if $footer_prev_page}<a href="{$footer_prev_page}">&laquo; {$CONST.PREVIOUS_PAGE}</a>{/if}</div>
-        <div class="alignright">{if $footer_next_page}<a href="{$footer_next_page}">{$CONST.NEXT_PAGE} &raquo;</a>{/if}</div>
+        <div class="alignleft">{if $linkPrevPage}<a href="{$linkPrevPage}">&laquo; {$CONST.PREVIOUS_PAGE}</a>{/if}</div>
+        <div class="alignright">{if $linkNextPage}<a href="{$linkNextPage}">{$CONST.NEXT_PAGE} &raquo;</a>{/if}</div>
      {serendipity_hookPlugin hook="entries_footer"}
     </div>
 
@@ -203,8 +211,8 @@
             {if $paginationStartPage <= 0}
                 {assign var="paginationStartPage" value="1"}
             {/if}
-            {if $footer_prev_page}
-                <a title="{$CONST.PREVIOUS_PAGE}" href="{$footer_prev_page}"><span class="pagearrow">&#9668;</span></a>
+            {if $linkPrevPage}
+                <a title="{$CONST.PREVIOUS_PAGE}" href="{$linkPrevPage}"><span class="pagearrow">&#9668;</span></a>
             {/if}
             {if $paginationStartPage > 1}
                 <a href="{'1'|string_format:$footer_pageLink}">1</a>
@@ -225,8 +233,8 @@
             {if $smarty.section.i.index <= $footer_totalPages}
                 <a href="{$footer_totalPages|string_format:$footer_pageLink}">{$footer_totalPages}</a>
             {/if}
-            {if $footer_next_page}
-                <a title="{$CONST.NEXT_PAGE}" href="{$footer_next_page}"><span class="pagearrow">&#9658;</span></a>
+            {if $linkNextPage}
+                <a title="{$CONST.NEXT_PAGE}" href="{$linkNextPage}"><span class="pagearrow">&#9658;</span></a>
             {/if}</center>
         </div>
      {/if}
