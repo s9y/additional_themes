@@ -27,7 +27,7 @@ if (is_array($required_fieldlist)) {
     $serendipity['smarty']->assign('required_fields', $smarty_required_fields);
 }
 
-$serendipity['smarty']->assign('is_templatechooser', $_SESSION['serendipityUseTemplate']);
+$serendipity['smarty']->assign('is_templatechooser', $_SESSION['serendipityUseTemplate'] ?? false);
 
 $template_config = array(
     array(
@@ -73,10 +73,10 @@ $template_config['sidebars'] = array('hide,bottom');
 $serendipity['sidebars'] = array('hide', 'bottom');
 $template_config_groups = NULL;
 $template_global_config = array('navigation' => true);
-$template_loaded_config = serendipity_loadThemeOptions($template_config, $serendipity['smarty_vars']['template_option'], true);
+$template_loaded_config = serendipity_loadThemeOptions($template_config, $serendipity['smarty_vars']['template_option'] ?? '', true);
 serendipity_loadGlobalThemeOptions($template_config, $template_loaded_config, $template_global_config);
 
-if ($_SESSION['serendipityUseTemplate']) {
+if ($_SESSION['serendipityUseTemplate'] ?? false) {
     $template_loaded_config['use_corenav'] = false;
 }
 

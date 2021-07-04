@@ -31,20 +31,20 @@
         {if $entry.categories}
             {$CONST.IN}  <span class="visuallyhidden">{$CONST.CATEGORIES}: </span>{foreach from=$entry.categories item="entry_category" name="categories"}<a href="{$entry_category.category_link}">{$entry_category.category_name|@escape}</a>{if not $smarty.foreach.categories.last}, {/if}{/foreach}
         {/if}
-        {if ($entry.has_comments or $entry.has_disqus)}
-        {if $entry.has_disqus }
+        {if ($entry.has_comments or isset($entry.has_disqus) and $entry.has_disqus)}
+        {if isset($entry.has_disqus) and $entry.has_disqus }
             | {$entry.comments}{if $entry.has_trackbacks}, <a href="{$entry.link}#trackbacks">{$entry.trackbacks} {$entry.label_trackbacks}</a>{/if}
         {else}
             | <a href="{$entry.link}#comments" title="{$entry.comments} {$entry.label_comments}{if $entry.has_trackbacks}, {$entry.trackbacks} {$entry.label_trackbacks}{/if}">{$entry.comments} {$entry.label_comments}</a>
         {/if}
         {/if}
-        {if $entry.url_tweetthis}
+        {if isset($entry.url_tweetthis) and $entry.url_tweetthis}
             | <a href="{$entry.url_tweetthis}" title="{$CONST.TWOK11_TWEET_THIS}">Twitter</a>
         {/if}
-        {if $entry.url_dentthis}
+        {if isset($entry.url_dentthis) and $entry.url_dentthis}
             | <a href="{$entry.url_dentthis}" title="{$CONST.TWOK11_DENT_THIS}">Identica</a>
         {/if}
-        {if $entry.url_shorturl}
+        {if isset($entry.url_shorturl) and $entry.url_shorturl}
             | <a href="{$entry.url_shorturl}" title="{$CONST.TWOK11_SHORT_URL_HINT}" class="short-url">{$CONST.TWOK11_SHORT_URL}</a>
         {/if}
             {$entry.add_footer}
@@ -126,7 +126,7 @@
     <p class="nocontent">{$CONST.NO_ENTRIES_TO_PRINT}</p>
     {/if}
 {/foreach}
-{if ($footer_info and ($footer_prev_page or $footer_next_page)) or $footer_prev_page or $footer_next_page}
+{if isset($footer_info) and $footer_info or isset($footer_prev_page) and $footer_prev_page or isset($footer_next_page) and $footer_next_page}
     <nav class="serendipity_pagination block_level">
         <ul class="clearfix">
             {if $footer_info}
