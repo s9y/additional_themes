@@ -1,4 +1,4 @@
-<?
+<?php
 define("FRESHY_HEADER_TITLE","Freshy Header Image");
 define("FRESHY_HEADER_DESCRIPTION",<<<OUT
 
