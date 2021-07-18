@@ -37,7 +37,7 @@ if (version_compare($serendipity['version'],"1.1.beta3") >= 0) {
             'name'          => NAV_LINK_TEXT . '/' . $i,
             'description'   => NAV_LINK_DESC . '/' .$i,
             'type'          => 'string',
-            'default'       => constant('NAV_DEFAULT_' . $i),
+            'default'       => defined('NAV_DEFAULT_' . $i) ? constant('NAV_DEFAULT_' . $i) : constant('NAV_LINK_TEXT'),
     	);
         $template_config[] = array(
             'var'           => 'navlink' . $i . 'url',
