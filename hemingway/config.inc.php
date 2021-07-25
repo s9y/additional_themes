@@ -1,12 +1,6 @@
 <?php #
 
-$probelang = dirname(__FILE__) . '/lang_' . $serendipity['lang'] . '.inc.php';
-
-if (file_exists($probelang)) {
-    include $probelang;
-} else {
-    include dirname(__FILE__) . '/lang_en.inc.php';
-}
+@serendipity_plugin_api::load_language(dirname(__FILE__));
 
 @define('HEMINGWAY_DATE_DDMMYYYY', '%d.%m.%Y');
 @define('HEMINGWAY_DATE_MMDDYYYY', '%m.%d.%Y');

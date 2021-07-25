@@ -1,12 +1,6 @@
 <?php #
 
-$probelang = dirname(__FILE__) . '/lang_' . $serendipity['lang'] . '.inc.php';
-
-if (file_exists($probelang)) {
-    include $probelang;
-} else {
-    include dirname(__FILE__) . '/lang_en.inc.php';
-}
+@serendipity_plugin_api::load_language(dirname(__FILE__));
 
 @define('DATE_FORMAT_CEEJAY01_TITLE', '%B %e. %Y');
 @define('DATE_FORMAT_CEEJAY01_FOOTER', '%A, %B %e. %Y @ %H:%M');
