@@ -58,8 +58,8 @@
 		<h3 class="serendipitySideBarTitle">{$template_option.SIDEBAR_NAVIGATION_TITLE}</h3>
 
 		<ul class="plainList">
-		{foreach from=$navlinks item="navlinks"}
-        <li><a href="{$navlinks.href}">{$navlinks.title}</a></li>
+		{foreach from=$navlinks item="navlink"}
+        <li><a href="{$navlink.href}">{$navlink.title}</a></li>
 		{/foreach}
 		</ul>
 
