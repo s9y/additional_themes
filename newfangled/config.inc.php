@@ -1,11 +1,7 @@
 <?php #
 
-$probelang = dirname(__FILE__) . '/lang_' . $serendipity['lang'] . '.inc.php';
-if (file_exists($probelang)) {
-    include $probelang;
-} else {
-    include dirname(__FILE__) . '/lang_en.inc.php';
-}
+@serendipity_plugin_api::load_language(dirname(__FILE__));
+
 $template_config = array(
     array(
         'var'           => 'amount',
@@ -33,7 +29,7 @@ if (version_compare($serendipity['version'],"1.1.beta1") >= 0) {
             'name'          => NAV_LINK_TEXT . ' #' . $i,
             'description'   => NAV_LINK_DESC . ' #' .$i,
             'type'          => 'string',
-            'default'       => constant('NAV_DEFAULT_' . $i),
+            'default'       => defined('NAV_DEFAULT_' . $i) ? constant('NAV_DEFAULT_' . $i) : NAV_LINK_TEXT,
     	);
         $template_config[] = array(
             'var'           => 'navlink' . $i . 'url',
