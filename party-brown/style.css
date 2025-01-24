@@ -28,7 +28,7 @@ h3, h4 {
   padding: 0;
 }
 
-#mainpane {
+#mainpane, #content, #page footer {
   background: #FFFDDD;
 }
 
@@ -53,7 +53,8 @@ h3, h4 {
 a.homelink1,
 a.homelink1:hover,
 a.homelink1:link,
-a.homelink1:visited {
+a.homelink1:visited,
+#banner a {
   color: #FFFDDD;
   text-decoration: none;
 }
@@ -84,7 +85,9 @@ table.serendipity_calendar td {
 /* Sidebars */
 
 #serendipityLeftSideBar,
-#serendipityRightSideBar {
+#serendipityRightSideBar,
+#sidebar_right,
+#sidebar_left {
   display: block;
   margin: 1em;
   vertical-align: top;
@@ -276,4 +279,31 @@ img.serendipity_entryIcon {
 
 .serendipity_msg_notice {
     color: green;
+}
+
+/* 2k11 compatibility rules */
+
+#page {
+  max-width: 1200px;
+  margin: auto;
+}
+
+#page > div {
+  display: flex;
+  background: #FFFDDD;
+}
+
+#sidebar_left {
+  order: 1;
+  max-width: 300px;
+}
+
+#content {
+  order: 2;
+  flex: 4;
+}
+
+#sidebar_right {
+  order: 3;
+  max-width: 300px;
 }
